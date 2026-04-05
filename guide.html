@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Newsreader:ital,wght@0,400;0,600;1,400&amp;family=Manrope:wght@300;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed-variant": "#574500",
+                    "on-error-container": "#ffdad6",
+                    "surface-container-lowest": "#140d06",
+                    "secondary": "#dec1b3",
+                    "surface-container-low": "#221a13",
+                    "surface": "#1a120b",
+                    "secondary-fixed-dim": "#dec1b3",
+                    "outline": "#9b8e88",
+                    "on-primary-fixed": "#241a00",
+                    "error": "#ffb4ab",
+                    "background": "#1a120b",
+                    "surface-bright": "#42372f",
+                    "primary-fixed": "#ffe088",
+                    "on-secondary": "#3f2c23",
+                    "tertiary": "#c8c8af",
+                    "on-secondary-container": "#cbafa2",
+                    "on-tertiary-fixed": "#1b1d0d",
+                    "on-secondary-fixed-variant": "#574238",
+                    "outline-variant": "#4f4540",
+                    "surface-tint": "#e9c349",
+                    "error-container": "#93000a",
+                    "secondary-container": "#574238",
+                    "inverse-primary": "#735c00",
+                    "tertiary-fixed": "#e4e4ca",
+                    "on-primary": "#3c2f00",
+                    "tertiary-container": "#2e2f1e",
+                    "on-error": "#690005",
+                    "on-tertiary-container": "#969780",
+                    "surface-container-high": "#322820",
+                    "on-tertiary-fixed-variant": "#474835",
+                    "primary": "#e9c349",
+                    "inverse-on-surface": "#382f26",
+                    "surface-dim": "#1a120b",
+                    "primary-fixed-dim": "#e9c349",
+                    "inverse-surface": "#f1dfd3",
+                    "on-primary-container": "#b49218",
+                    "tertiary-fixed-dim": "#c8c8af",
+                    "on-tertiary": "#303220",
+                    "on-surface": "#f1dfd3",
+                    "surface-container": "#271e16",
+                    "on-secondary-fixed": "#281810",
+                    "primary-container": "#3a2c00",
+                    "on-background": "#f1dfd3",
+                    "surface-variant": "#3d332b",
+                    "secondary-fixed": "#fbdcce",
+                    "on-surface-variant": "#d3c3bd",
+                    "surface-container-highest": "#3d332b"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif"],
+                    "body": ["Newsreader"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .wood-texture {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.03;
+        }
+        .smoke-mask {
+            mask-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary/30">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#1A120B]/70 backdrop-blur-md bg-gradient-to-b from-[#1A120B] to-transparent shadow-[0_4px_30px_rgba(0,0,0,0.1)]">
+<div class="flex justify-between items-center px-12 py-6 w-full max-w-screen-2xl mx-auto">
+<div class="text-xl font-headline font-bold tracking-tighter text-[#F1DFD3]">
+<span class="text-[#E9C349]">ZENITH</span> | 沉香
+            </div>
+<div class="hidden md:flex gap-10 items-center">
+<a class="font-label tracking-widest uppercase text-sm text-[#F1DFD3]/80 hover:text-[#E9C349] transition-colors duration-700 ease-in-out" href="articles_1.html">Articles</a>
+<a class="font-label tracking-widest uppercase text-sm text-[#F1DFD3]/80 hover:text-[#E9C349] transition-colors duration-700 ease-in-out" href="gallery.html">Gallery</a>
+<a class="font-label tracking-widest uppercase text-sm text-[#E9C349] border-b border-[#E9C349]/30 pb-1 hover:text-[#E9C349] transition-colors duration-700 ease-in-out" href="guide.html">Guide</a>
+<a class="font-label tracking-widest uppercase text-sm text-[#F1DFD3]/80 hover:text-[#E9C349] transition-colors duration-700 ease-in-out" href="products_1.html">Products</a>
+<a class="font-label tracking-widest uppercase text-sm text-[#F1DFD3]/80 hover:text-[#E9C349] transition-colors duration-700 ease-in-out" href="about_us.html">About</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="font-label tracking-widest uppercase text-sm text-[#E9C349] hover:opacity-80 transition-opacity">EN/ZH</button>
+<button class="text-[#F1DFD3]/80 hover:text-[#E9C349] transition-colors duration-700">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-24">
+<!-- Hero Section -->
+<header class="relative px-6 md:px-24 mb-32 overflow-hidden min-h-[716px] flex items-center">
+<div class="absolute inset-0 z-0 opacity-40">
+<img alt="Agarwood Heritage" class="w-full h-full object-cover grayscale" data-alt="Close-up of rare dark agarwood bark with intricate natural patterns in soft atmospheric low lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLhg5YBw8npf2oU72Q74jGBBRmg2IaRqffMN3OFZWfu0_Phfx2p1fMuYOcPw_mgtTgl_b-oa36JlbvipFxT_oNtPAyogvGIz1qdkzw4FByOdSlcBbyEhsMSStMLJ6X-z5TpY--mkEzLDd9zllg-V-UHQAKHAs-hVYid-von88xU_Zq-8RrUFdHMDLyyegYratyBrdrVlo3cPlL8Void3WaxjQJZ-MiCdjndCDKVUcU3pimXV7gTLjDYHHZ1fI5og5fRqeQsHchCXPg"/>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-4xl">
+<span class="font-label text-primary tracking-[0.3em] uppercase text-xs mb-6 block">The Beginner's Journey</span>
+<h1 class="font-headline text-6xl md:text-8xl text-on-surface leading-tight mb-8">
+                    Discover <br/>
+<span class="italic font-light">Agarwood</span>
+</h1>
+<p class="font-body text-xl md:text-2xl text-secondary max-w-xl leading-relaxed italic opacity-90">
+                    "A fragrance that connects the earth to the heavens, born from time and resilience."
+                </p>
+<div class="mt-12 flex gap-4">
+<div class="h-[1px] w-12 bg-primary self-center"></div>
+<span class="font-label text-sm uppercase tracking-widest text-on-surface-variant">Scroll to begin</span>
+</div>
+</div>
+</header>
+<!-- Section 1: What is 沉香? -->
+<section class="max-w-7xl mx-auto px-6 mb-48 grid md:grid-cols-2 gap-20 items-center">
+<div class="order-2 md:order-1 relative">
+<div class="aspect-[4/5] overflow-hidden rounded-sm relative">
+<img alt="What is Agarwood" class="w-full h-full object-cover" data-alt="Studio shot of high quality agarwood chips and resin on a dark textured surface with golden highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFSncoXT18hb2rzCqjRmeI-fmHM6guiG3A31FJdaUZY2NcXJEkZ9R39_xhKlxm7GVZnkLfcqphOv1KdSRVATt2pZ6GDNT3QYpKNOjZygd_eAzB7wB8I6ZItlZ1492I046oqLdRXNckOa6xPFaeIW0sAPjlVrO_VSDikfRruVrgm-u83gYiJiJLq0dvB5_g4iPvgy2KxnJxvjSSwxDoEWFq72nz2BeZYnAXkaPa4nV5whHtxjNjE4crJmRkz6W-CSAaJw6TuUI22Lfp"/>
+<div class="absolute inset-0 bg-primary/5"></div>
+</div>
+<div class="absolute -bottom-10 -right-10 bg-surface-container-high p-8 hidden md:block max-w-xs shadow-2xl">
+<div class="wood-texture absolute inset-0"></div>
+<p class="font-body italic text-secondary text-sm">
+                        Agarwood is formed when the Aquilaria tree produces a dark, aromatic resin as a defense against infection.
+                    </p>
+</div>
+</div>
+<div class="order-1 md:order-2">
+<span class="text-primary font-label text-xs tracking-widest uppercase mb-4 block">Chapter I</span>
+<h2 class="font-headline text-4xl mb-8 leading-tight">What is 沉香? <br/><span class="text-secondary font-light">The Diamond of Woods</span></h2>
+<div class="space-y-6 text-on-surface-variant font-body text-lg leading-relaxed">
+<p>
+                        Agarwood, known as <span class="text-primary italic">Chen Xiang (沉香)</span> in Chinese, is not a species of wood, but the heartwood of the Aquilaria tree that has become infected with a specific mold.
+                    </p>
+<p>
+                        In response, the tree produces a dark, dense, fragrant resin. Over decades, this resin saturates the wood, creating the most expensive raw material in the world—surpassing gold in value.
+                    </p>
+</div>
+<div class="mt-12">
+<button class="px-8 py-3 border border-primary/40 text-primary font-label text-xs tracking-[0.2em] uppercase hover:bg-primary/5 transition-all duration-700">Explore Science</button>
+</div>
+</div>
+</section>
+<!-- Section 2: Types & Grades (Bento Grid) -->
+<section class="max-w-7xl mx-auto px-6 mb-48">
+<div class="text-center mb-20">
+<span class="text-primary font-label text-xs tracking-widest uppercase mb-4 block">Chapter II</span>
+<h2 class="font-headline text-4xl md:text-5xl">Types and Grades</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Kinam Grade -->
+<div class="md:col-span-2 bg-surface-container-low p-12 relative group overflow-hidden">
+<div class="wood-texture absolute inset-0"></div>
+<div class="relative z-10">
+<span class="text-tertiary font-label text-[10px] tracking-widest uppercase border-b border-tertiary/30 pb-1">Supreme Tier</span>
+<h3 class="font-headline text-3xl mt-6 mb-4 text-primary">Kinam (奇楠)</h3>
+<p class="text-on-surface-variant max-w-lg mb-8 leading-relaxed">
+                            The pinnacle of agarwood. Kinam possesses a unique texture—soft, almost waxy—and a multi-layered scent profile that evolves from cooling to floral to sweet. It is exceptionally rare and often held in museums or private collections.
+                        </p>
+<ul class="space-y-3 font-label text-xs tracking-wider text-secondary">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-sm" data-icon="circle" data-weight="fill">circle</span> ORIGIN: VIETNAM / HAINAN</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-sm" data-icon="circle" data-weight="fill">circle</span> SCENT: 5 LAYERS OF EVOLUTION</li>
+</ul>
+</div>
+<img alt="Kinam detail" class="absolute -right-20 -bottom-20 w-80 opacity-20 grayscale transition-transform duration-1000 group-hover:scale-110" data-alt="Exquisite macro detail of Kinam agarwood resin structure with dark oily veins" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB03aB6L0V2gB2WUiQbRYsOnzVgAwtGtlxytz-0XtLJdLhsViqeSlYSROhAZPi8tY2TYedH-v7i25JnP4_EV2Ssas81Qp3F34vEkZgnJQmAJRTBFww7pquDOdLwI6OWG-xMHkMLkWd09u2R-MoTkM3wetOt3TF41vFd0Pbja4gqLAUefAUHS6BOt-e23tkn15wW2m8-Pe_P9X9XUle0cO1GIbny7JVNd24JFOQueWCv7iDb64lXv_LG8mHf2bPPmYckpb3qUjAGpwMW"/>
+</div>
+<!-- Wild vs Cultivated -->
+<div class="bg-surface-container p-12 relative flex flex-col justify-end">
+<div class="wood-texture absolute inset-0"></div>
+<h3 class="font-headline text-2xl mb-4 text-on-surface">Wild Harvest</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">
+                        Naturally aged for 50+ years in deep forests. Deep, complex, and high medicinal value.
+                    </p>
+<span class="text-primary font-label text-[10px] tracking-widest uppercase">The Original Path</span>
+</div>
+<!-- Sinkability -->
+<div class="bg-surface-container-highest p-12 relative flex flex-col justify-end">
+<div class="wood-texture absolute inset-0"></div>
+<h3 class="font-headline text-2xl mb-4 text-on-surface">Sinking Grade</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">
+                        Wood so dense with resin that it sinks in water (Chen Shui). This is the hallmark of high quality.
+                    </p>
+<span class="text-primary font-label text-[10px] tracking-widest uppercase">Resin Density</span>
+</div>
+<!-- Regional Variations -->
+<div class="md:col-span-2 bg-surface-container-low p-12 relative flex items-center gap-12">
+<div class="wood-texture absolute inset-0"></div>
+<div class="flex-1">
+<h3 class="font-headline text-2xl mb-4 text-on-surface">Regional Terroir</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">
+                            Vietnamese wood is famed for its sweetness, while Indonesian varieties offer earthy, woody, and robust notes. Each region imprints a unique soul upon the resin.
+                        </p>
+</div>
+<div class="hidden md:flex gap-4">
+<div class="w-24 h-32 bg-background/50 backdrop-blur-sm border border-outline-variant/20 flex flex-col items-center justify-center">
+<span class="text-primary font-label text-[10px] mb-2 uppercase">Vietnam</span>
+<div class="h-[1px] w-8 bg-primary/30"></div>
+</div>
+<div class="w-24 h-32 bg-background/50 backdrop-blur-sm border border-outline-variant/20 flex flex-col items-center justify-center">
+<span class="text-primary font-label text-[10px] mb-2 uppercase">Malaysia</span>
+<div class="h-[1px] w-8 bg-primary/30"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Timeline / How to Identify -->
+<section class="max-w-4xl mx-auto px-6 mb-48">
+<div class="text-center mb-24">
+<span class="text-primary font-label text-xs tracking-widest uppercase mb-4 block">Chapter III</span>
+<h2 class="font-headline text-4xl md:text-5xl">Identifying Quality</h2>
+<p class="text-secondary mt-4 italic">The Four Rituals of Appreciation</p>
+</div>
+<div class="relative">
+<!-- Vertical Line -->
+<div class="absolute left-1/2 top-0 bottom-0 w-[1px] bg-gradient-to-b from-primary via-outline-variant/30 to-transparent hidden md:block"></div>
+<!-- Steps -->
+<div class="space-y-32">
+<!-- Step 1 -->
+<div class="relative flex flex-col md:flex-row items-center gap-12 md:gap-0">
+<div class="md:w-1/2 md:pr-20 md:text-right">
+<h4 class="font-headline text-2xl mb-4 text-on-surface">1. Visual Texture</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">
+                                Genuine agarwood has irregular, natural resin veins. If the color is too uniform or "perfectly black," it may be oil-pressed imitation.
+                            </p>
+</div>
+<div class="w-12 h-12 bg-background border border-primary rounded-full z-10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="visibility">visibility</span>
+</div>
+<div class="md:w-1/2 md:pl-20">
+<div class="aspect-video bg-surface-container rounded-sm overflow-hidden">
+<img alt="Visual identification" class="w-full h-full object-cover" data-alt="Microscopic view of natural wood grains and resin deposits in agarwood" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3MbJx_LqVgRRC7EcWPF0dNYrqOeiGvGtS4WgyoahuEKk0P3Yiq4LW0eOQXb2I3gd3cSzHcXronBWwFXQeoIvGjtInTWoZUVdlkkMflsWDkMyjT7M9hxHCVaDsvM6WfNUM0WSX6VBPaCLD4FKAsaG00Akm0adWzp92daFlFOsLBKw11xrN9pFTo8ZCEUCAoWGVDetG19DDW5peY7Jnrjd75-y-NxqX3qngYbvLvBmhJq57JsgB_m15Df8Eo1GEUqgjvqRBXoIS0FNh"/>
+</div>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="relative flex flex-col md:flex-row-reverse items-center gap-12 md:gap-0">
+<div class="md:w-1/2 md:pl-20 md:text-left">
+<h4 class="font-headline text-2xl mb-4 text-on-surface">2. Olfactory Evolution</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">
+                                Natural agarwood scent is never overpowering at room temperature. When heated, the scent should be layered—often starting cool and ending with a honey-like sweetness.
+                            </p>
+</div>
+<div class="w-12 h-12 bg-background border border-primary rounded-full z-10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="air">air</span>
+</div>
+<div class="md:w-1/2 md:pr-20">
+<div class="aspect-video bg-surface-container rounded-sm overflow-hidden">
+<img alt="Scent identification" class="w-full h-full object-cover" data-alt="Thin wisp of white smoke rising from a traditional incense burner in a dark room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVvFs2QJ5pvUgAG7oOtAvTHIKsBrdVVMk6Mw961QuEgfyc6aQ9An7QYhyKjWVJowfhGCdjeavGinxXtxU45CWrk7h9BPPFtek4sc6Wu949oxq1Uz93USAP5yJ8k5BU426BJXi1kw2hfe8jVW7anbdjnDvqI0vU4fxtvJRdI2kVMB-TiuHLl1SeDWLNV0Blpp4cArIy-wa4ARIaSqfXy88bf7F8e-q1R9Xe73gu_sv1CoLT-wcoXhbbJNI74CXaE0cdAYU3c_W4mjwz"/>
+</div>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="relative flex flex-col md:flex-row items-center gap-12 md:gap-0">
+<div class="md:w-1/2 md:pr-20 md:text-right">
+<h4 class="font-headline text-2xl mb-4 text-on-surface">3. Water Test</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">
+                                "Chen" means sinking. High resin content makes the wood denser than water. Authentic sinking wood is rare and feels heavy and solid in the hand.
+                            </p>
+</div>
+<div class="w-12 h-12 bg-background border border-primary rounded-full z-10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="water_drop">water_drop</span>
+</div>
+<div class="md:w-1/2 md:pl-20">
+<div class="aspect-video bg-surface-container rounded-sm overflow-hidden">
+<img alt="Density test" class="w-full h-full object-cover" data-alt="Small dark wood pieces submerged at the bottom of a clear glass of water" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDB4ic1X34Xf_MO3E1PQFChhNfjvkQT9TDRR3pwwHkyNJ8cDqYMICG_dKN5xJVlLPdOqytZyvVCDT6B-WyBvdVMu5khQmwHWn47Jd3TjpVyHp_ZTZ9Jvef-mwNgme0MXDl7JXuWGq_-YEvup1lJ3cgnILrhLXh-hLL7yU_H58EytquQaXNc_IgRs11RHDJMuiXPC7KTtc2EDwzn3ADOHHMn7DlEucbdRj2mm3ewj0xg5hWvfHiycgSt-DQcPDjtjnaPWqHSN_GdvRQn"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: Maintenance Tips -->
+<section class="bg-surface-container-low py-32 relative overflow-hidden">
+<div class="wood-texture absolute inset-0"></div>
+<div class="max-w-7xl mx-auto px-6 relative z-10">
+<div class="grid md:grid-cols-2 gap-24 items-center">
+<div>
+<span class="text-primary font-label text-xs tracking-widest uppercase mb-4 block">Chapter IV</span>
+<h2 class="font-headline text-4xl mb-12">The Care of Eternal Scent</h2>
+<div class="space-y-10">
+<div class="flex gap-6">
+<div class="shrink-0 w-10 h-10 flex items-center justify-center border border-outline-variant/30 text-primary">
+<span class="material-symbols-outlined" data-icon="thermostat">thermostat</span>
+</div>
+<div>
+<h5 class="font-headline text-lg mb-2">Stable Environment</h5>
+<p class="text-on-surface-variant text-sm leading-relaxed">Avoid extreme humidity or direct sunlight, which can dry out the natural oils or cause mold.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="shrink-0 w-10 h-10 flex items-center justify-center border border-outline-variant/30 text-primary">
+<span class="material-symbols-outlined" data-icon="clean_hands">clean_hands</span>
+</div>
+<div>
+<h5 class="font-headline text-lg mb-2">Purity of Touch</h5>
+<p class="text-on-surface-variant text-sm leading-relaxed">When handling beads, ensure hands are free of perfume or strong chemical scents which the wood may absorb.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="shrink-0 w-10 h-10 flex items-center justify-center border border-outline-variant/30 text-primary">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+</div>
+<div>
+<h5 class="font-headline text-lg mb-2">Proper Storage</h5>
+<p class="text-on-surface-variant text-sm leading-relaxed">Store in a glass or ceramic container. Avoid plastic boxes which can impart a chemical odor over time.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="smoke-mask absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent"></div>
+<img alt="Maintenance" class="w-full rounded-sm opacity-90 shadow-2xl" data-alt="Artisanal ceramic jar for agarwood storage with a wooden lid in a minimalist setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOwWWMgD2QWyBDJg6vTsWO05ZzFYZyLBIk9UP7mQDBxQ8J-16ISCVIIWTY6-XMi887T-IE2br3qN9tRMkJMiLKkiapR_RyiBsR623zSeic2IIBfLn6cS61Wp-ylvov15d4Tn5DsejEQbq4dx1w1FUI3TGxZOCsccgq9wP95Pcmmt_ZWUCUO-ZsK0novOy2IVTdEpcB1cM3mUI2RsFdsrMJ05KdyqarDY7SCB422Uu3Wa2okvi652_8_Xk_sDGqsfNBPnUxccEOk8qS"/>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-32 px-6 text-center">
+<div class="max-w-2xl mx-auto border border-primary/20 p-16 relative">
+<div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-background px-6">
+<span class="material-symbols-outlined text-primary" data-icon="ac_unit" data-weight="fill">ac_unit</span>
+</div>
+<h2 class="font-headline text-3xl mb-6 italic">Continue Your Path</h2>
+<p class="text-on-surface-variant mb-10 leading-relaxed font-body text-lg">
+                    Whether seeking spiritual tranquility or an investment-grade collectible, our specialists are here to guide your selection.
+                </p>
+<div class="flex flex-col md:flex-row gap-6 justify-center">
+<button class="px-10 py-4 bg-primary text-on-primary font-label text-xs tracking-widest uppercase hover:opacity-90 transition-opacity">Browse Collection</button>
+<button class="px-10 py-4 border border-outline-variant/40 text-on-surface font-label text-xs tracking-widest uppercase hover:bg-white/5 transition-colors">Speak to an Expert</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-[#4F4540]/20 bg-[#1A120B]">
+<div class="flex flex-col items-center gap-8 py-16 px-4 w-full max-w-screen-2xl mx-auto">
+<div class="text-lg font-headline text-[#F1DFD3]">
+<span class="text-[#E9C349]">ZENITH</span> | THE MEDITATIVE VOID
+            </div>
+<div class="flex gap-10 flex-wrap justify-center">
+<a class="font-label text-xs tracking-widest text-[#F1DFD3]/60 hover:text-[#E9C349] transition-opacity duration-500 opacity-80 hover:opacity-100" href="#">Instagram</a>
+<a class="font-label text-xs tracking-widest text-[#F1DFD3]/60 hover:text-[#E9C349] transition-opacity duration-500 opacity-80 hover:opacity-100" href="#">WeChat</a>
+<a class="font-label text-xs tracking-widest text-[#F1DFD3]/60 hover:text-[#E9C349] transition-opacity duration-500 opacity-80 hover:opacity-100" href="#">Contact</a>
+<a class="font-label text-xs tracking-widest text-[#F1DFD3]/60 hover:text-[#E9C349] transition-opacity duration-500 opacity-80 hover:opacity-100" href="#">Privacy</a>
+</div>
+<div class="mt-8 font-label text-[10px] tracking-[0.4em] text-[#F1DFD3]/40 uppercase">
+                © 2024 THE MEDITATIVE VOID. ALL RIGHTS RESERVED.
+            </div>
+</div>
+</footer>
+</body></html>

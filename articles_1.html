@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Newsreader:ital,wght@0,400;0,600;1,400&amp;family=Manrope:wght@400;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed-variant": "#574500",
+                        "on-error-container": "#ffdad6",
+                        "surface-container-lowest": "#140d06",
+                        "secondary": "#dec1b3",
+                        "surface-container-low": "#221a13",
+                        "surface": "#1a120b",
+                        "secondary-fixed-dim": "#dec1b3",
+                        "outline": "#9b8e88",
+                        "on-primary-fixed": "#241a00",
+                        "error": "#ffb4ab",
+                        "background": "#1a120b",
+                        "surface-bright": "#42372f",
+                        "primary-fixed": "#ffe088",
+                        "on-secondary": "#3f2c23",
+                        "tertiary": "#c8c8af",
+                        "on-secondary-container": "#cbafa2",
+                        "on-tertiary-fixed": "#1b1d0d",
+                        "on-secondary-fixed-variant": "#574238",
+                        "outline-variant": "#4f4540",
+                        "surface-tint": "#e9c349",
+                        "error-container": "#93000a",
+                        "secondary-container": "#574238",
+                        "inverse-primary": "#735c00",
+                        "tertiary-fixed": "#e4e4ca",
+                        "on-primary": "#3c2f00",
+                        "tertiary-container": "#2e2f1e",
+                        "on-error": "#690005",
+                        "on-tertiary-container": "#969780",
+                        "surface-container-high": "#322820",
+                        "on-tertiary-fixed-variant": "#474835",
+                        "primary": "#e9c349",
+                        "inverse-on-surface": "#382f26",
+                        "surface-dim": "#1a120b",
+                        "primary-fixed-dim": "#e9c349",
+                        "inverse-surface": "#f1dfd3",
+                        "on-primary-container": "#b49218",
+                        "tertiary-fixed-dim": "#c8c8af",
+                        "on-tertiary": "#303220",
+                        "on-surface": "#f1dfd3",
+                        "surface-container": "#271e16",
+                        "on-secondary-fixed": "#281810",
+                        "primary-container": "#3a2c00",
+                        "on-background": "#f1dfd3",
+                        "surface-variant": "#3d332b",
+                        "secondary-fixed": "#fbdcce",
+                        "on-surface-variant": "#d3c3bd",
+                        "surface-container-highest": "#3d332b"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif", "Noto Serif SC", "serif"],
+                        "body": ["Newsreader", "serif"],
+                        "label": ["Manrope", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24;
+    vertical-align: middle
+    }
+body {
+    background-color: #1a120b;
+    color: #f1dfd3;
+    -webkit-font-smoothing: antialiased
+    }
+.grain-overlay {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCO_hzzhYQptjjHVNqGcuAZb7-_5-Pl6-YdX2hCbmDIk7MZHsqMHyFXO-FAz9Z3hKOrrnsuz0vCexnwR9JTEwMHaIHPPGoahun-cy36_4sjur0bU8G26J5153pdlHvUnN2pHuetG4pFcoFcD49Wj6QJdHQznxDvxdv9tuWARt_KIpV9rHAb3QP3y9FFqU1o47EshpFo6Z7wk81mMqziFI5LZNV9wQo3ceUyW61RfrF0FQJc5elLgohkOyuDhKWpictyMS-vf4Snhx6R);
+    opacity: 0.03;
+    pointer-events: none
+    }</style>
+</head>
+<body class="font-body selection:bg-primary/30">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#1A120B]/70 backdrop-blur-md shadow-[0_4px_30px_rgba(0,0,0,0.1)] bg-gradient-to-b from-[#1A120B] to-transparent">
+<div class="flex justify-between items-center px-12 py-6 w-full max-w-screen-2xl mx-auto">
+<div class="text-xl font-headline font-bold tracking-tighter text-[#F1DFD3]">
+                沉香 | AGARWOOD
+            </div>
+<div class="hidden md:flex gap-10 items-center">
+<a class="font-headline tracking-widest uppercase text-sm text-[#E9C349] border-b border-[#E9C349]/30 pb-1 hover:text-[#E9C349] transition-colors duration-700 ease-in-out" href="articles_1.html">Articles</a>
+<a class="font-headline tracking-widest uppercase text-sm text-[#F1DFD3]/80 hover:text-[#E9C349] transition-colors duration-700 ease-in-out" href="gallery.html">Gallery</a>
+<a class="font-headline tracking-widest uppercase text-sm text-[#F1DFD3]/80 hover:text-[#E9C349] transition-colors duration-700 ease-in-out" href="guide.html">Guide</a>
+<a class="font-headline tracking-widest uppercase text-sm text-[#F1DFD3]/80 hover:text-[#E9C349] transition-colors duration-700 ease-in-out" href="products_1.html">Products</a>
+<a class="font-headline tracking-widest uppercase text-sm text-[#F1DFD3]/80 hover:text-[#E9C349] transition-colors duration-700 ease-in-out" href="about_us.html">About</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="font-headline tracking-widest uppercase text-sm text-[#E9C349] hover:opacity-80 transition-opacity">EN/ZH</button>
+<button class="text-[#F1DFD3]/80 hover:text-[#E9C349] transition-colors duration-700">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="relative min-h-screen pt-32 pb-24 overflow-hidden">
+<div class="grain-overlay fixed inset-0 z-0"></div>
+<!-- Hero Section / Title -->
+<header class="relative z-10 max-w-screen-2xl mx-auto px-12 mb-20">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
+<div class="md:col-span-8">
+<span class="font-label text-primary tracking-[0.3em] uppercase text-xs mb-4 block">Archives &amp; Insights</span>
+<h1 class="font-headline text-5xl md:text-7xl text-on-surface leading-tight">
+                        The Meditative <br/> <span class="italic font-light text-secondary">Void Journal</span>
+</h1>
+</div>
+<div class="md:col-span-4 text-right">
+<p class="font-body text-on-surface-variant text-lg italic max-w-xs ml-auto">
+                        "In the silence of agarwood smoke, we find the echoes of the universe."
+                    </p>
+</div>
+</div>
+</header>
+<!-- Category Filter Chips -->
+<section class="relative z-10 max-w-screen-2xl mx-auto px-12 mb-16">
+<div class="flex flex-wrap gap-4 border-b border-outline-variant/20 pb-8">
+<button class="bg-tertiary-container text-tertiary px-6 py-2 rounded-sm font-label text-xs tracking-widest uppercase hover:bg-tertiary hover:text-on-tertiary transition-all duration-500">All Topics</button>
+<button class="text-on-surface-variant/60 px-6 py-2 rounded-sm font-label text-xs tracking-widest uppercase hover:text-primary transition-all duration-500">沉香知识</button>
+<button class="text-on-surface-variant/60 px-6 py-2 rounded-sm font-label text-xs tracking-widest uppercase hover:text-primary transition-all duration-500">佛珠文化</button>
+<button class="text-on-surface-variant/60 px-6 py-2 rounded-sm font-label text-xs tracking-widest uppercase hover:text-primary transition-all duration-500">冥想修行</button>
+<button class="text-on-surface-variant/60 px-6 py-2 rounded-sm font-label text-xs tracking-widest uppercase hover:text-primary transition-all duration-500">Living Zen</button>
+</div>
+</section>
+<!-- Articles Grid (Asymmetric Bento-inspired) -->
+<section class="relative z-10 max-w-screen-2xl mx-auto px-12">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-x-8 gap-y-24">
+<!-- Main Featured Card -->
+<article class="md:col-span-8 group">
+<div class="relative aspect-[16/9] mb-8 overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 opacity-80 group-hover:opacity-100" data-alt="Close-up of burning agarwood incense coil with elegant wisps of smoke rising in a dark moody zen room with warm lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3YiCCKqe35GQGc8q-LzKZPOVFuUQ-qRQd-S8PG5v4JAn9g5SNEAcN4pgGS8NVid0gsKjAlFMDIkUD0vDQ_0aJFnW8ZOpt1B14u2BizAJ66GE4PD2Q-FMHZwEb99NMHZk7OTi854LjhqBWG4H_vMfI4GETYF7QoF6ykBsRgIksA5Nfowq1T-jMV3A-8HxKrMGEF5_iwQIZrYZKS8CjBTOPb5V-puRbSKba0STazbIa-pGwcQKs7M5ksPM7OBAMvn9bqvtQBpRNcGzd"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60"></div>
+<div class="absolute top-6 left-6">
+<span class="bg-primary/10 backdrop-blur-md text-primary border border-primary/20 px-4 py-1 font-label text-[10px] tracking-widest uppercase">Knowledge</span>
+</div>
+</div>
+<div class="max-w-2xl">
+<h2 class="font-headline text-3xl md:text-4xl mb-4 group-hover:text-primary transition-colors duration-500">
+                            沉香知识：大地赋予的灵气与灵魂的安宁
+                        </h2>
+<p class="font-body text-on-surface-variant text-lg leading-relaxed mb-6">
+                            Explore the ancient origins of Agarwood, known as the 'Diamond of the Forest', and how its unique resonance helps anchor the wandering mind during deep meditation.
+                        </p>
+<a class="group/btn inline-flex items-center gap-4 font-label text-xs tracking-widest uppercase text-primary" href="article_detail.html">
+                            Read Journal
+                            <span class="w-12 h-[1px] bg-primary/30 group-hover/btn:w-20 transition-all duration-700"></span>
+</a>
+</div>
+</article>
+<!-- Sidebar Card 1 -->
+<article class="md:col-span-4 group mt-12 md:mt-0">
+<div class="relative aspect-[4/5] mb-6 overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-70 group-hover:opacity-90" data-alt="Exquisite dark agarwood prayer beads resting on a weathered wooden table with soft side lighting and shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCq6Rr6OPDC16w2BNO_pcGW5aVmI4uKTbT49L8B4os0hBRT6Dnvk3eVEIA_qaEsWKnm_kDuuvhXuAbFL5FITs19r3om9tluEFFAFY8Jir4Yy0dpXkjXcyzt4gAgvwe9E8plj18uQilu1E6L-XzPwGoDLL3VrRbn1v1HKyh0-7zYmdNnEdu-m-IsIjgh0nKhlvWdW_lBnqxXMT6qFy6tIvuN4OwLvW_zm-wdwJzWhRrfsgSGTVo9vRF6ndTRhjN0sBS72oGG4_1ihAoI"/>
+<div class="absolute top-6 left-6">
+<span class="bg-primary/10 backdrop-blur-md text-primary border border-primary/20 px-4 py-1 font-label text-[10px] tracking-widest uppercase">Culture</span>
+</div>
+</div>
+<h3 class="font-headline text-2xl mb-3 group-hover:text-secondary transition-colors duration-500">佛珠文化：指尖上的呼吸与禅意</h3>
+<p class="font-body text-on-surface-variant text-base italic mb-4">The sacred geometry of prayer beads as a tool for mindfulness.</p>
+<a class="font-label text-[10px] tracking-[0.2em] uppercase text-on-surface-variant/60 hover:text-primary transition-colors" href="article_detail.html">Explore Culture</a>
+</article>
+<!-- Grid Item 3 -->
+<article class="md:col-span-4 group">
+<div class="relative aspect-square mb-6 overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 opacity-70" data-alt="A person sitting in meditation silhouette against a soft warm backlight with a hint of forest atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnQ68WEkAV5qQZccmhyw26DiWwztpa5CksDFO9c9MvjWEtUSzt8ZXWVn89PYwPOPppQuxkD4Ixi2PuGqkRrRBilyCOvYoLheS19qMs1qp5Kz5yXBCsY0E9c5kKACDtIDDnm3ae1QSgh4vvVvmA3k74YgFMer76_uQIM9CDRlM5zfNBTZ4Y7AaFlWWbMdfc4afOHY0bavsl08bbVwyTINkJrBuj6zybwyV77u1hetGS_NbhYitGelNTeCAEM_rFMcoVFQqaYnJtU8kq"/>
+<div class="absolute top-6 left-6">
+<span class="bg-primary/10 backdrop-blur-md text-primary border border-primary/20 px-4 py-1 font-label text-[10px] tracking-widest uppercase">Practice</span>
+</div>
+</div>
+<h3 class="font-headline text-2xl mb-3 group-hover:text-secondary transition-colors duration-500">冥想修行：在虚无中寻回真实的自我</h3>
+<p class="font-body text-on-surface-variant text-base mb-4">Finding the 'Empty Vessel' state through scent and rhythmic breathing.</p>
+</article>
+<!-- Grid Item 4 - Wide -->
+<article class="md:col-span-8 group md:pl-12">
+<div class="flex flex-col md:flex-row gap-8 items-center h-full">
+<div class="md:w-1/2 overflow-hidden aspect-[3/4] bg-surface-container-low">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-70" data-alt="Artistic macro shot of high-quality resinous agarwood pieces with intricate textures and rich dark colors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAqk18SrJqnLzocrJPbE6whtJ5CZ2Y16SsoIYRkD0rOL-IiP65qEZuywSiC6itgxw-8mji_01AMy7JkKbYEpzOjjS-ORNVG90WW0MY2L4PukwNP7RrmfakX1oyVEQjDiRkkixfyHczGL3QJHaCox1ApOBhTQuGejca9eTDp99aD1ZK9QTG465Zt7GwCpvs_GTGoNWunFWe5ovJovYwyKB3gyqsNppzThg-gfhQa_N9OS37qBh2ng-GJPXUQ0Vd4tLkQ23MtTUsniD0"/>
+</div>
+<div class="md:w-1/2">
+<span class="font-label text-primary/60 text-[10px] tracking-widest uppercase mb-4 block">Zen Living</span>
+<h3 class="font-headline text-3xl mb-4 group-hover:text-primary transition-colors duration-500 leading-snug">The Art of Scent: <br/>Incense as a Ritual</h3>
+<p class="font-body text-on-surface-variant mb-6 text-lg">Beyond the physical, agarwood serves as a bridge between the mundane and the celestial.</p>
+<button class="border border-primary/30 text-primary px-8 py-3 font-label text-xs tracking-widest uppercase hover:bg-primary/10 transition-all duration-500">Read Essay</button>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- Newsletter / Sub-footer -->
+<section class="relative z-10 max-w-screen-2xl mx-auto px-12 mt-40">
+<div class="bg-surface-container-low p-12 md:p-24 text-center border-t border-outline-variant/10">
+<h4 class="font-headline text-3xl md:text-4xl mb-6">Receive the Void's Whisper</h4>
+<p class="font-body text-on-surface-variant text-lg mb-10 max-w-xl mx-auto italic">Join our refined community for monthly essays on tea, incense, and the meditative arts.</p>
+<form class="max-w-md mx-auto flex flex-col md:flex-row gap-4">
+<input class="bg-transparent border-b border-outline-variant/30 text-on-surface font-body p-3 w-full focus:outline-none focus:border-primary transition-colors" placeholder="Email Address" type="email"/>
+<button class="bg-primary text-on-primary px-10 py-3 font-label text-xs tracking-widest uppercase hover:opacity-90 transition-opacity">Subscribe</button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-[#4F4540]/20 bg-[#1A120B]">
+<div class="flex flex-col items-center gap-8 py-16 px-4 w-full">
+<div class="text-lg font-headline text-[#F1DFD3]">
+                THE MEDITATIVE VOID
+            </div>
+<div class="flex gap-12 text-[#F1DFD3]/60 font-headline text-xs tracking-widest uppercase">
+<a class="hover:text-[#E9C349] transition-opacity duration-500 opacity-80 hover:opacity-100" href="#">Instagram</a>
+<a class="hover:text-[#E9C349] transition-opacity duration-500 opacity-80 hover:opacity-100" href="#">WeChat</a>
+<a class="hover:text-[#E9C349] transition-opacity duration-500 opacity-80 hover:opacity-100" href="#">Contact</a>
+<a class="hover:text-[#E9C349] transition-opacity duration-500 opacity-80 hover:opacity-100" href="#">Privacy</a>
+</div>
+<div class="font-headline text-[#F1DFD3]/40 text-[10px] tracking-[0.3em] uppercase mt-4">
+                © 2024 THE MEDITATIVE VOID. ALL RIGHTS RESERVED.
+            </div>
+</div>
+</footer>
+</body></html>

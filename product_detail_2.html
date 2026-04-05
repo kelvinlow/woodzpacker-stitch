@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary": "#ffb68c",
+                        "on-surface-variant": "#d3c3bd",
+                        "on-secondary-fixed": "#281810",
+                        "surface-variant": "#353535",
+                        "surface-container": "#1f2020",
+                        "on-secondary-fixed-variant": "#574238",
+                        "on-tertiary-container": "#d6804a",
+                        "inverse-on-surface": "#303030",
+                        "primary-fixed-dim": "#e9c349",
+                        "tertiary-fixed": "#ffdbc9",
+                        "secondary-fixed-dim": "#dec1b3",
+                        "background": "#131313",
+                        "secondary": "#dec1b3",
+                        "surface-dim": "#131313",
+                        "on-primary-fixed-variant": "#574500",
+                        "on-primary-fixed": "#231a00",
+                        "on-tertiary-fixed": "#321200",
+                        "surface": "#131313",
+                        "on-error": "#690005",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-secondary": "#3f2c23",
+                        "surface-container-low": "#1b1c1c",
+                        "on-primary": "#3c2f00",
+                        "on-tertiary": "#532200",
+                        "on-error-container": "#ffdad6",
+                        "secondary-fixed": "#fbdcce",
+                        "on-primary-container": "#b49217",
+                        "surface-bright": "#393939",
+                        "inverse-surface": "#e4e2e1",
+                        "on-background": "#e4e2e1",
+                        "secondary-container": "#574238",
+                        "error-container": "#93000a",
+                        "primary": "#e9c349",
+                        "primary-fixed": "#ffe087",
+                        "outline": "#9b8e88",
+                        "outline-variant": "#4f4540",
+                        "surface-container-high": "#2a2a2a",
+                        "surface-container-highest": "#353535",
+                        "on-tertiary-fixed-variant": "#753401",
+                        "surface-tint": "#e9c349",
+                        "on-secondary-container": "#cbafa2",
+                        "error": "#ffb4ab",
+                        "tertiary-fixed-dim": "#ffb68c",
+                        "inverse-primary": "#735c00",
+                        "primary-container": "#3a2d00",
+                        "on-surface": "#e4e2e1",
+                        "tertiary-container": "#4f2100"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Noto Serif"],
+                        "label": ["Plus Jakarta Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .liubai-spacing { padding-top: 5rem; padding-bottom: 5rem; }
+        .glass-card { backdrop-filter: blur(12px); background-color: rgba(31, 32, 32, 0.4); }
+        .vertical-text { writing-mode: vertical-rl; text-orientation: mixed; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body transition-colors duration-700">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full flex justify-between items-center px-6 lg:px-12 py-5 lg:py-6 max-w-screen-2xl mx-auto bg-[#f5f1e6]/80 dark:bg-stone-950/70 backdrop-blur-md z-50 transition-all duration-700">
+<div class="text-xl lg:text-2xl font-noto-serif italic text-amber-900 dark:text-amber-400">沉香与佛珠</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-stone-600 dark:text-stone-300 font-noto-serif tracking-widest uppercase text-xs lg:text-sm hover:text-amber-600 dark:hover:text-amber-200 transition-colors duration-700" href="#">Home</a>
+<a class="text-stone-600 dark:text-stone-300 font-noto-serif tracking-widest uppercase text-xs lg:text-sm hover:text-amber-600 dark:hover:text-amber-200 transition-colors duration-700" href="articles_1.html">Articles</a>
+<a class="text-stone-600 dark:text-stone-300 font-noto-serif tracking-widest uppercase text-xs lg:text-sm hover:text-amber-600 dark:hover:text-amber-200 transition-colors duration-700" href="gallery.html">Gallery</a>
+<a class="text-amber-700 dark:text-amber-400 border-b border-amber-700 dark:border-amber-400 pb-1 font-noto-serif tracking-widest uppercase text-xs lg:text-sm" href="products_1.html">Products</a>
+<a class="text-stone-600 dark:text-stone-300 font-noto-serif tracking-widest uppercase text-xs lg:text-sm hover:text-amber-600 dark:hover:text-amber-200 transition-colors duration-700" href="about_us.html">About</a>
+</nav>
+<div class="flex items-center gap-4 text-stone-800 dark:text-amber-200">
+<button class="material-symbols-outlined hover:text-amber-600 transition-colors" data-icon="language">language</button>
+<button class="material-symbols-outlined hover:text-amber-600 transition-colors" data-icon="light_mode">light_mode</button>
+<button class="material-symbols-outlined hover:text-amber-600 transition-colors" data-icon="shopping_cart">shopping_cart</button>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-6 lg:px-12 pt-32 pb-20">
+<!-- Product Hero Section -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
+<!-- Left: Gallery -->
+<div class="lg:col-span-7 flex flex-col-reverse lg:flex-row gap-6">
+<!-- Thumbnails -->
+<div class="flex lg:flex-col gap-4 overflow-x-auto lg:overflow-visible shrink-0">
+<div class="w-20 h-20 bg-surface-container border border-primary/20 cursor-pointer overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="close-up of weathered agarwood beads with intricate grain patterns on a dark silk background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYfOQ7iZPRaIy2LqhL55mRrZttF7gqnmpF7D0CtPbb7w_K5Bfsld8NoJY3eQmUyF_wtBXk7nuJLg1raxDE5wFM-ZxyUYHxqBq1qKornrP202cToqB3GJ3ugST2c51z-_K99cbFK8vHHzW4ICXsoVzHN4TrU1ez-Sc_JPDvbT3NReowIcGCaZhKLIdbA155efwqrxUlytGLL_VZF5paxy7-q1wjJqY3WIQdUgjtqB3tDCvgDdpNUj1UeUsWshjYTbyrpytrLNc4BpnM"/>
+</div>
+<div class="w-20 h-20 bg-surface-container border-transparent cursor-pointer overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="detail shot of agarwood incense smoke rising in a dimly lit traditional tea room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATGRPNYU-FSBBY9w0pI_HhsNoZ3eysrvwEq1fz5LwtpSYRsMHwiH8Y2ba_bJK4Rmw2iTAN5BhZT9Tig_-Q7MWD4_TvbVviT5mPmDyayqMsTp-pLSADGJsMtsqDqVoTMfLkamyFXYDoo4a5w9VW6eaJ-tl4fimPyA9MDJFks8mL_8NHJC35EJTFxQXkkikBN1Dc2YM-whvoDHTQ2vzgS0-gO0U9dNFxuX_fXPwja1FD0MaPFTW47X5aZGUUV3sKYFRE4DlyDnh8ZBn8"/>
+</div>
+<div class="w-20 h-20 bg-surface-container border-transparent cursor-pointer overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="artisan holding a single rare agarwood bead between fingers with soft dramatic side lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4ME7i1A6MvWGfmXvqSkQTrDNQqLywOOBgvVVDOJXJQj_JOEUTq9HmgSDATFBkOl_rnu9pQqxz60qREh_BRIiyndtp9-_nvwuwcv_wTF2LIYahgbjF2lzF47NhYI2ePoDFvk1paYEa4whJQulqMA2IO_ZY06KilgcJ5W1dyJztg3mFNHt-Wdz3ar8fHnyq_LqBGa6P2oOZlD_7u4R-NdyKzBNz7E7UamaUoAa14traDoMHqZr6affeSsm-3vYbw61qkdXyf1cCY5Ai"/>
+</div>
+</div>
+<!-- Main Zoom Image -->
+<div class="relative w-full aspect-[4/5] bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="high resolution macro shot of a 108-bead agarwood mala resting on dark textured stone surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXPVLwPd3ksobDtpoVoQI-q58Thc9ih4kpB3eh4qleZdrHrZLjZhOOb7egqj6NSf91radwQUzXXX7FKNnOqNMjHvzQU6ngYUlIPp3LwSV8_occxnOAb8g8JFFeCsfoEmAoUH0Z926mikYkGqKOqIsGgFFQpAOS7CN0yEuFxj-165dkLochyFmTzxbUocrH6MoGzzk7xKKG4Ca6jIhf_cR9oXmU6SDYc7ACoGvvX9yI3fsd_iLH8EeUGbKgdH7xDtbYlX7HtTC5fhN-"/>
+<div class="absolute bottom-6 right-6">
+<button class="p-3 bg-surface/40 backdrop-blur-md text-on-surface border border-outline-variant/20 hover:bg-primary hover:text-on-primary transition-all duration-500">
+<span class="material-symbols-outlined" data-icon="zoom_in">zoom_in</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Right: Details -->
+<div class="lg:col-span-5 flex flex-col space-y-8">
+<div class="space-y-2">
+<p class="text-primary font-label text-xs tracking-[0.2em] uppercase">Private Collection | 私人珍藏</p>
+<h1 class="text-4xl lg:text-5xl font-headline font-bold leading-tight text-on-surface">Vietnam Kynam Mala<br/><span class="text-2xl lg:text-3xl font-light">越南奇楠沉香佛珠</span></h1>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-3xl font-headline text-primary">$12,800.00</span>
+<span class="text-on-surface-variant font-label text-sm uppercase tracking-widest px-3 py-1 border border-outline-variant/30">Available</span>
+</div>
+<div class="prose prose-invert prose-stone">
+<p class="text-on-surface-variant leading-relaxed text-body-lg">
+                        Rare Kinam agarwood sourced from the deep jungles of Nha Trang, Vietnam. This 108-bead mala exudes a cooling peppermint scent with subtle hints of honey and ancient wood. Highly resinous and dense, it represents the pinnacle of meditative accessories.
+                    </p>
+<p class="text-on-surface-variant/80 italic text-sm border-l-2 border-primary/30 pl-4 mt-4">
+                        越南芽庄红土奇楠，油润如膏，凉味彻骨，伴有蜜甜兰花香气。百里挑一，禅修上品。
+                    </p>
+</div>
+<!-- Product Attributes -->
+<div class="grid grid-cols-2 gap-4">
+<div class="p-4 bg-surface-container-low border border-outline-variant/10">
+<p class="text-[10px] font-label text-primary uppercase tracking-widest mb-1">Diameter | 规格</p>
+<p class="font-headline text-lg">8mm x 108</p>
+</div>
+<div class="p-4 bg-surface-container-low border border-outline-variant/10">
+<p class="text-[10px] font-label text-primary uppercase tracking-widest mb-1">Density | 密度</p>
+<p class="font-headline text-lg">Sinking | 沉水级</p>
+</div>
+</div>
+<!-- CTAs -->
+<div class="flex flex-col gap-4 pt-4">
+<button class="w-full py-5 bg-primary text-on-primary font-headline text-sm tracking-[0.3em] uppercase hover:bg-primary-fixed-dim transition-all duration-500 flex items-center justify-center gap-3">
+                        Add to Collection | 加入收藏
+                        <span class="material-symbols-outlined text-sm" data-icon="shopping_bag">shopping_bag</span>
+</button>
+<button class="w-full py-5 border border-outline-variant text-on-surface font-headline text-sm tracking-[0.3em] uppercase hover:bg-surface-container-high transition-all duration-500 flex items-center justify-center gap-3">
+                        Inquire Specialist | 咨询专家
+                        <span class="material-symbols-outlined text-sm" data-icon="chat_bubble_outline">chat_bubble_outline</span>
+</button>
+</div>
+<div class="flex items-center gap-6 pt-6 text-on-surface-variant text-xs font-label">
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm" data-icon="verified">verified</span> Authenticity Guaranteed</span>
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm" data-icon="package_2">package_2</span> Secure Global Shipping</span>
+</div>
+</div>
+</div>
+<!-- Section: Product Story -->
+<section class="liubai-spacing mt-32 relative overflow-hidden">
+<div class="absolute -left-20 top-0 vertical-text text-9xl font-headline opacity-[0.03] pointer-events-none select-none">
+                冥想 · 呼吸 · 时间
+            </div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="relative order-2 lg:order-1">
+<div class="absolute -top-10 -left-10 w-40 h-40 border-t border-l border-primary/20"></div>
+<img class="w-full grayscale contrast-125" data-alt="misty morning in a tropical forest with tall ancient trees and dramatic sunbeams filtering through the leaves" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOkZtrlKhl349dHLtQscjpk6RSdecT4BO3Et1fYCM5YTPToZnzpqJxlWGhKPTo3oO3lQ9DGFG4me3kgsw-aRrSbF41xoxiWtL5Vdww1clHN5ZJsbrWg60f5lQasZs_oM9qDCD6EW-Dp_U5LtMnRDwMCI72-mGL6InMSnkvM6bv2iJRrOKXIkh31HHh-G_K3iRf0bVhXkill_19H_0ivGwgwGLwrX5JTw4iE_R_JOwbk-baxzaqP0Og5KIBmkc-xJp607hwmnh8VOdA"/>
+<div class="absolute bottom-6 left-6 p-6 glass-card border border-outline-variant/10">
+<p class="text-xs font-label text-primary mb-2">ORIGIN STORY</p>
+<p class="font-headline italic text-lg text-on-surface">"Every bead tells a century-old story of resilience."</p>
+</div>
+</div>
+<div class="space-y-8 order-1 lg:order-2">
+<div class="inline-block px-4 py-1 border border-primary/30 text-primary text-[10px] font-label tracking-widest uppercase">The Genesis | 缘起</div>
+<h2 class="text-4xl font-headline leading-snug">Born from the<br/>Heart of the Jungle</h2>
+<p class="text-on-surface-variant leading-relaxed">
+                        Agarwood is not merely wood; it is the miraculous result of a tree's healing process. For over a century, the Aquilaria tree secreted rare resins to protect itself from the elements, concentrating its essence into what we now know as Kinam. Each bead in this mala has been hand-carved to preserve the natural grain and resinous veins.
+                    </p>
+<p class="text-on-surface-variant leading-relaxed">
+                        在越南深山之中，沉香树历经百年风霜与自然侵蚀，在自我修护中凝聚出稀世油脂。奇楠，是沉香中的极品，其形成极具偶然性，千百棵树中难求其一。
+                    </p>
+</div>
+</div>
+</section>
+<!-- Section: Material Details (Bento Grid) -->
+<section class="liubai-spacing bg-surface-container-low -mx-6 lg:-mx-12 px-6 lg:px-12">
+<div class="max-w-7xl mx-auto space-y-12">
+<div class="text-center space-y-4">
+<h3 class="text-xs font-label text-primary tracking-[0.4em] uppercase">Craftsmanship &amp; Material | 工艺与材质</h3>
+<p class="text-3xl font-headline">Uncompromising Excellence</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-4 h-auto lg:h-[600px]">
+<div class="md:col-span-2 md:row-span-2 relative group overflow-hidden bg-surface">
+<img class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-1000" data-alt="macro texture of dark oily agarwood resin veins resembling a landscape painting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJ7tmp1HH33cWAd-yX9ymh6ulUy1iTyd8Yjwn2FR1w8k7qedFRhlbkU1hoCCmfQUqWYGd-wpwHt3Veaplm1WM2F8r7jtlgBCTCMAyMIJHLb82aq--8N1NJheQgW0B4dU-FNcRMGMq1ydjPwa0LTafZhPiCw9CxEW6drUUNu6BIakT59EXFWZdRNA7qbbBitvPv5rqyJ9jNCepVNP502uDua7HKstJQ0_9hpXXbg1PSNgoYu2VvkzLjlNFdPQDLtY6gsYdaqwh1HT0u"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<div class="absolute bottom-8 left-8">
+<h4 class="text-xl font-headline mb-2">High Resin Content | 满油级别</h4>
+<p class="text-sm text-on-surface-variant max-w-xs">Nearly 80% resin saturation, giving it a cool, waxy texture and heavy weight.</p>
+</div>
+</div>
+<div class="md:col-span-2 relative group overflow-hidden bg-surface">
+<img class="w-full h-full object-cover opacity-40" data-alt="hand-drawn architectural diagram of a single prayer bead with geometric callouts" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCOWlBtSjaVXz72zqYkuoW_mAjDl40VbGaeUEyUjVlmDzFWpOw_t6uKAhDyv0dQfEYgLkqx-DFZ6MYcbUMTpgTDHvvn392ELdocWNtSuaZmh_WxFHBpHZsJTXKLSXtWgUNDIQMAPLGo3486izjpgFgqmwtVS8ZwMN7-DTWEr1GZr9ZWKrxIhm6E33q-PvdMq2Wcd5fsgTbAfs8TUIxmxQ1FpA9qBjyC2e1s7C3m8JLiPsGUY5GJzMcxiPmnypeGTY4bwJxnnbmBw30"/>
+<div class="absolute inset-0 flex flex-col justify-center px-10">
+<h4 class="text-xl font-headline mb-2">Precision Carving | 精工圆珠</h4>
+<p class="text-sm text-on-surface-variant">Each bead is calibrated to within 0.05mm of tolerance for a perfect tactile experience.</p>
+</div>
+</div>
+<div class="md:col-span-1 relative group overflow-hidden bg-secondary-container">
+<div class="p-8 h-full flex flex-col justify-between">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="ac_unit">ac_unit</span>
+<div>
+<h4 class="text-lg font-headline">Cooling Scent</h4>
+<p class="text-xs text-on-secondary-container mt-2">Natural menthol-like cooling notes.</p>
+</div>
+</div>
+</div>
+<div class="md:col-span-1 relative group overflow-hidden bg-surface-container-high border border-outline-variant/20">
+<div class="p-8 h-full flex flex-col justify-between">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="auto_awesome">auto_awesome</span>
+<div>
+<h4 class="text-lg font-headline">Aged 50+ Years</h4>
+<p class="text-xs text-on-surface-variant mt-2">Properly aged for maximum aromatic stability.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Usage & Care -->
+<section class="liubai-spacing">
+<div class="flex flex-col lg:flex-row gap-16">
+<div class="lg:w-1/3">
+<h3 class="text-4xl font-headline mb-6">Meditation<br/>Practice<br/><span class="text-primary italic">使用与养护</span></h3>
+<p class="text-on-surface-variant font-label text-sm uppercase tracking-widest">Guide to Scent &amp; Spirit</p>
+</div>
+<div class="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-12">
+<div class="space-y-4">
+<div class="w-12 h-12 flex items-center justify-center border border-primary/30 rounded-full text-primary font-headline">01</div>
+<h4 class="text-xl font-headline">The Ritual | 仪式</h4>
+<p class="text-on-surface-variant leading-relaxed">Place the mala in your palms and warm it slightly to release the top notes of honey and flowers before beginning your meditation.</p>
+</div>
+<div class="space-y-4">
+<div class="w-12 h-12 flex items-center justify-center border border-primary/30 rounded-full text-primary font-headline">02</div>
+<h4 class="text-xl font-headline">Preservation | 收藏</h4>
+<p class="text-on-surface-variant leading-relaxed">When not in use, keep in the provided glass vessel or a silk pouch away from direct sunlight and moisture to preserve the resin.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full flex flex-col items-center gap-6 lg:gap-8 border-t border-stone-300/20 dark:border-stone-800/20 bg-[#f5f1e6] dark:bg-stone-950 full-width py-12 lg:py-16 mt-20">
+<div class="font-noto-serif text-amber-900/50 dark:text-amber-500/50 text-2xl tracking-[0.5em] uppercase">THE MEDITATIVE VOID</div>
+<div class="flex gap-10">
+<a class="text-stone-500 dark:text-stone-500 font-noto-serif text-[10px] lg:text-xs tracking-tight hover:text-amber-600 dark:hover:text-amber-400 transition-all duration-500" href="#">Privacy Policy</a>
+<a class="text-stone-500 dark:text-stone-500 font-noto-serif text-[10px] lg:text-xs tracking-tight hover:text-amber-600 dark:hover:text-amber-400 transition-all duration-500" href="#">Terms of Service</a>
+<a class="text-stone-500 dark:text-stone-500 font-noto-serif text-[10px] lg:text-xs tracking-tight hover:text-amber-600 dark:hover:text-amber-400 transition-all duration-500" href="#">Wholesale</a>
+<a class="text-stone-500 dark:text-stone-500 font-noto-serif text-[10px] lg:text-xs tracking-tight hover:text-amber-600 dark:hover:text-amber-400 transition-all duration-500" href="#">Contact</a>
+</div>
+<p class="font-noto-serif text-amber-900 dark:text-amber-500 text-[10px] lg:text-xs tracking-tight opacity-60">© 2024 THE MEDITATIVE VOID. ALL RIGHTS RESERVED.</p>
+</footer>
+<!-- Mobile Bottom Nav -->
+<div class="md:hidden fixed bottom-0 left-0 w-full bg-surface-container/90 backdrop-blur-xl flex justify-around py-4 border-t border-outline-variant/10 z-50">
+<button class="flex flex-col items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="text-[10px] font-label">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined" data-icon="layers" style="font-variation-settings: 'FILL' 1;">layers</span>
+<span class="text-[10px] font-label">Shop</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+<span class="text-[10px] font-label">Wishlist</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-[10px] font-label">Account</span>
+</button>
+</div>
+</body></html>

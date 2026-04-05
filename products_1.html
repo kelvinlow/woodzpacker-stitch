@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Newsreader:ital,wght@0,400;0,600;1,400&amp;family=Manrope:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed-variant": "#574500",
+                    "on-error-container": "#ffdad6",
+                    "surface-container-lowest": "#140d06",
+                    "secondary": "#dec1b3",
+                    "surface-container-low": "#221a13",
+                    "surface": "#1a120b",
+                    "secondary-fixed-dim": "#dec1b3",
+                    "outline": "#9b8e88",
+                    "on-primary-fixed": "#241a00",
+                    "error": "#ffb4ab",
+                    "background": "#1a120b",
+                    "surface-bright": "#42372f",
+                    "primary-fixed": "#ffe088",
+                    "on-secondary": "#3f2c23",
+                    "tertiary": "#c8c8af",
+                    "on-secondary-container": "#cbafa2",
+                    "on-tertiary-fixed": "#1b1d0d",
+                    "on-secondary-fixed-variant": "#574238",
+                    "outline-variant": "#4f4540",
+                    "surface-tint": "#e9c349",
+                    "error-container": "#93000a",
+                    "secondary-container": "#574238",
+                    "inverse-primary": "#735c00",
+                    "tertiary-fixed": "#e4e4ca",
+                    "on-primary": "#3c2f00",
+                    "tertiary-container": "#2e2f1e",
+                    "on-error": "#690005",
+                    "on-tertiary-container": "#969780",
+                    "surface-container-high": "#322820",
+                    "on-tertiary-fixed-variant": "#474835",
+                    "primary": "#e9c349",
+                    "inverse-on-surface": "#382f26",
+                    "surface-dim": "#1a120b",
+                    "primary-fixed-dim": "#e9c349",
+                    "inverse-surface": "#f1dfd3",
+                    "on-primary-container": "#b49218",
+                    "tertiary-fixed-dim": "#c8c8af",
+                    "on-tertiary": "#303220",
+                    "on-surface": "#f1dfd3",
+                    "surface-container": "#271e16",
+                    "on-secondary-fixed": "#281810",
+                    "primary-container": "#3a2c00",
+                    "on-background": "#f1dfd3",
+                    "surface-variant": "#3d332b",
+                    "secondary-fixed": "#fbdcce",
+                    "on-surface-variant": "#d3c3bd",
+                    "surface-container-highest": "#3d332b"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif"],
+                    "body": ["Newsreader"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            font-size: 20px;
+        }
+        .grain-overlay {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.03;
+            pointer-events: none;
+        }
+        .glass-header {
+            background: rgba(26, 18, 11, 0.7);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary/30">
+<div class="fixed inset-0 grain-overlay z-[100]"></div>
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 glass-header shadow-[0_4px_30px_rgba(0,0,0,0.1)]">
+<nav class="flex justify-between items-center px-6 md:px-12 py-6 w-full max-w-screen-2xl mx-auto">
+<div class="flex items-center gap-8">
+<a class="text-xl font-headline font-bold tracking-tighter text-[#F1DFD3]" href="zenith_agarwood_landing_page_1.html">沉香 | AGARWOOD</a>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-headline tracking-widest uppercase text-sm text-[#F1DFD3]/80 hover:text-[#E9C349] transition-colors duration-700" href="articles_1.html">Articles</a>
+<a class="font-headline tracking-widest uppercase text-sm text-[#F1DFD3]/80 hover:text-[#E9C349] transition-colors duration-700" href="gallery.html">Gallery</a>
+<a class="font-headline tracking-widest uppercase text-sm text-[#F1DFD3]/80 hover:text-[#E9C349] transition-colors duration-700" href="guide.html">Guide</a>
+<a class="font-headline tracking-widest uppercase text-sm text-[#E9C349] border-b border-[#E9C349]/30 pb-1" href="products_1.html">Products</a>
+<a class="font-headline tracking-widest uppercase text-sm text-[#F1DFD3]/80 hover:text-[#E9C349] transition-colors duration-700" href="about_us.html">About</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="font-headline tracking-widest uppercase text-sm text-[#E9C349] hover:opacity-80 transition-opacity">EN/ZH</button>
+<button class="text-[#F1DFD3]/80 hover:text-[#E9C349] transition-colors">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+</div>
+</nav>
+</header>
+<main class="pt-32 pb-24 px-6 md:px-12 max-w-screen-2xl mx-auto min-h-screen">
+<!-- Hero Title Section -->
+<section class="mb-20 flex flex-col md:flex-row md:items-end justify-between gap-8">
+<div class="max-w-2xl">
+<span class="font-label text-xs uppercase tracking-[0.3em] text-primary mb-4 block">Zenith Collection</span>
+<h1 class="text-5xl md:text-7xl font-headline text-on-surface leading-tight mb-6">
+                    珍稀沉香 <br/>
+<span class="italic font-normal text-secondary/70">Sacred Fragments</span>
+</h1>
+<p class="text-lg text-on-surface-variant max-w-md leading-relaxed">
+                    A curated selection of the world's most exquisite agarwood and prayer beads, ethically sourced from ancient forests.
+                </p>
+</div>
+<div class="flex gap-4 items-center">
+<span class="font-label text-[10px] uppercase tracking-widest text-outline">Refine by</span>
+<div class="h-[1px] w-12 bg-outline-variant"></div>
+</div>
+</section>
+<!-- Filters & Categories -->
+<section class="mb-16 flex flex-wrap gap-x-12 gap-y-8 items-center border-b border-outline-variant/10 pb-8">
+<div class="flex gap-8">
+<button class="group relative py-2">
+<span class="font-headline text-sm tracking-widest uppercase text-primary">All Items</span>
+<span class="absolute bottom-0 left-0 w-full h-[1px] bg-primary scale-x-100 transition-transform duration-500"></span>
+</button>
+<button class="group relative py-2">
+<span class="font-headline text-sm tracking-widest uppercase text-on-surface/60 group-hover:text-primary transition-colors">沉香 (Agarwood)</span>
+<span class="absolute bottom-0 left-0 w-full h-[1px] bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></span>
+</button>
+<button class="group relative py-2">
+<span class="font-headline text-sm tracking-widest uppercase text-on-surface/60 group-hover:text-primary transition-colors">佛珠 (Prayer Beads)</span>
+<span class="absolute bottom-0 left-0 w-full h-[1px] bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></span>
+</button>
+</div>
+<div class="flex gap-4 ml-auto">
+<div class="relative group">
+<button class="px-6 py-2 border border-outline-variant/30 font-label text-xs uppercase tracking-widest flex items-center gap-3 hover:border-primary transition-colors">
+                        Material
+                        <span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+</div>
+<div class="relative group">
+<button class="px-6 py-2 border border-outline-variant/30 font-label text-xs uppercase tracking-widest flex items-center gap-3 hover:border-primary transition-colors">
+                        Origin
+                        <span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Product Grid (Asymmetric Bento-inspired) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-20">
+<!-- Product 1 -->
+<div class="flex flex-col group">
+<div class="relative aspect-[4/5] mb-8 overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover transition-transform duration-[1500ms] ease-out group-hover:scale-110 grayscale-[30%] group-hover:grayscale-0" data-alt="close-up of a raw dark agarwood fragment with intricate grain textures on a dark reflective surface with dramatic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0w0Jexj-Eh0kkLHPlAo12V3d3AYx05BEKPDKk4ZaDRI0pv69FjJXxCnfWo6WQqIlSY5UGTu-fnpKNceVdR8WTzJ6v174dLIC5xrttQKBRiR0MFwI9rZy-7rzLN37UN0OGcFpFe2ZlqXGYuuY53iQjklApbnCWFC_B6qOfALCu3sXKB44GJ7J7IddvSY9kKPMFOyw20BjGPKBRR2wiy6849Rym7dCjBG5im0U3vehh5ygnR8b31EV3wIpSt6lMSvp6FjLdU4YLE-xF"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent opacity-40"></div>
+<div class="absolute top-4 right-4 bg-surface/80 backdrop-blur-md px-3 py-1 text-[10px] tracking-[0.2em] uppercase font-label text-primary">Vietnam Kinam</div>
+<div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 bg-primary/5"></div>
+</div>
+<h3 class="font-headline text-xl mb-2 text-on-surface">Wild Highland Kynam Raw Wood</h3>
+<div class="flex justify-between items-center border-t border-outline-variant/20 pt-4">
+<span class="font-body italic text-secondary">沉香原木 - 越南奇楠</span>
+<span class="font-label text-sm text-primary tracking-widest">$4,250.00</span>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="flex flex-col group lg:mt-16">
+<div class="relative aspect-[4/5] mb-8 overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover transition-transform duration-[1500ms] ease-out group-hover:scale-110 grayscale-[30%] group-hover:grayscale-0" data-alt="ancient dark brown prayer beads made of aged wood arranged in a spiral on a piece of raw silk fabric with soft warm highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASHTsUEXDxVsHILJU1AUEVvQXkFr57Odxo7mginu-xLxmWwEaIFa_H3KLjOhmd38iO6NrJJ4_kUV1IgxVqLpPsxfXwS71kweIunUDIzPR-fqDuob55ypZtgKOwVl746Dif1Tymnm5vL_nZFJGoc7x1c7XSzIOdzYDVv02cXuW_R9Y9YnHQLjGy9L8H-7xaRuagFnM6RGPU-lnc2FeSJyeFLdV-SRxPd5JWkuhOTA7uDAN6K8dbNaOYv1SqrAT_AAbtgZ9abI1sc22R"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent opacity-40"></div>
+<div class="absolute top-4 right-4 bg-surface/80 backdrop-blur-md px-3 py-1 text-[10px] tracking-[0.2em] uppercase font-label text-primary">Limited Edition</div>
+<div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 bg-primary/5"></div>
+</div>
+<h3 class="font-headline text-xl mb-2 text-on-surface">108 Mala Beads · Sinking Grade</h3>
+<div class="flex justify-between items-center border-t border-outline-variant/20 pt-4">
+<span class="font-body italic text-secondary">108颗沉香佛珠</span>
+<span class="font-label text-sm text-primary tracking-widest">$1,890.00</span>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="flex flex-col group">
+<div class="relative aspect-[4/5] mb-8 overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover transition-transform duration-[1500ms] ease-out group-hover:scale-110 grayscale-[30%] group-hover:grayscale-0" data-alt="a small glass jar filled with thin dark agarwood incense coils sitting on a dark wood tray with thin wisps of smoke rising" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4F-V-qBcXIA71edEmOTplTXbldCtRgLBw2QJrufmsPJ0uQ8U_gXQ5X8YMd41pmb8cZKZOhNJmXOAgYgbCT1xu6lDdl2bMvd9RWG_pdL9D8yjmK6rU314nggnv5tyMxs4yYaXfZkmvLShy5glAtYYC7Y6IPqdFadq8e45iJkm4cKE5BeMSpFguncKpru5v1zqEk6cUh9SHdDYBLVYEi4efeNFXWDvT4KDnIbd055AVQyWfm6lKIFw0sDle5D0cC940k52LPspoL9aP"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent opacity-40"></div>
+<div class="absolute top-4 right-4 bg-surface/80 backdrop-blur-md px-3 py-1 text-[10px] tracking-[0.2em] uppercase font-label text-primary">Hainan Sinking</div>
+<div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 bg-primary/5"></div>
+</div>
+<h3 class="font-headline text-xl mb-2 text-on-surface">Signature Meditative Incense Coils</h3>
+<div class="flex justify-between items-center border-t border-outline-variant/20 pt-4">
+<span class="font-body italic text-secondary">海南沉香盘香</span>
+<span class="font-label text-sm text-primary tracking-widest">$320.00</span>
+</div>
+</div>
+<!-- Product 4 -->
+<div class="flex flex-col group md:mt-[-80px]">
+<div class="relative aspect-[4/5] mb-8 overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover transition-transform duration-[1500ms] ease-out group-hover:scale-110 grayscale-[30%] group-hover:grayscale-0" data-alt="macro shot of dark oily agarwood grains showing deep black resin veins under soft focus natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD31JOmGZuE1LDzjTDjv9Cbvt_IvzOSbmIxELcjN8w7QNbv2WN4cugM257qlmWb3yR8b9FGgfdXt_sreTDpvjVKAgQ14hmAJaF2YgaL04XjPIY84xVO5emZsUKoWg3LXlXBz6X9FDjtm6UzoP6-oqS4JDfW_RWYh-6D7X2h6252YheOZp4Osh7ac4EeihMXQXBkc5bDSi3iWs_RLu12WdLaj0diIgLJcCWFuLrIpmLHEPV6UPoitQ0NcG4nxBKpr1znyg1Hq7tggk6H"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent opacity-40"></div>
+<div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 bg-primary/5"></div>
+</div>
+<h3 class="font-headline text-xl mb-2 text-on-surface">Black Resin Kalimantan Chunk</h3>
+<div class="flex justify-between items-center border-t border-outline-variant/20 pt-4">
+<span class="font-body italic text-secondary">加里曼丹黑油原材</span>
+<span class="font-label text-sm text-primary tracking-widest">$2,100.00</span>
+</div>
+</div>
+<!-- Product 5 -->
+<div class="flex flex-col group">
+<div class="relative aspect-[4/5] mb-8 overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover transition-transform duration-[1500ms] ease-out group-hover:scale-110 grayscale-[30%] group-hover:grayscale-0" data-alt="zen aesthetic still life with single agarwood fragment and a ceramic tea bowl on a rustic wood surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4EJeOT3dfKTCSOm1SVVfRba4jd3c0uqblnwuvssNvxieCC-oP8q0v6xxbKEYqas2jD0rhdqtz7syrMjEmJbqyqKKt8vOcmUFVuArdplgGH5_P0Y0Cf-szu_YGF_zo8fdKzwuhHtwMCEyhEXaOtXjt-cTjKKcRn_3RSQopX8BEKbg38mwRglcwQ_5L6qLOXyGTJCyl7S0FvXhiAqaSW7Oyl7Xa2MhZrDQU7kEIueYx0jyb54CAA9I35HbPpYA9RgY_bqo79qogK9Vu"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent opacity-40"></div>
+<div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 bg-primary/5"></div>
+</div>
+<h3 class="font-headline text-xl mb-2 text-on-surface">Aged Cambodi Powder Refill</h3>
+<div class="flex justify-between items-center border-t border-outline-variant/20 pt-4">
+<span class="font-body italic text-secondary">柬埔寨老料沉香粉</span>
+<span class="font-label text-sm text-primary tracking-widest">$450.00</span>
+</div>
+</div>
+<!-- Product 6 -->
+<div class="flex flex-col group lg:mt-[-40px]">
+<div class="relative aspect-[4/5] mb-8 overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover transition-transform duration-[1500ms] ease-out group-hover:scale-110 grayscale-[30%] group-hover:grayscale-0" data-alt="ornate hand-carved agarwood sculpture of a serene deity figure with soft lighting highlighting the wood's patina" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbB0WFsajVZshAV4zy2ilLM0IFMmIjFLNUhiwfKZRyshZx87bMCxmUXtxXJpqAZhRpvdP9s_sPb-AjNS-y839tbc_b6uTTA04NBaLFITzq_VeqEN3xhK1hGVeYuQf9n4BegTODPJNUiyX7OZxA9haYCdAqhPY47Iaq5oQPeYYKM-GzBFN9PvUhhrPkFpDLGzz_BhBfdNL5TLmWx5HIiEJXCNtq4v0Md2whYzFXQk02kZxRTD4bdBEY-e0o2g8rO4KqbQN0tFusoMjy"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent opacity-40"></div>
+<div class="absolute top-4 right-4 bg-surface/80 backdrop-blur-md px-3 py-1 text-[10px] tracking-[0.2em] uppercase font-label text-primary">Masterpiece</div>
+<div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 bg-primary/5"></div>
+</div>
+<h3 class="font-headline text-xl mb-2 text-on-surface">Hand-Carved 'Zenith' Deity</h3>
+<div class="flex justify-between items-center border-t border-outline-variant/20 pt-4">
+<span class="font-body italic text-secondary">手工精雕沉香造像</span>
+<span class="font-label text-sm text-primary tracking-widest">$12,800.00</span>
+</div>
+</div>
+</div>
+<!-- Pagination / Load More -->
+<div class="mt-32 flex flex-col items-center">
+<button class="px-12 py-4 border border-primary/40 group relative overflow-hidden transition-all duration-700 hover:border-primary">
+<span class="relative z-10 font-label text-xs uppercase tracking-[0.4em] text-primary">Discover More</span>
+<div class="absolute inset-0 bg-primary/5 scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-center"></div>
+</button>
+<div class="mt-8 text-outline-variant font-label text-[10px] tracking-widest">SHOWING 6 OF 42 TREASURES</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-[#4F4540]/20 bg-[#1A120B]">
+<div class="flex flex-col items-center gap-8 py-16 px-4 w-full max-w-screen-2xl mx-auto">
+<div class="text-lg font-headline text-[#F1DFD3]">沉香 | ZENITH</div>
+<div class="flex flex-wrap justify-center gap-8 md:gap-12">
+<a class="font-headline text-xs tracking-widest text-[#F1DFD3]/60 hover:text-[#E9C349] transition-opacity duration-500 uppercase" href="#">Instagram</a>
+<a class="font-headline text-xs tracking-widest text-[#F1DFD3]/60 hover:text-[#E9C349] transition-opacity duration-500 uppercase" href="#">WeChat</a>
+<a class="font-headline text-xs tracking-widest text-[#F1DFD3]/60 hover:text-[#E9C349] transition-opacity duration-500 uppercase" href="#">Contact</a>
+<a class="font-headline text-xs tracking-widest text-[#F1DFD3]/60 hover:text-[#E9C349] transition-opacity duration-500 uppercase" href="#">Privacy</a>
+</div>
+<div class="flex flex-col items-center gap-4">
+<div class="h-[1px] w-24 bg-outline-variant/30"></div>
+<p class="font-headline text-xs tracking-widest text-[#F1DFD3]/40 uppercase text-center">
+                    © 2024 THE MEDITATIVE VOID. ALL RIGHTS RESERVED.
+                </p>
+</div>
+</div>
+</footer>
+</body></html>

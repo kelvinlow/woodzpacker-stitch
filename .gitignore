@@ -1,2 +1,4 @@
 *.DS_Store
 worker/src/.env
+worker/.wrangler/*
+worker/.dev.vars

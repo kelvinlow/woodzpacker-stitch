@@ -27,14 +27,15 @@ interface NotionBlock {
 
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
-    const { NOTION_TOKEN, DATABASE_ID, NOTION_API_VERSION } = env;
+    const { NOTION_TOKEN, DATA_SOURCE_ID } = env;
+    console.log(NOTION_TOKEN, DATA_SOURCE_ID);
     const url = new URL(request.url);
     const path = url.pathname;
 
-    if (!NOTION_TOKEN || !DATABASE_ID) {
+    if (!NOTION_TOKEN || !DATA_SOURCE_ID) {
       return new Response(
         JSON.stringify({
-          error: 'Missing NOTION_TOKEN or DATABASE_ID secrets.'
+          error: 'Missing NOTION_TOKEN or DATA_SOURCE_ID secrets.'
         }),
         { status: 500, headers: { 'Content-Type': 'application/json' } }
       );

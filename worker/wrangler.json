@@ -1,5 +1,5 @@
 {
-  "name": "notion-article-worker",
+  "name": "notion-worker",
   "main": "src/index.ts",
   "compatibility_date": "2024-04-03",
   "vars": {

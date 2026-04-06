@@ -1,110 +1,14 @@
 <!DOCTYPE html>
-
-<html class="dark" lang="zh-CN"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "tertiary": "#ffb68c",
-                        "on-surface-variant": "#d3c3bd",
-                        "on-secondary-fixed": "#281810",
-                        "surface-variant": "#353535",
-                        "surface-container": "#1f2020",
-                        "on-secondary-fixed-variant": "#574238",
-                        "on-tertiary-container": "#d6804a",
-                        "inverse-on-surface": "#303030",
-                        "primary-fixed-dim": "#e9c349",
-                        "tertiary-fixed": "#ffdbc9",
-                        "secondary-fixed-dim": "#dec1b3",
-                        "background": "#131313",
-                        "secondary": "#dec1b3",
-                        "surface-dim": "#131313",
-                        "on-primary-fixed-variant": "#574500",
-                        "on-primary-fixed": "#231a00",
-                        "on-tertiary-fixed": "#321200",
-                        "surface": "#131313",
-                        "on-error": "#690005",
-                        "surface-container-lowest": "#0e0e0e",
-                        "on-secondary": "#3f2c23",
-                        "surface-container-low": "#1b1c1c",
-                        "on-primary": "#3c2f00",
-                        "on-tertiary": "#532200",
-                        "on-error-container": "#ffdad6",
-                        "secondary-fixed": "#fbdcce",
-                        "on-primary-container": "#b49217",
-                        "surface-bright": "#393939",
-                        "inverse-surface": "#e4e2e1",
-                        "on-background": "#e4e2e1",
-                        "secondary-container": "#574238",
-                        "error-container": "#93000a",
-                        "primary": "#e9c349",
-                        "primary-fixed": "#ffe087",
-                        "outline": "#9b8e88",
-                        "outline-variant": "#4f4540",
-                        "surface-container-high": "#2a2a2a",
-                        "surface-container-highest": "#353535",
-                        "on-tertiary-fixed-variant": "#753401",
-                        "surface-tint": "#e9c349",
-                        "on-secondary-container": "#cbafa2",
-                        "error": "#ffb4ab",
-                        "tertiary-fixed-dim": "#ffb68c",
-                        "inverse-primary": "#735c00",
-                        "primary-container": "#3a2d00",
-                        "on-surface": "#e4e2e1",
-                        "tertiary-container": "#4f2100"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.125rem",
-                        "lg": "0.25rem",
-                        "xl": "0.5rem",
-                        "full": "0.75rem"
-                    },
-                    "fontFamily": {
-                        "headline": ["Noto Serif"],
-                        "body": ["Noto Serif"],
-                        "label": ["Plus Jakarta Sans"]
-                    }
-                },
-            },
-        }
-    </script>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-            display: inline-block;
-            vertical-align: middle;
-        }
-        .liubai-spacing { padding-top: 5rem; padding-bottom: 5rem; }
-        .glass-card { backdrop-filter: blur(12px); background-color: rgba(31, 32, 32, 0.4); }
-        .vertical-text { writing-mode: vertical-rl; text-orientation: mixed; }
-    </style>
-</head>
-<body class="bg-surface text-on-surface font-body transition-colors duration-700">
-<!-- TopNavBar -->
-<header class="fixed top-0 w-full flex justify-between items-center px-6 lg:px-12 py-5 lg:py-6 max-w-screen-2xl mx-auto bg-[#f5f1e6]/80 dark:bg-stone-950/70 backdrop-blur-md z-50 transition-all duration-700">
-<div class="text-xl lg:text-2xl font-noto-serif italic text-amber-900 dark:text-amber-400">沉香与佛珠</div>
-<nav class="hidden md:flex gap-8 items-center">
-<a class="text-stone-600 dark:text-stone-300 font-noto-serif tracking-widest uppercase text-xs lg:text-sm hover:text-amber-600 dark:hover:text-amber-200 transition-colors duration-700" href="#">Home</a>
-<a class="text-stone-600 dark:text-stone-300 font-noto-serif tracking-widest uppercase text-xs lg:text-sm hover:text-amber-600 dark:hover:text-amber-200 transition-colors duration-700" href="articles_1.html">Articles</a>
-<a class="text-stone-600 dark:text-stone-300 font-noto-serif tracking-widest uppercase text-xs lg:text-sm hover:text-amber-600 dark:hover:text-amber-200 transition-colors duration-700" href="gallery.html">Gallery</a>
-<a class="text-amber-700 dark:text-amber-400 border-b border-amber-700 dark:border-amber-400 pb-1 font-noto-serif tracking-widest uppercase text-xs lg:text-sm" href="products_1.html">Products</a>
-<a class="text-stone-600 dark:text-stone-300 font-noto-serif tracking-widest uppercase text-xs lg:text-sm hover:text-amber-600 dark:hover:text-amber-200 transition-colors duration-700" href="about_us.html">About</a>
-</nav>
-<div class="flex items-center gap-4 text-stone-800 dark:text-amber-200">
-<button class="material-symbols-outlined hover:text-amber-600 transition-colors" data-icon="language">language</button>
-<button class="material-symbols-outlined hover:text-amber-600 transition-colors" data-icon="light_mode">light_mode</button>
-<button class="material-symbols-outlined hover:text-amber-600 transition-colors" data-icon="shopping_cart">shopping_cart</button>
-</div>
-</header>
-<main class="max-w-7xl mx-auto px-6 lg:px-12 pt-32 pb-20">
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Product Detail | {{websiteName}}</title>
+    <script src="layout.js"></script>
+        <style>body { visibility: hidden; opacity: 0; }</style>
+    </head>
+<body class="bg-background text-on-surface font-body selection:bg-primary/30 opacity-0 transition-opacity duration-300">
+<main class="pt-32 pb-24">
 <!-- Product Hero Section -->
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
 <!-- Left: Gallery -->
@@ -269,34 +173,5 @@
 </div>
 </section>
 </main>
-<!-- Footer -->
-<footer class="w-full flex flex-col items-center gap-6 lg:gap-8 border-t border-stone-300/20 dark:border-stone-800/20 bg-[#f5f1e6] dark:bg-stone-950 full-width py-12 lg:py-16 mt-20">
-<div class="font-noto-serif text-amber-900/50 dark:text-amber-500/50 text-2xl tracking-[0.5em] uppercase">THE MEDITATIVE VOID</div>
-<div class="flex gap-10">
-<a class="text-stone-500 dark:text-stone-500 font-noto-serif text-[10px] lg:text-xs tracking-tight hover:text-amber-600 dark:hover:text-amber-400 transition-all duration-500" href="#">Privacy Policy</a>
-<a class="text-stone-500 dark:text-stone-500 font-noto-serif text-[10px] lg:text-xs tracking-tight hover:text-amber-600 dark:hover:text-amber-400 transition-all duration-500" href="#">Terms of Service</a>
-<a class="text-stone-500 dark:text-stone-500 font-noto-serif text-[10px] lg:text-xs tracking-tight hover:text-amber-600 dark:hover:text-amber-400 transition-all duration-500" href="#">Wholesale</a>
-<a class="text-stone-500 dark:text-stone-500 font-noto-serif text-[10px] lg:text-xs tracking-tight hover:text-amber-600 dark:hover:text-amber-400 transition-all duration-500" href="#">Contact</a>
-</div>
-<p class="font-noto-serif text-amber-900 dark:text-amber-500 text-[10px] lg:text-xs tracking-tight opacity-60">© 2024 THE MEDITATIVE VOID. ALL RIGHTS RESERVED.</p>
-</footer>
-<!-- Mobile Bottom Nav -->
-<div class="md:hidden fixed bottom-0 left-0 w-full bg-surface-container/90 backdrop-blur-xl flex justify-around py-4 border-t border-outline-variant/10 z-50">
-<button class="flex flex-col items-center gap-1 text-on-surface-variant">
-<span class="material-symbols-outlined" data-icon="home">home</span>
-<span class="text-[10px] font-label">Home</span>
-</button>
-<button class="flex flex-col items-center gap-1 text-primary">
-<span class="material-symbols-outlined" data-icon="layers" style="font-variation-settings: 'FILL' 1;">layers</span>
-<span class="text-[10px] font-label">Shop</span>
-</button>
-<button class="flex flex-col items-center gap-1 text-on-surface-variant">
-<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
-<span class="text-[10px] font-label">Wishlist</span>
-</button>
-<button class="flex flex-col items-center gap-1 text-on-surface-variant">
-<span class="material-symbols-outlined" data-icon="person">person</span>
-<span class="text-[10px] font-label">Account</span>
-</button>
-</div>
-</body></html>
+</body>
+</html>

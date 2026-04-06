@@ -1,118 +1,14 @@
 <!DOCTYPE html>
-
-<html class="dark" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Newsreader:ital,wght@0,400;0,600;1,400&amp;family=Manrope:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "on-primary-fixed-variant": "#574500",
-                    "on-error-container": "#ffdad6",
-                    "surface-container-lowest": "#140d06",
-                    "secondary": "#dec1b3",
-                    "surface-container-low": "#221a13",
-                    "surface": "#1a120b",
-                    "secondary-fixed-dim": "#dec1b3",
-                    "outline": "#9b8e88",
-                    "on-primary-fixed": "#241a00",
-                    "error": "#ffb4ab",
-                    "background": "#1a120b",
-                    "surface-bright": "#42372f",
-                    "primary-fixed": "#ffe088",
-                    "on-secondary": "#3f2c23",
-                    "tertiary": "#c8c8af",
-                    "on-secondary-container": "#cbafa2",
-                    "on-tertiary-fixed": "#1b1d0d",
-                    "on-secondary-fixed-variant": "#574238",
-                    "outline-variant": "#4f4540",
-                    "surface-tint": "#e9c349",
-                    "error-container": "#93000a",
-                    "secondary-container": "#574238",
-                    "inverse-primary": "#735c00",
-                    "tertiary-fixed": "#e4e4ca",
-                    "on-primary": "#3c2f00",
-                    "tertiary-container": "#2e2f1e",
-                    "on-error": "#690005",
-                    "on-tertiary-container": "#969780",
-                    "surface-container-high": "#322820",
-                    "on-tertiary-fixed-variant": "#474835",
-                    "primary": "#e9c349",
-                    "inverse-on-surface": "#382f26",
-                    "surface-dim": "#1a120b",
-                    "primary-fixed-dim": "#e9c349",
-                    "inverse-surface": "#f1dfd3",
-                    "on-primary-container": "#b49218",
-                    "tertiary-fixed-dim": "#c8c8af",
-                    "on-tertiary": "#303220",
-                    "on-surface": "#f1dfd3",
-                    "surface-container": "#271e16",
-                    "on-secondary-fixed": "#281810",
-                    "primary-container": "#3a2c00",
-                    "on-background": "#f1dfd3",
-                    "surface-variant": "#3d332b",
-                    "secondary-fixed": "#fbdcce",
-                    "on-surface-variant": "#d3c3bd",
-                    "surface-container-highest": "#3d332b"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0.125rem",
-                    "lg": "0.25rem",
-                    "xl": "0.5rem",
-                    "full": "0.75rem"
-            },
-            "fontFamily": {
-                    "headline": [
-                            "Noto Serif"
-                    ],
-                    "body": [
-                            "Newsreader"
-                    ],
-                    "label": [
-                            "Manrope"
-                    ]
-            }
-          },
-        },
-      }
-    </script>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
-        }
-        .wood-texture {
-            background-image: radial-gradient(circle at 2px 2px, rgba(79, 69, 64, 0.05) 1px, transparent 0);
-            background-size: 40px 40px;
-        }
-    </style>
-</head>
-<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-primary">
-<!-- Top Navigation Bar -->
-<header class="fixed top-0 w-full z-50 bg-[#1A120B]/70 backdrop-blur-md bg-gradient-to-b from-[#1A120B] to-transparent shadow-[0_4px_30px_rgba(0,0,0,0.1)]">
-<div class="flex justify-between items-center px-12 py-6 w-full max-w-screen-2xl mx-auto">
-<div class="text-xl font-headline font-bold tracking-tighter text-[#F1DFD3]">沉香 | AGARWOOD</div>
-<nav class="hidden md:flex items-center gap-10">
-<a class="font-headline tracking-widest uppercase text-sm text-[#F1DFD3]/80 hover:text-[#E9C349] transition-colors duration-700" href="articles_1.html">Articles</a>
-<a class="font-headline tracking-widest uppercase text-sm text-[#F1DFD3]/80 hover:text-[#E9C349] transition-colors duration-700" href="gallery.html">Gallery</a>
-<a class="font-headline tracking-widest uppercase text-sm text-[#F1DFD3]/80 hover:text-[#E9C349] transition-colors duration-700" href="guide.html">Guide</a>
-<a class="font-headline tracking-widest uppercase text-sm text-[#E9C349] border-b border-[#E9C349]/30 pb-1 hover:text-[#E9C349] transition-colors duration-700" href="products_1.html">Products</a>
-<a class="font-headline tracking-widest uppercase text-sm text-[#F1DFD3]/80 hover:text-[#E9C349] transition-colors duration-700" href="about_us.html">About</a>
-</nav>
-<div class="flex items-center gap-6">
-<button class="font-headline tracking-widest uppercase text-xs text-[#E9C349] border border-[#E9C349]/20 px-3 py-1 hover:bg-[#E9C349]/10 transition-all duration-500">EN/ZH</button>
-<button class="text-[#F1DFD3] hover:text-[#E9C349] transition-colors duration-700 flex items-center">
-<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
-</button>
-</div>
-</div>
-</header>
-<main class="pt-32 pb-24 px-6 md:px-12 max-w-screen-2xl mx-auto wood-texture">
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Product Detail | {{websiteName}}</title>
+    <script src="layout.js"></script>
+        <style>body { visibility: hidden; opacity: 0; }</style>
+    </head>
+<body class="bg-background text-on-surface font-body selection:bg-primary/30 opacity-0 transition-opacity duration-300">
+<main class="pt-32 pb-24">
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
 <!-- Left: Gallery -->
 <div class="lg:col-span-7 flex flex-col-reverse md:flex-row gap-6">
@@ -232,19 +128,5 @@
 </div>
 </section>
 </main>
-<!-- Footer -->
-<footer class="w-full border-t border-[#4F4540]/20 bg-[#1A120B]">
-<div class="flex flex-col items-center gap-8 py-16 px-4 w-full">
-<div class="text-lg font-headline text-[#F1DFD3]">THE MEDITATIVE VOID</div>
-<div class="flex gap-8">
-<a class="font-headline text-xs tracking-widest text-[#F1DFD3]/60 hover:text-[#E9C349] transition-opacity duration-500 opacity-80 hover:opacity-100" href="#">Instagram</a>
-<a class="font-headline text-xs tracking-widest text-[#F1DFD3]/60 hover:text-[#E9C349] transition-opacity duration-500 opacity-80 hover:opacity-100" href="#">WeChat</a>
-<a class="font-headline text-xs tracking-widest text-[#F1DFD3]/60 hover:text-[#E9C349] transition-opacity duration-500 opacity-80 hover:opacity-100" href="#">Contact</a>
-<a class="font-headline text-xs tracking-widest text-[#F1DFD3]/60 hover:text-[#E9C349] transition-opacity duration-500 opacity-80 hover:opacity-100" href="#">Privacy</a>
-</div>
-<div class="font-headline text-xs tracking-widest text-[#E9C349]/50 mt-4">
-                © 2024 THE MEDITATIVE VOID. ALL RIGHTS RESERVED.
-            </div>
-</div>
-</footer>
-</body></html>
+</body>
+</html>

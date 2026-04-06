@@ -1,196 +1,389 @@
-<!DOCTYPE html>
+<!doctype html>
 <html class="dark" lang="en">
-<head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>About Us | {{websiteName}}</title>
     <script src="layout.js"></script>
-        <style>body { visibility: hidden; opacity: 0; }</style>
-    </head>
-<body class="bg-background text-on-surface font-body selection:bg-primary/30 opacity-0 transition-opacity duration-300">
-<main class="pt-32 pb-24">
-<!-- Hero Section -->
-<section class="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-b from-[#1A120B] to-[#221A13]">
-<div class="absolute inset-0 z-0">
-<img alt="Zenith Agarwood Hero" class="w-full h-full object-cover opacity-30 mix-blend-luminosity" data-alt="Close-up of a singular high-quality agarwood chip resting on a dark silken cloth with soft golden sunlight filtering through smoke" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyZsb0UAKEXvJ7OjJmme7eOMKdcLJ0ZwcqOa7QyKhkrpxO5VcLCM2cWwYXiczvwciusuIyq4SVl98ibUH4oDwa3eypbCOCBgXhDj_3PT2BAINqKJ6_a_oTO93qAqnA55vt0fq-s_UzBQ5kVsWw-zNDStLKZwASBw1ecpYGl2hlciQB8ycKOmiGUFZhbn_eVUhBaFTZ8C7QoH5MeLQaEe50cS6sCsgKZrL0QUNhqa6Rfwg7uAhHqy01HZ4GPWcytOfBtXvb2s_quyV2"/>
-<div class="absolute inset-0 bg-gradient-to-t from-[#1A120B] via-transparent to-transparent"></div>
-</div>
-<div class="relative z-10 text-center max-w-4xl px-6">
-<span class="font-label tracking-[0.3em] uppercase text-primary/60 text-xs mb-8 block">Est. 1984 | 始于一九八四</span>
-<h1 class="font-headline text-5xl md:text-7xl lg:text-8xl text-on-surface mb-8 tracking-tighter leading-tight">
-                    The Meditative Void<br/>
-<span class="italic font-light text-primary/80">心之虚境</span>
-</h1>
-<p class="font-body text-xl md:text-2xl text-secondary max-w-2xl mx-auto leading-relaxed italic">
-                    "Where the scent ends, the journey within begins."
+    <style>
+      body {
+        visibility: hidden;
+        opacity: 0;
+      }
+    </style>
+  </head>
+
+  <body
+    class="bg-background text-on-surface font-body selection:bg-primary/30 opacity-0 transition-opacity duration-300"
+  >
+    <main class="pt-32 pb-24">
+      <!-- Hero Section -->
+      <section
+        class="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-b from-[#1A120B] to-[#221A13]"
+      >
+        <div class="absolute inset-0 z-0">
+          <img
+            alt="Zenith Agarwood Hero"
+            class="w-full h-full object-cover opacity-30 mix-blend-luminosity"
+            data-alt="Close-up of a singular high-quality agarwood chip resting on a dark silken cloth with soft golden sunlight filtering through smoke"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyZsb0UAKEXvJ7OjJmme7eOMKdcLJ0ZwcqOa7QyKhkrpxO5VcLCM2cWwYXiczvwciusuIyq4SVl98ibUH4oDwa3eypbCOCBgXhDj_3PT2BAINqKJ6_a_oTO93qAqnA55vt0fq-s_UzBQ5kVsWw-zNDStLKZwASBw1ecpYGl2hlciQB8ycKOmiGUFZhbn_eVUhBaFTZ8C7QoH5MeLQaEe50cS6sCsgKZrL0QUNhqa6Rfwg7uAhHqy01HZ4GPWcytOfBtXvb2s_quyV2"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-[#1A120B] via-transparent to-transparent"
+          ></div>
+        </div>
+        <div class="relative z-10 text-center max-w-4xl px-6">
+          <span
+            class="font-label tracking-[0.3em] uppercase text-primary/60 text-xs mb-8 block"
+            >Est. 1984 | 始于一九八四</span
+          >
+          <h1
+            class="font-headline text-5xl md:text-7xl lg:text-8xl text-on-surface mb-8 tracking-tighter leading-tight"
+          >
+            The Meditative Void<br />
+            <span class="italic font-light text-primary/80">心之虚境</span>
+          </h1>
+          <p
+            class="font-body text-xl md:text-2xl text-secondary max-w-2xl mx-auto leading-relaxed italic"
+          >
+            "Where the scent ends, the journey within begins."
+          </p>
+        </div>
+      </section>
+      <!-- Brand Story Section -->
+      <section class="py-32 bg-surface relative">
+        <div class="grain-overlay absolute inset-0"></div>
+        <div
+          class="container mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center"
+        >
+          <div class="lg:col-span-5 relative order-2 lg:order-1">
+            <div
+              class="aspect-[4/5] bg-surface-container-low p-4 overflow-hidden shadow-2xl"
+            >
+              <img
+                alt="Ancient Trees"
+                class="w-full h-full object-cover grayscale opacity-80 hover:grayscale-0 transition-all duration-1000"
+                data-alt="Misty landscape of an ancient agarwood forest in Southeast Asia with moss-covered trees and ethereal morning light"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbE-b8qCjZfZFD-WMtcinqCL9IoOya19pEB0d5EwJ-8h6y9w98u67nvyhOvBZIHmmuhSi9w9gEdviNIluJzF9cPr7LwXXk1iczATbZWrwjyTN4rFEF_sMMf2xty9roAcymhkD6xNK71TDBNV2mzvxnwseeMKIUvcd9ABrbYaQCQDjRc5kBx0_tObmSD617x6d1uJgKKOSSpTC8C8UAWnbWQfkLXV2p9eKW31QFJn1StdZjcXdQTWhwbChv2_SSRGLrqco80QqjXQbm"
+              />
+            </div>
+            <div
+              class="absolute -bottom-8 -right-8 w-2/3 aspect-video bg-surface-container-high p-3 shadow-xl hidden md:block"
+            >
+              <img
+                alt="Wood Detail"
+                class="w-full h-full object-cover"
+                data-alt="Detailed close-up of dark resinous agarwood veins with rich textures and golden oil patches"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxQ-FjshJmuU8kdGXTNxWFwJ62neuxQ4jATatEqSEJltK9DPOmNXvvv6IrZav24ZuCZQn_fwTTq5grbYnGael2os1bEQKT5bNuEhafkJ0-hEqr_qxw_jC7dLH14ZLpg1mVNFbLkKYVllXIHoSXkupfRlsfb-VYv-X4SE-z5sGLYQFPUD_ky8_Btow9VcKm7C3DCNSQJkh8BdaSYZKVMhlMIuxQCxCwDX1MypSgFIh-Tud0aBsmapv-sKaibge_vTs0Aj5FLrM3vPqh"
+              />
+            </div>
+          </div>
+          <div class="lg:col-span-7 space-y-8 order-1 lg:order-2">
+            <h2
+              class="font-headline text-4xl text-primary flex items-center gap-4"
+            >
+              Origin &amp; Philosophy
+              <span
+                class="text-sm font-label text-outline tracking-widest block h-px w-24 bg-outline-variant/30"
+              ></span>
+            </h2>
+            <div
+              class="space-y-6 text-on-surface-variant font-body text-lg leading-loose"
+            >
+              <p>
+                Zenith Agarwood began not as a business, but as a quest for
+                silence. Founded in the dense, mist-shrouded forests of Vietnam,
+                we sought the rarest resonance of nature—the "Liquid Gold"
+                created through years of endurance and transformation.
+              </p>
+              <p
+                class="italic text-secondary border-l-2 border-primary/20 pl-6 py-2"
+              >
+                禅意，不在于言语，而在于那一缕若有若无的清香。我们追求的不仅是极致的感官体验，更是通过沉香这种载体，引导人们回归内在的平和。
+              </p>
+              <p>
+                Our philosophy is rooted in *Liubai*—the intentional whitespace.
+                We believe that true luxury is not found in excess, but in the
+                profound clarity that arises when the mind is still. Each piece
+                of Zenith Agarwood is a vessel for this meditative void.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Craftsmanship Bento Grid -->
+      <section class="py-32 bg-surface-container-low relative">
+        <div class="container mx-auto px-6 md:px-12">
+          <div class="text-center mb-24">
+            <h2 class="font-headline text-4xl text-on-surface mb-4">
+              The Craft of Patience
+            </h2>
+            <p
+              class="font-label text-primary text-xs tracking-[0.4em] uppercase"
+            >
+              匠心之道 · 岁月留痕
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Sourcing -->
+            <div class="md:col-span-2 group">
+              <div
+                class="relative bg-surface p-8 h-[500px] flex flex-col justify-end overflow-hidden"
+              >
+                <img
+                  alt="Wild Harvest"
+                  class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-40 transition-opacity duration-1000"
+                  data-alt="Local artisans carefully inspecting fallen agarwood logs in a sun-dappled tropical clearing"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAw9XTqrICTLzmeuxwvp6bKl60w_T0w0q1ClYO1JJr80AE3RoPUd41L6cWM8-7XmoUTK2jbj2m64Z5ftQOmSzXXxnIdiayICTK9-IyiawWc7KXHOR84ZaSDisGmou9fTZK2LU5_heVxaSs3Nf9czBMpzbJ5DKR4z2Ez3thxG9JUpm3tTDZJ3J-G992wHo8GU3gpWn-w5O3sXRxC3AW0GerL_ynNvbNdp-I75lJfNXaK2ZaGhPYtoCxRCA-CSWHc7Z_gpt_GZM-MvIEY"
+                />
+                <div class="relative z-10">
+                  <span
+                    class="text-primary font-headline text-5xl opacity-20 mb-4 block italic"
+                    >01.</span
+                  >
+                  <h3 class="font-headline text-2xl text-on-surface mb-4">
+                    Wild Sourcing
+                  </h3>
+                  <p class="text-on-surface-variant max-w-md leading-relaxed">
+                    We exclusively source from sustainable, naturally infected
+                    wild trees. No chemical induction, no shortcuts. Only the
+                    slow, rhythmic dialogue between the tree and time.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Carving -->
+            <div class="group">
+              <div
+                class="relative bg-surface-container-highest p-8 h-[500px] flex flex-col justify-start overflow-hidden"
+              >
+                <div class="relative z-10">
+                  <span
+                    class="text-primary font-headline text-5xl opacity-20 mb-4 block italic"
+                    >02.</span
+                  >
+                  <h3 class="font-headline text-2xl text-on-surface mb-4">
+                    Manual Extraction
+                  </h3>
+                  <p class="text-on-surface-variant leading-relaxed mb-8">
+                    Each sliver is manually extracted using traditional
+                    micro-carving tools to preserve the resinous integrity.
+                  </p>
+                </div>
+                <img
+                  alt="Hands working"
+                  class="mt-auto w-full grayscale group-hover:grayscale-0 transition-all duration-1000"
+                  data-alt="Macro photo of aged hands using a traditional metal scraper to clean a dark piece of resinous agarwood"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6BMwbJgvfU21abECLiJE7pDJCj-9wev7BO-aqiQfxu0_blQClOb9ZXlB8fuH6ONgYEAJY-CgyEuA1VxOVctY4wY3E8SFALqCK9y8EVvB94Q9BQ-9cTRzBjTqmvoL6FY1N8LDuvknfg2i6pxezMn6f5OXYPoz7WRlEnVzzzBohTRFqy7KOFPIBJ2Mt5Bd2xDMSAK6nBDmnmRIJvz0F-7piO21ij6amIN5SXugL9kExiFzEPEgosFI4oDuuCIFggScyog45vG4z4rHP"
+                />
+              </div>
+            </div>
+            <!-- Distillation -->
+            <div class="group">
+              <div
+                class="relative bg-surface-container-high p-8 h-[500px] flex flex-col items-center justify-center text-center overflow-hidden"
+              >
+                <div class="relative z-10 space-y-6">
+                  <span
+                    class="text-primary font-headline text-5xl opacity-20 block italic"
+                    >03.</span
+                  >
+                  <h3 class="font-headline text-2xl text-on-surface">
+                    Pure Distillation
+                  </h3>
+                  <p class="text-on-surface-variant leading-relaxed">
+                    Our oils are steam-distilled for 72 hours at low
+                    temperatures in copper vats, capturing the volatile ethereal
+                    notes.
+                  </p>
+                </div>
+                <div
+                  class="absolute -bottom-10 -right-10 w-48 h-48 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-colors"
+                ></div>
+              </div>
+            </div>
+            <!-- Maturation -->
+            <div class="md:col-span-2 group">
+              <div
+                class="relative bg-surface p-8 h-[500px] flex items-center justify-between gap-12 overflow-hidden"
+              >
+                <div class="w-1/2 relative z-10">
+                  <span
+                    class="text-primary font-headline text-5xl opacity-20 mb-4 block italic"
+                    >04.</span
+                  >
+                  <h3 class="font-headline text-2xl text-on-surface mb-4">
+                    Aged Maturation
+                  </h3>
+                  <p class="text-on-surface-variant leading-relaxed">
+                    Like fine wine, our Kinam and oils are aged in cool, dark
+                    ceramic jars for years to develop their complex, velvety
+                    base notes.
+                  </p>
+                  <p class="text-primary/60 italic text-sm mt-4">
+                    Maturation: 5 - 20 Years
+                  </p>
+                </div>
+                <div class="w-1/2 h-full overflow-hidden">
+                  <img
+                    alt="Ceramic Jars"
+                    class="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-2000"
+                    data-alt="Traditional dark glazed ceramic jars lined up in a cool, shadowy cellar for aging oud oil"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCs6gMz-t2tnro4RDjOghIRo7o2U_-uLDVQKypo16GOgM2fB4M3BoZ-LboijlqjTTsEpp_6GOV1eSH_FVDSbscw8G9TTLyeiROmPS0aY1hbdLmx-Xg-eon4ps5e5tLHDAFsQXAtqLoNiEETQKKNTO1pzmf4_UFnUdaQKyhEGmswnve_0N7aJMrtvQdFIlCTdZEy2ivNY-5GYsbt670lb6sMu2BxBmkoWyCf-0Qu7NQZ37hAJsGVXsKLXyPTJ9k5sxvTmhPx_JWDBgdb"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Sourcing Transparency -->
+      <section class="py-32 bg-surface">
+        <div class="container mx-auto px-6 md:px-12">
+          <div
+            class="max-w-3xl mx-auto border border-outline-variant/20 p-12 relative"
+          >
+            <div
+              class="absolute -top-4 left-1/2 -translate-x-1/2 bg-surface px-6 text-primary tracking-[0.5em] uppercase text-xs font-label"
+            >
+              Transparency Report
+            </div>
+            <h2
+              class="font-headline text-3xl text-on-surface text-center mb-12"
+            >
+              Ethical Sourcing &amp; Ecology
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+              <div class="space-y-4">
+                <div class="flex items-start gap-4">
+                  <span
+                    class="material-symbols-outlined text-primary mt-1"
+                    data-icon="forest"
+                    >forest</span
+                  >
+                  <div>
+                    <h4 class="font-headline text-lg text-on-surface">
+                      CITES Certified
+                    </h4>
+                    <p class="text-on-surface-variant text-sm font-body italic">
+                      Every gram is tracked and certified for international
+                      conservation standards.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4">
+                  <span
+                    class="material-symbols-outlined text-primary mt-1"
+                    data-icon="handshake"
+                    >handshake</span
+                  >
+                  <div>
+                    <h4 class="font-headline text-lg text-on-surface">
+                      Direct Trade
+                    </h4>
+                    <p class="text-on-surface-variant text-sm font-body italic">
+                      We work directly with small-hold farmers in Hainan and Nha
+                      Trang, ensuring fair wages.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="space-y-4">
+                <div class="flex items-start gap-4">
+                  <span
+                    class="material-symbols-outlined text-primary mt-1"
+                    data-icon="biotech"
+                    >biotech</span
+                  >
+                  <div>
+                    <h4 class="font-headline text-lg text-on-surface">
+                      Lab Verified
+                    </h4>
+                    <p class="text-on-surface-variant text-sm font-body italic">
+                      Gas Chromatography-Mass Spectrometry (GC-MS) tested for 0%
+                      adulteration.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4">
+                  <span
+                    class="material-symbols-outlined text-primary mt-1"
+                    data-icon="recycling"
+                    >recycling</span
+                  >
+                  <div>
+                    <h4 class="font-headline text-lg text-on-surface">
+                      Reforestation
+                    </h4>
+                    <p class="text-on-surface-variant text-sm font-body italic">
+                      For every 50g sold, we fund the planting of a new
+                      Aquilaria sapling in protected zones.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mt-16 text-center">
+              <button
+                class="border border-primary text-primary px-10 py-3 font-label text-xs tracking-widest hover:bg-primary-container transition-all duration-500 uppercase"
+              >
+                View Origin Map
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Mission & Values -->
+      <section class="py-32 bg-surface-container-lowest">
+        <div class="container mx-auto px-6 md:px-12 text-center">
+          <div class="max-w-2xl mx-auto space-y-12">
+            <span
+              class="material-symbols-outlined text-primary text-5xl"
+              data-icon="spa"
+              data-weight="fill"
+              >spa</span
+            >
+            <h2 class="font-headline text-4xl text-on-surface leading-snug">
+              Our Mission: To preserve the heritage of scent and the sanctuary
+              of silence.
+            </h2>
+            <div
+              class="grid grid-cols-1 md:grid-cols-3 gap-8 py-12 border-y border-outline-variant/10"
+            >
+              <div class="space-y-2">
+                <h5
+                  class="text-primary font-label text-xs tracking-widest uppercase"
+                >
+                  Honesty
+                </h5>
+                <p class="text-on-surface-variant text-sm">
+                  Truth in every chip.
                 </p>
-</div>
-</section>
-<!-- Brand Story Section -->
-<section class="py-32 bg-surface relative">
-<div class="grain-overlay absolute inset-0"></div>
-<div class="container mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-<div class="lg:col-span-5 relative order-2 lg:order-1">
-<div class="aspect-[4/5] bg-surface-container-low p-4 overflow-hidden shadow-2xl">
-<img alt="Ancient Trees" class="w-full h-full object-cover grayscale opacity-80 hover:grayscale-0 transition-all duration-1000" data-alt="Misty landscape of an ancient agarwood forest in Southeast Asia with moss-covered trees and ethereal morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbE-b8qCjZfZFD-WMtcinqCL9IoOya19pEB0d5EwJ-8h6y9w98u67nvyhOvBZIHmmuhSi9w9gEdviNIluJzF9cPr7LwXXk1iczATbZWrwjyTN4rFEF_sMMf2xty9roAcymhkD6xNK71TDBNV2mzvxnwseeMKIUvcd9ABrbYaQCQDjRc5kBx0_tObmSD617x6d1uJgKKOSSpTC8C8UAWnbWQfkLXV2p9eKW31QFJn1StdZjcXdQTWhwbChv2_SSRGLrqco80QqjXQbm"/>
-</div>
-<div class="absolute -bottom-8 -right-8 w-2/3 aspect-video bg-surface-container-high p-3 shadow-xl hidden md:block">
-<img alt="Wood Detail" class="w-full h-full object-cover" data-alt="Detailed close-up of dark resinous agarwood veins with rich textures and golden oil patches" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxQ-FjshJmuU8kdGXTNxWFwJ62neuxQ4jATatEqSEJltK9DPOmNXvvv6IrZav24ZuCZQn_fwTTq5grbYnGael2os1bEQKT5bNuEhafkJ0-hEqr_qxw_jC7dLH14ZLpg1mVNFbLkKYVllXIHoSXkupfRlsfb-VYv-X4SE-z5sGLYQFPUD_ky8_Btow9VcKm7C3DCNSQJkh8BdaSYZKVMhlMIuxQCxCwDX1MypSgFIh-Tud0aBsmapv-sKaibge_vTs0Aj5FLrM3vPqh"/>
-</div>
-</div>
-<div class="lg:col-span-7 space-y-8 order-1 lg:order-2">
-<h2 class="font-headline text-4xl text-primary flex items-center gap-4">
-                        Origin &amp; Philosophy <span class="text-sm font-label text-outline tracking-widest block h-px w-24 bg-outline-variant/30"></span>
-</h2>
-<div class="space-y-6 text-on-surface-variant font-body text-lg leading-loose">
-<p>
-                            Zenith Agarwood began not as a business, but as a quest for silence. Founded in the dense, mist-shrouded forests of Vietnam, we sought the rarest resonance of nature—the "Liquid Gold" created through years of endurance and transformation.
-                        </p>
-<p class="italic text-secondary border-l-2 border-primary/20 pl-6 py-2">
-                            禅意，不在于言语，而在于那一缕若有若无的清香。我们追求的不仅是极致的感官体验，更是通过沉香这种载体，引导人们回归内在的平和。
-                        </p>
-<p>
-                            Our philosophy is rooted in *Liubai*—the intentional whitespace. We believe that true luxury is not found in excess, but in the profound clarity that arises when the mind is still. Each piece of Zenith Agarwood is a vessel for this meditative void.
-                        </p>
-</div>
-</div>
-</div>
-</section>
-<!-- Craftsmanship Bento Grid -->
-<section class="py-32 bg-surface-container-low relative">
-<div class="container mx-auto px-6 md:px-12">
-<div class="text-center mb-24">
-<h2 class="font-headline text-4xl text-on-surface mb-4">The Craft of Patience</h2>
-<p class="font-label text-primary text-xs tracking-[0.4em] uppercase">匠心之道 · 岁月留痕</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<!-- Sourcing -->
-<div class="md:col-span-2 group">
-<div class="relative bg-surface p-8 h-[500px] flex flex-col justify-end overflow-hidden">
-<img alt="Wild Harvest" class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-40 transition-opacity duration-1000" data-alt="Local artisans carefully inspecting fallen agarwood logs in a sun-dappled tropical clearing" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAw9XTqrICTLzmeuxwvp6bKl60w_T0w0q1ClYO1JJr80AE3RoPUd41L6cWM8-7XmoUTK2jbj2m64Z5ftQOmSzXXxnIdiayICTK9-IyiawWc7KXHOR84ZaSDisGmou9fTZK2LU5_heVxaSs3Nf9czBMpzbJ5DKR4z2Ez3thxG9JUpm3tTDZJ3J-G992wHo8GU3gpWn-w5O3sXRxC3AW0GerL_ynNvbNdp-I75lJfNXaK2ZaGhPYtoCxRCA-CSWHc7Z_gpt_GZM-MvIEY"/>
-<div class="relative z-10">
-<span class="text-primary font-headline text-5xl opacity-20 mb-4 block italic">01.</span>
-<h3 class="font-headline text-2xl text-on-surface mb-4">Wild Sourcing</h3>
-<p class="text-on-surface-variant max-w-md leading-relaxed">
-                                    We exclusively source from sustainable, naturally infected wild trees. No chemical induction, no shortcuts. Only the slow, rhythmic dialogue between the tree and time.
-                                </p>
-</div>
-</div>
-</div>
-<!-- Carving -->
-<div class="group">
-<div class="relative bg-surface-container-highest p-8 h-[500px] flex flex-col justify-start overflow-hidden">
-<div class="relative z-10">
-<span class="text-primary font-headline text-5xl opacity-20 mb-4 block italic">02.</span>
-<h3 class="font-headline text-2xl text-on-surface mb-4">Manual Extraction</h3>
-<p class="text-on-surface-variant leading-relaxed mb-8">
-                                    Each sliver is manually extracted using traditional micro-carving tools to preserve the resinous integrity.
-                                </p>
-</div>
-<img alt="Hands working" class="mt-auto w-full grayscale group-hover:grayscale-0 transition-all duration-1000" data-alt="Macro photo of aged hands using a traditional metal scraper to clean a dark piece of resinous agarwood" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6BMwbJgvfU21abECLiJE7pDJCj-9wev7BO-aqiQfxu0_blQClOb9ZXlB8fuH6ONgYEAJY-CgyEuA1VxOVctY4wY3E8SFALqCK9y8EVvB94Q9BQ-9cTRzBjTqmvoL6FY1N8LDuvknfg2i6pxezMn6f5OXYPoz7WRlEnVzzzBohTRFqy7KOFPIBJ2Mt5Bd2xDMSAK6nBDmnmRIJvz0F-7piO21ij6amIN5SXugL9kExiFzEPEgosFI4oDuuCIFggScyog45vG4z4rHP"/>
-</div>
-</div>
-<!-- Distillation -->
-<div class="group">
-<div class="relative bg-surface-container-high p-8 h-[500px] flex flex-col items-center justify-center text-center overflow-hidden">
-<div class="relative z-10 space-y-6">
-<span class="text-primary font-headline text-5xl opacity-20 block italic">03.</span>
-<h3 class="font-headline text-2xl text-on-surface">Pure Distillation</h3>
-<p class="text-on-surface-variant leading-relaxed">
-                                    Our oils are steam-distilled for 72 hours at low temperatures in copper vats, capturing the volatile ethereal notes.
-                                </p>
-</div>
-<div class="absolute -bottom-10 -right-10 w-48 h-48 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-colors"></div>
-</div>
-</div>
-<!-- Maturation -->
-<div class="md:col-span-2 group">
-<div class="relative bg-surface p-8 h-[500px] flex items-center justify-between gap-12 overflow-hidden">
-<div class="w-1/2 relative z-10">
-<span class="text-primary font-headline text-5xl opacity-20 mb-4 block italic">04.</span>
-<h3 class="font-headline text-2xl text-on-surface mb-4">Aged Maturation</h3>
-<p class="text-on-surface-variant leading-relaxed">
-                                    Like fine wine, our Kinam and oils are aged in cool, dark ceramic jars for years to develop their complex, velvety base notes. 
-                                </p>
-<p class="text-primary/60 italic text-sm mt-4">Maturation: 5 - 20 Years</p>
-</div>
-<div class="w-1/2 h-full overflow-hidden">
-<img alt="Ceramic Jars" class="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-2000" data-alt="Traditional dark glazed ceramic jars lined up in a cool, shadowy cellar for aging oud oil" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCs6gMz-t2tnro4RDjOghIRo7o2U_-uLDVQKypo16GOgM2fB4M3BoZ-LboijlqjTTsEpp_6GOV1eSH_FVDSbscw8G9TTLyeiROmPS0aY1hbdLmx-Xg-eon4ps5e5tLHDAFsQXAtqLoNiEETQKKNTO1pzmf4_UFnUdaQKyhEGmswnve_0N7aJMrtvQdFIlCTdZEy2ivNY-5GYsbt670lb6sMu2BxBmkoWyCf-0Qu7NQZ37hAJsGVXsKLXyPTJ9k5sxvTmhPx_JWDBgdb"/>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Sourcing Transparency -->
-<section class="py-32 bg-surface">
-<div class="container mx-auto px-6 md:px-12">
-<div class="max-w-3xl mx-auto border border-outline-variant/20 p-12 relative">
-<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-surface px-6 text-primary tracking-[0.5em] uppercase text-xs font-label">Transparency Report</div>
-<h2 class="font-headline text-3xl text-on-surface text-center mb-12">Ethical Sourcing &amp; Ecology</h2>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-<div class="space-y-4">
-<div class="flex items-start gap-4">
-<span class="material-symbols-outlined text-primary mt-1" data-icon="forest">forest</span>
-<div>
-<h4 class="font-headline text-lg text-on-surface">CITES Certified</h4>
-<p class="text-on-surface-variant text-sm font-body italic">Every gram is tracked and certified for international conservation standards.</p>
-</div>
-</div>
-<div class="flex items-start gap-4">
-<span class="material-symbols-outlined text-primary mt-1" data-icon="handshake">handshake</span>
-<div>
-<h4 class="font-headline text-lg text-on-surface">Direct Trade</h4>
-<p class="text-on-surface-variant text-sm font-body italic">We work directly with small-hold farmers in Hainan and Nha Trang, ensuring fair wages.</p>
-</div>
-</div>
-</div>
-<div class="space-y-4">
-<div class="flex items-start gap-4">
-<span class="material-symbols-outlined text-primary mt-1" data-icon="biotech">biotech</span>
-<div>
-<h4 class="font-headline text-lg text-on-surface">Lab Verified</h4>
-<p class="text-on-surface-variant text-sm font-body italic">Gas Chromatography-Mass Spectrometry (GC-MS) tested for 0% adulteration.</p>
-</div>
-</div>
-<div class="flex items-start gap-4">
-<span class="material-symbols-outlined text-primary mt-1" data-icon="recycling">recycling</span>
-<div>
-<h4 class="font-headline text-lg text-on-surface">Reforestation</h4>
-<p class="text-on-surface-variant text-sm font-body italic">For every 50g sold, we fund the planting of a new Aquilaria sapling in protected zones.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="mt-16 text-center">
-<button class="border border-primary text-primary px-10 py-3 font-label text-xs tracking-widest hover:bg-primary-container transition-all duration-500 uppercase">View Origin Map</button>
-</div>
-</div>
-</div>
-</section>
-<!-- Mission & Values -->
-<section class="py-32 bg-surface-container-lowest">
-<div class="container mx-auto px-6 md:px-12 text-center">
-<div class="max-w-2xl mx-auto space-y-12">
-<span class="material-symbols-outlined text-primary text-5xl" data-icon="spa" data-weight="fill">spa</span>
-<h2 class="font-headline text-4xl text-on-surface leading-snug">Our Mission: To preserve the heritage of scent and the sanctuary of silence.</h2>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8 py-12 border-y border-outline-variant/10">
-<div class="space-y-2">
-<h5 class="text-primary font-label text-xs tracking-widest uppercase">Honesty</h5>
-<p class="text-on-surface-variant text-sm">Truth in every chip.</p>
-</div>
-<div class="space-y-2">
-<h5 class="text-primary font-label text-xs tracking-widest uppercase">Reverence</h5>
-<p class="text-on-surface-variant text-sm">Respect for the ancient trees.</p>
-</div>
-<div class="space-y-2">
-<h5 class="text-primary font-label text-xs tracking-widest uppercase">Lineage</h5>
-<p class="text-on-surface-variant text-sm">Passing the craft to the next.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-</main>
-</body>
+              </div>
+              <div class="space-y-2">
+                <h5
+                  class="text-primary font-label text-xs tracking-widest uppercase"
+                >
+                  Reverence
+                </h5>
+                <p class="text-on-surface-variant text-sm">
+                  Respect for the ancient trees.
+                </p>
+              </div>
+              <div class="space-y-2">
+                <h5
+                  class="text-primary font-label text-xs tracking-widest uppercase"
+                >
+                  Lineage
+                </h5>
+                <p class="text-on-surface-variant text-sm">
+                  Passing the craft to the next.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>

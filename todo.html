@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Our Story | The Scholar’s Atelier</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;0,900;1,400&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#825500",
+              "on-primary": "#ffffff",
+              "on-secondary": "#ffffff",
+              "on-secondary-fixed-variant": "#55442d",
+              "on-primary-fixed-variant": "#624000",
+              "tertiary-container": "#afb89c",
+              "secondary-container": "#f6dcbc",
+              "on-tertiary-fixed-variant": "#414a34",
+              "primary-fixed": "#ffddb2",
+              "surface-container-lowest": "#ffffff",
+              "tertiary": "#59624a",
+              "background": "#f7f9ff",
+              "primary-container": "#f0a627",
+              "inverse-on-surface": "#eef1f6",
+              "on-tertiary-container": "#414933",
+              "surface": "#f7f9ff",
+              "surface-dim": "#d7dadf",
+              "surface-tint": "#825500",
+              "on-primary-fixed": "#291800",
+              "surface-container-highest": "#e0e3e8",
+              "surface-container-high": "#e5e8ee",
+              "outline-variant": "#d6c4ae",
+              "inverse-surface": "#2d3135",
+              "surface-bright": "#f7f9ff",
+              "on-background": "#181c20",
+              "error-container": "#ffdad6",
+              "on-primary-container": "#623f00",
+              "on-secondary-container": "#735f46",
+              "secondary-fixed": "#f9debf",
+              "on-tertiary": "#ffffff",
+              "surface-container-low": "#f1f4f9",
+              "on-surface": "#181c20",
+              "surface-container": "#ebeef3",
+              "tertiary-fixed-dim": "#c1caad",
+              "on-surface-variant": "#514534",
+              "on-error-container": "#93000a",
+              "on-tertiary-fixed": "#161e0b",
+              "surface-variant": "#e0e3e8",
+              "on-error": "#ffffff",
+              "error": "#ba1a1a",
+              "secondary": "#6e5b42",
+              "secondary-fixed-dim": "#dcc3a4",
+              "inverse-primary": "#ffb94e",
+              "primary-fixed-dim": "#ffb94e",
+              "tertiary-fixed": "#dde6c8",
+              "outline": "#847562",
+              "on-secondary-fixed": "#261906"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .brush-stroke {
+            mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0.2));
+            -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0.2));
+        }
+        .chinese-seal {
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container/30">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-[#f7f9ff]/85 dark:bg-[#181c20]/85 backdrop-blur-xl shadow-[0_32px_64px_rgba(24,28,32,0.06)]">
+<div class="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto">
+<div class="font-['Noto_Serif'] text-2xl font-black text-[#825500] dark:text-[#f0a627] tracking-tighter">
+                The Scholar’s Atelier
+            </div>
+<div class="hidden md:flex items-center space-x-8 font-['Noto_Serif'] font-bold text-lg tracking-tight">
+<a class="text-[#181c20] dark:text-[#e0e3e8] hover:text-[#825500] transition-colors" href="#">Collection</a>
+<a class="text-[#181c20] dark:text-[#e0e3e8] hover:text-[#825500] transition-colors" href="#">Rare Woods</a>
+<a class="text-[#181c20] dark:text-[#e0e3e8] hover:text-[#825500] transition-colors" href="#">Beads</a>
+<a class="text-[#825500] dark:text-[#f0a627] border-b-2 border-[#825500] pb-1" href="#">Story</a>
+<a class="text-[#181c20] dark:text-[#e0e3e8] hover:text-[#825500] transition-colors" href="#">Atelier</a>
+</div>
+<div class="flex items-center space-x-6">
+<button class="material-symbols-outlined text-[#825500] dark:text-[#f0a627] scale-95 active:scale-90 transition-transform" data-icon="shopping_basket">shopping_basket</button>
+<button class="material-symbols-outlined text-[#825500] dark:text-[#f0a627] scale-95 active:scale-90 transition-transform" data-icon="account_circle">account_circle</button>
+</div>
+</div>
+</nav>
+<main class="pt-24 overflow-x-hidden">
+<!-- Hero Section: Poetic Introduction -->
+<section class="relative min-h-[921px] flex items-center justify-center px-8">
+<div class="absolute inset-0 z-0 opacity-20 pointer-events-none overflow-hidden">
+<div class="absolute top-20 right-[-10%] w-[600px] h-[600px] bg-primary-container/20 rounded-full blur-[120px]"></div>
+<div class="absolute bottom-[-10%] left-[-5%] w-[400px] h-[400px] bg-tertiary-container/20 rounded-full blur-[100px]"></div>
+</div>
+<div class="max-w-5xl w-full grid md:grid-cols-12 gap-12 items-center relative z-10">
+<div class="md:col-span-7 space-y-8">
+<div class="inline-block px-4 py-1 bg-primary/10 text-primary font-bold text-xs tracking-widest uppercase rounded-sm border-l-2 border-primary">
+                        Legacy of the Literati
+                    </div>
+<h1 class="font-headline text-6xl md:text-8xl text-on-surface leading-[1.1] tracking-tighter">
+                        Where Time <br/><span class="text-primary italic">Lingers in Wood</span>
+</h1>
+<p class="font-body text-xl text-on-surface-variant max-w-lg leading-relaxed">
+                        The Scholar’s Atelier is a sanctuary for the modern literati. We curate the soul of ancient forests into beads of prayer and objects of quiet contemplation.
+                    </p>
+<div class="flex gap-6 items-center pt-4">
+<button class="bg-primary text-on-primary px-8 py-4 font-bold tracking-wide rounded-md hover:bg-primary-container transition-all shadow-xl shadow-primary/10 transform active:scale-95">
+                            Begin the Journey
+                        </button>
+<div class="chinese-seal text-primary font-headline text-2xl font-black opacity-40 select-none">
+                            學者之房
+                        </div>
+</div>
+</div>
+<div class="md:col-span-5 relative">
+<div class="aspect-[3/4] bg-surface-container-high rounded-xl overflow-hidden shadow-2xl relative">
+<img alt="Traditional Chinese tea set and incense burner" class="w-full h-full object-cover grayscale-[0.3] hover:grayscale-0 transition-all duration-700 scale-105 hover:scale-100" data-alt="A tranquil scene with incense smoke and agarwood" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJuFCvDzfn2Q7iBH6PJGypHL6prJ4I4nX5p9-k8E7vW4RN3YAYaR2mxSStVLDiUBv0x0PZDyFWwaLvOJc7PDp-XXNgJfPYFa_zs97KyzVesrn53hQ9ir4Xko6Y1BmrHMGXf1U5Uvfzx3zo9PCDkXg_Xl6-1nlR9h10NmFwi0d7lJiNzUe6o2_3uFS4u59Rkqzs2K2gHP8WugzdN2orVocquicwOMK1Jw26lgKy8TqzzTAGPSl_souTyQKRc03UuoPkmQNU-HtPYM3A"/>
+</div>
+<div class="absolute -bottom-8 -left-8 w-48 h-48 bg-surface-container-lowest p-4 rounded-lg shadow-2xl border border-outline-variant/15 hidden md:block">
+<img alt="Detail of carved wooden beads" class="w-full h-full object-cover" data-alt="Close up of hand-carved sandalwood beads" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBh5WlHL4FY4C1RJcDU6fkYDJj19XdvJ-aJn-iBGUAEOO0iW9vbJMP9KwFYhOLhypW0oGaxLthhNz4udc0ZL2xFXLyohMARKTKy1SCs0NjbkQi4nyNGpiUfxwgFiFbFYUdmcE_vuagNhpQWuHFa_68y-QSclUkhKzyYAydk9hw3h-QPYlf9RD_MmxNehp2RFgh7EOzs7CI2f9MK3w2kqMfCZ81UYp13M0hoiOprJ3ldNcECT6HL89Wp00J4lMidevXYJMGOAFfCKEqW"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 1: The Source -->
+<section class="py-32 bg-surface-container-low relative overflow-hidden">
+<div class="max-w-screen-2xl mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20">
+<div class="max-w-2xl">
+<h2 class="font-headline text-4xl md:text-5xl text-on-surface mb-6">The Source</h2>
+<div class="w-24 h-1 bg-primary mb-8"></div>
+<p class="font-body text-lg text-on-surface-variant leading-relaxed">
+                            Our agarwood is sourced from the deep, untouched mountain ranges of Southeast Asia. Each piece tells a story of centuries—of natural wounding, the tree's silent healing, and the resulting dark, aromatic resin that becomes 'Liquid Gold'.
+                        </p>
+</div>
+<div class="text-right mt-8 md:mt-0">
+<span class="text-8xl font-black font-headline text-surface-container-highest opacity-40">01</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="group bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-xl transition-all duration-500 border border-transparent hover:border-outline-variant/10">
+<div class="mb-6 overflow-hidden rounded-lg aspect-square">
+<img alt="Sunlight through forest canopy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Sunlight filtering through a dense old-growth forest" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6j9LYH1SRzu00bloMlgaxrcWLgLi3rRQfv_zXKc-L9DXNZtBoQAm08gx58wMZdNgJn7teP_UigHh-qIJrYLg8Qm6FJVFOZDtebDSvCxKfWKko8-WMuxMYUYxy1QYcW6jPr912AI4Xdg0qRbuGR_1Hjl47Z9mJJHe4V9e9B1bbfh39i_QUkQ9hoB__fq0Xw5HDMWxlL5L-ekovl1zIANze2WzDkrXqKWnbdOYl1-xWZ1ryJ_59jjNIaW1XP66bhzuuNq0INGoQZoFb"/>
+</div>
+<h3 class="font-headline text-2xl mb-4">Ancient Terroir</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">The mineral-rich soil and humid climate create the perfect alchemy for the slow maturation of rare resins.</p>
+</div>
+<div class="group bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-xl transition-all duration-500 border border-transparent hover:border-outline-variant/10 md:translate-y-12">
+<div class="mb-6 overflow-hidden rounded-lg aspect-square">
+<img alt="Close up of tree bark and resin" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Close up of shimmering resin on aged wood" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9Oj1rk7wrdGY1sADwMi8oitw52em8lLfnSp5xZVRj7cke_L1IB-W6hiD0uM_BjT1v0gEJiq8_5T-htXXQzMOHiamWBcbjigxPjbk1-2QJiElXLQVcRcRaPmNYqNEGczZCbz2tHpCsdkVbGL317FCWS_yDT6HqvtPLfnWKE2EUZYheEBqjvOgBt4G6N7h5JVgC0mj-0DofuCcOjlZorUU62J348y6DYRnA1eIZGAXi84bK_MG8OpPHzshpec5OqBmOoSYtPuTqT_b8"/>
+</div>
+<h3 class="font-headline text-2xl mb-4">Ethical Harvest</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">We practice 'Wild Extraction'—collecting only what nature offers after the tree's natural cycle is complete.</p>
+</div>
+<div class="group bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-xl transition-all duration-500 border border-transparent hover:border-outline-variant/10">
+<div class="mb-6 overflow-hidden rounded-lg aspect-square">
+<img alt="Traditional wooden tea room" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Minimalist wooden interior reflecting a peaceful atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1w9PyqxktZyXABQIEBQPOnp4FcAKZ5QQoMY9zsFjyqpsAeirgcTx36Sy3oMYLjdeI-A7alXUQhJEY7qkPKMSoJI5-DhcSIjmhL977Z2mSa-0YbhgkbIfkmZmpUc3TLY8Jfp9uEF8esmnltkUOnVcg70cBiGeBck9XznohgLM4crfGm8Z_WKpMADZLKpUIbB5SDh4XuWQNTVY_iC1VOpw-Zo2VkWBJMaC7cdKittdgifFEAUGt793gZvFLI39Urv_-5ntGHkd7mFy3"/>
+</div>
+<h3 class="font-headline text-2xl mb-4">Sanctuary Aging</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">In our atelier, raw woods are aged for years in temperature-controlled micro-climates to refine their scent profiles.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: The Art of Carving -->
+<section class="py-32 bg-surface px-8">
+<div class="max-w-screen-2xl mx-auto flex flex-col md:flex-row gap-20 items-center">
+<div class="w-full md:w-1/2 order-2 md:order-1 relative">
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-4">
+<div class="rounded-lg overflow-hidden h-64 shadow-lg">
+<img alt="Hands carving wood" class="w-full h-full object-cover" data-alt="Artisan hands working meticulously on a wood block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHMoaLAzY6bhR64m4gPj0mYx4ToLAVNe-ipWn6Bho_btOlNtj-LpDY2W8tv7AQzpFNDR0rD2al7RXu46wRi2MhpkKcNRWQDZJm9mWj2cfe2aBZ8qRLW8tt5Ld04gIECVLXb_G11wV9X7fJpGdLAtSA8xDlLT5Uav72JJdm2hC8UNoB0zIs6DA32Kv3HEAt59BtzpXmiLo_hHB2jNPP-mwAef3kVUqELLDMmsdhqLMiungng5XaZ4FWwfEcrKpsHVd3lG5uK9aJ4Zkm"/>
+</div>
+<div class="rounded-lg overflow-hidden h-40 shadow-lg">
+<img alt="Woodworking tools" class="w-full h-full object-cover" data-alt="Traditional wood carving tools arranged on a bench" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdnNepsA51uaqtIx2fi5NiD7XoTG7crpELUH_0FbYMHslJ4KVv0o-69cgQ3bxoKhHWKShMbAa0f8eNFa1Uuh1mExWhDuVUqZJvd5Do2PxXnUFCHH__Uof3XoEusoBMLk5SytXNE_syF9rA52Bce2YsMrIvgf4Q6oSnpWOEvrXHsUBduxHxBpWstnVLkRYuAM_WPW-zLngIxNqo5xifcKTob4-o0UlZz7DOe0hzgf7FNGjOpB6hPo_bx0cyqYRzeNVLmp51KN4bhHBY"/>
+</div>
+</div>
+<div class="pt-12">
+<div class="rounded-lg overflow-hidden h-96 shadow-2xl">
+<img alt="Finished Buddhist beads" class="w-full h-full object-cover" data-alt="A perfect strand of deep brown agarwood beads" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4eeZQUNKw62QpuqSJtQazZve1OahYB1eU4ijG5b2SehD_tulM8LISQroCKZbw57HDUIeIPpf2x9K___M_nI1zNHoTSepXutORXXbVFe4IXV8p5Gejcx1dCxlhx4oXb-bjfIHUQCjHgD8rQDACD6Fq_ozmSB2MK1ZS46TVSZ7xJ32mtntXDbDy8pygHUaRmmT5KuwQm3IgZ70amSFeM4LuGCYRCWWDlY442WbeaVU8xBq9t_a9MRY2kw04K7AeI7JLcNFBjZdF6cNi"/>
+</div>
+</div>
+</div>
+<div class="absolute -right-4 top-1/2 -translate-y-1/2 font-headline text-8xl text-surface-container-high opacity-50 pointer-events-none select-none -rotate-90">
+                        CRAFTSMANSHIP
+                    </div>
+</div>
+<div class="w-full md:w-1/2 order-1 md:order-2 space-y-8">
+<div class="inline-flex items-center gap-4 text-primary">
+<span class="w-12 h-px bg-primary/30"></span>
+<span class="font-bold tracking-[0.2em] uppercase text-xs">A Decade for One Bead</span>
+</div>
+<h2 class="font-headline text-4xl md:text-5xl leading-tight">The Art of <br/>Carving &amp; Polish</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed">
+                        Every bead in a Scholar’s Atelier strand is individually selected for grain direction and density. Our masters use traditional dry-grinding techniques that preserve the natural oils within the wood. 
+                    </p>
+<p class="text-on-surface-variant text-lg leading-relaxed">
+                        We do not use waxes or synthetic polishes. Instead, the wood is buffed with raw silk until it achieves a soft, internal glow—a reflection of the inner peace these objects are meant to facilitate.
+                    </p>
+<div class="pt-8 grid grid-cols-2 gap-12">
+<div>
+<div class="text-3xl font-headline font-bold text-primary mb-2">0.05mm</div>
+<div class="text-xs uppercase tracking-widest font-bold opacity-60">Precision Tolerance</div>
+</div>
+<div>
+<div class="text-3xl font-headline font-bold text-primary mb-2">300hrs</div>
+<div class="text-xs uppercase tracking-widest font-bold opacity-60">Curing Cycle</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Philosophy: Tonal Shift Section -->
+<section class="py-32 bg-inverse-surface text-inverse-on-surface relative">
+<div class="absolute inset-0 overflow-hidden opacity-10">
+<div class="w-full h-full border-4 border-inverse-on-surface/20 rounded-full scale-150 absolute -right-1/2"></div>
+</div>
+<div class="max-w-4xl mx-auto px-8 text-center space-y-12 relative z-10">
+<div class="material-symbols-outlined text-primary-container text-6xl" data-icon="energy_savings_leaf">energy_savings_leaf</div>
+<h2 class="font-headline text-4xl md:text-6xl italic">“The scent of wood is the breath <br/>of the mountain.”</h2>
+<div class="h-px w-32 bg-primary-container mx-auto"></div>
+<div class="space-y-6 max-w-2xl mx-auto">
+<h3 class="font-headline text-2xl text-primary-container">Our Philosophy</h3>
+<p class="text-lg opacity-80 leading-loose">
+                        We believe that objects of beauty should also be objects of mindfulness. In the rush of the modern world, The Scholar's Atelier offers a pause. To wear these beads is to carry a piece of the forest's silence with you—a reminder to remain rooted, patient, and fragrant in character.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Newsletter / Atelier Invitation -->
+<section class="py-24 px-8">
+<div class="max-w-5xl mx-auto bg-surface-container-lowest p-12 md:p-20 rounded-2xl shadow-2xl flex flex-col md:flex-row items-center gap-12 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary-container/10 rounded-bl-full"></div>
+<div class="flex-1 space-y-6">
+<h2 class="font-headline text-3xl md:text-4xl">Enter the Atelier</h2>
+<p class="text-on-surface-variant">Receive seasonal stories on rare wood acquisitions and invitations to our private tea ceremonies.</p>
+<form class="flex flex-col sm:flex-row gap-4 pt-4">
+<input class="flex-1 bg-surface-container-low border-none rounded-md px-6 py-4 focus:ring-2 focus:ring-primary/20 text-on-surface" placeholder="Literati Email" type="email"/>
+<button class="bg-primary text-on-primary px-10 py-4 font-bold rounded-md hover:bg-on-surface-variant transition-colors">Join</button>
+</form>
+</div>
+<div class="w-full md:w-1/3 aspect-square rounded-full border-8 border-surface-container-low overflow-hidden shadow-inner">
+<img alt="Old book and beads" class="w-full h-full object-cover" data-alt="A strand of dark beads resting on an ancient manuscript" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-2qdekNNcDnHv6uvbISp57zNgBsdEBj4fX5tsU81OkL_5KLYSvkh-HzcgHrEWa3moA-0GBcXbVmaHSyVCZqULypbofkqPIT6B6cmL5fW_K6WC5Ro3-e_ewMgNRBOE5Mv20-dXwBXmYkdwsWR1pXaVBSls1Ot1FiYM3-1R68e3bZO1YRt7QlpjCqAi5rmXROvR075CzzZqF7EU_noaXaoIJizyX7u_5i1-j_15GJg4frHd71J3-HBkydHUwJsQbjTbBPlK4ZGiO54o"/>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-[#d6c4ae]/15 bg-[#f1f4f9] dark:bg-[#181c20]">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-16 gap-8 max-w-screen-2xl mx-auto">
+<div class="flex flex-col items-center md:items-start gap-4">
+<div class="font-['Noto_Serif'] text-xl font-bold text-[#181c20] dark:text-[#ffffff]">The Scholar’s Atelier</div>
+<p class="font-['Inter'] text-sm leading-relaxed tracking-wide text-[#181c20]/70 dark:text-[#e0e3e8]/70 text-center md:text-left">
+                    © MMXXIV The Scholar’s Atelier. All Rights Reserved. Crafted for the Modern Literati.
+                </p>
+</div>
+<div class="flex flex-wrap justify-center gap-8 font-['Inter'] text-sm leading-relaxed tracking-wide">
+<a class="text-[#181c20]/70 dark:text-[#e0e3e8]/70 hover:text-[#825500] hover:underline decoration-[#d6c4ae]/30 underline-offset-4 transition-all opacity-80 hover:opacity-100" href="#">Ethical Sourcing</a>
+<a class="text-[#181c20]/70 dark:text-[#e0e3e8]/70 hover:text-[#825500] hover:underline decoration-[#d6c4ae]/30 underline-offset-4 transition-all opacity-80 hover:opacity-100" href="#">Care Guide</a>
+<a class="text-[#181c20]/70 dark:text-[#e0e3e8]/70 hover:text-[#825500] hover:underline decoration-[#d6c4ae]/30 underline-offset-4 transition-all opacity-80 hover:opacity-100" href="#">Shipping</a>
+<a class="text-[#181c20]/70 dark:text-[#e0e3e8]/70 hover:text-[#825500] hover:underline decoration-[#d6c4ae]/30 underline-offset-4 transition-all opacity-80 hover:opacity-100" href="#">Privacy</a>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-[#825500] cursor-pointer hover:scale-110 transition-transform" data-icon="share">share</span>
+<span class="material-symbols-outlined text-[#825500] cursor-pointer hover:scale-110 transition-transform" data-icon="public">public</span>
+</div>
+</div>
+</footer>
+</body></html>

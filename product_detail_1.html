@@ -1,132 +1,267 @@
-<!DOCTYPE html>
+<!doctype html>
 <html class="dark" lang="en">
-<head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Product Detail | {{websiteName}}</title>
     <script src="layout.js"></script>
-        <style>body { visibility: hidden; opacity: 0; }</style>
-    </head>
-<body class="bg-background text-on-surface font-body selection:bg-primary/30 opacity-0 transition-opacity duration-300">
-<main class="pt-32 pb-24">
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
-<!-- Left: Gallery -->
-<div class="lg:col-span-7 flex flex-col-reverse md:flex-row gap-6">
-<!-- Thumbnails -->
-<div class="flex md:flex-col gap-4 overflow-x-auto md:overflow-y-visible pb-4 md:pb-0 shrink-0">
-<div class="w-20 h-20 bg-surface-container-high border border-primary/20 cursor-pointer overflow-hidden group">
-<img alt="Agarwood thumbnail" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" data-alt="Close-up of a raw Zenith Agarwood piece with deep resinous veins and dark textures on a black surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCABPP-VCT2WqZMS-4LHeO87n9fmrMMirH7IXuiDYKbOCGXkfGAQfI9ZFDYe3EGLsM4_TR06hhdPqYVXLyaZZwqkeK9lJ3w5nd8nBEjeSYhodpyhUdfO2kdvcrdyKSrSy-beze4dYjqou-d9Nr9gUZ66fiKthdSGHlpByxfKySGC8gNvf-lWZS5nMraI_STqQQURzpGjywdrU87JNG0NxEcu6HCnpsFCjH8ISnA1A9-CGmt-VY4X6CUoDaeZb8gN3UkAtGkPXVhrQWm"/>
-</div>
-<div class="w-20 h-20 bg-surface-container-high border border-outline-variant/20 cursor-pointer overflow-hidden group">
-<img alt="Agarwood smoke" class="w-full h-full object-cover opacity-40 group-hover:opacity-100 transition-opacity" data-alt="Wispy smoke rising from a burning agarwood incense coil in a dark minimalist zen setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCym5JGsXI2EUhaqfsrWC6i4zEs-sFPtguxNFX5rYbvyhaVSRXWTbhYuq-58URhmBHWdMVlgBXBI2u6NTMKFnW1t9CplruePMDpP2BFStaLJEywCNdKe06XqN2dtGaTF2rnHbi7JoDgvvOP-FjVs-aFrrRxOQpLeLe5busxwQ6J3WF5NDU4rFtZDRtNsugVbzLJXpiDkCGiG29HEJ6avj5gfoJ1p6MqP7Xh1GFZ1K8un6HI0ZUhaND0cvrtrsA1GegRoFpsZ7aowhPv"/>
-</div>
-<div class="w-20 h-20 bg-surface-container-high border border-outline-variant/20 cursor-pointer overflow-hidden group">
-<img alt="Agarwood craft" class="w-full h-full object-cover opacity-40 group-hover:opacity-100 transition-opacity" data-alt="Artisan hands carefully carving a piece of premium dark agarwood with traditional tools" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANCE6XWZiQhkU4OGjwQMwN9Jf4oSVQt349VFjwzZ1ExJg4Q0mnZWnGdDqDM5nkGQCkEfYpqVVwLmVTMX-Usp7_BavDCmLPlEjBLP0TM7tKae-yiZFpaiej6yibXnz_mJSE6zNUyXfw80udQLcnHktWt4PAtIXK7eVb6D-PN1qE-HywQMvPGoBFC2j3r_unBnOLDBt4uwYFJOQ1oP2orZVCqayzn1xkzWMPLW-KXwfzYcoiTL9a5SbLGGERDHFeGYvrmg_G4T50RfHl"/>
-</div>
-</div>
-<!-- Main Hero Image -->
-<div class="flex-grow relative group">
-<div class="absolute -top-4 -left-4 w-32 h-32 border-t border-l border-primary/20 z-0"></div>
-<div class="relative bg-surface-container overflow-hidden">
-<img alt="Zenith Agarwood Main" class="w-full aspect-[4/5] object-cover transition-transform duration-[2000ms] group-hover:scale-105" data-alt="Luxury product shot of Zenith Agarwood piece resting on a dark walnut wood block with soft golden rim lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDn9giCLcKW7DaCD84fqvijjQpFatJiyV1QRzPnWg2uae1LR1sTzecd6lIQ3pbQzFUpzm4BO6sYow4GVeKz0fKGVVPIoSqAo9G57AU9PYFSJOHB2XQVqUJfiN65klztcYzNS9pMQx7-ETu0KTMOGV1z3gE0IS8pzlQda-hPdaop5fD83PP3IJEeM6UzjodpTiey6wKOp_FVIVi-l62_7C6UuXqWHhRws1_bzNmDGb7FCk1Qc8rxMa2b90xQn_Yi-1QX2zzYfAoFZuw_"/>
-<div class="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent opacity-60"></div>
-</div>
-<div class="absolute bottom-8 left-8 flex items-center gap-3">
-<div class="h-[1px] w-12 bg-primary/40"></div>
-<span class="font-label text-[10px] tracking-[0.3em] uppercase text-primary/80">Wild Harvested • 2024</span>
-</div>
-</div>
-</div>
-<!-- Right: Product Narrative -->
-<div class="lg:col-span-5 flex flex-col justify-center">
-<nav class="flex items-center gap-2 mb-8 font-label text-[10px] tracking-widest uppercase text-on-surface-variant">
-<a class="hover:text-primary transition-colors" href="products_1.html">Products</a>
-<span class="material-symbols-outlined text-[12px]" data-icon="chevron_right">chevron_right</span>
-<span class="text-primary">Zenith Series</span>
-</nav>
-<h1 class="text-4xl lg:text-6xl font-headline font-bold text-on-surface mb-2 leading-tight">Zenith Agarwood</h1>
-<h2 class="text-xl font-headline italic text-secondary mb-8">巅峰沉香 — The Silent Peak</h2>
-<div class="flex items-end gap-4 mb-10">
-<span class="text-3xl font-headline text-primary">$4,280</span>
-<span class="font-label text-xs text-on-surface-variant mb-1 uppercase tracking-widest">USD / 50g Rare Collection</span>
-</div>
-<div class="space-y-8 mb-12">
-<section>
-<h3 class="font-label text-[10px] tracking-[0.2em] uppercase text-primary mb-4">The Story | 缘起</h3>
-<p class="text-lg leading-relaxed text-on-surface-variant font-body italic">
-                            Born from decades of quiet resilience in the heart of the Annamite Range, Zenith Agarwood is a testament to the transformative power of time. It is not merely wood; it is a frozen symphony of resin and earth, harvested at the precise moment of spiritual peak.
-                        </p>
-</section>
-<div class="grid grid-cols-2 gap-8 py-8 border-y border-outline-variant/10">
-<div>
-<h4 class="font-label text-[10px] tracking-[0.2em] uppercase text-on-surface/60 mb-2">Origin | 产地</h4>
-<p class="font-body text-on-surface">Nha Trang, Vietnam</p>
-</div>
-<div>
-<h4 class="font-label text-[10px] tracking-[0.2em] uppercase text-on-surface/60 mb-2">Aroma Profile | 香型</h4>
-<p class="font-body text-on-surface">Honeyed, Medicinal, Ethereal</p>
-</div>
-</div>
-<section>
-<h3 class="font-label text-[10px] tracking-[0.2em] uppercase text-primary mb-4">Usage Suggestions | 使用建议</h3>
-<ul class="space-y-3 font-body text-on-surface-variant">
-<li class="flex items-start gap-3">
-<span class="w-1 h-1 rounded-full bg-primary/40 mt-3"></span>
-<span>Ideal for midnight meditation and deep contemplative states.</span>
-</li>
-<li class="flex items-start gap-3">
-<span class="w-1 h-1 rounded-full bg-primary/40 mt-3"></span>
-<span>Pair with high-mountain Oolong tea for a complete sensory grounding.</span>
-</li>
-</ul>
-</section>
-</div>
-<div class="flex flex-col sm:flex-row gap-4">
-<button class="flex-1 bg-transparent border border-primary text-primary px-8 py-5 font-label tracking-[0.2em] uppercase text-xs hover:bg-primary-container transition-all duration-700 flex items-center justify-center gap-2 group">
-                        Add to Collection
-                        <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
-</button>
-<button class="flex-1 border border-outline-variant/30 text-on-surface px-8 py-5 font-label tracking-[0.2em] uppercase text-xs hover:border-on-surface/40 transition-all duration-700">
-                        Enquire / Contact
-                    </button>
-</div>
-<div class="mt-12 flex items-center gap-6">
-<div class="flex -space-x-2">
-<div class="w-8 h-8 rounded-full border-2 border-background bg-surface-container flex items-center justify-center">
-<span class="material-symbols-outlined text-[14px] text-primary" data-icon="verified" data-weight="fill">verified</span>
-</div>
-</div>
-<p class="text-[10px] font-label text-on-surface-variant tracking-wider uppercase">Authenticity Certificate Included • Global Insured Shipping</p>
-</div>
-</div>
-</div>
-<!-- Secondary Section: Detail Bento -->
-<section class="mt-32">
-<div class="text-center mb-20">
-<span class="font-label text-[10px] tracking-[0.5em] uppercase text-primary mb-4 block">Craftsmanship</span>
-<h2 class="text-3xl font-headline">The Soul of the Material</h2>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-1">
-<div class="bg-surface-container-low p-12 flex flex-col justify-between aspect-square group hover:bg-surface-container transition-colors duration-700">
-<span class="text-primary/20 text-4xl font-headline italic">01</span>
-<div>
-<h4 class="text-xl font-headline mb-4">Resin Density</h4>
-<p class="font-body text-on-surface-variant leading-relaxed">Sinks in water, indicating an exceptional concentration of essential oils and aromatic resins developed over 40+ years.</p>
-</div>
-</div>
-<div class="relative overflow-hidden aspect-square group">
-<img alt="Detail Macro" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-110" data-alt="Macro photography of agarwood grain showing crystalline resin structures and amber hues under strong light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBASbWjCn6swrBKLnFolVOaE5KF2wAj18trF1H9Bt1XrmUI9TnF3KLxQwP0sZ33Cu9efsVeVtZI9nri5HfMNEIUtMGP_83fg8U4qIVKYq7SH6RgGvTf-zQgyCqt2GPdPH9qzjnOkpMYByBxDYp4MiXmzGAa4DYKC0YORkKRPXqcwoCmxUrAE8ovPX6PPMX90gSRTKNfAz2GbjP5RY857THvUgapA3zkE37zIMf2i4g7P-0tAxBvuEBX0fLlDtDdPtiF1ox1b-JCXTys"/>
-<div class="absolute inset-0 bg-primary/10 mix-blend-overlay"></div>
-</div>
-<div class="bg-surface-container-low p-12 flex flex-col justify-between aspect-square group hover:bg-surface-container transition-colors duration-700">
-<span class="text-primary/20 text-4xl font-headline italic">02</span>
-<div>
-<h4 class="text-xl font-headline mb-4">Spiritual Alignment</h4>
-<p class="font-body text-on-surface-variant leading-relaxed">Considered the 'Scent of the Void', it is used in sacred ceremonies to clear the mind and align the heart's rhythm.</p>
-</div>
-</div>
-</div>
-</section>
-</main>
-</body>
+    <style>
+      body {
+        visibility: hidden;
+        opacity: 0;
+      }
+    </style>
+  </head>
+
+  <body
+    class="bg-background text-on-surface font-body selection:bg-primary/30 opacity-0 transition-opacity duration-300"
+  >
+    <main class="pt-32 pb-24">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+        <!-- Left: Gallery -->
+        <div class="lg:col-span-7 flex flex-col-reverse md:flex-row gap-6">
+          <!-- Thumbnails -->
+          <div
+            class="flex md:flex-col gap-4 overflow-x-auto md:overflow-y-visible pb-4 md:pb-0 shrink-0"
+          >
+            <div
+              class="w-20 h-20 bg-surface-container-high border border-primary/20 cursor-pointer overflow-hidden group"
+            >
+              <img
+                alt="Agarwood thumbnail"
+                class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
+                data-alt="Close-up of a raw Zenith Agarwood piece with deep resinous veins and dark textures on a black surface"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCABPP-VCT2WqZMS-4LHeO87n9fmrMMirH7IXuiDYKbOCGXkfGAQfI9ZFDYe3EGLsM4_TR06hhdPqYVXLyaZZwqkeK9lJ3w5nd8nBEjeSYhodpyhUdfO2kdvcrdyKSrSy-beze4dYjqou-d9Nr9gUZ66fiKthdSGHlpByxfKySGC8gNvf-lWZS5nMraI_STqQQURzpGjywdrU87JNG0NxEcu6HCnpsFCjH8ISnA1A9-CGmt-VY4X6CUoDaeZb8gN3UkAtGkPXVhrQWm"
+              />
+            </div>
+            <div
+              class="w-20 h-20 bg-surface-container-high border border-outline-variant/20 cursor-pointer overflow-hidden group"
+            >
+              <img
+                alt="Agarwood smoke"
+                class="w-full h-full object-cover opacity-40 group-hover:opacity-100 transition-opacity"
+                data-alt="Wispy smoke rising from a burning agarwood incense coil in a dark minimalist zen setting"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCym5JGsXI2EUhaqfsrWC6i4zEs-sFPtguxNFX5rYbvyhaVSRXWTbhYuq-58URhmBHWdMVlgBXBI2u6NTMKFnW1t9CplruePMDpP2BFStaLJEywCNdKe06XqN2dtGaTF2rnHbi7JoDgvvOP-FjVs-aFrrRxOQpLeLe5busxwQ6J3WF5NDU4rFtZDRtNsugVbzLJXpiDkCGiG29HEJ6avj5gfoJ1p6MqP7Xh1GFZ1K8un6HI0ZUhaND0cvrtrsA1GegRoFpsZ7aowhPv"
+              />
+            </div>
+            <div
+              class="w-20 h-20 bg-surface-container-high border border-outline-variant/20 cursor-pointer overflow-hidden group"
+            >
+              <img
+                alt="Agarwood craft"
+                class="w-full h-full object-cover opacity-40 group-hover:opacity-100 transition-opacity"
+                data-alt="Artisan hands carefully carving a piece of premium dark agarwood with traditional tools"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuANCE6XWZiQhkU4OGjwQMwN9Jf4oSVQt349VFjwzZ1ExJg4Q0mnZWnGdDqDM5nkGQCkEfYpqVVwLmVTMX-Usp7_BavDCmLPlEjBLP0TM7tKae-yiZFpaiej6yibXnz_mJSE6zNUyXfw80udQLcnHktWt4PAtIXK7eVb6D-PN1qE-HywQMvPGoBFC2j3r_unBnOLDBt4uwYFJOQ1oP2orZVCqayzn1xkzWMPLW-KXwfzYcoiTL9a5SbLGGERDHFeGYvrmg_G4T50RfHl"
+              />
+            </div>
+          </div>
+          <!-- Main Hero Image -->
+          <div class="flex-grow relative group">
+            <div
+              class="absolute -top-4 -left-4 w-32 h-32 border-t border-l border-primary/20 z-0"
+            ></div>
+            <div class="relative bg-surface-container overflow-hidden">
+              <img
+                alt="Zenith Agarwood Main"
+                class="w-full aspect-[4/5] object-cover transition-transform duration-[2000ms] group-hover:scale-105"
+                data-alt="Luxury product shot of Zenith Agarwood piece resting on a dark walnut wood block with soft golden rim lighting"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDn9giCLcKW7DaCD84fqvijjQpFatJiyV1QRzPnWg2uae1LR1sTzecd6lIQ3pbQzFUpzm4BO6sYow4GVeKz0fKGVVPIoSqAo9G57AU9PYFSJOHB2XQVqUJfiN65klztcYzNS9pMQx7-ETu0KTMOGV1z3gE0IS8pzlQda-hPdaop5fD83PP3IJEeM6UzjodpTiey6wKOp_FVIVi-l62_7C6UuXqWHhRws1_bzNmDGb7FCk1Qc8rxMa2b90xQn_Yi-1QX2zzYfAoFZuw_"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent opacity-60"
+              ></div>
+            </div>
+            <div class="absolute bottom-8 left-8 flex items-center gap-3">
+              <div class="h-[1px] w-12 bg-primary/40"></div>
+              <span
+                class="font-label text-[10px] tracking-[0.3em] uppercase text-primary/80"
+                >Wild Harvested • 2024</span
+              >
+            </div>
+          </div>
+        </div>
+        <!-- Right: Product Narrative -->
+        <div class="lg:col-span-5 flex flex-col justify-center">
+          <nav
+            class="flex items-center gap-2 mb-8 font-label text-[10px] tracking-widest uppercase text-on-surface-variant"
+          >
+            <a
+              class="hover:text-primary transition-colors"
+              href="products_1.html"
+              >Products</a
+            >
+            <span
+              class="material-symbols-outlined text-[12px]"
+              data-icon="chevron_right"
+              >chevron_right</span
+            >
+            <span class="text-primary">Zenith Series</span>
+          </nav>
+          <h1
+            class="text-4xl lg:text-6xl font-headline font-bold text-on-surface mb-2 leading-tight"
+          >
+            Zenith Agarwood
+          </h1>
+          <h2 class="text-xl font-headline italic text-secondary mb-8">
+            巅峰沉香 — The Silent Peak
+          </h2>
+          <div class="flex items-end gap-4 mb-10">
+            <span class="text-3xl font-headline text-primary">$4,280</span>
+            <span
+              class="font-label text-xs text-on-surface-variant mb-1 uppercase tracking-widest"
+              >USD / 50g Rare Collection</span
+            >
+          </div>
+          <div class="space-y-8 mb-12">
+            <section>
+              <h3
+                class="font-label text-[10px] tracking-[0.2em] uppercase text-primary mb-4"
+              >
+                The Story | 缘起
+              </h3>
+              <p
+                class="text-lg leading-relaxed text-on-surface-variant font-body italic"
+              >
+                Born from decades of quiet resilience in the heart of the
+                Annamite Range, Zenith Agarwood is a testament to the
+                transformative power of time. It is not merely wood; it is a
+                frozen symphony of resin and earth, harvested at the precise
+                moment of spiritual peak.
+              </p>
+            </section>
+            <div
+              class="grid grid-cols-2 gap-8 py-8 border-y border-outline-variant/10"
+            >
+              <div>
+                <h4
+                  class="font-label text-[10px] tracking-[0.2em] uppercase text-on-surface/60 mb-2"
+                >
+                  Origin | 产地
+                </h4>
+                <p class="font-body text-on-surface">Nha Trang, Vietnam</p>
+              </div>
+              <div>
+                <h4
+                  class="font-label text-[10px] tracking-[0.2em] uppercase text-on-surface/60 mb-2"
+                >
+                  Aroma Profile | 香型
+                </h4>
+                <p class="font-body text-on-surface">
+                  Honeyed, Medicinal, Ethereal
+                </p>
+              </div>
+            </div>
+            <section>
+              <h3
+                class="font-label text-[10px] tracking-[0.2em] uppercase text-primary mb-4"
+              >
+                Usage Suggestions | 使用建议
+              </h3>
+              <ul class="space-y-3 font-body text-on-surface-variant">
+                <li class="flex items-start gap-3">
+                  <span class="w-1 h-1 rounded-full bg-primary/40 mt-3"></span>
+                  <span
+                    >Ideal for midnight meditation and deep contemplative
+                    states.</span
+                  >
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="w-1 h-1 rounded-full bg-primary/40 mt-3"></span>
+                  <span
+                    >Pair with high-mountain Oolong tea for a complete sensory
+                    grounding.</span
+                  >
+                </li>
+              </ul>
+            </section>
+          </div>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <button
+              class="flex-1 bg-transparent border border-primary text-primary px-8 py-5 font-label tracking-[0.2em] uppercase text-xs hover:bg-primary-container transition-all duration-700 flex items-center justify-center gap-2 group"
+            >
+              Add to Collection
+              <span
+                class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform"
+                data-icon="arrow_forward"
+                >arrow_forward</span
+              >
+            </button>
+            <button
+              class="flex-1 border border-outline-variant/30 text-on-surface px-8 py-5 font-label tracking-[0.2em] uppercase text-xs hover:border-on-surface/40 transition-all duration-700"
+            >
+              Enquire / Contact
+            </button>
+          </div>
+          <div class="mt-12 flex items-center gap-6">
+            <div class="flex -space-x-2">
+              <div
+                class="w-8 h-8 rounded-full border-2 border-background bg-surface-container flex items-center justify-center"
+              >
+                <span
+                  class="material-symbols-outlined text-[14px] text-primary"
+                  data-icon="verified"
+                  data-weight="fill"
+                  >verified</span
+                >
+              </div>
+            </div>
+            <p
+              class="text-[10px] font-label text-on-surface-variant tracking-wider uppercase"
+            >
+              Authenticity Certificate Included • Global Insured Shipping
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Secondary Section: Detail Bento -->
+      <section class="mt-32">
+        <div class="text-center mb-20">
+          <span
+            class="font-label text-[10px] tracking-[0.5em] uppercase text-primary mb-4 block"
+            >Craftsmanship</span
+          >
+          <h2 class="text-3xl font-headline">The Soul of the Material</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-1">
+          <div
+            class="bg-surface-container-low p-12 flex flex-col justify-between aspect-square group hover:bg-surface-container transition-colors duration-700"
+          >
+            <span class="text-primary/20 text-4xl font-headline italic"
+              >01</span
+            >
+            <div>
+              <h4 class="text-xl font-headline mb-4">Resin Density</h4>
+              <p class="font-body text-on-surface-variant leading-relaxed">
+                Sinks in water, indicating an exceptional concentration of
+                essential oils and aromatic resins developed over 40+ years.
+              </p>
+            </div>
+          </div>
+          <div class="relative overflow-hidden aspect-square group">
+            <img
+              alt="Detail Macro"
+              class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-110"
+              data-alt="Macro photography of agarwood grain showing crystalline resin structures and amber hues under strong light"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBASbWjCn6swrBKLnFolVOaE5KF2wAj18trF1H9Bt1XrmUI9TnF3KLxQwP0sZ33Cu9efsVeVtZI9nri5HfMNEIUtMGP_83fg8U4qIVKYq7SH6RgGvTf-zQgyCqt2GPdPH9qzjnOkpMYByBxDYp4MiXmzGAa4DYKC0YORkKRPXqcwoCmxUrAE8ovPX6PPMX90gSRTKNfAz2GbjP5RY857THvUgapA3zkE37zIMf2i4g7P-0tAxBvuEBX0fLlDtDdPtiF1ox1b-JCXTys"
+            />
+            <div class="absolute inset-0 bg-primary/10 mix-blend-overlay"></div>
+          </div>
+          <div
+            class="bg-surface-container-low p-12 flex flex-col justify-between aspect-square group hover:bg-surface-container transition-colors duration-700"
+          >
+            <span class="text-primary/20 text-4xl font-headline italic"
+              >02</span
+            >
+            <div>
+              <h4 class="text-xl font-headline mb-4">Spiritual Alignment</h4>
+              <p class="font-body text-on-surface-variant leading-relaxed">
+                Considered the 'Scent of the Void', it is used in sacred
+                ceremonies to clear the mind and align the heart's rhythm.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>

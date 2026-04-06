@@ -1,205 +1,418 @@
-<!DOCTYPE html>
+<!doctype html>
 <html class="dark" lang="en">
-<head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Products - Shop | {{websiteName}}</title>
     <script src="layout.js"></script>
-        <style>body { visibility: hidden; opacity: 0; }</style>
-    </head>
-<body class="bg-background text-on-surface font-body selection:bg-primary/30 opacity-0 transition-opacity duration-300">
-<main class="pt-32 pb-24">
-<!-- Hero Section / Header -->
-<section class="px-6 lg:px-12 mb-12 lg:mb-20">
-<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
-<div class="max-w-2xl">
-<span class="font-label text-primary tracking-[0.2em] text-xs uppercase mb-4 block">甄选系列 | CURATED COLLECTION</span>
-<h1 class="font-headline text-4xl lg:text-6xl text-on-surface leading-tight">
-                        自然的馈赠，<br/>
-<span class="italic text-primary-fixed-dim">时间的沉淀。</span>
-</h1>
-</div>
-<div class="hidden lg:block text-right">
-<p class="font-body text-on-surface-variant max-w-xs text-sm leading-relaxed">
-                        Every piece tells a century-long story of resilience and transformation. Sourced from the mystical forests of Southeast Asia.
+    <style>
+      body {
+        visibility: hidden;
+        opacity: 0;
+      }
+    </style>
+  </head>
+
+  <body
+    class="bg-background text-on-surface font-body selection:bg-primary/30 opacity-0 transition-opacity duration-300"
+  >
+    <main class="pt-32 pb-24">
+      <!-- Hero Section / Header -->
+      <section class="px-6 lg:px-12 mb-12 lg:mb-20">
+        <div
+          class="flex flex-col md:flex-row md:items-end justify-between gap-6"
+        >
+          <div class="max-w-2xl">
+            <span
+              class="font-label text-primary tracking-[0.2em] text-xs uppercase mb-4 block"
+              >甄选系列 | CURATED COLLECTION</span
+            >
+            <h1
+              class="font-headline text-4xl lg:text-6xl text-on-surface leading-tight"
+            >
+              自然的馈赠，<br />
+              <span class="italic text-primary-fixed-dim">时间的沉淀。</span>
+            </h1>
+          </div>
+          <div class="hidden lg:block text-right">
+            <p
+              class="font-body text-on-surface-variant max-w-xs text-sm leading-relaxed"
+            >
+              Every piece tells a century-long story of resilience and
+              transformation. Sourced from the mystical forests of Southeast
+              Asia.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Filter & Grid Canvas -->
+      <section class="px-6 lg:px-12 flex flex-col lg:flex-row gap-12">
+        <!-- Filter Sidebar -->
+        <aside class="w-full lg:w-64 space-y-10">
+          <!-- Search -->
+          <div class="relative group">
+            <input
+              class="w-full bg-transparent border-b border-outline-variant py-2 pr-10 focus:outline-none focus:border-primary transition-colors font-label text-sm placeholder:text-on-surface-variant/50"
+              placeholder="搜索商品..."
+              type="text"
+            />
+            <span
+              class="material-symbols-outlined absolute right-0 top-2 text-on-surface-variant group-focus-within:text-primary transition-colors"
+              data-icon="search"
+              >search</span
+            >
+          </div>
+          <!-- Categories -->
+          <div>
+            <h3
+              class="font-label text-xs uppercase tracking-widest text-primary mb-6"
+            >
+              分类 CATEGORIES
+            </h3>
+            <ul class="space-y-4">
+              <li>
+                <button
+                  class="flex items-center gap-3 text-on-surface hover:text-primary transition-colors font-body text-sm group"
+                >
+                  <span
+                    class="w-1.5 h-1.5 bg-primary/20 group-hover:bg-primary transition-colors rounded-full"
+                  ></span>
+                  沉香 Agarwood
+                </button>
+              </li>
+              <li>
+                <button
+                  class="flex items-center gap-3 text-on-surface-variant hover:text-primary transition-colors font-body text-sm group"
+                >
+                  <span
+                    class="w-1.5 h-1.5 bg-primary/0 group-hover:bg-primary transition-colors rounded-full"
+                  ></span>
+                  佛珠 Prayer Beads
+                </button>
+              </li>
+              <li>
+                <button
+                  class="flex items-center gap-3 text-on-surface-variant hover:text-primary transition-colors font-body text-sm group"
+                >
+                  <span
+                    class="w-1.5 h-1.5 bg-primary/0 group-hover:bg-primary transition-colors rounded-full"
+                  ></span>
+                  香具 Accessories
+                </button>
+              </li>
+            </ul>
+          </div>
+          <!-- Scent Profile (The Scent Map Chips) -->
+          <div>
+            <h3
+              class="font-label text-xs uppercase tracking-widest text-primary mb-6"
+            >
+              香韵 SCENT MAP
+            </h3>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="glass-map px-3 py-1.5 text-[10px] uppercase font-label tracking-wider text-on-surface hover:border-primary border border-outline-variant/30 cursor-pointer transition-all"
+                >Floral 花香</span
+              >
+              <span
+                class="glass-map px-3 py-1.5 text-[10px] uppercase font-label tracking-wider text-on-surface hover:border-primary border border-outline-variant/30 cursor-pointer transition-all"
+                >Woody 木香</span
+              >
+              <span
+                class="glass-map px-3 py-1.5 text-[10px] uppercase font-label tracking-wider text-on-surface hover:border-primary border border-outline-variant/30 cursor-pointer transition-all"
+                >Sweet 甜香</span
+              >
+              <span
+                class="glass-map px-3 py-1.5 text-[10px] uppercase font-label tracking-wider text-on-surface hover:border-primary border border-outline-variant/30 cursor-pointer transition-all"
+                >Spicy 辛香</span
+              >
+            </div>
+          </div>
+          <!-- Price Range -->
+          <div>
+            <h3
+              class="font-label text-xs uppercase tracking-widest text-primary mb-6"
+            >
+              价格区间 PRICE
+            </h3>
+            <div class="h-1 bg-surface-container-highest relative rounded-full">
+              <div
+                class="absolute left-0 right-1/4 h-full bg-primary/40 rounded-full"
+              ></div>
+              <div
+                class="absolute left-0 w-3 h-3 bg-primary rounded-full -top-1 shadow-[0_0_10px_rgba(233,195,73,0.5)]"
+              ></div>
+              <div
+                class="absolute right-1/4 w-3 h-3 bg-primary rounded-full -top-1 shadow-[0_0_10px_rgba(233,195,73,0.5)]"
+              ></div>
+            </div>
+            <div
+              class="flex justify-between mt-4 font-label text-[10px] text-on-surface-variant"
+            >
+              <span>¥0</span>
+              <span>¥50,000+</span>
+            </div>
+          </div>
+        </aside>
+        <!-- Product Grid -->
+        <div class="flex-1">
+          <!-- Sorting & Count -->
+          <div
+            class="flex justify-between items-center mb-10 pb-4 border-b border-outline-variant/10"
+          >
+            <p class="font-label text-xs text-on-surface-variant">
+              Showing 24 products
+            </p>
+            <div class="flex items-center gap-6">
+              <div
+                class="flex items-center gap-2 font-label text-xs cursor-pointer hover:text-primary transition-colors"
+              >
+                <span>排序 SORT BY</span>
+                <span
+                  class="material-symbols-outlined text-sm"
+                  data-icon="expand_more"
+                  >expand_more</span
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Bento-inspired Product Grid -->
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-8 gap-y-16"
+          >
+            <!-- Product 1: Hero Featured -->
+            <div
+              class="group relative md:col-span-2 overflow-hidden bg-surface-container-low"
+            >
+              <div class="aspect-[16/9] overflow-hidden">
+                <img
+                  class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
+                  data-alt="Close-up of premium agarwood pieces with intricate textures on a dark minimalist background with soft warm spotlighting"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeX9mYiIJC3tHEsoJb1MjY9xOFk1Nm2hXFGgWaKZiuXBrt6m_w-MqbGH-IUZexQNHH219YojGzzL4Xg0XbUuP8q44dQMLlZyzvPnanYsDuCPHmtfdc8n_TiBau1IEi_PKmLRa8o4tOPFRVHFvc7O3lWtSjwus7aRiVIRxXPo0V7uWZPadr-9iD_P3YZpcmW8NnxgDMP20k6eZX5kqphS5up-a0dNsTBle3CeK0JUTI9ZfkAezAj5uQZj6ND6q1Rg6O5bUGf3TAa5AI"
+                />
+              </div>
+              <div
+                class="absolute bottom-0 left-0 p-8 w-full bg-gradient-to-t from-background via-background/60 to-transparent"
+              >
+                <div class="flex justify-between items-end">
+                  <div>
+                    <span
+                      class="font-label text-[10px] text-primary tracking-widest uppercase"
+                      >Premium Grade</span
+                    >
+                    <h3 class="font-headline text-2xl mt-1">
+                      越南芽庄沉香块
+                      <span class="text-sm font-light opacity-60 ml-2"
+                        >Nha Trang Oud</span
+                      >
+                    </h3>
+                    <p
+                      class="font-body text-on-surface-variant text-sm mt-2 max-w-md"
+                    >
+                      Sweet honey-like aroma with a hint of coolness. Rare
+                      collection grade.
                     </p>
-</div>
-</div>
-</section>
-<!-- Filter & Grid Canvas -->
-<section class="px-6 lg:px-12 flex flex-col lg:flex-row gap-12">
-<!-- Filter Sidebar -->
-<aside class="w-full lg:w-64 space-y-10">
-<!-- Search -->
-<div class="relative group">
-<input class="w-full bg-transparent border-b border-outline-variant py-2 pr-10 focus:outline-none focus:border-primary transition-colors font-label text-sm placeholder:text-on-surface-variant/50" placeholder="搜索商品..." type="text"/>
-<span class="material-symbols-outlined absolute right-0 top-2 text-on-surface-variant group-focus-within:text-primary transition-colors" data-icon="search">search</span>
-</div>
-<!-- Categories -->
-<div>
-<h3 class="font-label text-xs uppercase tracking-widest text-primary mb-6">分类 CATEGORIES</h3>
-<ul class="space-y-4">
-<li><button class="flex items-center gap-3 text-on-surface hover:text-primary transition-colors font-body text-sm group">
-<span class="w-1.5 h-1.5 bg-primary/20 group-hover:bg-primary transition-colors rounded-full"></span>
-                            沉香 Agarwood
-                        </button></li>
-<li><button class="flex items-center gap-3 text-on-surface-variant hover:text-primary transition-colors font-body text-sm group">
-<span class="w-1.5 h-1.5 bg-primary/0 group-hover:bg-primary transition-colors rounded-full"></span>
-                            佛珠 Prayer Beads
-                        </button></li>
-<li><button class="flex items-center gap-3 text-on-surface-variant hover:text-primary transition-colors font-body text-sm group">
-<span class="w-1.5 h-1.5 bg-primary/0 group-hover:bg-primary transition-colors rounded-full"></span>
-                            香具 Accessories
-                        </button></li>
-</ul>
-</div>
-<!-- Scent Profile (The Scent Map Chips) -->
-<div>
-<h3 class="font-label text-xs uppercase tracking-widest text-primary mb-6">香韵 SCENT MAP</h3>
-<div class="flex flex-wrap gap-2">
-<span class="glass-map px-3 py-1.5 text-[10px] uppercase font-label tracking-wider text-on-surface hover:border-primary border border-outline-variant/30 cursor-pointer transition-all">Floral 花香</span>
-<span class="glass-map px-3 py-1.5 text-[10px] uppercase font-label tracking-wider text-on-surface hover:border-primary border border-outline-variant/30 cursor-pointer transition-all">Woody 木香</span>
-<span class="glass-map px-3 py-1.5 text-[10px] uppercase font-label tracking-wider text-on-surface hover:border-primary border border-outline-variant/30 cursor-pointer transition-all">Sweet 甜香</span>
-<span class="glass-map px-3 py-1.5 text-[10px] uppercase font-label tracking-wider text-on-surface hover:border-primary border border-outline-variant/30 cursor-pointer transition-all">Spicy 辛香</span>
-</div>
-</div>
-<!-- Price Range -->
-<div>
-<h3 class="font-label text-xs uppercase tracking-widest text-primary mb-6">价格区间 PRICE</h3>
-<div class="h-1 bg-surface-container-highest relative rounded-full">
-<div class="absolute left-0 right-1/4 h-full bg-primary/40 rounded-full"></div>
-<div class="absolute left-0 w-3 h-3 bg-primary rounded-full -top-1 shadow-[0_0_10px_rgba(233,195,73,0.5)]"></div>
-<div class="absolute right-1/4 w-3 h-3 bg-primary rounded-full -top-1 shadow-[0_0_10px_rgba(233,195,73,0.5)]"></div>
-</div>
-<div class="flex justify-between mt-4 font-label text-[10px] text-on-surface-variant">
-<span>¥0</span>
-<span>¥50,000+</span>
-</div>
-</div>
-</aside>
-<!-- Product Grid -->
-<div class="flex-1">
-<!-- Sorting & Count -->
-<div class="flex justify-between items-center mb-10 pb-4 border-b border-outline-variant/10">
-<p class="font-label text-xs text-on-surface-variant">Showing 24 products</p>
-<div class="flex items-center gap-6">
-<div class="flex items-center gap-2 font-label text-xs cursor-pointer hover:text-primary transition-colors">
-<span>排序 SORT BY</span>
-<span class="material-symbols-outlined text-sm" data-icon="expand_more">expand_more</span>
-</div>
-</div>
-</div>
-<!-- Bento-inspired Product Grid -->
-<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-8 gap-y-16">
-<!-- Product 1: Hero Featured -->
-<div class="group relative md:col-span-2 overflow-hidden bg-surface-container-low">
-<div class="aspect-[16/9] overflow-hidden">
-<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 group-hover:scale-105" data-alt="Close-up of premium agarwood pieces with intricate textures on a dark minimalist background with soft warm spotlighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeX9mYiIJC3tHEsoJb1MjY9xOFk1Nm2hXFGgWaKZiuXBrt6m_w-MqbGH-IUZexQNHH219YojGzzL4Xg0XbUuP8q44dQMLlZyzvPnanYsDuCPHmtfdc8n_TiBau1IEi_PKmLRa8o4tOPFRVHFvc7O3lWtSjwus7aRiVIRxXPo0V7uWZPadr-9iD_P3YZpcmW8NnxgDMP20k6eZX5kqphS5up-a0dNsTBle3CeK0JUTI9ZfkAezAj5uQZj6ND6q1Rg6O5bUGf3TAa5AI"/>
-</div>
-<div class="absolute bottom-0 left-0 p-8 w-full bg-gradient-to-t from-background via-background/60 to-transparent">
-<div class="flex justify-between items-end">
-<div>
-<span class="font-label text-[10px] text-primary tracking-widest uppercase">Premium Grade</span>
-<h3 class="font-headline text-2xl mt-1">越南芽庄沉香块 <span class="text-sm font-light opacity-60 ml-2">Nha Trang Oud</span></h3>
-<p class="font-body text-on-surface-variant text-sm mt-2 max-w-md">Sweet honey-like aroma with a hint of coolness. Rare collection grade.</p>
-</div>
-<div class="text-right">
-<span class="font-headline text-2xl text-primary">¥12,800</span>
-<button class="mt-4 block w-full px-6 py-2 bg-primary text-on-primary font-label text-xs tracking-widest uppercase hover:bg-primary-fixed-dim transition-colors">
-                                        收藏产品 VIEW
-                                    </button>
-</div>
-</div>
-</div>
-</div>
-<!-- Product 2 -->
-<div class="group">
-<div class="aspect-[4/5] bg-surface-container-low overflow-hidden relative">
-<img class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all duration-700 group-hover:scale-110" data-alt="Detailed view of dark sandalwood prayer beads resting on a weathered piece of wood with dramatic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAb2AjmEaU9W-enTuvaz-EQrknsgrUMVb32P4TNgoW_f-i5TA3d9Q9cHKGgjTlz4mQbwOutykQgisE8zPzQz28ZU1Z1IFMesexY96r2Zu1nFOpC5ZoUfvTE6-6O0jsGRoLu2E6b7GvaZ3o7i-_i5nMc9aGTnMn--xqyAmIMpvPgTqbq3jG-5pt8FZbYwJ6qvpioN4IjOrPS1DO2FBqjXKefw4Ac5PG370T0jcehwVkNYsqryti1WzcJ4eWw1BIV7ewu07bPyjLCVjNJ"/>
-<div class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-</div>
-<div class="mt-6 flex justify-between items-start">
-<div>
-<h3 class="font-headline text-lg">黑檀木佛珠 <br/><span class="text-xs font-label uppercase text-on-surface-variant">Ebony Mala Beads</span></h3>
-<p class="font-label text-[10px] text-primary mt-1">108 BEADS | 8MM</p>
-</div>
-<span class="font-headline text-lg opacity-60 group-hover:opacity-100 transition-opacity">¥2,580</span>
-</div>
-</div>
-<!-- Product 3 -->
-<div class="group">
-<div class="aspect-[4/5] bg-surface-container-low overflow-hidden relative">
-<img class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all duration-700 group-hover:scale-110" data-alt="Exquisite brass incense burner with rising white smoke in a dark zen tea room setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAY0QrN7ykDqHCPb06uLuFPvNi9q1WQalUTvNvZF4uX3vOBiSU9hcn4NGde7BJ11EWaQ_X3mi-tHtyROqmc114J8L2YLK2IVaMC9DvkKTqGh2pEk7xDArHyhpnD3oHs5hvfyhpsRi9bADyCaTUB0GX_oYI249frDVO2SXOw-dMKAsj2ezHMqfr2bSvESBM2nIBv77hwv1q-OOGjgm0uq4KgLNpfTqYNTvjinVVOqSYfFJpgdUVYv80_D9ezlhqAcjMMb0RKb33fgkkI"/>
-<div class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-</div>
-<div class="mt-6 flex justify-between items-start">
-<div>
-<h3 class="font-headline text-lg">古法铜质香炉 <br/><span class="text-xs font-label uppercase text-on-surface-variant">Antique Brass Burner</span></h3>
-<p class="font-label text-[10px] text-primary mt-1">HAND-CRAFTED | BRONZE</p>
-</div>
-<span class="font-headline text-lg opacity-60 group-hover:opacity-100 transition-opacity">¥1,890</span>
-</div>
-</div>
-<!-- Product 4 -->
-<div class="group">
-<div class="aspect-[4/5] bg-surface-container-low overflow-hidden relative">
-<img class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all duration-700 group-hover:scale-110" data-alt="Macro photography of raw agarwood oil in a small glass vial reflecting amber light on dark stone" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsEd_Pq-cWyV0yycPgQimH2ZZBqW1IhlB1kvTSbd7zzZY7q_9YPJNYdHHSpxVSzO-jG_iHXD6ul2Q9aeF3pagWYUHZgqQT_SdMGZNnd50Rm0dlVcxrRcMxRlOq7r4Jd3ZtOw8kDzxuB5QqA4BeQw5s1cPIC_hFmY4r6IesorwVbHE64BL7d6iv0IBKCPg20b-zP9FtOUjJdlbIdqbmLd6yO0_qD2mP0squSDyyKrPwsRbRuuUAG7oMPqjidW-zqJJFcvV_hiMzakhw"/>
-<div class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-</div>
-<div class="mt-6 flex justify-between items-start">
-<div>
-<h3 class="font-headline text-lg">柬埔寨沉香精油 <br/><span class="text-xs font-label uppercase text-on-surface-variant">Cambodian Oud Oil</span></h3>
-<p class="font-label text-[10px] text-primary mt-1">PURE CONCENTRATE | 3ML</p>
-</div>
-<span class="font-headline text-lg opacity-60 group-hover:opacity-100 transition-opacity">¥5,400</span>
-</div>
-</div>
-<!-- Product 5 -->
-<div class="group">
-<div class="aspect-[4/5] bg-surface-container-low overflow-hidden relative">
-<img class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all duration-700 group-hover:scale-110" data-alt="Rows of incense sticks in a minimalist bamboo container on an off-white silk surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdEWvl0FU9R3QPqlLzIlMZ_LAM0A4wPQY2HYanBOTmgLhdMZE8NCj7KIbXMS1CFPRnUz2yKkiivWZrNwSa-uUCYs78Uwcdk0dbiPxjKVeqSwz4lNVOwHHDfNmJrzG_YX9Ipbu3YkNp3cypBWqdvzaOEApEAfUI4Cn0eZgrw0hkjWvzTDaNStRo8vJcw6X5N1lkTLEpeQitvzwbMsdptZvJkYlGAYsvyHM2BZCQz4fWsTDsSlM3vijGfJJEBoLsjVcyNEKNGSCSojm3"/>
-<div class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-</div>
-<div class="mt-6 flex justify-between items-start">
-<div>
-<h3 class="font-headline text-lg">惠安水沉线香 <br/><span class="text-xs font-label uppercase text-on-surface-variant">Hui An Joss Sticks</span></h3>
-<p class="font-label text-[10px] text-primary mt-1">NATURAL BINDER | 20G</p>
-</div>
-<span class="font-headline text-lg opacity-60 group-hover:opacity-100 transition-opacity">¥680</span>
-</div>
-</div>
-</div>
-<!-- Pagination / Loading -->
-<div class="mt-24 flex justify-center items-center gap-10">
-<button class="font-label text-xs tracking-widest uppercase opacity-40 hover:opacity-100 transition-opacity flex items-center gap-2">
-<span class="material-symbols-outlined text-sm" data-icon="arrow_back">arrow_back</span>
-                        PREVIOUS
+                  </div>
+                  <div class="text-right">
+                    <span class="font-headline text-2xl text-primary"
+                      >¥12,800</span
+                    >
+                    <button
+                      class="mt-4 block w-full px-6 py-2 bg-primary text-on-primary font-label text-xs tracking-widest uppercase hover:bg-primary-fixed-dim transition-colors"
+                    >
+                      收藏产品 VIEW
                     </button>
-<div class="flex gap-4 font-label text-xs">
-<span class="text-primary border-b border-primary pb-1">01</span>
-<span class="opacity-40 hover:opacity-100 cursor-pointer transition-opacity">02</span>
-<span class="opacity-40 hover:opacity-100 cursor-pointer transition-opacity">03</span>
-</div>
-<button class="font-label text-xs tracking-widest uppercase opacity-40 hover:opacity-100 transition-opacity flex items-center gap-2">
-                        NEXT
-                        <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
-</button>
-</div>
-</div>
-</section>
-<!-- Newsletter Subscription Area -->
-<section class="liubai-spacing bg-surface-container-low mt-20">
-<div class="max-w-4xl mx-auto px-6 text-center">
-<h2 class="font-headline text-3xl lg:text-5xl mb-6">入席，听香。</h2>
-<p class="font-body text-on-surface-variant mb-12 max-w-lg mx-auto">Subscribe to our journal for early access to rare harvests and meditative insights into the world of Agarwood.</p>
-<form class="flex flex-col md:flex-row gap-4 max-w-xl mx-auto">
-<input class="flex-1 bg-background border-outline-variant px-6 py-4 font-label text-xs tracking-widest focus:border-primary outline-none transition-colors" placeholder="EMAIL ADDRESS" type="email"/>
-<button class="bg-primary text-on-primary px-10 py-4 font-label text-xs tracking-widest uppercase hover:bg-primary-fixed-dim transition-colors">
-                        SUBSCRIBE
-                    </button>
-</form>
-</div>
-</section>
-</main>
-</body>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="group">
+              <div
+                class="aspect-[4/5] bg-surface-container-low overflow-hidden relative"
+              >
+                <img
+                  class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all duration-700 group-hover:scale-110"
+                  data-alt="Detailed view of dark sandalwood prayer beads resting on a weathered piece of wood with dramatic lighting"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAb2AjmEaU9W-enTuvaz-EQrknsgrUMVb32P4TNgoW_f-i5TA3d9Q9cHKGgjTlz4mQbwOutykQgisE8zPzQz28ZU1Z1IFMesexY96r2Zu1nFOpC5ZoUfvTE6-6O0jsGRoLu2E6b7GvaZ3o7i-_i5nMc9aGTnMn--xqyAmIMpvPgTqbq3jG-5pt8FZbYwJ6qvpioN4IjOrPS1DO2FBqjXKefw4Ac5PG370T0jcehwVkNYsqryti1WzcJ4eWw1BIV7ewu07bPyjLCVjNJ"
+                />
+                <div
+                  class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity"
+                ></div>
+              </div>
+              <div class="mt-6 flex justify-between items-start">
+                <div>
+                  <h3 class="font-headline text-lg">
+                    黑檀木佛珠 <br /><span
+                      class="text-xs font-label uppercase text-on-surface-variant"
+                      >Ebony Mala Beads</span
+                    >
+                  </h3>
+                  <p class="font-label text-[10px] text-primary mt-1">
+                    108 BEADS | 8MM
+                  </p>
+                </div>
+                <span
+                  class="font-headline text-lg opacity-60 group-hover:opacity-100 transition-opacity"
+                  >¥2,580</span
+                >
+              </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="group">
+              <div
+                class="aspect-[4/5] bg-surface-container-low overflow-hidden relative"
+              >
+                <img
+                  class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all duration-700 group-hover:scale-110"
+                  data-alt="Exquisite brass incense burner with rising white smoke in a dark zen tea room setting"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAY0QrN7ykDqHCPb06uLuFPvNi9q1WQalUTvNvZF4uX3vOBiSU9hcn4NGde7BJ11EWaQ_X3mi-tHtyROqmc114J8L2YLK2IVaMC9DvkKTqGh2pEk7xDArHyhpnD3oHs5hvfyhpsRi9bADyCaTUB0GX_oYI249frDVO2SXOw-dMKAsj2ezHMqfr2bSvESBM2nIBv77hwv1q-OOGjgm0uq4KgLNpfTqYNTvjinVVOqSYfFJpgdUVYv80_D9ezlhqAcjMMb0RKb33fgkkI"
+                />
+                <div
+                  class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity"
+                ></div>
+              </div>
+              <div class="mt-6 flex justify-between items-start">
+                <div>
+                  <h3 class="font-headline text-lg">
+                    古法铜质香炉 <br /><span
+                      class="text-xs font-label uppercase text-on-surface-variant"
+                      >Antique Brass Burner</span
+                    >
+                  </h3>
+                  <p class="font-label text-[10px] text-primary mt-1">
+                    HAND-CRAFTED | BRONZE
+                  </p>
+                </div>
+                <span
+                  class="font-headline text-lg opacity-60 group-hover:opacity-100 transition-opacity"
+                  >¥1,890</span
+                >
+              </div>
+            </div>
+            <!-- Product 4 -->
+            <div class="group">
+              <div
+                class="aspect-[4/5] bg-surface-container-low overflow-hidden relative"
+              >
+                <img
+                  class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all duration-700 group-hover:scale-110"
+                  data-alt="Macro photography of raw agarwood oil in a small glass vial reflecting amber light on dark stone"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsEd_Pq-cWyV0yycPgQimH2ZZBqW1IhlB1kvTSbd7zzZY7q_9YPJNYdHHSpxVSzO-jG_iHXD6ul2Q9aeF3pagWYUHZgqQT_SdMGZNnd50Rm0dlVcxrRcMxRlOq7r4Jd3ZtOw8kDzxuB5QqA4BeQw5s1cPIC_hFmY4r6IesorwVbHE64BL7d6iv0IBKCPg20b-zP9FtOUjJdlbIdqbmLd6yO0_qD2mP0squSDyyKrPwsRbRuuUAG7oMPqjidW-zqJJFcvV_hiMzakhw"
+                />
+                <div
+                  class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity"
+                ></div>
+              </div>
+              <div class="mt-6 flex justify-between items-start">
+                <div>
+                  <h3 class="font-headline text-lg">
+                    柬埔寨沉香精油 <br /><span
+                      class="text-xs font-label uppercase text-on-surface-variant"
+                      >Cambodian Oud Oil</span
+                    >
+                  </h3>
+                  <p class="font-label text-[10px] text-primary mt-1">
+                    PURE CONCENTRATE | 3ML
+                  </p>
+                </div>
+                <span
+                  class="font-headline text-lg opacity-60 group-hover:opacity-100 transition-opacity"
+                  >¥5,400</span
+                >
+              </div>
+            </div>
+            <!-- Product 5 -->
+            <div class="group">
+              <div
+                class="aspect-[4/5] bg-surface-container-low overflow-hidden relative"
+              >
+                <img
+                  class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all duration-700 group-hover:scale-110"
+                  data-alt="Rows of incense sticks in a minimalist bamboo container on an off-white silk surface"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdEWvl0FU9R3QPqlLzIlMZ_LAM0A4wPQY2HYanBOTmgLhdMZE8NCj7KIbXMS1CFPRnUz2yKkiivWZrNwSa-uUCYs78Uwcdk0dbiPxjKVeqSwz4lNVOwHHDfNmJrzG_YX9Ipbu3YkNp3cypBWqdvzaOEApEAfUI4Cn0eZgrw0hkjWvzTDaNStRo8vJcw6X5N1lkTLEpeQitvzwbMsdptZvJkYlGAYsvyHM2BZCQz4fWsTDsSlM3vijGfJJEBoLsjVcyNEKNGSCSojm3"
+                />
+                <div
+                  class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity"
+                ></div>
+              </div>
+              <div class="mt-6 flex justify-between items-start">
+                <div>
+                  <h3 class="font-headline text-lg">
+                    惠安水沉线香 <br /><span
+                      class="text-xs font-label uppercase text-on-surface-variant"
+                      >Hui An Joss Sticks</span
+                    >
+                  </h3>
+                  <p class="font-label text-[10px] text-primary mt-1">
+                    NATURAL BINDER | 20G
+                  </p>
+                </div>
+                <span
+                  class="font-headline text-lg opacity-60 group-hover:opacity-100 transition-opacity"
+                  >¥680</span
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Pagination / Loading -->
+          <div class="mt-24 flex justify-center items-center gap-10">
+            <button
+              class="font-label text-xs tracking-widest uppercase opacity-40 hover:opacity-100 transition-opacity flex items-center gap-2"
+            >
+              <span
+                class="material-symbols-outlined text-sm"
+                data-icon="arrow_back"
+                >arrow_back</span
+              >
+              PREVIOUS
+            </button>
+            <div class="flex gap-4 font-label text-xs">
+              <span class="text-primary border-b border-primary pb-1">01</span>
+              <span
+                class="opacity-40 hover:opacity-100 cursor-pointer transition-opacity"
+                >02</span
+              >
+              <span
+                class="opacity-40 hover:opacity-100 cursor-pointer transition-opacity"
+                >03</span
+              >
+            </div>
+            <button
+              class="font-label text-xs tracking-widest uppercase opacity-40 hover:opacity-100 transition-opacity flex items-center gap-2"
+            >
+              NEXT
+              <span
+                class="material-symbols-outlined text-sm"
+                data-icon="arrow_forward"
+                >arrow_forward</span
+              >
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- Newsletter Subscription Area -->
+      <section class="liubai-spacing bg-surface-container-low mt-20">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+          <h2 class="font-headline text-3xl lg:text-5xl mb-6">入席，听香。</h2>
+          <p class="font-body text-on-surface-variant mb-12 max-w-lg mx-auto">
+            Subscribe to our journal for early access to rare harvests and
+            meditative insights into the world of Agarwood.
+          </p>
+          <form class="flex flex-col md:flex-row gap-4 max-w-xl mx-auto">
+            <input
+              class="flex-1 bg-background border-outline-variant px-6 py-4 font-label text-xs tracking-widest focus:border-primary outline-none transition-colors"
+              placeholder="EMAIL ADDRESS"
+              type="email"
+            />
+            <button
+              class="bg-primary text-on-primary px-10 py-4 font-label text-xs tracking-widest uppercase hover:bg-primary-fixed-dim transition-colors"
+            >
+              SUBSCRIBE
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>

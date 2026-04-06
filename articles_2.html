@@ -1,127 +1,308 @@
-<!DOCTYPE html>
+<!doctype html>
 <html class="dark" lang="en">
-<head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Articles - Collection | {{websiteName}}</title>
     <script src="layout.js"></script>
-        <style>body { visibility: hidden; opacity: 0; }</style>
-    </head>
-<body class="bg-background text-on-surface font-body selection:bg-primary/30 opacity-0 transition-opacity duration-300">
-<main class="pt-32 pb-24">
-<!-- Hero Section -->
-<header class="liubai-spacing mb-20 lg:mb-32 relative">
-<div class="absolute -left-4 top-0 opacity-10 select-none">
-<span class="text-[12rem] font-bold leading-none vertical-text">香</span>
-</div>
-<div class="relative z-10 max-w-4xl">
-<p class="font-label text-primary tracking-[0.3em] uppercase mb-4 text-xs lg:text-sm">Wisdom &amp; Tranquility</p>
-<h1 class="text-5xl lg:text-7xl font-headline leading-tight mb-8">
-                    The Archive of <br/>
-<span class="italic font-normal text-on-surface-variant">Eternal Scent.</span>
-</h1>
-<div class="h-px w-24 bg-outline-variant opacity-30 mb-8"></div>
-<p class="text-lg lg:text-xl text-on-surface-variant max-w-2xl leading-relaxed">
-                    Explore the ancient wisdom of Agarwood, the sacred art of Buddhist beads, and the path to inner peace through meditative practice.
-                </p>
-</div>
-</header>
-<!-- Category Filter -->
-<section class="liubai-spacing mb-16">
-<div class="flex flex-wrap gap-4 lg:gap-8 items-center border-b border-outline-variant/10 pb-8">
-<span class="text-xs font-label uppercase tracking-widest text-on-surface-variant mr-4">Filter by</span>
-<button class="px-6 py-2 rounded-full border border-primary text-primary text-sm font-label tracking-wide bg-primary/5">All Wisdom</button>
-<button class="px-6 py-2 rounded-full border border-outline-variant/20 text-on-surface-variant hover:border-primary/50 hover:text-primary transition-all text-sm font-label tracking-wide">沉香知识</button>
-<button class="px-6 py-2 rounded-full border border-outline-variant/20 text-on-surface-variant hover:border-primary/50 hover:text-primary transition-all text-sm font-label tracking-wide">佛珠文化</button>
-<button class="px-6 py-2 rounded-full border border-outline-variant/20 text-on-surface-variant hover:border-primary/50 hover:text-primary transition-all text-sm font-label tracking-wide">冥想修行</button>
-</div>
-</section>
-<!-- Article Grid -->
-<section class="liubai-spacing">
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-y-16 lg:gap-y-32 lg:gap-x-12">
-<!-- Feature Article (Asymmetric Layout) -->
-<article class="lg:col-span-8 group cursor-pointer">
-<div class="relative overflow-hidden mb-8 aspect-[16/9]">
-<img alt="Agarwood smoke" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="Close up of a piece of dark agarwood burning with a thin elegant wisp of white smoke rising in a dark moody setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcCSJ0ktuSJ7tqLq5FgM4S2Jk_VeSC9xRKEq4UmH-uqxwBiJxVOP98kRtFDCiInFen2HGU793qYTQ-tiHcWxgFy5I_5mK6LEEH-4r_M7CUZ1VO-QFXM2hbzK6-kKSYI3RCZhtCpZocFwlv6jTiNiLbbw24KD3y5SuOvOJb-BwN4Gb7WQqHiim3fO8ExAsnl5CwM2m-dWbAWQ_eXjWwh7J5iaR35eBn2E9mMXr-_4uGUFFgBsNlKvSVd-YMKzNyLsCnZKMsg2X_GNi8"/>
-<div class="absolute top-6 left-6 px-4 py-1 bg-surface-container/80 backdrop-blur-md text-primary text-[10px] font-label uppercase tracking-[0.2em]">沉香知识</div>
-</div>
-<div class="max-w-2xl">
-<div class="flex items-center gap-4 mb-4">
-<span class="text-[10px] font-label text-on-surface-variant uppercase tracking-widest">October 24, 2024</span>
-<div class="h-[1px] w-8 bg-outline-variant"></div>
-<span class="text-[10px] font-label text-on-surface-variant uppercase tracking-widest">8 min read</span>
-</div>
-<h2 class="text-3xl lg:text-4xl font-headline mb-4 group-hover:text-primary transition-colors">辨识真假沉香的艺术 <br/><span class="text-xl lg:text-2xl font-normal text-on-surface-variant italic">The Art of Identifying Authentic Agarwood</span></h2>
-<p class="text-on-surface-variant leading-relaxed mb-6 line-clamp-3">
-                            In the world of rare woods, none hold a candle to the complexity of Agarwood. This guide delves into the microscopic structures and olfactory signatures that define genuine "liquid gold" and how to protect yourself from modern counterfeits.
-                        </p>
-<a class="inline-flex items-center gap-2 text-primary font-label text-sm uppercase tracking-widest group/link" href="#">
-                            Read Journal
-                            <span class="material-symbols-outlined group-hover/link:translate-x-1 transition-transform" data-icon="arrow_right_alt">arrow_right_alt</span>
-</a>
-</div>
-</article>
-<!-- Side Article 1 -->
-<article class="lg:col-span-4 self-center group cursor-pointer">
-<div class="aspect-square mb-6 overflow-hidden">
-<img alt="Buddhist beads" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" data-alt="Handcrafted sandalwood Buddhist prayer beads resting on a weathered piece of driftwood with soft directional lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLN4EGOuF1-UcdLlTG_Aefyks6LK7aH-SGWd-NE-8Q-hxDo5OMy58-fP2emaEC3spr1DB7Ehtw19m0TudaGrxSruGcveLUWfI4r9J5XBVjBqxI-wsSf1I9OXfxtecUWv_vBigJLPYLmw3iwl_s_pUeC5_FyMaNqfCG4SB3c_mEcY7RWruHt8yxuEhvOY6I7_AO-iUeOvv87AHRPSmWnTJ4qHmOXsVVc6COUNhGqldmfoVPsiQ4wWDrm83MkMXf7jRAyWiPBFy0BCXI"/>
-</div>
-<div>
-<div class="text-[10px] font-label text-primary uppercase tracking-[0.2em] mb-2">佛珠文化</div>
-<h3 class="text-xl font-headline mb-3 group-hover:text-primary transition-colors">持珠的指尖修行 <br/><span class="text-sm italic text-on-surface-variant font-normal">Mindfulness Through the Fingertips</span></h3>
-<p class="text-sm text-on-surface-variant leading-relaxed mb-4">
-                            How the simple act of counting beads serves as an anchor for the wandering mind.
-                        </p>
-<span class="text-[10px] font-label text-outline uppercase tracking-widest">Sept 12, 2024</span>
-</div>
-</article>
-<!-- Second Row - Trio -->
-<article class="lg:col-span-4 group cursor-pointer">
-<div class="aspect-[4/5] mb-6 overflow-hidden">
-<img alt="Meditation" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="A person sitting in meditation in a minimalist Zen room with a single incense burner and soft natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4PB4YCXeFhaneE2oR6o6pATSYA49vDK_d4HfGVyTEftXg6DPpGtdUJv4A-kx_MGoM-go8dkUzYtn7OrO6S3UfyoTQ-HG-I4IPYOawpyJVDplMD-psvmAg64rapkGL0vbRZWjWAu_OGKPOKx0cCXnfKj6aA60Urf_L92VQSqDkoAhXXFRpfWpfgAdGMoP5lDGxvVSWpoTKghyD7VDlx1cXF7qK24Np_YDi9A5b4F1G0vp-dDYFahat-tQo9p68_f3EToZIHnLsvZaA"/>
-</div>
-<div>
-<div class="text-[10px] font-label text-primary uppercase tracking-[0.2em] mb-2">冥想修行</div>
-<h3 class="text-xl font-headline mb-3 group-hover:text-primary transition-colors">禅定与香气：初学者的呼吸法 <br/><span class="text-sm italic text-on-surface-variant font-normal">Zen and Scent: Breathing for Beginners</span></h3>
-<p class="text-[10px] font-label text-outline uppercase tracking-widest">Aug 28, 2024</p>
-</div>
-</article>
-<article class="lg:col-span-4 group cursor-pointer mt-12 lg:mt-24">
-<div class="aspect-[4/5] mb-6 overflow-hidden">
-<img alt="Forest" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="Mist rising from a dense tropical rainforest canopy at dawn symbolizing the origin of wild agarwood trees" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuLsfNJKv5zogPY-_0oPwMxYv1w4bNxv9qeBTgM12EBHD6DdHZ4GIx6pSbXGMzbo1UDxYZnZqMtnksL9Jv-VMbiOsj2S9qKqnuqiTrqrPPN0JemgOyYJve07qS8gS_NW6f0_wa92wtH6nzidg2sC0T51WzLG8fYga36UIeuZ5EQ6ypMPMybvDIRKmBvCMFj3vvbdft-OEcSziq0LwnCPqDIpfHJO2KzQJbbhLZ86xmcSBgBKfOn97KBsNc0n9JJzwBdr-N4U2aKpSn"/>
-</div>
-<div>
-<div class="text-[10px] font-label text-primary uppercase tracking-[0.2em] mb-2">沉香知识</div>
-<h3 class="text-xl font-headline mb-3 group-hover:text-primary transition-colors">探寻星洲沉香的独特韵味 <br/><span class="text-sm italic text-on-surface-variant font-normal">Exploring the Profiles of Xingzhou Agarwood</span></h3>
-<p class="text-[10px] font-label text-outline uppercase tracking-widest">July 15, 2024</p>
-</div>
-</article>
-<article class="lg:col-span-4 group cursor-pointer">
-<div class="aspect-[4/5] mb-6 overflow-hidden">
-<img alt="Tea Ceremony" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="A refined Chinese tea set with a small incense holder on a dark slate tray with a single autumn leaf" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABtmK-sPea7gwTQ_nOQJymnKdB3vOqBxkw-Py8XEPDFcgbifb2zaESKDnjf0VYifvjCZRmi-q3ANMDhsbRGqvf9shqlTsgSkjRCpNUkwtfUp9eVFiNIeL8Wu_1mlW9dMMbqmbM_tDM97P4k36FV_J1jjOJMTEqd9Ufy2Ut5rATwHJ9JPwy5TRwaLG-1KZ-DWT16lNtcgiX7fjJgFtXsRSaChTwMfJjt5kUuXggaBDx46hug_ngVjW7Dl3rXpIp0WKp3L7R532Wshdb"/>
-</div>
-<div>
-<div class="text-[10px] font-label text-primary uppercase tracking-[0.2em] mb-2">冥想修行</div>
-<h3 class="text-xl font-headline mb-3 group-hover:text-primary transition-colors">茶香一味：生活的留白艺术 <br/><span class="text-sm italic text-on-surface-variant font-normal">Tea and Incense: The Art of Living in Space</span></h3>
-<p class="text-[10px] font-label text-outline uppercase tracking-widest">June 04, 2024</p>
-</div>
-</article>
-</div>
-</section>
-<!-- Newsletter / Contact CTA -->
-<section class="liubai-spacing mt-32 lg:mt-48">
-<div class="bg-surface-container-low p-12 lg:p-24 relative overflow-hidden flex flex-col items-center text-center">
-<div class="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none">
-<div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary via-transparent to-transparent"></div>
-</div>
-<h2 class="text-4xl lg:text-5xl font-headline mb-6 relative z-10">订阅灵感 <br/><span class="text-2xl italic font-normal text-on-surface-variant">Subscribe to the Void.</span></h2>
-<p class="text-on-surface-variant max-w-lg mb-12 relative z-10">Receive a monthly curation of meditative practices, rare wood arrivals, and stories from the tea room.</p>
-<form class="flex flex-col md:flex-row gap-4 w-full max-w-md relative z-10">
-<input class="flex-1 bg-transparent border-b border-outline-variant focus:border-primary focus:ring-0 text-sm font-label py-3 transition-colors" placeholder="Your essence (Email)" type="email"/>
-<button class="bg-primary text-on-primary px-8 py-3 text-xs font-label uppercase tracking-widest font-bold hover:bg-primary-fixed-dim transition-colors" type="submit">Join Us</button>
-</form>
-</div>
-</section>
-</main>
-</body>
+    <style>
+      body {
+        visibility: hidden;
+        opacity: 0;
+      }
+    </style>
+  </head>
+
+  <body
+    class="bg-background text-on-surface font-body selection:bg-primary/30 opacity-0 transition-opacity duration-300"
+  >
+    <main class="pt-32 pb-24">
+      <!-- Hero Section -->
+      <header class="liubai-spacing mb-20 lg:mb-32 relative">
+        <div class="absolute -left-4 top-0 opacity-10 select-none">
+          <span class="text-[12rem] font-bold leading-none vertical-text"
+            >香</span
+          >
+        </div>
+        <div class="relative z-10 max-w-4xl">
+          <p
+            class="font-label text-primary tracking-[0.3em] uppercase mb-4 text-xs lg:text-sm"
+          >
+            Wisdom &amp; Tranquility
+          </p>
+          <h1 class="text-5xl lg:text-7xl font-headline leading-tight mb-8">
+            The Archive of <br />
+            <span class="italic font-normal text-on-surface-variant"
+              >Eternal Scent.</span
+            >
+          </h1>
+          <div class="h-px w-24 bg-outline-variant opacity-30 mb-8"></div>
+          <p
+            class="text-lg lg:text-xl text-on-surface-variant max-w-2xl leading-relaxed"
+          >
+            Explore the ancient wisdom of Agarwood, the sacred art of Buddhist
+            beads, and the path to inner peace through meditative practice.
+          </p>
+        </div>
+      </header>
+      <!-- Category Filter -->
+      <section class="liubai-spacing mb-16">
+        <div
+          class="flex flex-wrap gap-4 lg:gap-8 items-center border-b border-outline-variant/10 pb-8"
+        >
+          <span
+            class="text-xs font-label uppercase tracking-widest text-on-surface-variant mr-4"
+            >Filter by</span
+          >
+          <button
+            class="px-6 py-2 rounded-full border border-primary text-primary text-sm font-label tracking-wide bg-primary/5"
+          >
+            All Wisdom
+          </button>
+          <button
+            class="px-6 py-2 rounded-full border border-outline-variant/20 text-on-surface-variant hover:border-primary/50 hover:text-primary transition-all text-sm font-label tracking-wide"
+          >
+            沉香知识
+          </button>
+          <button
+            class="px-6 py-2 rounded-full border border-outline-variant/20 text-on-surface-variant hover:border-primary/50 hover:text-primary transition-all text-sm font-label tracking-wide"
+          >
+            佛珠文化
+          </button>
+          <button
+            class="px-6 py-2 rounded-full border border-outline-variant/20 text-on-surface-variant hover:border-primary/50 hover:text-primary transition-all text-sm font-label tracking-wide"
+          >
+            冥想修行
+          </button>
+        </div>
+      </section>
+      <!-- Article Grid -->
+      <section class="liubai-spacing">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-y-16 lg:gap-y-32 lg:gap-x-12"
+        >
+          <!-- Feature Article (Asymmetric Layout) -->
+          <article class="lg:col-span-8 group cursor-pointer">
+            <div class="relative overflow-hidden mb-8 aspect-[16/9]">
+              <img
+                alt="Agarwood smoke"
+                class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                data-alt="Close up of a piece of dark agarwood burning with a thin elegant wisp of white smoke rising in a dark moody setting"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcCSJ0ktuSJ7tqLq5FgM4S2Jk_VeSC9xRKEq4UmH-uqxwBiJxVOP98kRtFDCiInFen2HGU793qYTQ-tiHcWxgFy5I_5mK6LEEH-4r_M7CUZ1VO-QFXM2hbzK6-kKSYI3RCZhtCpZocFwlv6jTiNiLbbw24KD3y5SuOvOJb-BwN4Gb7WQqHiim3fO8ExAsnl5CwM2m-dWbAWQ_eXjWwh7J5iaR35eBn2E9mMXr-_4uGUFFgBsNlKvSVd-YMKzNyLsCnZKMsg2X_GNi8"
+              />
+              <div
+                class="absolute top-6 left-6 px-4 py-1 bg-surface-container/80 backdrop-blur-md text-primary text-[10px] font-label uppercase tracking-[0.2em]"
+              >
+                沉香知识
+              </div>
+            </div>
+            <div class="max-w-2xl">
+              <div class="flex items-center gap-4 mb-4">
+                <span
+                  class="text-[10px] font-label text-on-surface-variant uppercase tracking-widest"
+                  >October 24, 2024</span
+                >
+                <div class="h-[1px] w-8 bg-outline-variant"></div>
+                <span
+                  class="text-[10px] font-label text-on-surface-variant uppercase tracking-widest"
+                  >8 min read</span
+                >
+              </div>
+              <h2
+                class="text-3xl lg:text-4xl font-headline mb-4 group-hover:text-primary transition-colors"
+              >
+                辨识真假沉香的艺术 <br /><span
+                  class="text-xl lg:text-2xl font-normal text-on-surface-variant italic"
+                  >The Art of Identifying Authentic Agarwood</span
+                >
+              </h2>
+              <p
+                class="text-on-surface-variant leading-relaxed mb-6 line-clamp-3"
+              >
+                In the world of rare woods, none hold a candle to the complexity
+                of Agarwood. This guide delves into the microscopic structures
+                and olfactory signatures that define genuine "liquid gold" and
+                how to protect yourself from modern counterfeits.
+              </p>
+              <a
+                class="inline-flex items-center gap-2 text-primary font-label text-sm uppercase tracking-widest group/link"
+                href="#"
+              >
+                Read Journal
+                <span
+                  class="material-symbols-outlined group-hover/link:translate-x-1 transition-transform"
+                  data-icon="arrow_right_alt"
+                  >arrow_right_alt</span
+                >
+              </a>
+            </div>
+          </article>
+          <!-- Side Article 1 -->
+          <article class="lg:col-span-4 self-center group cursor-pointer">
+            <div class="aspect-square mb-6 overflow-hidden">
+              <img
+                alt="Buddhist beads"
+                class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                data-alt="Handcrafted sandalwood Buddhist prayer beads resting on a weathered piece of driftwood with soft directional lighting"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLN4EGOuF1-UcdLlTG_Aefyks6LK7aH-SGWd-NE-8Q-hxDo5OMy58-fP2emaEC3spr1DB7Ehtw19m0TudaGrxSruGcveLUWfI4r9J5XBVjBqxI-wsSf1I9OXfxtecUWv_vBigJLPYLmw3iwl_s_pUeC5_FyMaNqfCG4SB3c_mEcY7RWruHt8yxuEhvOY6I7_AO-iUeOvv87AHRPSmWnTJ4qHmOXsVVc6COUNhGqldmfoVPsiQ4wWDrm83MkMXf7jRAyWiPBFy0BCXI"
+              />
+            </div>
+            <div>
+              <div
+                class="text-[10px] font-label text-primary uppercase tracking-[0.2em] mb-2"
+              >
+                佛珠文化
+              </div>
+              <h3
+                class="text-xl font-headline mb-3 group-hover:text-primary transition-colors"
+              >
+                持珠的指尖修行 <br /><span
+                  class="text-sm italic text-on-surface-variant font-normal"
+                  >Mindfulness Through the Fingertips</span
+                >
+              </h3>
+              <p class="text-sm text-on-surface-variant leading-relaxed mb-4">
+                How the simple act of counting beads serves as an anchor for the
+                wandering mind.
+              </p>
+              <span
+                class="text-[10px] font-label text-outline uppercase tracking-widest"
+                >Sept 12, 2024</span
+              >
+            </div>
+          </article>
+          <!-- Second Row - Trio -->
+          <article class="lg:col-span-4 group cursor-pointer">
+            <div class="aspect-[4/5] mb-6 overflow-hidden">
+              <img
+                alt="Meditation"
+                class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                data-alt="A person sitting in meditation in a minimalist Zen room with a single incense burner and soft natural light"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4PB4YCXeFhaneE2oR6o6pATSYA49vDK_d4HfGVyTEftXg6DPpGtdUJv4A-kx_MGoM-go8dkUzYtn7OrO6S3UfyoTQ-HG-I4IPYOawpyJVDplMD-psvmAg64rapkGL0vbRZWjWAu_OGKPOKx0cCXnfKj6aA60Urf_L92VQSqDkoAhXXFRpfWpfgAdGMoP5lDGxvVSWpoTKghyD7VDlx1cXF7qK24Np_YDi9A5b4F1G0vp-dDYFahat-tQo9p68_f3EToZIHnLsvZaA"
+              />
+            </div>
+            <div>
+              <div
+                class="text-[10px] font-label text-primary uppercase tracking-[0.2em] mb-2"
+              >
+                冥想修行
+              </div>
+              <h3
+                class="text-xl font-headline mb-3 group-hover:text-primary transition-colors"
+              >
+                禅定与香气：初学者的呼吸法 <br /><span
+                  class="text-sm italic text-on-surface-variant font-normal"
+                  >Zen and Scent: Breathing for Beginners</span
+                >
+              </h3>
+              <p
+                class="text-[10px] font-label text-outline uppercase tracking-widest"
+              >
+                Aug 28, 2024
+              </p>
+            </div>
+          </article>
+          <article class="lg:col-span-4 group cursor-pointer mt-12 lg:mt-24">
+            <div class="aspect-[4/5] mb-6 overflow-hidden">
+              <img
+                alt="Forest"
+                class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                data-alt="Mist rising from a dense tropical rainforest canopy at dawn symbolizing the origin of wild agarwood trees"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuLsfNJKv5zogPY-_0oPwMxYv1w4bNxv9qeBTgM12EBHD6DdHZ4GIx6pSbXGMzbo1UDxYZnZqMtnksL9Jv-VMbiOsj2S9qKqnuqiTrqrPPN0JemgOyYJve07qS8gS_NW6f0_wa92wtH6nzidg2sC0T51WzLG8fYga36UIeuZ5EQ6ypMPMybvDIRKmBvCMFj3vvbdft-OEcSziq0LwnCPqDIpfHJO2KzQJbbhLZ86xmcSBgBKfOn97KBsNc0n9JJzwBdr-N4U2aKpSn"
+              />
+            </div>
+            <div>
+              <div
+                class="text-[10px] font-label text-primary uppercase tracking-[0.2em] mb-2"
+              >
+                沉香知识
+              </div>
+              <h3
+                class="text-xl font-headline mb-3 group-hover:text-primary transition-colors"
+              >
+                探寻星洲沉香的独特韵味 <br /><span
+                  class="text-sm italic text-on-surface-variant font-normal"
+                  >Exploring the Profiles of Xingzhou Agarwood</span
+                >
+              </h3>
+              <p
+                class="text-[10px] font-label text-outline uppercase tracking-widest"
+              >
+                July 15, 2024
+              </p>
+            </div>
+          </article>
+          <article class="lg:col-span-4 group cursor-pointer">
+            <div class="aspect-[4/5] mb-6 overflow-hidden">
+              <img
+                alt="Tea Ceremony"
+                class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                data-alt="A refined Chinese tea set with a small incense holder on a dark slate tray with a single autumn leaf"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuABtmK-sPea7gwTQ_nOQJymnKdB3vOqBxkw-Py8XEPDFcgbifb2zaESKDnjf0VYifvjCZRmi-q3ANMDhsbRGqvf9shqlTsgSkjRCpNUkwtfUp9eVFiNIeL8Wu_1mlW9dMMbqmbM_tDM97P4k36FV_J1jjOJMTEqd9Ufy2Ut5rATwHJ9JPwy5TRwaLG-1KZ-DWT16lNtcgiX7fjJgFtXsRSaChTwMfJjt5kUuXggaBDx46hug_ngVjW7Dl3rXpIp0WKp3L7R532Wshdb"
+              />
+            </div>
+            <div>
+              <div
+                class="text-[10px] font-label text-primary uppercase tracking-[0.2em] mb-2"
+              >
+                冥想修行
+              </div>
+              <h3
+                class="text-xl font-headline mb-3 group-hover:text-primary transition-colors"
+              >
+                茶香一味：生活的留白艺术 <br /><span
+                  class="text-sm italic text-on-surface-variant font-normal"
+                  >Tea and Incense: The Art of Living in Space</span
+                >
+              </h3>
+              <p
+                class="text-[10px] font-label text-outline uppercase tracking-widest"
+              >
+                June 04, 2024
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <!-- Newsletter / Contact CTA -->
+      <section class="liubai-spacing mt-32 lg:mt-48">
+        <div
+          class="bg-surface-container-low p-12 lg:p-24 relative overflow-hidden flex flex-col items-center text-center"
+        >
+          <div
+            class="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none"
+          >
+            <div
+              class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary via-transparent to-transparent"
+            ></div>
+          </div>
+          <h2 class="text-4xl lg:text-5xl font-headline mb-6 relative z-10">
+            订阅灵感 <br /><span
+              class="text-2xl italic font-normal text-on-surface-variant"
+              >Subscribe to the Void.</span
+            >
+          </h2>
+          <p class="text-on-surface-variant max-w-lg mb-12 relative z-10">
+            Receive a monthly curation of meditative practices, rare wood
+            arrivals, and stories from the tea room.
+          </p>
+          <form
+            class="flex flex-col md:flex-row gap-4 w-full max-w-md relative z-10"
+          >
+            <input
+              class="flex-1 bg-transparent border-b border-outline-variant focus:border-primary focus:ring-0 text-sm font-label py-3 transition-colors"
+              placeholder="Your essence (Email)"
+              type="email"
+            />
+            <button
+              class="bg-primary text-on-primary px-8 py-3 text-xs font-label uppercase tracking-widest font-bold hover:bg-primary-fixed-dim transition-colors"
+              type="submit"
+            >
+              Join Us
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>

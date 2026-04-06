@@ -5,130 +5,130 @@
 
 // Global Configuration
 const GLOBAL_CONFIG = {
-    websiteName: "Woodzpacker",
-    tagline: "沉香",
-    footerTitle: "冥想虚空 THE MEDITATIVE VOID",
-    footerSlogan: "悟培閣 · {{footerTitle}}",
-    footerDescription: "专注于马来西亚野生沉香与佛教珍品<br/>品质至上，诚信经营"
+  websiteName: "Woodzpacker",
+  tagline: "沉香",
+  footerTitle: "冥想虚空 THE MEDITATIVE VOID",
+  footerSlogan: "悟培閣 · {{footerTitle}}",
+  footerDescription: "专注于马来西亚野生沉香与佛教珍品<br/>品质至上，诚信经营"
 };
 
 // Simple template interpolation
 const interpolate = (str) => {
-    return str.replace(/\{\{(.*?)\}\}/g, (match, key) => {
-        const val = GLOBAL_CONFIG[key.trim()] || match;
-        // If the value itself contains curly braces, interpolate it recursively (one level)
-        if (typeof val === 'string' && val.includes('{{')) {
-            return interpolate(val);
-        }
-        return val;
-    });
+  return str.replace(/\{\{(.*?)\}\}/g, (match, key) => {
+    const val = GLOBAL_CONFIG[key.trim()] || match;
+    // If the value itself contains curly braces, interpolate it recursively (one level)
+    if (typeof val === 'string' && val.includes('{{')) {
+      return interpolate(val);
+    }
+    return val;
+  });
 };
 
 // 1. Initial Head Setup (Run immediately)
 const setupHead = () => {
-    // Process Page Title immediately
-    document.title = interpolate(document.title);
+  // Process Page Title immediately
+  document.title = interpolate(document.title);
 
-    // Add Tailwind CSS (Synchronous Script)
-    if (!document.querySelector('script[src*="tailwindcss"]')) {
-        document.write('<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>');
-    }
+  // Add Tailwind CSS (Synchronous Script)
+  if (!document.querySelector('script[src*="tailwindcss"]')) {
+    document.write('<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>');
+  }
 
-    // Add Google Fonts and Shared Stlyes (Synchronous Link)
-    const fonts = [
-        "https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Newsreader:ital,wght@0,400;0,600;1,400&family=Manrope:wght@300;500;700&display=swap",
-        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
-    ];
-    fonts.forEach(url => {
-        document.write(`<link rel="stylesheet" href="${url}">`);
-    });
+  // Add Google Fonts and Shared Stlyes (Synchronous Link)
+  const fonts = [
+    "https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Newsreader:ital,wght@0,400;0,600;1,400&family=Manrope:wght@300;500;700&display=swap",
+    "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+  ];
+  fonts.forEach(url => {
+    document.write(`<link rel="stylesheet" href="${url}">`);
+  });
 
-    // Inject Shared style.css
-    document.write('<link rel="stylesheet" href="style.css">');
+  // Inject Shared style.css
+  document.write('<link rel="stylesheet" href="style.css">');
 
-    // Setup Tailwind Config
-    window.tailwindConfig = {
-        darkMode: "class",
-        theme: {
-            extend: {
-                "colors": {
-                    "on-primary-fixed-variant": "#574500",
-                    "on-error-container": "#ffdad6",
-                    "surface-container-lowest": "#140d06",
-                    "secondary": "#dec1b3",
-                    "surface-container-low": "#221a13",
-                    "surface": "#1a120b",
-                    "secondary-fixed-dim": "#dec1b3",
-                    "outline": "#9b8e88",
-                    "on-primary-fixed": "#241a00",
-                    "error": "#ffb4ab",
-                    "background": "#1a120b",
-                    "surface-bright": "#42372f",
-                    "primary-fixed": "#ffe088",
-                    "on-secondary": "#3f2c23",
-                    "tertiary": "#c8c8af",
-                    "on-secondary-container": "#cbafa2",
-                    "on-tertiary-fixed": "#1b1d0d",
-                    "on-secondary-fixed-variant": "#574238",
-                    "outline-variant": "#4f4540",
-                    "surface-tint": "#e9c349",
-                    "error-container": "#93000a",
-                    "secondary-container": "#574238",
-                    "inverse-primary": "#735c00",
-                    "tertiary-fixed": "#e4e4ca",
-                    "on-primary": "#3c2f00",
-                    "tertiary-container": "#2e2f1e",
-                    "on-error": "#690005",
-                    "on-tertiary-container": "#969780",
-                    "surface-container-high": "#322820",
-                    "on-tertiary-fixed-variant": "#474835",
-                    "primary": "#e9c349",
-                    "inverse-on-surface": "#382f26",
-                    "surface-dim": "#1a120b",
-                    "primary-fixed-dim": "#e9c349",
-                    "inverse-surface": "#f1dfd3",
-                    "on-primary-container": "#b49218",
-                    "tertiary-fixed-dim": "#c8c8af",
-                    "on-tertiary": "#303220",
-                    "on-surface": "#f1dfd3",
-                    "surface-container": "#271e16",
-                    "on-secondary-fixed": "#281810",
-                    "primary-container": "#3a2c00",
-                    "on-background": "#f1dfd3",
-                    "surface-variant": "#3d332b",
-                    "secondary-fixed": "#fbdcce",
-                    "on-surface-variant": "#d3c3bd",
-                    "surface-container-highest": "#3d332b"
-                },
-                "borderRadius": {
-                    "DEFAULT": "0.125rem",
-                    "lg": "0.25rem",
-                    "xl": "0.5rem",
-                    "full": "0.75rem"
-                },
-                "fontFamily": {
-                    "headline": ["Noto Serif"],
-                    "body": ["Newsreader"],
-                    "label": ["Manrope"]
-                }
-            },
+  // Setup Tailwind Config
+  window.tailwindConfig = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-primary-fixed-variant": "#574500",
+          "on-error-container": "#ffdad6",
+          "surface-container-lowest": "#140d06",
+          "secondary": "#dec1b3",
+          "surface-container-low": "#221a13",
+          "surface": "#1a120b",
+          "secondary-fixed-dim": "#dec1b3",
+          "outline": "#9b8e88",
+          "on-primary-fixed": "#241a00",
+          "error": "#ffb4ab",
+          "background": "#1a120b",
+          "surface-bright": "#42372f",
+          "primary-fixed": "#ffe088",
+          "on-secondary": "#3f2c23",
+          "tertiary": "#c8c8af",
+          "on-secondary-container": "#cbafa2",
+          "on-tertiary-fixed": "#1b1d0d",
+          "on-secondary-fixed-variant": "#574238",
+          "outline-variant": "#4f4540",
+          "surface-tint": "#e9c349",
+          "error-container": "#93000a",
+          "secondary-container": "#574238",
+          "inverse-primary": "#735c00",
+          "tertiary-fixed": "#e4e4ca",
+          "on-primary": "#3c2f00",
+          "tertiary-container": "#2e2f1e",
+          "on-error": "#690005",
+          "on-tertiary-container": "#969780",
+          "surface-container-high": "#322820",
+          "on-tertiary-fixed-variant": "#474835",
+          "primary": "#e9c349",
+          "inverse-on-surface": "#382f26",
+          "surface-dim": "#1a120b",
+          "primary-fixed-dim": "#e9c349",
+          "inverse-surface": "#f1dfd3",
+          "on-primary-container": "#b49218",
+          "tertiary-fixed-dim": "#c8c8af",
+          "on-tertiary": "#303220",
+          "on-surface": "#f1dfd3",
+          "surface-container": "#271e16",
+          "on-secondary-fixed": "#281810",
+          "primary-container": "#3a2c00",
+          "on-background": "#f1dfd3",
+          "surface-variant": "#3d332b",
+          "secondary-fixed": "#fbdcce",
+          "on-surface-variant": "#d3c3bd",
+          "surface-container-highest": "#3d332b"
         },
-    };
-
-    const pollTailwind = setInterval(() => {
-        if (window.tailwind) {
-            window.tailwind.config = window.tailwindConfig;
-            clearInterval(pollTailwind);
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "fontFamily": {
+          "headline": ["Noto Serif"],
+          "body": ["Newsreader"],
+          "label": ["Manrope"]
         }
-    }, 50);
+      },
+    },
+  };
+
+  const pollTailwind = setInterval(() => {
+    if (window.tailwind) {
+      window.tailwind.config = window.tailwindConfig;
+      clearInterval(pollTailwind);
+    }
+  }, 50);
 };
 
 // 2. Main Logic - Inject Header & Footer
 const injectLayout = () => {
-    const currentPage = window.location.pathname.split("/").pop() || "index.html";
+  const currentPage = window.location.pathname.split("/").pop() || "index.html";
 
-    // Navigation HTML
-    const navHTML = interpolate(`
+  // Navigation HTML
+  const navHTML = interpolate(`
 <nav class="fixed top-0 w-full z-50 bg-[#1A120B]/70 backdrop-blur-md bg-gradient-to-b from-[#1A120B] to-transparent shadow-[0_4px_30_rgba(0,0,0,0.1)]">
     <div class="flex justify-between items-center px-12 py-6 w-full max-w-screen-2xl mx-auto">
         <div class="text-xl font-headline font-bold tracking-tighter text-[#F1DFD3]">
@@ -150,8 +150,8 @@ const injectLayout = () => {
     </div>
 </nav>`);
 
-    // Footer HTML (Redesigned for Premium Look)
-    const footerHTML = interpolate(`
+  // Footer HTML (Redesigned for Premium Look)
+  const footerHTML = interpolate(`
 <footer class="w-full border-t border-[#4F4540]/20 bg-[#1A120B] pt-24 pb-12">
     <div class="max-w-screen-2xl mx-auto px-12">
         <div class="grid grid-cols-1 md:grid-cols-12 gap-16 mb-20">
@@ -220,16 +220,16 @@ const injectLayout = () => {
     </div>
 </footer>`);
 
-    // Inject into body
-    document.body.insertAdjacentHTML('afterbegin', navHTML);
-    document.body.insertAdjacentHTML('beforeend', footerHTML);
+  // Inject into body
+  document.body.insertAdjacentHTML('afterbegin', navHTML);
+  document.body.insertAdjacentHTML('beforeend', footerHTML);
 
-    // Final Revelation
-    setTimeout(() => {
-        document.body.style.visibility = 'visible';
-        document.body.style.opacity = '1';
-        document.body.classList.add('transition-opacity', 'duration-700');
-    }, 10);
+  // Final Revelation
+  setTimeout(() => {
+    document.body.style.visibility = 'visible';
+    document.body.style.opacity = '1';
+    document.body.classList.add('transition-opacity', 'duration-700');
+  }, 10);
 };
 
 // Execution
@@ -237,16 +237,14 @@ setupHead();
 
 // Fail-safe: Reveal body if something goes wrong
 setTimeout(() => {
-    if (document.body && document.body.style.visibility !== 'visible') {
-        document.body.style.visibility = 'visible';
-        document.body.style.opacity = '1';
-    }
+  if (document.body && document.body.style.visibility !== 'visible') {
+    document.body.style.visibility = 'visible';
+    document.body.style.opacity = '1';
+  }
 }, 3000);
 
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', injectLayout);
+  document.addEventListener('DOMContentLoaded', injectLayout);
 } else {
-    injectLayout();
+  injectLayout();
 }
-
-

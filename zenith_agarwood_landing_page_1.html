@@ -1,171 +1,312 @@
-<!DOCTYPE html>
+<!doctype html>
 <html class="dark" lang="en">
-<head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>沉香与佛珠 | {{websiteName}}</title>
     <script src="layout.js"></script>
-        <style>body { visibility: hidden; opacity: 0; }</style>
-    </head>
-<body class="bg-background text-on-surface font-body selection:bg-primary/30 opacity-0 transition-opacity duration-300">
-<main class="pt-32 pb-24">
-<!-- Hero Section -->
-<section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
-<div class="absolute inset-0 z-0">
-<img class="w-full h-full object-cover" data-alt="atmospheric dark landscape with mystical fog rising from a silent forest floor at midnight under soft moonlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATHxt7OP7eMFb4WiiEX4e-8Xl2aiCxtlKznRTySgy3ZjUaI9pMpBCzLLcLprkowcUMU4kYVmnFcyUTNAduMAHabDnT-yy0s2qYRb7hwlS5JSsDKq0QnrgZCrxr6lbEHTniPpAoPgfYxIhXO_dAKgaay6lcvucsU9_B-Ce06VUYUoQT7Bbj6UBcDCJ-dMpNoK0OUQDw5t7zNLFzQQvtgxX7fXcNxNsSJgd9QRTGyuSpFTSooXPqEDP-qcti9ZtHrom1WaN6N6aONwpR"/>
-<div class="absolute inset-0 smoke-overlay"></div>
-<div class="absolute inset-0 wood-texture"></div>
-</div>
-<div class="relative z-10 text-center max-w-4xl px-6">
-<h1 class="font-headline text-5xl md:text-7xl lg:text-8xl mb-8 leading-tight tracking-tighter text-on-surface">
-                静观浮生<br/><span class="italic text-primary">沉香禅境</span>
-</h1>
-<p class="font-body text-xl md:text-2xl text-secondary mb-12 max-w-2xl mx-auto opacity-80 leading-relaxed">
-                传承千年工艺, 以古法敬自然, 寻一缕本真之香
+    <style>
+      body {
+        visibility: hidden;
+        opacity: 0;
+      }
+    </style>
+  </head>
+
+  <body
+    class="bg-background text-on-surface font-body selection:bg-primary/30 opacity-0 transition-opacity duration-300"
+  >
+    <main class="pt-32 pb-24">
+      <!-- Hero Section -->
+      <section
+        class="relative h-screen w-full flex items-center justify-center overflow-hidden"
+      >
+        <div class="absolute inset-0 z-0">
+          <img
+            class="w-full h-full object-cover"
+            data-alt="atmospheric dark landscape with mystical fog rising from a silent forest floor at midnight under soft moonlight"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuATHxt7OP7eMFb4WiiEX4e-8Xl2aiCxtlKznRTySgy3ZjUaI9pMpBCzLLcLprkowcUMU4kYVmnFcyUTNAduMAHabDnT-yy0s2qYRb7hwlS5JSsDKq0QnrgZCrxr6lbEHTniPpAoPgfYxIhXO_dAKgaay6lcvucsU9_B-Ce06VUYUoQT7Bbj6UBcDCJ-dMpNoK0OUQDw5t7zNLFzQQvtgxX7fXcNxNsSJgd9QRTGyuSpFTSooXPqEDP-qcti9ZtHrom1WaN6N6aONwpR"
+          />
+          <div class="absolute inset-0 smoke-overlay"></div>
+          <div class="absolute inset-0 wood-texture"></div>
+        </div>
+        <div class="relative z-10 text-center max-w-4xl px-6">
+          <h1
+            class="font-headline text-5xl md:text-7xl lg:text-8xl mb-8 leading-tight tracking-tighter text-on-surface"
+          >
+            静观浮生<br /><span class="italic text-primary">沉香禅境</span>
+          </h1>
+          <p
+            class="font-body text-xl md:text-2xl text-secondary mb-12 max-w-2xl mx-auto opacity-80 leading-relaxed"
+          >
+            传承千年工艺, 以古法敬自然, 寻一缕本真之香
+          </p>
+          <button
+            class="px-10 py-4 border border-primary text-primary font-label tracking-widest uppercase text-sm hover:bg-primary-container hover:shadow-[0_0_20px_rgba(233,195,73,0.3)] transition-all duration-700"
+          >
+            探索馆藏
+          </button>
+        </div>
+        <div
+          class="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4"
+        >
+          <div
+            class="w-px h-16 bg-gradient-to-b from-primary/50 to-transparent"
+          ></div>
+        </div>
+      </section>
+      <!-- About Section (Asymmetric Layout) -->
+      <section class="py-32 px-6 md:px-24 bg-surface relative overflow-hidden">
+        <div
+          class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-center"
+        >
+          <div class="lg:col-span-5 order-2 lg:order-1">
+            <span
+              class="font-label text-primary tracking-[0.3em] uppercase text-xs mb-4 block"
+              >Origins</span
+            >
+            <h2 class="font-headline text-4xl md:text-5xl text-on-surface mb-8">
+              万物之源
+            </h2>
+            <div class="space-y-6 text-lg text-secondary/80 leading-relaxed">
+              <p>
+                沉香，岁月的凝练。是树木在历经雷击、虫蛀、或风雨摧残后，于伤痕处自我治愈，历经数十年甚至上百年的醇化而得。它是大自然给予的恩赐，亦是生命的涅槃。
+              </p>
+              <p>
+                每一粒佛珠，皆承载着修行的智慧。我们严选顶级材种，遵循古法打磨，保留木质最原始的触感与芬芳。于腕间游走，在指尖沉淀，是对内心的观照，亦是对自然的敬畏。
+              </p>
+            </div>
+          </div>
+          <div class="lg:col-span-7 order-1 lg:order-2 relative">
+            <div
+              class="aspect-[4/5] md:aspect-[16/9] lg:aspect-[4/5] overflow-hidden"
+            >
+              <img
+                class="w-full h-full object-cover transform scale-105 hover:scale-100 transition-transform duration-[2000ms]"
+                data-alt="close-up of raw agarwood piece with intricate natural textures and resin veins on a dark reflective surface"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_RUTS7fW-JGKDtRCLlf9BqFCD6tN92Mc1N6p2St1DYgzp-U8TVFhfkf0CtLOiAB3O810_JARFJg3kgeglu30aesRw_Sj8GAXutY1DS9fXAQAdgQ8nVxJTS-FJYRgfHPG22Z5sj2BQPAYgVSzvXiWAbHzj6StmBKVX-5SURuaG61qDKckRW9TLOM_sHkQHImPh_F6nEzntyIuDvZHRaVOKofPPW4NuIsDIjK7C9sP4q7fft6dqqsqSH83RR_cgz1kCirvn1BgOmN_Q"
+              />
+            </div>
+            <div
+              class="absolute -bottom-8 -left-8 bg-surface-container-high p-8 hidden md:block"
+            >
+              <p class="font-headline italic text-primary text-2xl">
+                “香气如丝，绕指不散”
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Featured Video Section (Visual Centerpiece) -->
+      <section class="py-32 bg-surface-container-lowest">
+        <div class="max-w-6xl mx-auto px-6 text-center mb-16">
+          <h2 class="font-headline text-4xl text-on-surface mb-4">匠心之道</h2>
+          <div class="w-12 h-px bg-primary mx-auto mb-12"></div>
+        </div>
+        <div class="max-w-5xl mx-auto px-6 relative group">
+          <div
+            class="relative aspect-video overflow-hidden rounded-sm shadow-2xl"
+          >
+            <img
+              class="w-full h-full object-cover opacity-60"
+              data-alt="cinematic shot of master craftsman hand-carving traditional patterns into precious dark wood under soft golden light"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVnT4D1x6ygIqeVTaOvG-7veM85_2O4Vw-xnc-UdQhfO0ayzC8lnEvXXB7VAAt0FWdimF4oK49mi_BHtEX1MdLU6m88zqIKCDUd0Fgcma7Mj417bYVeDXqFa9BZnVcgK2tqnU7ea4ajJyUga399qYpdeQDwGD53T8gYj-4KA6vEL2WbKUcDfIQPu0DYAU375jnkNCNcF3yd57S8EqdQ6e1RFLvmLeHTpiA_1e1jjrdSyeTK4H8QO6I1cgvMYWG-BcCli81Z7plf6FZ"
+            />
+            <div class="absolute inset-0 flex items-center justify-center">
+              <button
+                class="w-24 h-24 rounded-full border border-primary/40 bg-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-700 shadow-[0_0_40px_rgba(233,195,73,0.15)]"
+              >
+                <span
+                  class="material-symbols-outlined text-primary text-5xl translate-x-1"
+                  data-icon="play_arrow"
+                  >play_arrow</span
+                >
+              </button>
+            </div>
+          </div>
+          <div class="mt-12 text-center max-w-2xl mx-auto">
+            <p class="font-body text-lg text-secondary italic opacity-70">
+              从亿万林木中甄选，由匠人指尖赋予灵性。镜头记录下每一次精准的切磨、每一根丝线的穿行，这是对极致工艺的静默坚守。
             </p>
-<button class="px-10 py-4 border border-primary text-primary font-label tracking-widest uppercase text-sm hover:bg-primary-container hover:shadow-[0_0_20px_rgba(233,195,73,0.3)] transition-all duration-700">
-                探索馆藏
-            </button>
-</div>
-<div class="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4">
-<div class="w-px h-16 bg-gradient-to-b from-primary/50 to-transparent"></div>
-</div>
-</section>
-<!-- About Section (Asymmetric Layout) -->
-<section class="py-32 px-6 md:px-24 bg-surface relative overflow-hidden">
-<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-<div class="lg:col-span-5 order-2 lg:order-1">
-<span class="font-label text-primary tracking-[0.3em] uppercase text-xs mb-4 block">Origins</span>
-<h2 class="font-headline text-4xl md:text-5xl text-on-surface mb-8">万物之源</h2>
-<div class="space-y-6 text-lg text-secondary/80 leading-relaxed">
-<p>
-                        沉香，岁月的凝练。是树木在历经雷击、虫蛀、或风雨摧残后，于伤痕处自我治愈，历经数十年甚至上百年的醇化而得。它是大自然给予的恩赐，亦是生命的涅槃。
-                    </p>
-<p>
-                        每一粒佛珠，皆承载着修行的智慧。我们严选顶级材种，遵循古法打磨，保留木质最原始的触感与芬芳。于腕间游走，在指尖沉淀，是对内心的观照，亦是对自然的敬畏。
-                    </p>
-</div>
-</div>
-<div class="lg:col-span-7 order-1 lg:order-2 relative">
-<div class="aspect-[4/5] md:aspect-[16/9] lg:aspect-[4/5] overflow-hidden">
-<img class="w-full h-full object-cover transform scale-105 hover:scale-100 transition-transform duration-[2000ms]" data-alt="close-up of raw agarwood piece with intricate natural textures and resin veins on a dark reflective surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_RUTS7fW-JGKDtRCLlf9BqFCD6tN92Mc1N6p2St1DYgzp-U8TVFhfkf0CtLOiAB3O810_JARFJg3kgeglu30aesRw_Sj8GAXutY1DS9fXAQAdgQ8nVxJTS-FJYRgfHPG22Z5sj2BQPAYgVSzvXiWAbHzj6StmBKVX-5SURuaG61qDKckRW9TLOM_sHkQHImPh_F6nEzntyIuDvZHRaVOKofPPW4NuIsDIjK7C9sP4q7fft6dqqsqSH83RR_cgz1kCirvn1BgOmN_Q"/>
-</div>
-<div class="absolute -bottom-8 -left-8 bg-surface-container-high p-8 hidden md:block">
-<p class="font-headline italic text-primary text-2xl">“香气如丝，绕指不散”</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Featured Video Section (Visual Centerpiece) -->
-<section class="py-32 bg-surface-container-lowest">
-<div class="max-w-6xl mx-auto px-6 text-center mb-16">
-<h2 class="font-headline text-4xl text-on-surface mb-4">匠心之道</h2>
-<div class="w-12 h-px bg-primary mx-auto mb-12"></div>
-</div>
-<div class="max-w-5xl mx-auto px-6 relative group">
-<div class="relative aspect-video overflow-hidden rounded-sm shadow-2xl">
-<img class="w-full h-full object-cover opacity-60" data-alt="cinematic shot of master craftsman hand-carving traditional patterns into precious dark wood under soft golden light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVnT4D1x6ygIqeVTaOvG-7veM85_2O4Vw-xnc-UdQhfO0ayzC8lnEvXXB7VAAt0FWdimF4oK49mi_BHtEX1MdLU6m88zqIKCDUd0Fgcma7Mj417bYVeDXqFa9BZnVcgK2tqnU7ea4ajJyUga399qYpdeQDwGD53T8gYj-4KA6vEL2WbKUcDfIQPu0DYAU375jnkNCNcF3yd57S8EqdQ6e1RFLvmLeHTpiA_1e1jjrdSyeTK4H8QO6I1cgvMYWG-BcCli81Z7plf6FZ"/>
-<div class="absolute inset-0 flex items-center justify-center">
-<button class="w-24 h-24 rounded-full border border-primary/40 bg-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-700 shadow-[0_0_40px_rgba(233,195,73,0.15)]">
-<span class="material-symbols-outlined text-primary text-5xl translate-x-1" data-icon="play_arrow">play_arrow</span>
-</button>
-</div>
-</div>
-<div class="mt-12 text-center max-w-2xl mx-auto">
-<p class="font-body text-lg text-secondary italic opacity-70">
-                    从亿万林木中甄选，由匠人指尖赋予灵性。镜头记录下每一次精准的切磨、每一根丝线的穿行，这是对极致工艺的静默坚守。
+          </div>
+        </div>
+      </section>
+      <!-- Philosophy Section (Grid Pillar) -->
+      <section class="py-32 px-6 bg-surface">
+        <div class="max-w-7xl mx-auto">
+          <div class="mb-20 text-center">
+            <h2 class="font-headline text-4xl text-on-surface mb-4">
+              品牌哲思
+            </h2>
+            <p
+              class="font-label text-primary tracking-widest text-xs uppercase"
+            >
+              Philosophy of Soul
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <!-- Pillar 1 -->
+            <div
+              class="p-12 bg-surface-container-low flex flex-col items-center text-center hover:bg-surface-container transition-colors duration-700 group"
+            >
+              <div
+                class="mb-8 p-4 rounded-full bg-primary-container/30 text-primary group-hover:scale-110 transition-transform duration-500"
+              >
+                <span class="material-symbols-outlined text-4xl" data-icon="air"
+                  >air</span
+                >
+              </div>
+              <h3 class="font-headline text-2xl text-on-surface mb-4">宁静</h3>
+              <p class="text-secondary/70 leading-relaxed">
+                在纷扰尘世中开辟一方净土，让灵魂在香气中归于平静，寻找内心的恒定与安宁。
+              </p>
+            </div>
+            <!-- Pillar 2 -->
+            <div
+              class="p-12 bg-surface-container-low flex flex-col items-center text-center hover:bg-surface-container transition-colors duration-700 group"
+            >
+              <div
+                class="mb-8 p-4 rounded-full bg-primary-container/30 text-primary group-hover:scale-110 transition-transform duration-500"
+              >
+                <span
+                  class="material-symbols-outlined text-4xl"
+                  data-icon="auto_awesome"
+                  >auto_awesome</span
+                >
+              </div>
+              <h3 class="font-headline text-2xl text-on-surface mb-4">修行</h3>
+              <p class="text-secondary/70 leading-relaxed">
+                珠转心随，香染意通。于一呼一吸间体验觉察，将每一刻的感知化作生命的修行。
+              </p>
+            </div>
+            <!-- Pillar 3 -->
+            <div
+              class="p-12 bg-surface-container-low flex flex-col items-center text-center hover:bg-surface-container transition-colors duration-700 group"
+            >
+              <div
+                class="mb-8 p-4 rounded-full bg-primary-container/30 text-primary group-hover:scale-110 transition-transform duration-500"
+              >
+                <span
+                  class="material-symbols-outlined text-4xl"
+                  data-icon="history_edu"
+                  >history_edu</span
+                >
+              </div>
+              <h3 class="font-headline text-2xl text-on-surface mb-4">传承</h3>
+              <p class="text-secondary/70 leading-relaxed">
+                连接过去与未来的桥梁。守护非遗技艺，让千年的禅意文化在当代生活中焕发新生。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Services Section (Interactive Cards) -->
+      <section class="py-32 px-6 bg-surface-container-low">
+        <div class="max-w-7xl mx-auto">
+          <div
+            class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8"
+          >
+            <div>
+              <h2
+                class="font-headline text-4xl md:text-5xl text-on-surface mb-4"
+              >
+                定制与赏鉴
+              </h2>
+              <p
+                class="text-primary tracking-widest font-label text-xs uppercase"
+              >
+                Bespoke Excellence
+              </p>
+            </div>
+            <p class="max-w-md text-secondary/60 text-right font-body">
+              提供超越物质的专属体验，从私人订制到专业咨询，助您在香道之路上更进一步。
+            </p>
+          </div>
+          <div
+            class="grid grid-cols-1 lg:grid-cols-3 gap-1 px-1 bg-outline-variant/10"
+          >
+            <!-- Service 1 -->
+            <div
+              class="group relative aspect-[4/5] overflow-hidden bg-surface cursor-pointer"
+            >
+              <img
+                class="w-full h-full object-cover opacity-40 group-hover:opacity-20 transition-opacity duration-1000"
+                data-alt="top-down artistic view of wooden prayer beads scattered on a textured charcoal background with warm spotlight"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcoZNZsZXYlDbzGOexJR5SkQD-rZ8GFHL9d3PkmMChX4r3UWSZAdpWrmsiZ9vnti3r_fXPhFbK-xkW3RA4JvVoiS9Pp7MZcBATINyyLduoQhb1LX5iQLi3Lo2NB-9GBQgoyyQoK36RykYDRmoNvH4S5OVjrjWkXH3WTlL92SODI_m2QDZ6K3D3Q2Oj3yqdCzzVgKit7OntUmuurDTIJkhANjhux6qL5QUxbSZpsMxUYV1LrSmcRKNIdwO0k9pFcWVJL5LM6ljPy1W_"
+              />
+              <div class="absolute inset-0 p-12 flex flex-col justify-end">
+                <h4 class="font-headline text-2xl text-on-surface mb-4">
+                  私人订制佛珠
+                </h4>
+                <p
+                  class="text-secondary/60 group-hover:text-on-surface transition-colors duration-500"
+                >
+                  基于生辰八字与个人意愿，严选原材，手工精琢。
                 </p>
-</div>
-</div>
-</section>
-<!-- Philosophy Section (Grid Pillar) -->
-<section class="py-32 px-6 bg-surface">
-<div class="max-w-7xl mx-auto">
-<div class="mb-20 text-center">
-<h2 class="font-headline text-4xl text-on-surface mb-4">品牌哲思</h2>
-<p class="font-label text-primary tracking-widest text-xs uppercase">Philosophy of Soul</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-<!-- Pillar 1 -->
-<div class="p-12 bg-surface-container-low flex flex-col items-center text-center hover:bg-surface-container transition-colors duration-700 group">
-<div class="mb-8 p-4 rounded-full bg-primary-container/30 text-primary group-hover:scale-110 transition-transform duration-500">
-<span class="material-symbols-outlined text-4xl" data-icon="air">air</span>
-</div>
-<h3 class="font-headline text-2xl text-on-surface mb-4">宁静</h3>
-<p class="text-secondary/70 leading-relaxed">
-                        在纷扰尘世中开辟一方净土，让灵魂在香气中归于平静，寻找内心的恒定与安宁。
-                    </p>
-</div>
-<!-- Pillar 2 -->
-<div class="p-12 bg-surface-container-low flex flex-col items-center text-center hover:bg-surface-container transition-colors duration-700 group">
-<div class="mb-8 p-4 rounded-full bg-primary-container/30 text-primary group-hover:scale-110 transition-transform duration-500">
-<span class="material-symbols-outlined text-4xl" data-icon="auto_awesome">auto_awesome</span>
-</div>
-<h3 class="font-headline text-2xl text-on-surface mb-4">修行</h3>
-<p class="text-secondary/70 leading-relaxed">
-                        珠转心随，香染意通。于一呼一吸间体验觉察，将每一刻的感知化作生命的修行。
-                    </p>
-</div>
-<!-- Pillar 3 -->
-<div class="p-12 bg-surface-container-low flex flex-col items-center text-center hover:bg-surface-container transition-colors duration-700 group">
-<div class="mb-8 p-4 rounded-full bg-primary-container/30 text-primary group-hover:scale-110 transition-transform duration-500">
-<span class="material-symbols-outlined text-4xl" data-icon="history_edu">history_edu</span>
-</div>
-<h3 class="font-headline text-2xl text-on-surface mb-4">传承</h3>
-<p class="text-secondary/70 leading-relaxed">
-                        连接过去与未来的桥梁。守护非遗技艺，让千年的禅意文化在当代生活中焕发新生。
-                    </p>
-</div>
-</div>
-</div>
-</section>
-<!-- Services Section (Interactive Cards) -->
-<section class="py-32 px-6 bg-surface-container-low">
-<div class="max-w-7xl mx-auto">
-<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
-<div>
-<h2 class="font-headline text-4xl md:text-5xl text-on-surface mb-4">定制与赏鉴</h2>
-<p class="text-primary tracking-widest font-label text-xs uppercase">Bespoke Excellence</p>
-</div>
-<p class="max-w-md text-secondary/60 text-right font-body">
-                    提供超越物质的专属体验，从私人订制到专业咨询，助您在香道之路上更进一步。
+                <div
+                  class="w-0 group-hover:w-full h-px bg-primary mt-8 transition-all duration-1000"
+                ></div>
+              </div>
+              <div
+                class="absolute inset-0 border border-primary/0 group-hover:border-primary/30 transition-all duration-1000 pointer-events-none"
+              ></div>
+            </div>
+            <!-- Service 2 -->
+            <div
+              class="group relative aspect-[4/5] overflow-hidden bg-surface cursor-pointer"
+            >
+              <img
+                class="w-full h-full object-cover opacity-40 group-hover:opacity-20 transition-opacity duration-1000"
+                data-alt="exquisite rare agarwood incense sticks in a minimalist holder with soft ambient smoke drifting slowly"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCWMNQNKNCOEFS7VgDTbzhnzzSc5kTRpeE6k6-AJcdaTia9k97jYTasYZ0FmFWHIqsQ4_4RTctAEAvUdI6K-0M2AaZKvSLeT7OM2zNQT1MszKVK9kUqxl0UOFpF_fK13DBGJWWBirCPTUIT_XjCkt3zNp-wh8hRiy8LAPliInF4PiLh91HuarV2AyUWA3mLuwoM0n4c9hMan6EpnvqL8sT17aFOBaMn0sWAzROUNdSHoYtXpL5vO7PgLCARb4gqL81cWlNX8WN2SSN"
+              />
+              <div class="absolute inset-0 p-12 flex flex-col justify-end">
+                <h4 class="font-headline text-2xl text-on-surface mb-4">
+                  顶级沉香珍藏
+                </h4>
+                <p
+                  class="text-secondary/60 group-hover:text-on-surface transition-colors duration-500"
+                >
+                  汇聚全球顶级产区，奇楠及老料珍品，极具鉴赏与收藏价值。
                 </p>
-</div>
-<div class="grid grid-cols-1 lg:grid-cols-3 gap-1 px-1 bg-outline-variant/10">
-<!-- Service 1 -->
-<div class="group relative aspect-[4/5] overflow-hidden bg-surface cursor-pointer">
-<img class="w-full h-full object-cover opacity-40 group-hover:opacity-20 transition-opacity duration-1000" data-alt="top-down artistic view of wooden prayer beads scattered on a textured charcoal background with warm spotlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcoZNZsZXYlDbzGOexJR5SkQD-rZ8GFHL9d3PkmMChX4r3UWSZAdpWrmsiZ9vnti3r_fXPhFbK-xkW3RA4JvVoiS9Pp7MZcBATINyyLduoQhb1LX5iQLi3Lo2NB-9GBQgoyyQoK36RykYDRmoNvH4S5OVjrjWkXH3WTlL92SODI_m2QDZ6K3D3Q2Oj3yqdCzzVgKit7OntUmuurDTIJkhANjhux6qL5QUxbSZpsMxUYV1LrSmcRKNIdwO0k9pFcWVJL5LM6ljPy1W_"/>
-<div class="absolute inset-0 p-12 flex flex-col justify-end">
-<h4 class="font-headline text-2xl text-on-surface mb-4">私人订制佛珠</h4>
-<p class="text-secondary/60 group-hover:text-on-surface transition-colors duration-500">基于生辰八字与个人意愿，严选原材，手工精琢。</p>
-<div class="w-0 group-hover:w-full h-px bg-primary mt-8 transition-all duration-1000"></div>
-</div>
-<div class="absolute inset-0 border border-primary/0 group-hover:border-primary/30 transition-all duration-1000 pointer-events-none"></div>
-</div>
-<!-- Service 2 -->
-<div class="group relative aspect-[4/5] overflow-hidden bg-surface cursor-pointer">
-<img class="w-full h-full object-cover opacity-40 group-hover:opacity-20 transition-opacity duration-1000" data-alt="exquisite rare agarwood incense sticks in a minimalist holder with soft ambient smoke drifting slowly" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCWMNQNKNCOEFS7VgDTbzhnzzSc5kTRpeE6k6-AJcdaTia9k97jYTasYZ0FmFWHIqsQ4_4RTctAEAvUdI6K-0M2AaZKvSLeT7OM2zNQT1MszKVK9kUqxl0UOFpF_fK13DBGJWWBirCPTUIT_XjCkt3zNp-wh8hRiy8LAPliInF4PiLh91HuarV2AyUWA3mLuwoM0n4c9hMan6EpnvqL8sT17aFOBaMn0sWAzROUNdSHoYtXpL5vO7PgLCARb4gqL81cWlNX8WN2SSN"/>
-<div class="absolute inset-0 p-12 flex flex-col justify-end">
-<h4 class="font-headline text-2xl text-on-surface mb-4">顶级沉香珍藏</h4>
-<p class="text-secondary/60 group-hover:text-on-surface transition-colors duration-500">汇聚全球顶级产区，奇楠及老料珍品，极具鉴赏与收藏价值。</p>
-<div class="w-0 group-hover:w-full h-px bg-primary mt-8 transition-all duration-1000"></div>
-</div>
-<div class="absolute inset-0 border border-primary/0 group-hover:border-primary/30 transition-all duration-1000 pointer-events-none"></div>
-</div>
-<!-- Service 3 -->
-<div class="group relative aspect-[4/5] overflow-hidden bg-surface cursor-pointer">
-<img class="w-full h-full object-cover opacity-40 group-hover:opacity-20 transition-opacity duration-1000" data-alt="overhead view of a traditional tea and incense ceremony set on a dark wooden table with soft focus" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhxTx1Pm8KV1q4shTg_j6J5WygXAbusYL_g-U_5U_Ivm3uZpoi5TOQac11ybzEbzb74onAd7RdqMvXrV6O0QEMbuYPWfGHR9vudWiQH2KS5-7O821dxkIKrxjzAz1HsYlb8x50JREOa4_wYeY1rNfj7jDSI3mZqHzXMkv-1b8VwnoundetXSUUZ48-c3cXoVSKthrYBn57DgMR_Vix7qzLrqGBym7p0MJ28zqCP1gIC9stTEQf4yq9rj2WI8RKJC_83lHAnOC2buHK"/>
-<div class="absolute inset-0 p-12 flex flex-col justify-end">
-<h4 class="font-headline text-2xl text-on-surface mb-4">香道研习顾问</h4>
-<p class="text-secondary/60 group-hover:text-on-surface transition-colors duration-500">专业顾问带您领略四字真言，系统学习用香仪轨与鉴别技巧。</p>
-<div class="w-0 group-hover:w-full h-px bg-primary mt-8 transition-all duration-1000"></div>
-</div>
-<div class="absolute inset-0 border border-primary/0 group-hover:border-primary/30 transition-all duration-1000 pointer-events-none"></div>
-</div>
-</div>
-</div>
-</section>
-<!-- Footer -->
-</main>
-</body>
+                <div
+                  class="w-0 group-hover:w-full h-px bg-primary mt-8 transition-all duration-1000"
+                ></div>
+              </div>
+              <div
+                class="absolute inset-0 border border-primary/0 group-hover:border-primary/30 transition-all duration-1000 pointer-events-none"
+              ></div>
+            </div>
+            <!-- Service 3 -->
+            <div
+              class="group relative aspect-[4/5] overflow-hidden bg-surface cursor-pointer"
+            >
+              <img
+                class="w-full h-full object-cover opacity-40 group-hover:opacity-20 transition-opacity duration-1000"
+                data-alt="overhead view of a traditional tea and incense ceremony set on a dark wooden table with soft focus"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhxTx1Pm8KV1q4shTg_j6J5WygXAbusYL_g-U_5U_Ivm3uZpoi5TOQac11ybzEbzb74onAd7RdqMvXrV6O0QEMbuYPWfGHR9vudWiQH2KS5-7O821dxkIKrxjzAz1HsYlb8x50JREOa4_wYeY1rNfj7jDSI3mZqHzXMkv-1b8VwnoundetXSUUZ48-c3cXoVSKthrYBn57DgMR_Vix7qzLrqGBym7p0MJ28zqCP1gIC9stTEQf4yq9rj2WI8RKJC_83lHAnOC2buHK"
+              />
+              <div class="absolute inset-0 p-12 flex flex-col justify-end">
+                <h4 class="font-headline text-2xl text-on-surface mb-4">
+                  香道研习顾问
+                </h4>
+                <p
+                  class="text-secondary/60 group-hover:text-on-surface transition-colors duration-500"
+                >
+                  专业顾问带您领略四字真言，系统学习用香仪轨与鉴别技巧。
+                </p>
+                <div
+                  class="w-0 group-hover:w-full h-px bg-primary mt-8 transition-all duration-1000"
+                ></div>
+              </div>
+              <div
+                class="absolute inset-0 border border-primary/0 group-hover:border-primary/30 transition-all duration-1000 pointer-events-none"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Footer -->
+    </main>
+  </body>
 </html>

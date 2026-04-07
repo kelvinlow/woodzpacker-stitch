@@ -1,10 +1,3 @@
-export interface Env {
-  NOTION_TOKEN: string;
-  ARTICLE_DATA_SOURCE_ID: string;
-  PRODUCT_DATA_SOURCE_ID: string;
-  NOTION_API_VERSION: string;
-}
-
 export interface NotionProperty {
   type: string;
   [key: string]: any;

@@ -1,14 +1,25 @@
-import { Env } from './types';
 import { handleFeed } from './handlers/feed';
 import { handleProduct } from './handlers/product';
 import { handleArticleDetail } from './handlers/article';
 import { errorResponse } from './utils/response';
 
 export default {
-  async fetch(request: Request, env: Env): Promise<Response> {
+  async fetch(request: Request, env: any): Promise<Response> {
     const { NOTION_TOKEN } = env;
     const url = new URL(request.url);
     const path = url.pathname;
+
+    // Debug route to check presence of secret bindings without leaking values
+    if (path === '/_debug/env') {
+      return new Response(
+        JSON.stringify({
+          NOTION_TOKEN_set: env.NOTION_TOKEN.get(),
+          ARTICLE_DATA_SOURCE_ID_set: env.ARTICLE_DATA_SOURCE_ID.get(),
+          PRODUCT_DATA_SOURCE_ID_set: env.PRODUCT_DATA_SOURCE_ID.get()
+        }),
+        { headers: { 'Content-Type': 'application/json' } }
+      );
+    }
 
     if (!NOTION_TOKEN) {
       return errorResponse('Missing NOTION_TOKEN secret.');

@@ -1,11 +1,10 @@
-import { Env } from '../types';
-
 export async function notionFetch(
   path: string,
-  env: Env,
+  env: any,
   options: RequestInit = {}
 ): Promise<Response> {
-  const { NOTION_TOKEN, NOTION_API_VERSION } = env;
+  const NOTION_TOKEN = await env.NOTION_TOKEN.get();
+  const NOTION_API_VERSION = await env.NOTION_API_VERSION.get();
 
   const url = `https://api.notion.com${path}`;
   const headers = {

@@ -1,15 +1,26 @@
+import { Env } from '../types';
+import { getEnvValue } from './env';
+
 export async function notionFetch(
   path: string,
-  env: any,
+  env: Env,
   options: RequestInit = {}
 ): Promise<Response> {
-  const NOTION_TOKEN = await env.NOTION_TOKEN.get();
-  const NOTION_API_VERSION = await env.NOTION_API_VERSION.get();
+  const notionToken = await getEnvValue(env, 'NOTION_TOKEN');
+  const notionApiVersion = await getEnvValue(env, 'NOTION_API_VERSION');
+
+  if (!notionToken) {
+    throw new Error('Missing NOTION_TOKEN secret.');
+  }
+
+  if (!notionApiVersion) {
+    throw new Error('Missing NOTION_API_VERSION variable.');
+  }
 
   const url = `https://api.notion.com${path}`;
   const headers = {
-    Authorization: `Bearer ${NOTION_TOKEN}`,
-    'Notion-Version': NOTION_API_VERSION,
+    Authorization: `Bearer ${notionToken}`,
+    'Notion-Version': notionApiVersion,
     'Content-Type': 'application/json',
     ...options.headers
   };

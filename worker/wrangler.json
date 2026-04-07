@@ -1,8 +1,0 @@
-{
-  "name": "notion-worker",
-  "main": "src/index.ts",
-  "compatibility_date": "2024-04-03",
-  "vars": {
-    "NOTION_API_VERSION": "2026-03-11"
-  }
-}

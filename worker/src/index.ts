@@ -2,28 +2,32 @@ import { handleFeed } from './handlers/feed';
 import { handleProduct } from './handlers/product';
 import { handleArticleDetail } from './handlers/article';
 import { errorResponse } from './utils/response';
+import { getEnvValue } from './utils/env';
+import { Env } from './types';
 
 export default {
-  async fetch(request: Request, env: any): Promise<Response> {
+  async fetch(request: Request, env: Env): Promise<Response> {
     const url = new URL(request.url);
-    const NOTION_TOKEN = await env.NOTION_TOKEN.get();
-    const ARTICLE_DATA_SOURCE_ID = await env.ARTICLE_DATA_SOURCE_ID.get();
-    const PRODUCT_DATA_SOURCE_ID = await env.PRODUCT_DATA_SOURCE_ID.get();
     const path = url.pathname;
 
     // Debug route to check presence of secret bindings without leaking values
     if (path === '/_debug/env') {
+      const notionToken = await getEnvValue(env, 'NOTION_TOKEN');
+      const articleDataSourceId = await getEnvValue(env, 'ARTICLE_DATA_SOURCE_ID');
+      const productDataSourceId = await getEnvValue(env, 'PRODUCT_DATA_SOURCE_ID');
+
       return new Response(
         JSON.stringify({
-          NOTION_TOKEN_set: NOTION_TOKEN,
-          ARTICLE_DATA_SOURCE_ID_set: ARTICLE_DATA_SOURCE_ID,
-          PRODUCT_DATA_SOURCE_ID_set: PRODUCT_DATA_SOURCE_ID
+          NOTION_TOKEN_set: Boolean(notionToken),
+          ARTICLE_DATA_SOURCE_ID_set: Boolean(articleDataSourceId),
+          PRODUCT_DATA_SOURCE_ID_set: Boolean(productDataSourceId)
         }),
         { headers: { 'Content-Type': 'application/json' } }
       );
     }
 
-    if (!NOTION_TOKEN) {
+    const notionToken = await getEnvValue(env, 'NOTION_TOKEN');
+    if (!notionToken) {
       return errorResponse('Missing NOTION_TOKEN secret.');
     }
 
@@ -31,7 +35,7 @@ export default {
   }
 };
 
-async function handleRequest(path: string, env: any): Promise<Response> {
+async function handleRequest(path: string, env: Env): Promise<Response> {
   // Static routes
   if (path === '/v1/feed') {
     return handleFeed(env);

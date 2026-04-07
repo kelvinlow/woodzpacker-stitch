@@ -1,14 +1,21 @@
+name = "notion-worker"
+main = "src/index.ts"
+compatibility_date = "2024-04-03"
+
+[vars]
+NOTION_API_VERSION = "2026-03-11"
+
 [[secrets_store_secrets]]
 binding = "NOTION_TOKEN"
 store_id = "679c33b8690b486aa651c8280ca7e109"
-secret_name = "<NOTION_TOKEN
+secret_name = "NOTION_TOKEN"
 
 [[secrets_store_secrets]]
 binding = "ARTICLE_DATA_SOURCE_ID"
 store_id = "679c33b8690b486aa651c8280ca7e109"
-secret_name = "<ARTICLE_DATA_SOURCE_ID
+secret_name = "ARTICLE_DATA_SOURCE_ID"
 
 [[secrets_store_secrets]]
 binding = "PRODUCT_DATA_SOURCE_ID"
 store_id = "679c33b8690b486aa651c8280ca7e109"
-secret_name = "<PRODUCT_DATA_SOURCE_ID
+secret_name = "PRODUCT_DATA_SOURCE_ID"

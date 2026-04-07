@@ -1,17 +1,18 @@
 import { Env, NotionResponse } from '../types';
 import { errorResponse, JSON_HEADERS } from '../utils/response';
+import { getEnvValue } from '../utils/env';
 import { notionFetch } from '../utils/notion';
 
 export async function handleProduct(env: Env): Promise<Response> {
-  const { PRODUCT_DATA_SOURCE_ID } = env;
+  const productDataSourceId = await getEnvValue(env, 'PRODUCT_DATA_SOURCE_ID');
 
-  if (!PRODUCT_DATA_SOURCE_ID) {
+  if (!productDataSourceId) {
     return errorResponse('Missing PRODUCT_DATA_SOURCE_ID secret.');
   }
 
   try {
     const response = await notionFetch(
-      `/v1/data_sources/${PRODUCT_DATA_SOURCE_ID}/query`,
+      `/v1/data_sources/${productDataSourceId}/query`,
       env,
       {
         method: 'POST',

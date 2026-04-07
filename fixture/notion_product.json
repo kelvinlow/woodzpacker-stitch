@@ -1,0 +1,386 @@
+{
+  "object": "list",
+  "results": [
+    {
+      "object": "page",
+      "id": "33a63a7b-b3db-8084-80e6-ead255330a2b",
+      "created_time": "2026-04-06T03:05:00.000Z",
+      "last_edited_time": "2026-04-07T02:02:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "cover": null,
+      "icon": null,
+      "parent": {
+        "type": "data_source_id",
+        "data_source_id": "33a63a7b-b3db-80b1-b0e8-000bb66acfd7",
+        "database_id": "33a63a7b-b3db-8033-a699-eda5a8766a76"
+      },
+      "in_trash": false,
+      "is_archived": false,
+      "is_locked": false,
+      "properties": {
+        "Supplier": {
+          "id": "FU%7C~",
+          "type": "rich_text",
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "HydroGear Industries",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "HydroGear Industries",
+              "href": null
+            }
+          ]
+        },
+        "Status": {
+          "id": "IrGz",
+          "type": "status",
+          "status": {
+            "id": "TgDK",
+            "name": "Active",
+            "color": "green"
+          }
+        },
+        "Stock": {
+          "id": "Tv%3B%3A",
+          "type": "number",
+          "number": 75
+        },
+        "Created Time": {
+          "id": "%5EXB%3B",
+          "type": "date",
+          "date": {
+            "start": "2026-04-08",
+            "end": null,
+            "time_zone": null
+          }
+        },
+        "Manufactory Date": {
+          "id": "_c%5Et",
+          "type": "date",
+          "date": {
+            "start": "2026-04-03",
+            "end": null,
+            "time_zone": null
+          }
+        },
+        "Product Category": {
+          "id": "j%3BI%3C",
+          "type": "select",
+          "select": {
+            "id": "xtKm",
+            "name": "Sports & Outdoors",
+            "color": "red"
+          }
+        },
+        "Discount Price": {
+          "id": "%7BoE%5D",
+          "type": "number",
+          "number": 29.99
+        },
+        "Selling Price": {
+          "id": "~%3BAw",
+          "type": "number",
+          "number": 29.99
+        },
+        "Product Name": {
+          "id": "title",
+          "type": "title",
+          "title": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Stainless Steel Water Bottle",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Stainless Steel Water Bottle",
+              "href": null
+            }
+          ]
+        }
+      },
+      "url": "https://www.notion.so/Stainless-Steel-Water-Bottle-33a63a7bb3db808480e6ead255330a2b",
+      "public_url": null
+    },
+    {
+      "object": "page",
+      "id": "33a63a7b-b3db-8082-9e52-c63fab564fbd",
+      "created_time": "2026-04-06T03:05:00.000Z",
+      "last_edited_time": "2026-04-07T02:02:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "cover": null,
+      "icon": null,
+      "parent": {
+        "type": "data_source_id",
+        "data_source_id": "33a63a7b-b3db-80b1-b0e8-000bb66acfd7",
+        "database_id": "33a63a7b-b3db-8033-a699-eda5a8766a76"
+      },
+      "in_trash": false,
+      "is_archived": false,
+      "is_locked": false,
+      "properties": {
+        "Supplier": {
+          "id": "FU%7C~",
+          "type": "rich_text",
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "EcoWear Textiles",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "EcoWear Textiles",
+              "href": null
+            }
+          ]
+        },
+        "Status": {
+          "id": "IrGz",
+          "type": "status",
+          "status": {
+            "id": "KvME",
+            "name": "Out of Stock",
+            "color": "yellow"
+          }
+        },
+        "Stock": {
+          "id": "Tv%3B%3A",
+          "type": "number",
+          "number": 0
+        },
+        "Created Time": {
+          "id": "%5EXB%3B",
+          "type": "date",
+          "date": {
+            "start": "2026-04-08",
+            "end": null,
+            "time_zone": null
+          }
+        },
+        "Manufactory Date": {
+          "id": "_c%5Et",
+          "type": "date",
+          "date": {
+            "start": "2026-03-28",
+            "end": null,
+            "time_zone": null
+          }
+        },
+        "Product Category": {
+          "id": "j%3BI%3C",
+          "type": "select",
+          "select": {
+            "id": "Kt:]",
+            "name": "Clothing & Apparel",
+            "color": "purple"
+          }
+        },
+        "Discount Price": {
+          "id": "%7BoE%5D",
+          "type": "number",
+          "number": 19.99
+        },
+        "Selling Price": {
+          "id": "~%3BAw",
+          "type": "number",
+          "number": 24.99
+        },
+        "Product Name": {
+          "id": "title",
+          "type": "title",
+          "title": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Organic Cotton T-Shirt",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Organic Cotton T-Shirt",
+              "href": null
+            }
+          ]
+        }
+      },
+      "url": "https://www.notion.so/Organic-Cotton-T-Shirt-33a63a7bb3db80829e52c63fab564fbd",
+      "public_url": null
+    },
+    {
+      "object": "page",
+      "id": "33a63a7b-b3db-80b8-b036-cfb5677f685c",
+      "created_time": "2026-04-06T03:05:00.000Z",
+      "last_edited_time": "2026-04-07T02:02:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "cover": null,
+      "icon": null,
+      "parent": {
+        "type": "data_source_id",
+        "data_source_id": "33a63a7b-b3db-80b1-b0e8-000bb66acfd7",
+        "database_id": "33a63a7b-b3db-8033-a699-eda5a8766a76"
+      },
+      "in_trash": false,
+      "is_archived": false,
+      "is_locked": false,
+      "properties": {
+        "Supplier": {
+          "id": "FU%7C~",
+          "type": "rich_text",
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "AudioTech Manufacturing",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "AudioTech Manufacturing",
+              "href": null
+            }
+          ]
+        },
+        "Status": {
+          "id": "IrGz",
+          "type": "status",
+          "status": {
+            "id": "TgDK",
+            "name": "Active",
+            "color": "green"
+          }
+        },
+        "Stock": {
+          "id": "Tv%3B%3A",
+          "type": "number",
+          "number": 150
+        },
+        "Created Time": {
+          "id": "%5EXB%3B",
+          "type": "date",
+          "date": {
+            "start": "2026-04-06",
+            "end": null,
+            "time_zone": null
+          }
+        },
+        "Manufactory Date": {
+          "id": "_c%5Et",
+          "type": "date",
+          "date": {
+            "start": "2026-04-01",
+            "end": null,
+            "time_zone": null
+          }
+        },
+        "Product Category": {
+          "id": "j%3BI%3C",
+          "type": "select",
+          "select": {
+            "id": "\\Wfu",
+            "name": "Electronics",
+            "color": "blue"
+          }
+        },
+        "Discount Price": {
+          "id": "%7BoE%5D",
+          "type": "number",
+          "number": 59.99
+        },
+        "Selling Price": {
+          "id": "~%3BAw",
+          "type": "number",
+          "number": 79.99
+        },
+        "Product Name": {
+          "id": "title",
+          "type": "title",
+          "title": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Wireless Bluetooth Headphones",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Wireless Bluetooth Headphones",
+              "href": null
+            }
+          ]
+        }
+      },
+      "url": "https://www.notion.so/Wireless-Bluetooth-Headphones-33a63a7bb3db80b8b036cfb5677f685c",
+      "public_url": null
+    }
+  ],
+  "next_cursor": null,
+  "has_more": false,
+  "type": "page_or_data_source",
+  "page_or_data_source": {},
+  "developer_survey": "https://notionup.typeform.com/to/bllBsoI4?utm_source=postman",
+  "request_id": "8c7cf902-13d0-4653-a0a4-d3a700406189"
+}

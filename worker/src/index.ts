@@ -13,9 +13,9 @@ export default {
     if (path === '/_debug/env') {
       return new Response(
         JSON.stringify({
-          NOTION_TOKEN_set: env.NOTION_TOKEN.get(),
-          ARTICLE_DATA_SOURCE_ID_set: env.ARTICLE_DATA_SOURCE_ID.get(),
-          PRODUCT_DATA_SOURCE_ID_set: env.PRODUCT_DATA_SOURCE_ID.get()
+          NOTION_TOKEN_set: env.NOTION_TOKEN,
+          ARTICLE_DATA_SOURCE_ID_set: env.ARTICLE_DATA_SOURCE_ID,
+          PRODUCT_DATA_SOURCE_ID_set: env.PRODUCT_DATA_SOURCE_ID
         }),
         { headers: { 'Content-Type': 'application/json' } }
       );

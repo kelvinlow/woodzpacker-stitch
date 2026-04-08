@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Journal | 文章 | {{websiteName}}</title>
+    <meta
+      name="description"
+      content="Browse the Woodzpacker journal for agarwood knowledge, meditation insights, and cultural essays."
+    />
+    <script src="layout.js"></script>
+    <style>
+      body {
+        visibility: hidden;
+        opacity: 0;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background text-on-surface font-body selection:bg-primary/30 opacity-0 transition-opacity duration-300"
+  >
+
+    <main class="pt-32 pb-24 px-6 md:px-12 lg:px-24">
+    <!-- Editorial Header -->
+    <header class="max-w-4xl mx-auto text-center ma-spacing">
+    <h1 class="font-headline text-5xl md:text-7xl font-light mb-8 tracking-tight text-on-surface">Journal | 文章</h1>
+    <p class="font-body text-xl md:text-2xl text-secondary italic opacity-80 leading-relaxed max-w-2xl mx-auto">
+                    "A curated collection of wisdom on the art of scent and the path to inner peace."
+                </p>
+    <!-- Search & Filters -->
+    <div class="mt-16 flex flex-col items-center gap-10">
+    <div class="relative w-full max-w-md group">
+    <input class="w-full bg-transparent border-b border-outline-variant/30 py-3 px-2 text-on-surface font-label tracking-wide focus:outline-none focus:border-primary transition-all duration-700 placeholder:text-on-surface/30" placeholder="Explore the void..." type="text"/>
+    <span class="material-symbols-outlined absolute right-2 top-3 text-outline-variant/50 group-focus-within:text-primary transition-colors duration-700">search</span>
+    </div>
+    <div class="flex flex-wrap justify-center gap-4">
+    <button class="px-6 py-2 rounded-full border border-primary/20 text-primary font-label text-xs tracking-widest uppercase bg-primary-container/10 hover:bg-primary-container transition-all duration-700">All Stories</button>
+    <button class="px-6 py-2 rounded-full border border-outline-variant/20 text-on-surface/60 font-label text-xs tracking-widest uppercase hover:border-primary/40 hover:text-primary transition-all duration-700">Agarwood Knowledge | 沉香知识</button>
+    <button class="px-6 py-2 rounded-full border border-outline-variant/20 text-on-surface/60 font-label text-xs tracking-widest uppercase hover:border-primary/40 hover:text-primary transition-all duration-700">Prayer Beads Culture | 佛珠文化</button>
+    <button class="px-6 py-2 rounded-full border border-outline-variant/20 text-on-surface/60 font-label text-xs tracking-widest uppercase hover:border-primary/40 hover:text-primary transition-all duration-700">Meditation | 冥想修行</button>
+    </div>
+    </div>
+    </header>
+    <div class="max-w-6xl mx-auto">
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6 mb-12">
+    <div aria-live="polite" class="font-label text-[11px] tracking-[0.28em] uppercase text-on-surface/40" id="feed-status">
+                    Loading journal entries...
+                </div>
+    <div class="font-label text-[11px] tracking-[0.28em] uppercase text-on-surface/30" id="feed-summary">
+                    Powered by v1/feed
+                </div>
+    </div>
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20" id="article-grid">
+    <article class="md:col-span-2 rounded-xl border border-outline-variant/10 bg-surface-container-low px-8 py-20 text-center">
+    <p class="font-headline text-3xl text-on-surface/80">Preparing the journal archive...</p>
+    </article>
+    </section>
+    </div>
+    <!-- Pagination -->
+    <nav class="mt-32 flex justify-center items-center gap-8 border-t border-outline-variant/10 pt-16" id="pagination">
+    <button class="text-on-surface/30 transition-colors duration-500" disabled type="button">
+    <span class="material-symbols-outlined">west</span>
+    </button>
+    <div class="flex items-center gap-6 font-label text-xs tracking-[0.3em]" id="pagination-pages">
+    <span class="text-primary border-b border-primary pb-1">01</span>
+    </div>
+    <button class="text-on-surface/30 transition-colors duration-500" disabled type="button">
+    <span class="material-symbols-outlined">east</span>
+    </button>
+    </nav>
+    </main>
+    <noscript>
+      <div class="px-6 pb-12 text-center text-secondary">
+        JavaScript is required to load the latest journal archive on this listing page.
+      </div>
+    </noscript>
+    <script>
+      (() => {
+        const PAGE_SIZE = 5;
+        const DEFAULT_IMAGE =
+          'https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1200&q=80';
+        const params = new URLSearchParams(window.location.search);
+        const state = {
+          page: parsePositiveInt(params.get('page'), 1),
+          query: (params.get('q') || '').trim(),
+          category: (params.get('category') || '').trim(),
+          pageSize: PAGE_SIZE
+        };
+
+        const searchInput = document.querySelector('input[type="text"]');
+        const filtersContainer = document.querySelector('header .flex.flex-wrap.justify-center.gap-4');
+        const grid = document.getElementById('article-grid');
+        const status = document.getElementById('feed-status');
+        const summary = document.getElementById('feed-summary');
+        const pagination = document.getElementById('pagination');
+        let searchTimer;
+
+        searchInput.value = state.query;
+
+        function parsePositiveInt(value, fallbackValue) {
+          const parsed = Number.parseInt(value || '', 10);
+          return Number.isFinite(parsed) && parsed > 0 ? parsed : fallbackValue;
+        }
+
+        function getApiBase() {
+          return window.location.protocol === 'file:'
+            ? 'http://127.0.0.1:8787'
+            : window.location.origin;
+        }
+
+        function escapeHtml(value) {
+          return String(value || '').replace(/[&<>\"']/g, (character) => {
+            const entities = {
+              '&': '&amp;',
+              '<': '&lt;',
+              '>': '&gt;',
+              '"': '&quot;',
+              "'": '&#39;'
+            };
+            return entities[character] || character;
+          });
+        }
+
+        function formatDate(value) {
+          if (!value) {
+            return 'Undated';
+          }
+
+          const date = new Date(value);
+          if (Number.isNaN(date.getTime())) {
+            return value;
+          }
+
+          return new Intl.DateTimeFormat('en', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+          }).format(date);
+        }
+
+        function buildArticleUrl(article) {
+          return `/article/${encodeURIComponent(article.slug || article.id)}`;
+        }
+
+        function buildPageHref(pageNumber) {
+          const nextParams = new URLSearchParams();
+          if (pageNumber > 1) {
+            nextParams.set('page', String(pageNumber));
+          }
+          if (state.query) {
+            nextParams.set('q', state.query);
+          }
+          if (state.category) {
+            nextParams.set('category', state.category);
+          }
+          const queryString = nextParams.toString();
+          return queryString ? `?${queryString}` : window.location.pathname;
+        }
+
+        function syncUrl(mode) {
+          if (mode === 'none') {
+            return;
+          }
+
+          const nextUrl = buildPageHref(state.page);
+          const historyMethod = mode === 'replace' ? 'replaceState' : 'pushState';
+          window.history[historyMethod](
+            {
+              page: state.page,
+              query: state.query,
+              category: state.category
+            },
+            '',
+            nextUrl
+          );
+        }
+
+        function setLoading() {
+          status.textContent = 'Loading journal entries...';
+          summary.textContent = state.query || state.category
+            ? 'Searching archive'
+            : 'Powered by v1/feed';
+          grid.innerHTML = `
+            <article class="md:col-span-2 rounded-xl border border-outline-variant/10 bg-surface-container-low px-8 py-20 text-center">
+              <p class="font-headline text-3xl text-on-surface/80">Loading stories...</p>
+            </article>
+          `;
+        }
+
+        function renderCategoryFilters(categories) {
+          const allCategories = [''].concat(categories || []);
+          filtersContainer.innerHTML = allCategories
+            .map((category) => {
+              const isActive = (category || '') === state.category;
+              const label = category || 'All Stories';
+              const activeClasses = isActive
+                ? 'border-primary/20 text-primary bg-primary-container/10'
+                : 'border-outline-variant/20 text-on-surface/60 hover:border-primary/40 hover:text-primary';
+
+              return `
+                <button
+                  class="px-6 py-2 rounded-full border font-label text-xs tracking-widest uppercase transition-all duration-700 ${activeClasses}"
+                  data-category="${escapeHtml(category)}"
+                  type="button"
+                >
+                  ${escapeHtml(label)}
+                </button>
+              `;
+            })
+            .join('');
+        }
+
+        function renderFeaturedArticle(article) {
+          const category = article.category || 'Journal';
+          const description = article.description || 'Read the full entry in the Woodzpacker journal.';
+
+          return `
+            <article class="md:col-span-2 group">
+              <a class="block overflow-hidden rounded-xl bg-surface-container-low transition-all duration-1000 hover:shadow-2xl hover:shadow-primary/5" href="${escapeHtml(buildArticleUrl(article))}">
+                <div class="flex flex-col lg:flex-row h-full">
+                  <div class="lg:w-3/5 overflow-hidden">
+                    <img
+                      alt="${escapeHtml(article.title)}"
+                      class="w-full h-[400px] lg:h-[600px] object-cover transition-transform duration-[2000ms] group-hover:scale-105"
+                      src="${escapeHtml(article.thumbnail || DEFAULT_IMAGE)}"
+                    />
+                  </div>
+                  <div class="lg:w-2/5 p-8 lg:p-16 flex flex-col justify-center">
+                    <span class="font-label text-[10px] tracking-[0.3em] text-primary uppercase mb-4">Featured Selection | ${escapeHtml(category)}</span>
+                    <h2 class="font-headline text-3xl lg:text-4xl leading-tight mb-6 text-on-surface group-hover:text-primary transition-colors duration-700">
+                      ${escapeHtml(article.title)}
+                    </h2>
+                    <p class="font-body text-lg text-secondary leading-relaxed mb-8">
+                      ${escapeHtml(description)}
+                    </p>
+                    <div class="flex items-center justify-between mt-auto pt-8 border-t border-outline-variant/10">
+                      <span class="font-label text-[10px] text-on-surface/40 uppercase tracking-widest">${escapeHtml(formatDate(article.createdAt))}</span>
+                      <span class="text-primary group-hover:translate-x-2 transition-transform duration-700">
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </article>
+          `;
+        }
+
+        function renderStandardCard(article, offsetIndex) {
+          const category = article.category || 'Journal';
+          const offsetClass = offsetIndex % 2 === 1 ? ' md:mt-12' : '';
+
+          return `
+            <article class="group${offsetClass}">
+              <a class="block bg-surface-container-low rounded-xl overflow-hidden transition-all duration-700 hover:shadow-xl" href="${escapeHtml(buildArticleUrl(article))}">
+                <div class="relative overflow-hidden aspect-[4/3]">
+                  <img
+                    alt="${escapeHtml(article.title)}"
+                    class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                    src="${escapeHtml(article.thumbnail || DEFAULT_IMAGE)}"
+                  />
+                  <div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent opacity-60"></div>
+                </div>
+                <div class="p-8">
+                  <span class="font-label text-[10px] tracking-[0.3em] text-secondary uppercase mb-3 block">${escapeHtml(category)}</span>
+                  <h3 class="font-headline text-2xl mb-4 text-on-surface group-hover:text-primary transition-colors duration-700">${escapeHtml(article.title)}</h3>
+                  <p class="font-body text-secondary/80 leading-relaxed mb-6">${escapeHtml(article.description || 'Read the full journal entry for details.')}</p>
+                  <div class="flex items-center justify-between text-[10px] font-label text-on-surface/40 tracking-widest uppercase">
+                    <span>${escapeHtml(formatDate(article.createdAt))}</span>
+                    <span class="material-symbols-outlined text-sm">more_horiz</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+          `;
+        }
+
+        function renderEmptyState() {
+          grid.innerHTML = `
+            <article class="md:col-span-2 rounded-xl border border-outline-variant/10 bg-surface-container-low px-8 py-20 text-center">
+              <p class="font-headline text-3xl text-on-surface/80 mb-4">No journal entries matched this view.</p>
+              <p class="text-secondary text-lg">Try a different keyword or clear the active category.</p>
+            </article>
+          `;
+        }
+
+        function renderGrid(items) {
+          if (!items.length) {
+            renderEmptyState();
+            return;
+          }
+
+          const [featuredArticle, ...otherArticles] = items;
+          grid.innerHTML = [
+            renderFeaturedArticle(featuredArticle),
+            ...otherArticles.map((article, index) => renderStandardCard(article, index))
+          ].join('');
+        }
+
+        function getPaginationPages(currentPage, totalPages) {
+          const pages = [];
+          const start = Math.max(1, currentPage - 2);
+          const end = Math.min(totalPages, currentPage + 2);
+
+          for (let page = start; page <= end; page += 1) {
+            pages.push(page);
+          }
+
+          return pages;
+        }
+
+        function renderPagination(data) {
+          if (!data.totalPages || data.totalPages === 1) {
+            pagination.innerHTML = '';
+            return;
+          }
+
+          const pages = getPaginationPages(data.pageNumber, data.totalPages)
+            .map((page) => {
+              const isActive = page === data.pageNumber;
+              const classes = isActive
+                ? 'text-primary border-b border-primary pb-1'
+                : 'text-on-surface/40 hover:text-on-surface transition-colors duration-500';
+
+              return `
+                <a
+                  class="${classes}"
+                  data-page="${page}"
+                  href="${escapeHtml(buildPageHref(page))}"
+                >
+                  ${String(page).padStart(2, '0')}
+                </a>
+              `;
+            })
+            .join('');
+
+          pagination.innerHTML = `
+            <a
+              aria-disabled="${data.hasPrevious ? 'false' : 'true'}"
+              class="${data.hasPrevious ? 'text-on-surface/60 hover:text-primary' : 'text-on-surface/30 pointer-events-none'} transition-colors duration-500"
+              data-page="${Math.max(1, data.pageNumber - 1)}"
+              href="${escapeHtml(buildPageHref(Math.max(1, data.pageNumber - 1)))}"
+            >
+              <span class="material-symbols-outlined">west</span>
+            </a>
+            <div class="flex items-center gap-6 font-label text-xs tracking-[0.3em]">
+              ${pages}
+            </div>
+            <a
+              aria-disabled="${data.hasMore ? 'false' : 'true'}"
+              class="${data.hasMore ? 'text-on-surface/60 hover:text-primary' : 'text-on-surface/30 pointer-events-none'} transition-colors duration-500"
+              data-page="${Math.min(data.totalPages, data.pageNumber + 1)}"
+              href="${escapeHtml(buildPageHref(Math.min(data.totalPages, data.pageNumber + 1)))}"
+            >
+              <span class="material-symbols-outlined">east</span>
+            </a>
+          `;
+        }
+
+        async function loadArticles(historyMode) {
+          setLoading();
+
+          try {
+            const endpoint = state.query || state.category ? '/v1/search' : '/v1/feed';
+            const apiUrl = new URL(endpoint, getApiBase());
+            apiUrl.searchParams.set('pageNumber', String(state.page));
+            apiUrl.searchParams.set('pageSize', String(state.pageSize));
+
+            if (state.query) {
+              apiUrl.searchParams.set('q', state.query);
+            }
+
+            if (state.category) {
+              apiUrl.searchParams.set('category', state.category);
+            }
+
+            const response = await fetch(apiUrl.toString());
+            if (!response.ok) {
+              throw new Error(`Request failed with status ${response.status}`);
+            }
+
+            const data = await response.json();
+            state.page = data.pageNumber || 1;
+            renderCategoryFilters(data.availableCategories || []);
+            renderGrid(data.items || []);
+            renderPagination(data);
+
+            status.textContent = data.totalItems
+              ? `Showing ${data.items.length} entries from page ${data.pageNumber} of ${data.totalPages}`
+              : 'No journal entries matched the current filters.';
+            summary.textContent = data.totalItems
+              ? `${data.totalItems} published entries${state.category ? ` in ${state.category}` : ''}`
+              : 'Adjust your search or category filter';
+
+            syncUrl(historyMode);
+          } catch (error) {
+            grid.innerHTML = `
+              <article class="md:col-span-2 rounded-xl border border-error/20 bg-surface-container-low px-8 py-20 text-center">
+                <p class="font-headline text-3xl text-on-surface mb-4">Unable to load the journal.</p>
+                <p class="text-secondary text-lg">${escapeHtml(error.message || 'Unexpected error')}</p>
+              </article>
+            `;
+            status.textContent = 'Failed to load journal entries.';
+            summary.textContent = 'Check the worker deployment or local API base.';
+            pagination.innerHTML = '';
+          }
+        }
+
+        filtersContainer.addEventListener('click', (event) => {
+          const button = event.target.closest('[data-category]');
+          if (!button) {
+            return;
+          }
+
+          state.category = button.getAttribute('data-category') || '';
+          state.page = 1;
+          loadArticles('push');
+        });
+
+        searchInput.addEventListener('input', () => {
+          window.clearTimeout(searchTimer);
+          searchTimer = window.setTimeout(() => {
+            state.query = searchInput.value.trim();
+            state.page = 1;
+            loadArticles('push');
+          }, 250);
+        });
+
+        pagination.addEventListener('click', (event) => {
+          const link = event.target.closest('[data-page]');
+          if (!link || link.getAttribute('aria-disabled') === 'true') {
+            return;
+          }
+
+          event.preventDefault();
+          state.page = parsePositiveInt(link.getAttribute('data-page'), 1);
+          loadArticles('push');
+        });
+
+        window.addEventListener('popstate', () => {
+          const currentParams = new URLSearchParams(window.location.search);
+          state.page = parsePositiveInt(currentParams.get('page'), 1);
+          state.query = (currentParams.get('q') || '').trim();
+          state.category = (currentParams.get('category') || '').trim();
+          searchInput.value = state.query;
+          loadArticles('none');
+        });
+
+        loadArticles('replace');
+      })();
+    </script>
+  </body>
+</html>

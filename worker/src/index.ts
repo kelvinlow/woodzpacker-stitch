@@ -1,5 +1,6 @@
 import { handleFeed } from './handlers/feed';
 import { handleProduct } from './handlers/product';
+import { handleSearch } from './handlers/search';
 import { fetchArticleDetailData, handleArticleDetail } from './handlers/article';
 import {
   htmlResponse,
@@ -45,7 +46,17 @@ async function handleRequest(
   if (path === '/v1/feed') {
     const pageNumber = Number(url.searchParams.get('pageNumber') || '1');
     const pageSize = Number(url.searchParams.get('pageSize') || '8');
-    return handleFeed(env, pageNumber, pageSize);
+    const category = url.searchParams.get('category') || undefined;
+    const query = url.searchParams.get('q') || undefined;
+    return handleFeed(env, pageNumber, pageSize, category, query);
+  }
+
+  if (path === '/v1/search') {
+    const query = url.searchParams.get('q') || url.searchParams.get('query') || '';
+    const category = url.searchParams.get('category') || '';
+    const pageNumber = Number(url.searchParams.get('pageNumber') || '1');
+    const pageSize = Number(url.searchParams.get('pageSize') || '8');
+    return handleSearch(env, query, category, pageNumber, pageSize);
   }
   
   if (path === '/v1/product') {

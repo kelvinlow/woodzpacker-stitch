@@ -1,4 +1,5 @@
 import { Env, NotionBlock } from '../types';
+import { NAV_ITEMS } from '../utils/nav';
 
 const HTML_HEADERS = {
   'Content-Type': 'text/html; charset=utf-8',
@@ -125,7 +126,7 @@ export function renderArticlePage(
     </style>
   </head>
   <body class="bg-background text-on-surface font-body selection:bg-primary/30">
-    ${renderNav(siteName, siteTagline)}
+    ${renderNav(siteName, siteTagline, requestUrl.pathname)}
     <main class="pt-32 pb-24">
       <div class="max-w-6xl mx-auto px-6 md:px-8">
         ${renderHero(articleId, title, description, heroImage)}
@@ -176,15 +177,22 @@ export function renderErrorPage(message: string, siteName: string): string {
 </html>`;
 }
 
-function renderNav(siteName: string, siteTagline: string): string {
+function renderNav(siteName: string, siteTagline: string, currentPath: string): string {
+  const navLinksHtml = NAV_ITEMS.map(item => {
+    const isActive = item.activeMatch === 'includes'
+      ? currentPath.includes(item.activeKey)
+      : currentPath === item.activeKey;
+    const activeClass = isActive ? 'text-[#E9C349] border-b border-[#E9C349]/30 pb-1' : 'text-[#F1DFD3]/80';
+    return `<a class="font-label tracking-widest uppercase text-sm ${activeClass} hover:text-[#E9C349] transition-colors duration-700" href="${escapeHtml(item.workerHref || item.href)}">${escapeHtml(item.label)}</a>`;
+  }).join('\n        ');
+
   return `<nav class="fixed top-0 w-full z-50 bg-[#1A120B]/70 backdrop-blur-md bg-gradient-to-b from-[#1A120B] to-transparent shadow-[0_4px_30px_rgba(0,0,0,0.1)]">
     <div class="flex justify-between items-center px-6 md:px-12 py-6 w-full max-w-screen-2xl mx-auto gap-6">
       <div class="text-xl font-headline font-bold tracking-tighter text-[#F1DFD3]">
         <span class="text-[#E9C349]">${escapeHtml(siteName)} </span> | ${escapeHtml(siteTagline)}
       </div>
       <div class="hidden md:flex gap-10 items-center">
-        <a class="font-label tracking-widest uppercase text-sm text-[#E9C349] border-b border-[#E9C349]/30 pb-1" href="/article">Articles</a>
-        <a class="font-label tracking-widest uppercase text-sm text-[#F1DFD3]/80 hover:text-[#E9C349] transition-colors duration-700" href="/v1/feed">API Feed</a>
+        ${navLinksHtml}
       </div>
     </div>
   </nav>`;

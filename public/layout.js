@@ -18,6 +18,8 @@ window.WOODZPACKER_CONFIG = {
   workerBaseUrl: GLOBAL_CONFIG.workerBaseUrl.replace(/\/+$/, '')
 };
 
+// Navigation items are fetched from the worker (single source: worker/src/utils/nav.ts)
+
 // Simple template interpolation
 const interpolate = (str) => {
   return str.replace(/\{\{(.*?)\}\}/g, (match, key) => {
@@ -130,8 +132,25 @@ const setupHead = () => {
 };
 
 // 2. Main Logic - Inject Header & Footer
-const injectLayout = () => {
+const injectLayout = async () => {
   const currentPage = window.location.pathname.split("/").pop() || "index.html";
+
+  // Fetch nav items from nav.json — single source of truth
+  let navItems = [];
+  try {
+    const res = await fetch('./nav.json');
+    navItems = await res.json();
+  } catch (e) {
+    console.warn('[layout] Failed to load nav items:', e);
+  }
+
+  const navLinksHTML = navItems.map(item => {
+    const isActive = item.activeMatch === 'includes'
+      ? currentPage.includes(item.activeKey)
+      : currentPage === item.activeKey;
+    const activeClass = isActive ? 'text-[#E9C349] border-b border-[#E9C349]/30 pb-1' : 'text-[#F1DFD3]/80';
+    return `<a class="font-label tracking-widest uppercase text-sm ${activeClass} hover:text-[#E9C349] transition-colors duration-700" href="${item.href}">${item.label}</a>`;
+  }).join('\n            ');
 
   // Navigation HTML
   const navHTML = interpolate(`
@@ -141,11 +160,7 @@ const injectLayout = () => {
             <span class="text-[#E9C349]">{{websiteName}} </span> | {{tagline}}
         </div>
         <div class="hidden md:flex gap-10 items-center">
-            <a class="font-label tracking-widest uppercase text-sm ${currentPage.includes('articles') ? 'text-[#E9C349] border-b border-[#E9C349]/30 pb-1' : 'text-[#F1DFD3]/80'} hover:text-[#E9C349] transition-colors duration-700" href="articles_1.html">Articles</a>
-            <a class="font-label tracking-widest uppercase text-sm ${currentPage === 'gallery.html' ? 'text-[#E9C349] border-b border-[#E9C349]/30 pb-1' : 'text-[#F1DFD3]/80'} hover:text-[#E9C349] transition-colors duration-700" href="gallery.html">Gallery</a>
-            <a class="font-label tracking-widest uppercase text-sm ${currentPage === 'guide.html' ? 'text-[#E9C349] border-b border-[#E9C349]/30 pb-1' : 'text-[#F1DFD3]/80'} hover:text-[#E9C349] transition-colors duration-700" href="guide.html">Guide</a>
-            <a class="font-label tracking-widest uppercase text-sm ${currentPage.includes('products') ? 'text-[#E9C349] border-b border-[#E9C349]/30 pb-1' : 'text-[#F1DFD3]/80'} hover:text-[#E9C349] transition-colors duration-700" href="products_1.html">Products</a>
-            <a class="font-label tracking-widest uppercase text-sm ${currentPage === 'about_us.html' ? 'text-[#E9C349] border-b border-[#E9C349]/30 pb-1' : 'text-[#F1DFD3]/80'} hover:text-[#E9C349] transition-colors duration-700" href="about_us.html">About</a>
+            ${navLinksHTML}
         </div>
         <div class="flex items-center gap-6">
             <button class="text-[#F1DFD3]/80 hover:text-[#E9C349] transition-colors duration-700">
@@ -159,7 +174,7 @@ const injectLayout = () => {
   const footerHTML = interpolate(`
 <footer class="w-full border-t border-[#4F4540]/20 bg-[#1A120B] pt-24 pb-12">
     <div class="max-w-screen-2xl mx-auto px-12">
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-16 mb-20">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-16 mb-5">
             <!-- Brand Column -->
             <div class="md:col-span-5 space-y-8">
                 <div class="text-2xl font-headline font-bold tracking-tighter text-[#F1DFD3]">
@@ -188,7 +203,7 @@ const injectLayout = () => {
                 <div class="space-y-6">
                     <h4 class="font-label text-[#E9C349] text-xs tracking-[0.3em] uppercase">Discovery</h4>
                     <ul class="space-y-4">
-                        <li><a href="articles_1.html" class="font-body text-[#F1DFD3]/60 hover:text-[#E9C349] transition-colors">Journal</a></li>
+                        <li><a href="articles_demo.html" class="font-body text-[#F1DFD3]/60 hover:text-[#E9C349] transition-colors">Journal</a></li>
                         <li><a href="gallery.html" class="font-body text-[#F1DFD3]/60 hover:text-[#E9C349] transition-colors">Gallery</a></li>
                         <li><a href="guide.html" class="font-body text-[#F1DFD3]/60 hover:text-[#E9C349] transition-colors">Beginner's Guide</a></li>
                     </ul>
@@ -196,7 +211,7 @@ const injectLayout = () => {
                 <div class="space-y-6">
                     <h4 class="font-label text-[#E9C349] text-xs tracking-[0.3em] uppercase">Shop</h4>
                     <ul class="space-y-4">
-                        <li><a href="products_1.html" class="font-body text-[#F1DFD3]/60 hover:text-[#E9C349] transition-colors">Collection</a></li>
+                        <li><a href="products.html" class="font-body text-[#F1DFD3]/60 hover:text-[#E9C349] transition-colors">Collection</a></li>
                         <li><a href="product_detail_1.html" class="font-body text-[#F1DFD3]/60 hover:text-[#E9C349] transition-colors">Gift Sets</a></li>
                         <li><a href="about_us.html" class="font-body text-[#F1DFD3]/60 hover:text-[#E9C349] transition-colors">Heritage</a></li>
                     </ul>
@@ -213,9 +228,9 @@ const injectLayout = () => {
         </div>
 
         <!-- Copyright Line -->
-        <div class="pt-12 border-t border-[#4F4540]/10 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="pt-6 border-t border-[#4F4540]/10 flex flex-col md:flex-row justify-between items-center gap-6">
             <div class="font-label text-[10px] tracking-[0.4em] text-[#F1DFD3]/30 uppercase">
-                © 2024 {{websiteName}} {{tagline}}. ALL RIGHTS RESERVED.
+                © 2026 WOODZPACKER | AGARWOOD. ALL RIGHTS RESERVED.
             </div>
             <div class="flex items-center gap-8">
                 <span class="font-label text-[10px] tracking-widest text-[#F1DFD3]/20 uppercase">Handcrafted with time</span>

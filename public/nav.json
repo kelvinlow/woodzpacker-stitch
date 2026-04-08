@@ -1,0 +1,8 @@
+[
+  { "label": "Articles",    "href": "articles_demo.html",  "workerHref": null,                                                                                "activeMatch": "includes", "activeKey": "article"       },
+  { "label": "Gallery",     "href": "gallery.html",         "workerHref": null,                                                                                "activeMatch": "includes",    "activeKey": "gallery"  },
+  { "label": "分辨頂級沉香", "href": "https://woodzpacker-stitch.lowshinsheng.workers.dev/article/distinguishing-top-quality-agarwood-origin-characteristics-aroma", "workerHref": "/article/distinguishing-top-quality-agarwood-origin-characteristics-aroma", "activeMatch": "includes", "activeKey": "/article/distinguishing-top-quality-agarwood-origin-characteristics-aroma" },
+  { "label": "Guide",       "href": "guide.html",           "workerHref": null,                                                                                "activeMatch": "includes",    "activeKey": "guide"    },
+  { "label": "Products",    "href": "products.html",        "workerHref": null,                                                                                "activeMatch": "includes", "activeKey": "products"      },
+  { "label": "About",       "href": "about_us.html",        "workerHref": null,                                                                                "activeMatch": "includes",    "activeKey": "about" }
+]

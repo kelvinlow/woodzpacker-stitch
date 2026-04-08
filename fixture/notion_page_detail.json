@@ -1,0 +1,125 @@
+{
+  "object": "page",
+  "id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa",
+  "created_time": "2026-04-08T01:53:00.000Z",
+  "last_edited_time": "2026-04-08T05:04:00.000Z",
+  "created_by": {
+    "object": "user",
+    "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+  },
+  "last_edited_by": {
+    "object": "user",
+    "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+  },
+  "cover": null,
+  "icon": {
+    "type": "icon",
+    "icon": {
+      "name": "document",
+      "color": "gray"
+    }
+  },
+  "parent": {
+    "type": "data_source_id",
+    "data_source_id": "33a63a7b-b3db-8029-a772-000b7795b3a8",
+    "database_id": "33a63a7b-b3db-8068-b435-f220cf3e09a7"
+  },
+  "in_trash": false,
+  "is_archived": false,
+  "is_locked": false,
+  "properties": {
+    "Description": {
+      "id": "FY_a",
+      "type": "rich_text",
+      "rich_text": [
+        {
+          "type": "text",
+          "text": {
+            "content": "不同產區的沉香，會因為樹種的不同和環境條件的差異，產生不一樣的香韻。即使相同樹種、同一個產區生產的沉香，也會因為結香條件的差異，譬如水質、染菌的菌種跟受傷的部位、生長時間的長遠，而出現千差萬別的香味。",
+            "link": null
+          },
+          "annotations": {
+            "bold": false,
+            "italic": false,
+            "strikethrough": false,
+            "underline": false,
+            "code": false,
+            "color": "default"
+          },
+          "plain_text": "不同產區的沉香，會因為樹種的不同和環境條件的差異，產生不一樣的香韻。即使相同樹種、同一個產區生產的沉香，也會因為結香條件的差異，譬如水質、染菌的菌種跟受傷的部位、生長時間的長遠，而出現千差萬別的香味。",
+          "href": null
+        }
+      ]
+    },
+    "Thumbnail": {
+      "id": "QgeE",
+      "type": "url",
+      "url": null
+    },
+    "Slug": {
+      "id": "XbC%5D",
+      "type": "rich_text",
+      "rich_text": [
+        {
+          "type": "text",
+          "text": {
+            "content": "distinguishing-top-quality-agarwood-origin-characteristics-aroma",
+            "link": null
+          },
+          "annotations": {
+            "bold": false,
+            "italic": false,
+            "strikethrough": false,
+            "underline": false,
+            "code": false,
+            "color": "default"
+          },
+          "plain_text": "distinguishing-top-quality-agarwood-origin-characteristics-aroma",
+          "href": null
+        }
+      ]
+    },
+    "Published": {
+      "id": "uunJ",
+      "type": "checkbox",
+      "checkbox": false
+    },
+    "Created Time": {
+      "id": "y~UW",
+      "type": "date",
+      "date": null
+    },
+    "Category": {
+      "id": "%7COej",
+      "type": "select",
+      "select": null
+    },
+    "Title": {
+      "id": "title",
+      "type": "title",
+      "title": [
+        {
+          "type": "text",
+          "text": {
+            "content": "分辨頂級沉香——產區、特色、味道",
+            "link": null
+          },
+          "annotations": {
+            "bold": true,
+            "italic": false,
+            "strikethrough": false,
+            "underline": false,
+            "code": false,
+            "color": "default"
+          },
+          "plain_text": "分辨頂級沉香——產區、特色、味道",
+          "href": null
+        }
+      ]
+    }
+  },
+  "url": "https://www.notion.so/33c63a7bb3db80298069dc4f9a6b60fa",
+  "public_url": null,
+  "developer_survey": "https://notionup.typeform.com/to/bllBsoI4?utm_source=postman",
+  "request_id": "9d8c2856-f5a2-4a4e-9cb7-5ad4a0f22133"
+}

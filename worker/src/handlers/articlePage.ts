@@ -14,6 +14,7 @@ export function htmlResponse(html: string, status = 200): Response {
 
 export function renderArticlePage(
   articleId: string,
+  articleSlug: string,
   articleTitle: string,
   blocks: NotionBlock[],
   requestUrl: URL,
@@ -28,7 +29,10 @@ export function renderArticlePage(
     introBlock?.text?.trim() || siteDescription,
     180
   );
-  const canonicalUrl = new URL(`/article/${articleId}`, requestUrl.origin).toString();
+  const canonicalUrl = new URL(
+    `/article/${articleSlug || articleId}`,
+    requestUrl.origin
+  ).toString();
 
   return `<!doctype html>
 <html class="dark" lang="zh-Hant">

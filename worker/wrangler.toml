@@ -2,10 +2,6 @@ name = "notion-worker"
 main = "src/index.ts"
 compatibility_date = "2024-04-03"
 
-[[routes]]
-pattern = "journal.woodzpacker.com"
-custom_domain = true
-
 [vars]
 NOTION_API_VERSION = "2026-03-11"
 SITE_NAME = "Woodzpacker"

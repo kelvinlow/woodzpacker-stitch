@@ -105,7 +105,7 @@
         function getApiBase() {
           return window.location.protocol === 'file:'
             ? 'http://127.0.0.1:8787'
-            : window.location.origin;
+            : (window.WOODZPACKER_CONFIG?.workerBaseUrl || window.location.origin);
         }
 
         function escapeHtml(value) {
@@ -139,7 +139,7 @@
         }
 
         function buildArticleUrl(article) {
-          return `/article/${encodeURIComponent(article.slug || article.id)}`;
+          return `/article_detail.html?id=${encodeURIComponent(article.id)}`;
         }
 
         function buildPageHref(pageNumber) {

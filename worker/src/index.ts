@@ -5,8 +5,7 @@ import { fetchArticleDetailData, handleArticleDetail } from './handlers/article'
 import {
   htmlResponse,
   renderArticlePage,
-  renderErrorPage,
-  renderHomePage
+  renderErrorPage
 } from './handlers/articlePage';
 import { errorResponse } from './utils/response';
 import { getEnvValue } from './utils/env';
@@ -17,11 +16,6 @@ export default {
     const url = new URL(request.url);
     const path = url.pathname;
 
-    const notionToken = await getEnvValue(env, 'NOTION_TOKEN');
-    if (!notionToken) {
-      return errorResponse('Missing NOTION_TOKEN secret.');
-    }
-
     return handleRequest(request, path, env);
   }
 };
@@ -31,16 +25,21 @@ async function handleRequest(
   path: string,
   env: Env
 ): Promise<Response> {
+  if (!isWorkerRoute(path)) {
+    return errorResponse('Route not found', null, 404);
+  }
+
+  const notionToken = await getEnvValue(env, 'NOTION_TOKEN');
+  if (!notionToken) {
+    return errorResponse('Missing NOTION_TOKEN secret.');
+  }
+
   const url = new URL(request.url);
   const siteName = (await getEnvValue(env, 'SITE_NAME')) || 'Woodzpacker';
   const siteTagline = (await getEnvValue(env, 'SITE_TAGLINE')) || '沉香';
   const siteDescription =
     (await getEnvValue(env, 'SITE_DESCRIPTION')) ||
     '专注于马来西亚野生沉香与佛教珍品';
-
-  if (path === '/') {
-    return htmlResponse(renderHomePage(siteName, new URL(request.url).origin));
-  }
 
   // Static routes
   if (path === '/v1/feed') {
@@ -105,4 +104,8 @@ async function handleRequest(
   }
 
   return errorResponse('Route not found', null, 404);
+}
+
+function isWorkerRoute(path: string): boolean {
+  return path.startsWith('/v1/') || path.startsWith('/article/');
 }

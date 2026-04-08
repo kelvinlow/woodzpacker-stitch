@@ -85,7 +85,13 @@
         return url.searchParams.get("id") || DEFAULT_ARTICLE_ID;
       };
 
-      const getApiUrl = (articleId) => `https://woodzpacker-stitch.lowshinsheng.workers.dev/v1/article/${articleId}`;
+      const getApiBase = () =>
+        window.location.protocol === "file:"
+          ? "http://127.0.0.1:8787"
+          : (window.WOODZPACKER_CONFIG?.workerBaseUrl || window.location.origin);
+
+      const getApiUrl = (articleId) =>
+        `${getApiBase()}/v1/article/${encodeURIComponent(articleId)}`;
 
       const getFirstParagraph = (blocks) =>
         blocks.find((block) => block.type === "paragraph" && block.text?.trim());

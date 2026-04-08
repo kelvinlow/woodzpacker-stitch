@@ -7,9 +7,15 @@
 const GLOBAL_CONFIG = {
   websiteName: "Woodzpacker",
   tagline: "沉香",
+  workerBaseUrl: "https://woodzpacker-stitch.lowshinsheng.workers.dev",
   footerTitle: "冥想虚空 THE MEDITATIVE VOID",
   footerSlogan: "悟培閣 · {{footerTitle}}",
   footerDescription: "专注于马来西亚野生沉香与佛教珍品<br/>品质至上，诚信经营"
+};
+
+window.WOODZPACKER_CONFIG = {
+  ...GLOBAL_CONFIG,
+  workerBaseUrl: GLOBAL_CONFIG.workerBaseUrl.replace(/\/+$/, '')
 };
 
 // Simple template interpolation

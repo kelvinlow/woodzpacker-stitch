@@ -30,4 +30,7 @@ export interface Env {
   ARTICLE_DATA_SOURCE_ID?: EnvValue;
   PRODUCT_DATA_SOURCE_ID?: EnvValue;
   NOTION_API_VERSION?: EnvValue;
+  SITE_NAME?: EnvValue;
+  SITE_TAGLINE?: EnvValue;
+  SITE_DESCRIPTION?: EnvValue;
 }

@@ -2,8 +2,12 @@ name = "article-page-worker"
 main = "src/index.ts"
 compatibility_date = "2024-04-03"
 
+[[routes]]
+pattern = "journal.woodzpacker.com"
+custom_domain = true
+
 [vars]
-API_BASE_URL = "https://notion-worker.your-domain.workers.dev"
+API_BASE_URL = "https://api.woodzpacker.com"
 SITE_NAME = "Woodzpacker"
 SITE_TAGLINE = "沉香"
 SITE_DESCRIPTION = "专注于马来西亚野生沉香与佛教珍品"

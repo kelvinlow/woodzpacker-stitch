@@ -1,100 +1,25 @@
-interface Env {
-  API_BASE_URL?: string;
-  SITE_NAME?: string;
-  SITE_TAGLINE?: string;
-  SITE_DESCRIPTION?: string;
-}
+import { Env, NotionBlock } from '../types';
 
-interface ArticleBlock {
-  type: string;
-  id: string;
-  text?: string;
-  url?: string;
-  caption?: string;
-}
-
-interface ArticleResponse {
-  blocks: ArticleBlock[];
-}
-
-const JSON_HEADERS = {
+const HTML_HEADERS = {
   'Content-Type': 'text/html; charset=utf-8',
   'Cache-Control': 'public, max-age=300'
 };
 
-export default {
-  async fetch(request: Request, env: Env): Promise<Response> {
-    const url = new URL(request.url);
-
-    if (url.pathname === '/') {
-      return new Response(renderHome(env), { headers: JSON_HEADERS });
-    }
-
-    if (url.pathname.startsWith('/article/')) {
-      const articleId = url.pathname.split('/').pop();
-      if (!articleId) {
-        return new Response(renderErrorPage('Missing article id.', env), {
-          status: 400,
-          headers: JSON_HEADERS
-        });
-      }
-
-      try {
-        const blocks = await fetchArticleBlocks(articleId, env);
-        return new Response(renderArticlePage(articleId, blocks, env, url), {
-          headers: JSON_HEADERS
-        });
-      } catch (error: any) {
-        return new Response(
-          renderErrorPage(error?.message || 'Failed to load article.', env),
-          {
-            status: 502,
-            headers: JSON_HEADERS
-          }
-        );
-      }
-    }
-
-    return new Response(renderErrorPage('Page not found.', env), {
-      status: 404,
-      headers: JSON_HEADERS
-    });
-  }
-};
-
-async function fetchArticleBlocks(articleId: string, env: Env): Promise<ArticleBlock[]> {
-  const baseUrl = env.API_BASE_URL;
-  if (!baseUrl) {
-    throw new Error('Missing API_BASE_URL.');
-  }
-
-  const response = await fetch(`${trimTrailingSlash(baseUrl)}/v1/article/${articleId}`, {
-    headers: {
-      Accept: 'application/json'
-    }
+export function htmlResponse(html: string, status = 200): Response {
+  return new Response(html, {
+    status,
+    headers: HTML_HEADERS
   });
-
-  if (!response.ok) {
-    throw new Error(`Article API returned ${response.status}.`);
-  }
-
-  const data = (await response.json()) as ArticleResponse;
-  if (!Array.isArray(data.blocks) || data.blocks.length === 0) {
-    throw new Error('Article has no renderable blocks.');
-  }
-
-  return data.blocks;
 }
 
-function renderArticlePage(
+export function renderArticlePage(
   articleId: string,
-  blocks: ArticleBlock[],
-  env: Env,
-  requestUrl: URL
+  blocks: NotionBlock[],
+  requestUrl: URL,
+  siteName: string,
+  siteTagline: string,
+  siteDescription: string
 ): string {
-  const siteName = env.SITE_NAME || 'Woodzpacker';
-  const siteTagline = env.SITE_TAGLINE || '沉香';
-  const siteDescription = env.SITE_DESCRIPTION || '专注于马来西亚野生沉香与佛教珍品';
   const titleBlock = getPrimaryHeading(blocks);
   const introBlock = getFirstParagraph(blocks);
   const heroImage = getFirstImage(blocks);
@@ -112,10 +37,10 @@ function renderArticlePage(
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>${escapeHtml(title)} | ${escapeHtml(siteName)}</title>
     <meta name="description" content="${escapeHtml(description)}" />
+    <link rel="canonical" href="${escapeHtml(canonicalUrl)}" />
     <meta property="og:type" content="article" />
     <meta property="og:title" content="${escapeHtml(title)} | ${escapeHtml(siteName)}" />
     <meta property="og:description" content="${escapeHtml(description)}" />
-    <link rel="canonical" href="${escapeHtml(canonicalUrl)}" />
     <meta property="og:url" content="${escapeHtml(canonicalUrl)}" />
     ${heroImage?.url ? `<meta property="og:image" content="${escapeHtml(heroImage.url)}" />` : ''}
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -215,6 +140,38 @@ function renderArticlePage(
 </html>`;
 }
 
+export function renderHomePage(siteName: string, origin: string): string {
+  const exampleId = '33c63a7bb3db80298069dc4f9a6b60fa';
+  return `<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>${escapeHtml(siteName)} Worker</title>
+  </head>
+  <body style="font-family: sans-serif; padding: 40px;">
+    <h1>${escapeHtml(siteName)} Worker</h1>
+    <p>Article page: <a href="${escapeHtml(`${origin}/article/${exampleId}`)}">${escapeHtml(`${origin}/article/${exampleId}`)}</a></p>
+    <p>Article API: <a href="${escapeHtml(`${origin}/v1/article/${exampleId}`)}">${escapeHtml(`${origin}/v1/article/${exampleId}`)}</a></p>
+  </body>
+</html>`;
+}
+
+export function renderErrorPage(message: string, siteName: string): string {
+  return `<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Error | ${escapeHtml(siteName)}</title>
+  </head>
+  <body style="font-family: sans-serif; padding: 40px;">
+    <h1>${escapeHtml(siteName)}</h1>
+    <p>${escapeHtml(message)}</p>
+  </body>
+</html>`;
+}
+
 function renderNav(siteName: string, siteTagline: string): string {
   return `<nav class="fixed top-0 w-full z-50 bg-[#1A120B]/70 backdrop-blur-md bg-gradient-to-b from-[#1A120B] to-transparent shadow-[0_4px_30px_rgba(0,0,0,0.1)]">
     <div class="flex justify-between items-center px-6 md:px-12 py-6 w-full max-w-screen-2xl mx-auto gap-6">
@@ -222,9 +179,8 @@ function renderNav(siteName: string, siteTagline: string): string {
         <span class="text-[#E9C349]">${escapeHtml(siteName)} </span> | ${escapeHtml(siteTagline)}
       </div>
       <div class="hidden md:flex gap-10 items-center">
-        <a class="font-label tracking-widest uppercase text-sm text-[#E9C349] border-b border-[#E9C349]/30 pb-1" href="/articles">Articles</a>
-        <a class="font-label tracking-widest uppercase text-sm text-[#F1DFD3]/80 hover:text-[#E9C349] transition-colors duration-700" href="/products">Products</a>
-        <a class="font-label tracking-widest uppercase text-sm text-[#F1DFD3]/80 hover:text-[#E9C349] transition-colors duration-700" href="/about">About</a>
+        <a class="font-label tracking-widest uppercase text-sm text-[#E9C349] border-b border-[#E9C349]/30 pb-1" href="/article">Articles</a>
+        <a class="font-label tracking-widest uppercase text-sm text-[#F1DFD3]/80 hover:text-[#E9C349] transition-colors duration-700" href="/v1/feed">API Feed</a>
       </div>
     </div>
   </nav>`;
@@ -256,7 +212,7 @@ function renderHero(
   articleId: string,
   title: string,
   description: string,
-  imageBlock?: ArticleBlock
+  imageBlock?: NotionBlock
 ): string {
   return `<header class="mb-20 md:mb-24">
     <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-end">
@@ -287,7 +243,7 @@ function renderHero(
   </header>`;
 }
 
-function renderBlocks(blocks: ArticleBlock[]): string {
+function renderBlocks(blocks: NotionBlock[]): string {
   const rendered: string[] = [];
   let i = 0;
 
@@ -321,7 +277,7 @@ function renderBlocks(blocks: ArticleBlock[]): string {
   return rendered.join('');
 }
 
-function renderBlock(block: ArticleBlock): string {
+function renderBlock(block: NotionBlock): string {
   const text = escapeHtml(block.text || '');
 
   switch (block.type) {
@@ -354,40 +310,7 @@ function renderBlock(block: ArticleBlock): string {
   }
 }
 
-function renderHome(env: Env): string {
-  const exampleId = '33c63a7bb3db80298069dc4f9a6b60fa';
-  const siteName = env.SITE_NAME || 'Woodzpacker';
-  return `<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>${escapeHtml(siteName)} Article Worker</title>
-  </head>
-  <body style="font-family: sans-serif; padding: 40px;">
-    <h1>${escapeHtml(siteName)} Article Worker</h1>
-    <p>Use <code>/article/${exampleId}</code> to render an SEO-friendly article page.</p>
-  </body>
-</html>`;
-}
-
-function renderErrorPage(message: string, env: Env): string {
-  const siteName = env.SITE_NAME || 'Woodzpacker';
-  return `<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Error | ${escapeHtml(siteName)}</title>
-  </head>
-  <body style="font-family: sans-serif; padding: 40px;">
-    <h1>${escapeHtml(siteName)}</h1>
-    <p>${escapeHtml(message)}</p>
-  </body>
-</html>`;
-}
-
-function getPrimaryHeading(blocks: ArticleBlock[]): ArticleBlock | undefined {
+function getPrimaryHeading(blocks: NotionBlock[]): NotionBlock | undefined {
   return (
     blocks.find((block) => block.type === 'heading_1' && block.text?.trim()) ||
     blocks.find(
@@ -398,11 +321,11 @@ function getPrimaryHeading(blocks: ArticleBlock[]): ArticleBlock | undefined {
   );
 }
 
-function getFirstParagraph(blocks: ArticleBlock[]): ArticleBlock | undefined {
+function getFirstParagraph(blocks: NotionBlock[]): NotionBlock | undefined {
   return blocks.find((block) => block.type === 'paragraph' && block.text?.trim());
 }
 
-function getFirstImage(blocks: ArticleBlock[]): ArticleBlock | undefined {
+function getFirstImage(blocks: NotionBlock[]): NotionBlock | undefined {
   return blocks.find((block) => block.type === 'image' && block.url);
 }
 
@@ -412,10 +335,6 @@ function compactExcerpt(text: string, maxLength: number): string {
     return normalized;
   }
   return `${normalized.slice(0, maxLength).trimEnd()}...`;
-}
-
-function trimTrailingSlash(value: string): string {
-  return value.endsWith('/') ? value.slice(0, -1) : value;
 }
 
 function escapeHtml(value: string): string {

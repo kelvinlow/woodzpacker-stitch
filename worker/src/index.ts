@@ -1,6 +1,12 @@
 import { handleFeed } from './handlers/feed';
 import { handleProduct } from './handlers/product';
-import { handleArticleDetail } from './handlers/article';
+import { fetchArticleBlocks, handleArticleDetail } from './handlers/article';
+import {
+  htmlResponse,
+  renderArticlePage,
+  renderErrorPage,
+  renderHomePage
+} from './handlers/articlePage';
 import { errorResponse } from './utils/response';
 import { getEnvValue } from './utils/env';
 import { Env } from './types';
@@ -10,32 +16,30 @@ export default {
     const url = new URL(request.url);
     const path = url.pathname;
 
-    // Debug route to check presence of secret bindings without leaking values
-    if (path === '/_debug/env') {
-      const notionToken = await getEnvValue(env, 'NOTION_TOKEN');
-      const articleDataSourceId = await getEnvValue(env, 'ARTICLE_DATA_SOURCE_ID');
-      const productDataSourceId = await getEnvValue(env, 'PRODUCT_DATA_SOURCE_ID');
-
-      return new Response(
-        JSON.stringify({
-          NOTION_TOKEN_set: Boolean(notionToken),
-          ARTICLE_DATA_SOURCE_ID_set: Boolean(articleDataSourceId),
-          PRODUCT_DATA_SOURCE_ID_set: Boolean(productDataSourceId)
-        }),
-        { headers: { 'Content-Type': 'application/json' } }
-      );
-    }
-
     const notionToken = await getEnvValue(env, 'NOTION_TOKEN');
     if (!notionToken) {
       return errorResponse('Missing NOTION_TOKEN secret.');
     }
 
-    return handleRequest(path, env);
+    return handleRequest(request, path, env);
   }
 };
 
-async function handleRequest(path: string, env: Env): Promise<Response> {
+async function handleRequest(
+  request: Request,
+  path: string,
+  env: Env
+): Promise<Response> {
+  const siteName = (await getEnvValue(env, 'SITE_NAME')) || 'Woodzpacker';
+  const siteTagline = (await getEnvValue(env, 'SITE_TAGLINE')) || '沉香';
+  const siteDescription =
+    (await getEnvValue(env, 'SITE_DESCRIPTION')) ||
+    '专注于马来西亚野生沉香与佛教珍品';
+
+  if (path === '/') {
+    return htmlResponse(renderHomePage(siteName, new URL(request.url).origin));
+  }
+
   // Static routes
   if (path === '/v1/feed') {
     return handleFeed(env);
@@ -49,6 +53,32 @@ async function handleRequest(path: string, env: Env): Promise<Response> {
   if (path.startsWith('/v1/article/')) {
     const articleId = path.split('/').pop();
     if (articleId) return handleArticleDetail(articleId, env);
+  }
+
+  if (path.startsWith('/article/')) {
+    const articleId = path.split('/').pop();
+    if (!articleId) {
+      return htmlResponse(renderErrorPage('Missing article id.', siteName), 400);
+    }
+
+    try {
+      const blocks = await fetchArticleBlocks(articleId, env);
+      return htmlResponse(
+        renderArticlePage(
+          articleId,
+          blocks,
+          new URL(request.url),
+          siteName,
+          siteTagline,
+          siteDescription
+        )
+      );
+    } catch (error: any) {
+      return htmlResponse(
+        renderErrorPage(error.message || 'Failed to load article.', siteName),
+        502
+      );
+    }
   }
 
   return errorResponse('Route not found', null, 404);

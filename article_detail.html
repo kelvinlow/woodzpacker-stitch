@@ -87,14 +87,6 @@
 
       const getApiUrl = (articleId) => `https://woodzpacker-stitch.lowshinsheng.workers.dev/v1/article/${articleId}`;
 
-      const getPrimaryHeading = (blocks) =>
-        blocks.find((block) => block.type === "heading_1" && block.text?.trim()) ||
-        blocks.find(
-          (block) =>
-            ["heading_2", "heading_3", "paragraph", "bulleted_list_item"].includes(block.type) &&
-            block.text?.trim()
-        );
-
       const getFirstParagraph = (blocks) =>
         blocks.find((block) => block.type === "paragraph" && block.text?.trim());
 
@@ -119,11 +111,9 @@
         descriptionTag.content = description;
       };
 
-      const renderHero = (blocks) => {
-        const titleBlock = getPrimaryHeading(blocks);
+      const renderHero = (title, blocks) => {
         const introBlock = getFirstParagraph(blocks);
         const imageBlock = getFirstImage(blocks);
-        const title = titleBlock?.text?.trim() || "The Meditative Void Journal";
         const intro =
           introBlock?.text?.trim() ||
           "A curated reflection on agarwood, ritual, and the meditative arts.";
@@ -167,6 +157,64 @@
         `;
       };
 
+      const renderListItem = (block, listType) => {
+        const nested = renderNestedChildren(block.children || [], listType);
+        return `<li class="mb-3">${escapeHtml(block.text || "")}${nested}</li>`;
+      };
+
+      const renderNestedChildren = (children, parentListType) => {
+        if (!children.length) return "";
+
+        const childListType =
+          children[0].type === "numbered_list_item" ? "ol" : parentListType;
+        const className =
+          childListType === "ol"
+            ? "mt-3 pl-6 list-decimal text-on-surface/90 leading-[1.9]"
+            : "mt-3 pl-6 list-disc text-on-surface/90 leading-[1.9]";
+
+        const items = children
+          .map((child) => {
+            if (
+              child.type === "bulleted_list_item" ||
+              child.type === "numbered_list_item"
+            ) {
+              return renderListItem(child, childListType);
+            }
+            return renderBlock(child);
+          })
+          .join("");
+
+        return `<${childListType} class="${className}">${items}</${childListType}>`;
+      };
+
+      const renderTable = (block) => {
+        const rows = Array.isArray(block.children) ? block.children : [];
+        if (!rows.length) return "";
+
+        const body = rows
+          .filter((row) => row.type === "table_row")
+          .map((row) => {
+            const cells = Array.isArray(row.cells) ? row.cells : [];
+            const columns = cells
+              .map((cell) => {
+                const text = Array.isArray(cell) ? cell.join(" ") : "";
+                return `<td class="border border-outline-variant/20 px-4 py-3 align-top">${escapeHtml(text)}</td>`;
+              })
+              .join("");
+
+            return `<tr>${columns}</tr>`;
+          })
+          .join("");
+
+        return `
+          <div class="my-10 overflow-x-auto bg-surface-container-low border border-outline-variant/20">
+            <table class="min-w-full border-collapse text-left text-base">
+              <tbody>${body}</tbody>
+            </table>
+          </div>
+        `;
+      };
+
       const renderBlock = (block) => {
         const text = escapeHtml(block.text || "");
 
@@ -202,17 +250,14 @@
             return `<div class="my-12 border-t border-outline-variant/20"></div>`;
           case "bulleted_list_item":
             if (!text.trim()) return "";
-            return `<li class="mb-3 marker:text-primary">${text}</li>`;
+            return renderListItem(block, "ul");
           case "numbered_list_item":
             if (!text.trim()) return "";
-            return `<li class="mb-3">${text}</li>`;
+            return renderListItem(block, "ol");
           case "table":
-            return `
-              <div class="my-10 p-6 bg-surface-container-low border border-outline-variant/20">
-                <p class="font-label text-xs tracking-[0.3em] uppercase text-primary mb-3">Table Block</p>
-                <p class="text-on-surface-variant">This block type is returned by the API, but table row data is not included in the current worker response yet.</p>
-              </div>
-            `;
+            return renderTable(block);
+          case "table_row":
+            return "";
           default:
             return "";
         }
@@ -288,13 +333,14 @@
           }
 
           const data = await response.json();
+          const title = data.title || "The Meditative Void Journal";
           const blocks = Array.isArray(data.blocks) ? data.blocks : [];
 
           if (!blocks.length) {
             throw new Error("This article does not contain any renderable blocks.");
           }
 
-          renderHero(blocks);
+          renderHero(title, blocks);
           renderContent(blocks);
           showArticle();
         } catch (error) {

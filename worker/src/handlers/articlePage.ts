@@ -14,16 +14,16 @@ export function htmlResponse(html: string, status = 200): Response {
 
 export function renderArticlePage(
   articleId: string,
+  articleTitle: string,
   blocks: NotionBlock[],
   requestUrl: URL,
   siteName: string,
   siteTagline: string,
   siteDescription: string
 ): string {
-  const titleBlock = getPrimaryHeading(blocks);
   const introBlock = getFirstParagraph(blocks);
   const heroImage = getFirstImage(blocks);
-  const title = titleBlock?.text?.trim() || `${siteName} Journal`;
+  const title = articleTitle?.trim() || `${siteName} Journal`;
   const description = compactExcerpt(
     introBlock?.text?.trim() || siteDescription,
     180
@@ -253,20 +253,24 @@ function renderBlocks(blocks: NotionBlock[]): string {
     if (block.type === 'bulleted_list_item') {
       const items: string[] = [];
       while (i < blocks.length && blocks[i].type === 'bulleted_list_item') {
-        items.push(`<li class="mb-3 marker:text-primary">${escapeHtml(blocks[i].text || '')}</li>`);
+        items.push(renderListItem(blocks[i], 'ul'));
         i += 1;
       }
-      rendered.push(`<ul class="mb-8 pl-6 list-disc text-on-surface/90 leading-[1.9]">${items.join('')}</ul>`);
+      rendered.push(
+        `<ul class="mb-8 pl-6 list-disc text-on-surface/90 leading-[1.9]">${items.join('')}</ul>`
+      );
       continue;
     }
 
     if (block.type === 'numbered_list_item') {
       const items: string[] = [];
       while (i < blocks.length && blocks[i].type === 'numbered_list_item') {
-        items.push(`<li class="mb-3">${escapeHtml(blocks[i].text || '')}</li>`);
+        items.push(renderListItem(blocks[i], 'ol'));
         i += 1;
       }
-      rendered.push(`<ol class="mb-8 pl-6 list-decimal text-on-surface/90 leading-[1.9]">${items.join('')}</ol>`);
+      rendered.push(
+        `<ol class="mb-8 pl-6 list-decimal text-on-surface/90 leading-[1.9]">${items.join('')}</ol>`
+      );
       continue;
     }
 
@@ -298,27 +302,15 @@ function renderBlock(block: NotionBlock): string {
           ${block.caption ? `<figcaption class="mt-4 text-center font-body italic text-sm text-on-surface-variant">${escapeHtml(block.caption)}</figcaption>` : ''}
         </div>
       </figure>`;
+    case 'table':
+      return renderTable(block);
+    case 'table_row':
+      return '';
     case 'divider':
       return `<div class="my-12 border-t border-outline-variant/20"></div>`;
-    case 'table':
-      return `<div class="my-10 p-6 bg-surface-container-low border border-outline-variant/20">
-        <p class="font-label text-xs tracking-[0.3em] uppercase text-primary mb-3">Table Block</p>
-        <p class="text-on-surface-variant">The article API currently does not include table row data.</p>
-      </div>`;
     default:
       return '';
   }
-}
-
-function getPrimaryHeading(blocks: NotionBlock[]): NotionBlock | undefined {
-  return (
-    blocks.find((block) => block.type === 'heading_1' && block.text?.trim()) ||
-    blocks.find(
-      (block) =>
-        ['heading_2', 'heading_3', 'paragraph', 'bulleted_list_item'].includes(block.type) &&
-        block.text?.trim()
-    )
-  );
 }
 
 function getFirstParagraph(blocks: NotionBlock[]): NotionBlock | undefined {
@@ -344,4 +336,65 @@ function escapeHtml(value: string): string {
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#39;');
+}
+
+function renderListItem(block: NotionBlock, listType: 'ul' | 'ol'): string {
+  const nested = renderNestedChildren(block.children || [], listType);
+  return `<li class="mb-3">${escapeHtml(block.text || '')}${nested}</li>`;
+}
+
+function renderNestedChildren(
+  children: NotionBlock[],
+  parentListType: 'ul' | 'ol'
+): string {
+  if (!children.length) {
+    return '';
+  }
+
+  const childListType = children[0].type === 'numbered_list_item' ? 'ol' : parentListType;
+  const className =
+    childListType === 'ol'
+      ? 'mt-3 pl-6 list-decimal text-on-surface/90 leading-[1.9]'
+      : 'mt-3 pl-6 list-disc text-on-surface/90 leading-[1.9]';
+
+  const items = children
+    .map((child) => {
+      if (child.type === 'bulleted_list_item' || child.type === 'numbered_list_item') {
+        return renderListItem(child, childListType);
+      }
+      return renderBlock(child);
+    })
+    .join('');
+
+  return `<${childListType} class="${className}">${items}</${childListType}>`;
+}
+
+function renderTable(block: NotionBlock): string {
+  const rows = Array.isArray(block.children) ? block.children : [];
+  if (!rows.length) {
+    return '';
+  }
+
+  const body = rows
+    .filter((row) => row.type === 'table_row')
+    .map((row) => {
+      const cells = Array.isArray(row.cells) ? row.cells : [];
+      const columns = cells
+        .map(
+          (cell) =>
+            `<td class="border border-outline-variant/20 px-4 py-3 align-top">${escapeHtml(
+              Array.isArray(cell) ? cell.join(' ') : ''
+            )}</td>`
+        )
+        .join('');
+
+      return `<tr>${columns}</tr>`;
+    })
+    .join('');
+
+  return `<div class="my-10 overflow-x-auto bg-surface-container-low border border-outline-variant/20">
+    <table class="min-w-full border-collapse text-left text-base">
+      <tbody>${body}</tbody>
+    </table>
+  </div>`;
 }

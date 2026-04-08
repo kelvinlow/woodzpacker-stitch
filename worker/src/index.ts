@@ -1,6 +1,6 @@
 import { handleFeed } from './handlers/feed';
 import { handleProduct } from './handlers/product';
-import { fetchArticleBlocks, handleArticleDetail } from './handlers/article';
+import { fetchArticleDetailData, handleArticleDetail } from './handlers/article';
 import {
   htmlResponse,
   renderArticlePage,
@@ -62,11 +62,12 @@ async function handleRequest(
     }
 
     try {
-      const blocks = await fetchArticleBlocks(articleId, env);
+      const article = await fetchArticleDetailData(articleId, env);
       return htmlResponse(
         renderArticlePage(
-          articleId,
-          blocks,
+          article.id,
+          article.title,
+          article.blocks,
           new URL(request.url),
           siteName,
           siteTagline,

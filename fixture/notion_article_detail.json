@@ -3,13 +3,57 @@
   "results": [
     {
       "object": "block",
-      "id": "33a63a7b-b3db-807e-9b3d-c2677e825c9a",
+      "id": "33c63a7b-b3db-80bc-b9f3-ecea89b3d70a",
       "parent": {
         "type": "page_id",
-        "page_id": "33a63a7b-b3db-807b-8c11-ea8047790fc0"
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
       },
-      "created_time": "2026-04-06T14:41:00.000Z",
-      "last_edited_time": "2026-04-06T14:41:00.000Z",
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T03:06:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "heading_1",
+      "heading_1": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "沉香的香氣奇妙而豐富，這種體驗只能親身感受，無法用言語或者文字給予定義",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "沉香的香氣奇妙而豐富，這種體驗只能親身感受，無法用言語或者文字給予定義",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-8019-a125-d5abb45e4210",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
       "created_by": {
         "object": "user",
         "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
@@ -26,7 +70,7 @@
           {
             "type": "text",
             "text": {
-              "content": "Traditional Uses of Agarwood",
+              "content": "不同產區的沉香，會因為樹種的不同和環境條件的差異，產生不一樣的香韻。即使相同樹種、同一個產區生產的沉香，也會因為結香條件的差異，譬如水質、染菌的菌種跟受傷的部位、生長時間的長遠，而出現千差萬別的香味。",
               "link": null
             },
             "annotations": {
@@ -37,7 +81,7 @@
               "code": false,
               "color": "default"
             },
-            "plain_text": "Traditional Uses of Agarwood",
+            "plain_text": "不同產區的沉香，會因為樹種的不同和環境條件的差異，產生不一樣的香韻。即使相同樹種、同一個產區生產的沉香，也會因為結香條件的差異，譬如水質、染菌的菌種跟受傷的部位、生長時間的長遠，而出現千差萬別的香味。",
             "href": null
           }
         ],
@@ -47,41 +91,13 @@
     },
     {
       "object": "block",
-      "id": "33a63a7b-b3db-80f3-855d-d6bc450fbaeb",
+      "id": "33c63a7b-b3db-80bd-a32e-e4848a9b695f",
       "parent": {
         "type": "page_id",
-        "page_id": "33a63a7b-b3db-807b-8c11-ea8047790fc0"
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
       },
-      "created_time": "2026-04-06T14:46:00.000Z",
-      "last_edited_time": "2026-04-06T14:46:00.000Z",
-      "created_by": {
-        "object": "user",
-        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
-      },
-      "last_edited_by": {
-        "object": "user",
-        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
-      },
-      "has_children": false,
-      "in_trash": false,
-      "type": "image",
-      "image": {
-        "caption": [],
-        "type": "external",
-        "external": {
-          "url": "https://images.unsplash.com/photo-1635351610543-752b8abe48aa?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb"
-        }
-      }
-    },
-    {
-      "object": "block",
-      "id": "33a63a7b-b3db-80df-af3a-d858efe8277e",
-      "parent": {
-        "type": "page_id",
-        "page_id": "33a63a7b-b3db-807b-8c11-ea8047790fc0"
-      },
-      "created_time": "2026-04-06T14:41:00.000Z",
-      "last_edited_time": "2026-04-06T14:42:00.000Z",
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
       "created_by": {
         "object": "user",
         "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
@@ -98,7 +114,7 @@
           {
             "type": "text",
             "text": {
-              "content": "Agarwood (Chen Xiang) is a highly valued, fragrant resinous wood traditionally used in Asian medicine (TCM, Ayurveda, Tibetan) for over thousands of years to ",
+              "content": "這裡說的不同，除了香味的醇厚程度及特點外，也包含含油量的多寡。值得一提的是，不同的品香方式，也會影響沉香散發出來的氣韻。",
               "link": null
             },
             "annotations": {
@@ -109,13 +125,106 @@
               "code": false,
               "color": "default"
             },
-            "plain_text": "Agarwood (Chen Xiang) is a highly valued, fragrant resinous wood traditionally used in Asian medicine (TCM, Ayurveda, Tibetan) for over thousands of years to ",
+            "plain_text": "這裡說的不同，除了香味的醇厚程度及特點外，也包含含油量的多寡。值得一提的是，不同的品香方式，也會影響沉香散發出來的氣韻。",
             "href": null
-          },
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-80bc-80ae-e47504777272",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "divider",
+      "divider": {}
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-8064-89ef-c53265a8ef24",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "heading_1",
+      "heading_1": {
+        "rich_text": [
           {
             "type": "text",
             "text": {
-              "content": "move qi, relieve pain, and warm the kidneys",
+              "content": "沉香的產地",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "沉香的產地",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-8088-916d-ffe4ededb821",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "heading_3",
+      "heading_3": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "沉香產地怎麼定義",
               "link": null
             },
             "annotations": {
@@ -126,40 +235,23 @@
               "code": false,
               "color": "default"
             },
-            "plain_text": "move qi, relieve pain, and warm the kidneys",
-            "href": null
-          },
-          {
-            "type": "text",
-            "text": {
-              "content": ". Key therapeutic uses include treating digestive disorders, chronic asthma, skin infections, and acting as a sedative or stimulant.",
-              "link": null
-            },
-            "annotations": {
-              "bold": false,
-              "italic": false,
-              "strikethrough": false,
-              "underline": false,
-              "code": false,
-              "color": "default"
-            },
-            "plain_text": ". Key therapeutic uses include treating digestive disorders, chronic asthma, skin infections, and acting as a sedative or stimulant.",
+            "plain_text": "沉香產地怎麼定義",
             "href": null
           }
         ],
-        "icon": null,
+        "is_toggleable": false,
         "color": "default"
       }
     },
     {
       "object": "block",
-      "id": "33a63a7b-b3db-802f-b410-cedb667300b1",
+      "id": "33c63a7b-b3db-80b4-91ea-ed6284a171a0",
       "parent": {
         "type": "page_id",
-        "page_id": "33a63a7b-b3db-807b-8c11-ea8047790fc0"
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
       },
-      "created_time": "2026-04-06T14:45:00.000Z",
-      "last_edited_time": "2026-04-06T14:45:00.000Z",
+      "created_time": "2026-04-08T01:58:00.000Z",
+      "last_edited_time": "2026-04-08T01:58:00.000Z",
       "created_by": {
         "object": "user",
         "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
@@ -173,21 +265,22 @@
       "type": "image",
       "image": {
         "caption": [],
-        "type": "external",
-        "external": {
-          "url": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb"
+        "type": "file",
+        "file": {
+          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/4527bee2-f499-4f29-b253-6c1ca56a5a5c/942ae248-9d2a-4ac6-94ba-03304557ebac/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466TMLYR7VO%2F20260408%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260408T032257Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjECoaCXVzLXdlc3QtMiJGMEQCIGgPJ6Qo8nXf1ui9sQt%2BHcM9%2F0EahYgI0bYGh%2F35DszyAiBVZDDwYSKIn%2FXYMBqdHd4XH%2BPLyamAG5TpuEc%2BOE3VGSqIBAjz%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAAaDDYzNzQyMzE4MzgwNSIMXVWeee4az5lkx%2By6KtwD9fXf%2BgweF8dGgvbN8BvGlFV5IH7dp7LVUdizJ%2F4ess8epAnPV%2F1OeKhc6UcGhimmyHBi0PziPro%2F3YXSMwa%2BMA9Dh2rxxreqzl%2ByRRATAct7gRe3qsP58gkrWrw8enPdKtKdcfd%2BDKf8Bcna%2F2%2FoiIrkura6rWPWAfhmRmNRoDUQ18BGjgLKKOLJAeZU19D1Ld5MvjYDx7F5uGGz%2BQ8cCdBOsEpEf%2F8AgLY5WuqLOzebfyNjFSIH8KhJQJeF%2B%2FQRbvfUuuKd3j2W9jQwkJcssRie5M%2Fw8ENiPaz6BCXTTpCdWAlCgO3cMplPu3GWgye3q0%2FWV8it%2BuXeEwSAMLU9oyBvk4%2B5denF3VQnm60stJnatmxHxHPQWiK34ybP%2BPRC2uD%2Fe%2FdM%2F2JNKM%2Fjjxj4mE2QwQpnkWTzZOd7e%2BSsxsg3oP1Ok0Qbm5fh50p4q0DTOhwpNsnNnvFDIQEyjFRvlSQrX6e4anF4p5qegmRaOt28F5BDi90UFM6kr%2BJlUiGnlDVLwhn0ELkfua4KC2Qfxc4H7oJ0HBIjpKof4VpAsbOvmH6JWxXnfxnEkXF98GBd9nZruIfBgcHAlGQYlrI9cO3ONLbWmTqDPiqvYzbPAJbGudnanRJilkkNHKcw8u7WzgY6pgHiLxE5x4loeSFf3%2BZWsmW7e%2FtD5vCyvPw8OzKaTCwdge1a1%2BK4EeHk16kR16z37AA%2BEXmdjP0RWk%2F8cPiF3DYlq%2FQr12gqFjhw6X9cJYS%2FegCjJHfNFqsGSIzEN1F6ieoylElf6jpxq1KY0oqjvjoVg%2BTAsNH6O%2BBJvXcqm4CYziF0wFF7EZQV4oj8mqZIarOiuKg2M%2F6%2FtIEo%2BBaw1TOcZTh5YcvM&X-Amz-Signature=c4d116745ac0640ed0b0b697340524327cd9163459fd18b7522425ac9672f207&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+          "expiry_time": "2026-04-08T04:22:57.305Z"
         }
       }
     },
     {
       "object": "block",
-      "id": "33a63a7b-b3db-80c9-9ad9-fecd1b50319a",
+      "id": "33c63a7b-b3db-8025-aec7-e22456a30cd2",
       "parent": {
         "type": "page_id",
-        "page_id": "33a63a7b-b3db-807b-8c11-ea8047790fc0"
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
       },
-      "created_time": "2026-04-06T14:46:00.000Z",
-      "last_edited_time": "2026-04-06T14:46:00.000Z",
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
       "created_by": {
         "object": "user",
         "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
@@ -204,7 +297,7 @@
           {
             "type": "text",
             "text": {
-              "content": "i",
+              "content": "對品香者而言，香味是選購沉香最重要的條件！沉香生成的因素多變，為保障結香的條件儘量相同（經緯度、環境），依據生產地或集散地來命名，是最恰當的方式。",
               "link": null
             },
             "annotations": {
@@ -215,12 +308,3251 @@
               "code": false,
               "color": "default"
             },
-            "plain_text": "i",
+            "plain_text": "對品香者而言，香味是選購沉香最重要的條件！沉香生成的因素多變，為保障結香的條件儘量相同（經緯度、環境），依據生產地或集散地來命名，是最恰當的方式。",
             "href": null
           }
         ],
         "icon": null,
         "color": "default"
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-807d-873f-f03475700405",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "heading_2",
+      "heading_2": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "沉香兩大產地：惠安系與星洲系",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "沉香兩大產地：惠安系與星洲系",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-80f9-aac7-d7d08bd0b736",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:58:00.000Z",
+      "last_edited_time": "2026-04-08T01:58:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "image",
+      "image": {
+        "caption": [],
+        "type": "file",
+        "file": {
+          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/4527bee2-f499-4f29-b253-6c1ca56a5a5c/d1d7bd19-b445-43c2-8a69-b43404bdf8cd/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466TMLYR7VO%2F20260408%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260408T032257Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjECoaCXVzLXdlc3QtMiJGMEQCIGgPJ6Qo8nXf1ui9sQt%2BHcM9%2F0EahYgI0bYGh%2F35DszyAiBVZDDwYSKIn%2FXYMBqdHd4XH%2BPLyamAG5TpuEc%2BOE3VGSqIBAjz%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAAaDDYzNzQyMzE4MzgwNSIMXVWeee4az5lkx%2By6KtwD9fXf%2BgweF8dGgvbN8BvGlFV5IH7dp7LVUdizJ%2F4ess8epAnPV%2F1OeKhc6UcGhimmyHBi0PziPro%2F3YXSMwa%2BMA9Dh2rxxreqzl%2ByRRATAct7gRe3qsP58gkrWrw8enPdKtKdcfd%2BDKf8Bcna%2F2%2FoiIrkura6rWPWAfhmRmNRoDUQ18BGjgLKKOLJAeZU19D1Ld5MvjYDx7F5uGGz%2BQ8cCdBOsEpEf%2F8AgLY5WuqLOzebfyNjFSIH8KhJQJeF%2B%2FQRbvfUuuKd3j2W9jQwkJcssRie5M%2Fw8ENiPaz6BCXTTpCdWAlCgO3cMplPu3GWgye3q0%2FWV8it%2BuXeEwSAMLU9oyBvk4%2B5denF3VQnm60stJnatmxHxHPQWiK34ybP%2BPRC2uD%2Fe%2FdM%2F2JNKM%2Fjjxj4mE2QwQpnkWTzZOd7e%2BSsxsg3oP1Ok0Qbm5fh50p4q0DTOhwpNsnNnvFDIQEyjFRvlSQrX6e4anF4p5qegmRaOt28F5BDi90UFM6kr%2BJlUiGnlDVLwhn0ELkfua4KC2Qfxc4H7oJ0HBIjpKof4VpAsbOvmH6JWxXnfxnEkXF98GBd9nZruIfBgcHAlGQYlrI9cO3ONLbWmTqDPiqvYzbPAJbGudnanRJilkkNHKcw8u7WzgY6pgHiLxE5x4loeSFf3%2BZWsmW7e%2FtD5vCyvPw8OzKaTCwdge1a1%2BK4EeHk16kR16z37AA%2BEXmdjP0RWk%2F8cPiF3DYlq%2FQr12gqFjhw6X9cJYS%2FegCjJHfNFqsGSIzEN1F6ieoylElf6jpxq1KY0oqjvjoVg%2BTAsNH6O%2BBJvXcqm4CYziF0wFF7EZQV4oj8mqZIarOiuKg2M%2F6%2FtIEo%2BBaw1TOcZTh5YcvM&X-Amz-Signature=bda8f23264151e68dbee9910dd6227945e5ace7389760a94f12e94f4a0215b83&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+          "expiry_time": "2026-04-08T04:22:57.302Z"
+        }
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-8065-bd8e-cb7d05829a4d",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "沉香產地依上述的定義，基本分為惠安系和星洲系兩大類別，兩者涵蓋許多地區。",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "沉香產地依上述的定義，基本分為惠安系和星洲系兩大類別，兩者涵蓋許多地區。",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-8013-90aa-e0091cf09e0c",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "heading_1",
+      "heading_1": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "▌惠安系（越南）沉香",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "▌惠安系（越南）沉香",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-80d4-ac0f-fb2eb875de46",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:58:00.000Z",
+      "last_edited_time": "2026-04-08T01:58:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "image",
+      "image": {
+        "caption": [],
+        "type": "file",
+        "file": {
+          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/4527bee2-f499-4f29-b253-6c1ca56a5a5c/8b84b0d8-09b4-4857-80ec-07d3e9f800ad/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466TMLYR7VO%2F20260408%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260408T032257Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjECoaCXVzLXdlc3QtMiJGMEQCIGgPJ6Qo8nXf1ui9sQt%2BHcM9%2F0EahYgI0bYGh%2F35DszyAiBVZDDwYSKIn%2FXYMBqdHd4XH%2BPLyamAG5TpuEc%2BOE3VGSqIBAjz%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAAaDDYzNzQyMzE4MzgwNSIMXVWeee4az5lkx%2By6KtwD9fXf%2BgweF8dGgvbN8BvGlFV5IH7dp7LVUdizJ%2F4ess8epAnPV%2F1OeKhc6UcGhimmyHBi0PziPro%2F3YXSMwa%2BMA9Dh2rxxreqzl%2ByRRATAct7gRe3qsP58gkrWrw8enPdKtKdcfd%2BDKf8Bcna%2F2%2FoiIrkura6rWPWAfhmRmNRoDUQ18BGjgLKKOLJAeZU19D1Ld5MvjYDx7F5uGGz%2BQ8cCdBOsEpEf%2F8AgLY5WuqLOzebfyNjFSIH8KhJQJeF%2B%2FQRbvfUuuKd3j2W9jQwkJcssRie5M%2Fw8ENiPaz6BCXTTpCdWAlCgO3cMplPu3GWgye3q0%2FWV8it%2BuXeEwSAMLU9oyBvk4%2B5denF3VQnm60stJnatmxHxHPQWiK34ybP%2BPRC2uD%2Fe%2FdM%2F2JNKM%2Fjjxj4mE2QwQpnkWTzZOd7e%2BSsxsg3oP1Ok0Qbm5fh50p4q0DTOhwpNsnNnvFDIQEyjFRvlSQrX6e4anF4p5qegmRaOt28F5BDi90UFM6kr%2BJlUiGnlDVLwhn0ELkfua4KC2Qfxc4H7oJ0HBIjpKof4VpAsbOvmH6JWxXnfxnEkXF98GBd9nZruIfBgcHAlGQYlrI9cO3ONLbWmTqDPiqvYzbPAJbGudnanRJilkkNHKcw8u7WzgY6pgHiLxE5x4loeSFf3%2BZWsmW7e%2FtD5vCyvPw8OzKaTCwdge1a1%2BK4EeHk16kR16z37AA%2BEXmdjP0RWk%2F8cPiF3DYlq%2FQr12gqFjhw6X9cJYS%2FegCjJHfNFqsGSIzEN1F6ieoylElf6jpxq1KY0oqjvjoVg%2BTAsNH6O%2BBJvXcqm4CYziF0wFF7EZQV4oj8mqZIarOiuKg2M%2F6%2FtIEo%2BBaw1TOcZTh5YcvM&X-Amz-Signature=5c02c49f6ef2eecc91d0ef29dac4cda73a72390b5ad048bb19ae156cf8a24479&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+          "expiry_time": "2026-04-08T04:22:57.306Z"
+        }
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-80f1-a5ca-e39bbd12a19f",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "在越南這一代生產的沉香，都會運送到惠安這個地區來做集散和交易，並透過惠安港運輸出去，因此越南沉香又被稱為惠安沉香。其範圍涵蓋了：芽莊、富森、柬埔寨、寮國、印度、緬甸，泰國…等區域。因為地緣的關係，其緯度、水質、土壤和氣候等生成條件相近，產出的沉香味道有較為相似之處。",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "在越南這一代生產的沉香，都會運送到惠安這個地區來做集散和交易，並透過惠安港運輸出去，因此越南沉香又被稱為惠安沉香。其範圍涵蓋了：芽莊、富森、柬埔寨、寮國、印度、緬甸，泰國…等區域。因為地緣的關係，其緯度、水質、土壤和氣候等生成條件相近，產出的沉香味道有較為相似之處。",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-8074-a660-c24a00a83f84",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "越南沉香的品質名聞遐邇，香氣受大眾歡迎，在市場上擁有較高的價格，也因此，開始有人將印尼的沉香，進口到越南再行出口販售，誆稱為越南沉香。",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "越南沉香的品質名聞遐邇，香氣受大眾歡迎，在市場上擁有較高的價格，也因此，開始有人將印尼的沉香，進口到越南再行出口販售，誆稱為越南沉香。",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-80ec-ac25-c3ca4c0ffc8e",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "———————-",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "———————-",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-8003-a8b4-d599477ab531",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "heading_1",
+      "heading_1": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "▌星洲系（青州）沉香",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "▌星洲系（青州）沉香",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-80a3-90e1-ece29046cf64",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:58:00.000Z",
+      "last_edited_time": "2026-04-08T01:58:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "image",
+      "image": {
+        "caption": [],
+        "type": "file",
+        "file": {
+          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/4527bee2-f499-4f29-b253-6c1ca56a5a5c/33fc4914-2884-4ea5-b162-f35f792b688f/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466TMLYR7VO%2F20260408%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260408T032257Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjECoaCXVzLXdlc3QtMiJGMEQCIGgPJ6Qo8nXf1ui9sQt%2BHcM9%2F0EahYgI0bYGh%2F35DszyAiBVZDDwYSKIn%2FXYMBqdHd4XH%2BPLyamAG5TpuEc%2BOE3VGSqIBAjz%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAAaDDYzNzQyMzE4MzgwNSIMXVWeee4az5lkx%2By6KtwD9fXf%2BgweF8dGgvbN8BvGlFV5IH7dp7LVUdizJ%2F4ess8epAnPV%2F1OeKhc6UcGhimmyHBi0PziPro%2F3YXSMwa%2BMA9Dh2rxxreqzl%2ByRRATAct7gRe3qsP58gkrWrw8enPdKtKdcfd%2BDKf8Bcna%2F2%2FoiIrkura6rWPWAfhmRmNRoDUQ18BGjgLKKOLJAeZU19D1Ld5MvjYDx7F5uGGz%2BQ8cCdBOsEpEf%2F8AgLY5WuqLOzebfyNjFSIH8KhJQJeF%2B%2FQRbvfUuuKd3j2W9jQwkJcssRie5M%2Fw8ENiPaz6BCXTTpCdWAlCgO3cMplPu3GWgye3q0%2FWV8it%2BuXeEwSAMLU9oyBvk4%2B5denF3VQnm60stJnatmxHxHPQWiK34ybP%2BPRC2uD%2Fe%2FdM%2F2JNKM%2Fjjxj4mE2QwQpnkWTzZOd7e%2BSsxsg3oP1Ok0Qbm5fh50p4q0DTOhwpNsnNnvFDIQEyjFRvlSQrX6e4anF4p5qegmRaOt28F5BDi90UFM6kr%2BJlUiGnlDVLwhn0ELkfua4KC2Qfxc4H7oJ0HBIjpKof4VpAsbOvmH6JWxXnfxnEkXF98GBd9nZruIfBgcHAlGQYlrI9cO3ONLbWmTqDPiqvYzbPAJbGudnanRJilkkNHKcw8u7WzgY6pgHiLxE5x4loeSFf3%2BZWsmW7e%2FtD5vCyvPw8OzKaTCwdge1a1%2BK4EeHk16kR16z37AA%2BEXmdjP0RWk%2F8cPiF3DYlq%2FQr12gqFjhw6X9cJYS%2FegCjJHfNFqsGSIzEN1F6ieoylElf6jpxq1KY0oqjvjoVg%2BTAsNH6O%2BBJvXcqm4CYziF0wFF7EZQV4oj8mqZIarOiuKg2M%2F6%2FtIEo%2BBaw1TOcZTh5YcvM&X-Amz-Signature=9030f22003a1c1b5871432c529477436cef28f8e58fb9592ace3cd6e94f2a109&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+          "expiry_time": "2026-04-08T04:22:57.309Z"
+        }
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-80d6-af27-f2b262804cf9",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "泛指在新加坡集散和交易的沉香。包含：印尼、汶萊、馬來西亞…等地所產的沉香。這些國家中又以印尼本島的沉香產量最多，耳熟的沉香產地，例如：伊利安、安汶、馬拉OK、加里曼丹、達拉干…等，皆屬於印尼出產的星洲沉香。與惠安系沉香相比，大多較為便宜，一般來說市面上較便宜的沉香香品，皆以星洲系沉香為主。",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "泛指在新加坡集散和交易的沉香。包含：印尼、汶萊、馬來西亞…等地所產的沉香。這些國家中又以印尼本島的沉香產量最多，耳熟的沉香產地，例如：伊利安、安汶、馬拉OK、加里曼丹、達拉干…等，皆屬於印尼出產的星洲沉香。與惠安系沉香相比，大多較為便宜，一般來說市面上較便宜的沉香香品，皆以星洲系沉香為主。",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-8077-92ce-f8b87dd9f856",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "———————-",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "———————-",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-8035-a79f-c0ed1e9567d0",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "heading_3",
+      "heading_3": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "▌何謂偏區",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "▌何謂偏區",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-8013-b77f-c35a1ddb7a07",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "沉香的氣味，會依據土壤、氣候、水質的不同而有所差異，這些變化是漸進式的，比如在惠安和柬埔寨中間的產地，沉香的味道可能會兼具兩個產區的特色，若味道較偏向惠安，可稱做惠安偏區，若較偏向柬埔寨，叫做柬埔寨偏區。",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "沉香的氣味，會依據土壤、氣候、水質的不同而有所差異，這些變化是漸進式的，比如在惠安和柬埔寨中間的產地，沉香的味道可能會兼具兩個產區的特色，若味道較偏向惠安，可稱做惠安偏區，若較偏向柬埔寨，叫做柬埔寨偏區。",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-8059-bdf6-de3cfa463bee",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "沉香的香味並不單一，不管是哪個產區的沉香，燃點後都有不同的香韻層次。同一個產區的沉香，味道可能大不相同；同一塊沉香不同的部位，香味也會有所差別，這便是沉香的魅力所在。選購沉香時，一定要實際品嗅、感受香韻的曼妙變化。",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "沉香的香味並不單一，不管是哪個產區的沉香，燃點後都有不同的香韻層次。同一個產區的沉香，味道可能大不相同；同一塊沉香不同的部位，香味也會有所差別，這便是沉香的魅力所在。選購沉香時，一定要實際品嗅、感受香韻的曼妙變化。",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-8072-aa83-d8ad2b0ab755",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "divider",
+      "divider": {}
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-80f4-ba2f-dc53b4531442",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "heading_1",
+      "heading_1": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "沉香常見的幾種味道",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "沉香常見的幾種味道",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-80d8-acad-c13cd0e54e21",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "《中藥誌》記載，沉香氣甜、涼、辛、苦、麻、澀具，入藥為聖品。沉香的香氣非常豐富多樣，加熱時，氣味才會逐漸、完全的顯現。",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "《中藥誌》記載，沉香氣甜、涼、辛、苦、麻、澀具，入藥為聖品。沉香的香氣非常豐富多樣，加熱時，氣味才會逐漸、完全的顯現。",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-8035-87cf-ee883ca03da1",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "►甜味",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "►甜味",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "甜韻在沉香的香韻裡頭佔據很重要的角色。甜味偏清者，有一種清幽之感，聞了以後多有精神為之一振的舒暢感受。甜味偏重者則具濃蜜感，香味沉穩踏實，甜感醇厚，有心神寧靜的作用。",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "甜韻在沉香的香韻裡頭佔據很重要的角色。甜味偏清者，有一種清幽之感，聞了以後多有精神為之一振的舒暢感受。甜味偏重者則具濃蜜感，香味沉穩踏實，甜感醇厚，有心神寧靜的作用。",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "►乳香味",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "►乳香味",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "沉香一般都具有不同程度的乳香味，常與甜味相伴。是一種柔和濃郁的油脂香氣。",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "沉香一般都具有不同程度的乳香味，常與甜味相伴。是一種柔和濃郁的油脂香氣。",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "►涼味",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "►涼味",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "類似薄荷散發出的清涼香氣。絲絲清新的涼意，淡淡清幽舒爽，給人品香的愉悅感。",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "類似薄荷散發出的清涼香氣。絲絲清新的涼意，淡淡清幽舒爽，給人品香的愉悅感。",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "►果香",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "►果香",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "清香之中帶有類似哈密瓜或水果的香氣韻味。果香也有偏酸和偏甜之分，偏酸的果香較為清新，偏甜的果香更為醇厚。",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "清香之中帶有類似哈密瓜或水果的香氣韻味。果香也有偏酸和偏甜之分，偏酸的果香較為清新，偏甜的果香更為醇厚。",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "►花草香",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "►花草香",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "一種融合了涼和甜的氣息，有著草本纖維和花朵清香的味道，又類似青草香氣。",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "一種融合了涼和甜的氣息，有著草本纖維和花朵清香的味道，又類似青草香氣。",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "►藥味",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "►藥味",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "生聞的話很多人能直接感受到，類似中藥的藥香，也類似老家具散發出來的香味。",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "生聞的話很多人能直接感受到，類似中藥的藥香，也類似老家具散發出來的香味。",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-80dc-a719-c21ebe314759",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "divider",
+      "divider": {}
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-803e-8a86-f5534c87dc6b",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "heading_1",
+      "heading_1": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "各產區沉香的味道特色",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "各產區沉香的味道特色",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-8074-a87c-dca63f4758e4",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "沉香是天然香料中，香氣變化最為豐富的一種。香味並不是單一的，而是幾種香氣的融合，是複合香氣。不同產區、不同樹種的香味差異性很大。即使是同一產區、相同樹種所產的沉香，香味特色也會有所不同。尤其沉香的結香不規則，一塊天然野生的沉香，不同部位取下的結香，香味表現也會不同。更讓人著迷的是，沉香本身具有的芳香有機物，會隨溫度慢慢的釋放，用不同的方式給沉香「加溫」，捕捉到的香氣層次也不相同。",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "沉香是天然香料中，香氣變化最為豐富的一種。香味並不是單一的，而是幾種香氣的融合，是複合香氣。不同產區、不同樹種的香味差異性很大。即使是同一產區、相同樹種所產的沉香，香味特色也會有所不同。尤其沉香的結香不規則，一塊天然野生的沉香，不同部位取下的結香，香味表現也會不同。更讓人著迷的是，沉香本身具有的芳香有機物，會隨溫度慢慢的釋放，用不同的方式給沉香「加溫」，捕捉到的香氣層次也不相同。",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-8094-9a99-f5c68e306502",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "———————-",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "———————-",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-80e9-8034-f55308b2518c",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "六國五味",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "六國五味",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-80ff-9875-d501dd872e1c",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "六國五味是日本香道對於沉香產地和沉香香韻的一種形容和總結，這裡說的六國，可以理解為沉香的六個產地（古時沉香產地的名稱和現今不同），也可當成六個沉香的品種…。而五味，則是用來形容沉香味道的五種氣味：",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "六國五味是日本香道對於沉香產地和沉香香韻的一種形容和總結，這裡說的六國，可以理解為沉香的六個產地（古時沉香產地的名稱和現今不同），也可當成六個沉香的品種…。而五味，則是用來形容沉香味道的五種氣味：",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-806d-84da-e78a5d3443b2",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": true,
+      "in_trash": false,
+      "type": "table",
+      "table": {
+        "table_width": 3,
+        "has_column_header": false,
+        "has_row_header": false
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-80b7-b260-ea474ca71a33",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "現今對沉香產地的劃分對比古時更加的細膩，六國五味已不足夠廣泛。",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "現今對沉香產地的劃分對比古時更加的細膩，六國五味已不足夠廣泛。",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-80cc-8be1-d36b39ebcfc9",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "值得注意的是，每個人對沉香產區香味的認定不同，要實際上手才能確認。以下為我們的判斷標準",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "值得注意的是，每個人對沉香產區香味的認定不同，要實際上手才能確認。以下為我們的判斷標準",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-806a-9032-c37ce138ec2c",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "———————-",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "———————-",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-8085-bc5d-d6563ff98176",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "heading_2",
+      "heading_2": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "▌惠安系（越南）沉香",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "▌惠安系（越南）沉香",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-804a-9feb-d814b12d8ef7",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:58:00.000Z",
+      "last_edited_time": "2026-04-08T01:59:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "image",
+      "image": {
+        "caption": [],
+        "type": "file",
+        "file": {
+          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/4527bee2-f499-4f29-b253-6c1ca56a5a5c/20a9a93e-17d4-4d1c-9207-02c8a1b90fc5/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466TMLYR7VO%2F20260408%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260408T032257Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjECoaCXVzLXdlc3QtMiJGMEQCIGgPJ6Qo8nXf1ui9sQt%2BHcM9%2F0EahYgI0bYGh%2F35DszyAiBVZDDwYSKIn%2FXYMBqdHd4XH%2BPLyamAG5TpuEc%2BOE3VGSqIBAjz%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAAaDDYzNzQyMzE4MzgwNSIMXVWeee4az5lkx%2By6KtwD9fXf%2BgweF8dGgvbN8BvGlFV5IH7dp7LVUdizJ%2F4ess8epAnPV%2F1OeKhc6UcGhimmyHBi0PziPro%2F3YXSMwa%2BMA9Dh2rxxreqzl%2ByRRATAct7gRe3qsP58gkrWrw8enPdKtKdcfd%2BDKf8Bcna%2F2%2FoiIrkura6rWPWAfhmRmNRoDUQ18BGjgLKKOLJAeZU19D1Ld5MvjYDx7F5uGGz%2BQ8cCdBOsEpEf%2F8AgLY5WuqLOzebfyNjFSIH8KhJQJeF%2B%2FQRbvfUuuKd3j2W9jQwkJcssRie5M%2Fw8ENiPaz6BCXTTpCdWAlCgO3cMplPu3GWgye3q0%2FWV8it%2BuXeEwSAMLU9oyBvk4%2B5denF3VQnm60stJnatmxHxHPQWiK34ybP%2BPRC2uD%2Fe%2FdM%2F2JNKM%2Fjjxj4mE2QwQpnkWTzZOd7e%2BSsxsg3oP1Ok0Qbm5fh50p4q0DTOhwpNsnNnvFDIQEyjFRvlSQrX6e4anF4p5qegmRaOt28F5BDi90UFM6kr%2BJlUiGnlDVLwhn0ELkfua4KC2Qfxc4H7oJ0HBIjpKof4VpAsbOvmH6JWxXnfxnEkXF98GBd9nZruIfBgcHAlGQYlrI9cO3ONLbWmTqDPiqvYzbPAJbGudnanRJilkkNHKcw8u7WzgY6pgHiLxE5x4loeSFf3%2BZWsmW7e%2FtD5vCyvPw8OzKaTCwdge1a1%2BK4EeHk16kR16z37AA%2BEXmdjP0RWk%2F8cPiF3DYlq%2FQr12gqFjhw6X9cJYS%2FegCjJHfNFqsGSIzEN1F6ieoylElf6jpxq1KY0oqjvjoVg%2BTAsNH6O%2BBJvXcqm4CYziF0wFF7EZQV4oj8mqZIarOiuKg2M%2F6%2FtIEo%2BBaw1TOcZTh5YcvM&X-Amz-Signature=d821611b1f660c1dbb347bc8772a6cbee896ac506c77052e6d9aeff3e7e7e2b0&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+          "expiry_time": "2026-04-08T04:22:57.395Z"
+        }
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-80dc-86a7-d40f48036fbe",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "惠安系沉香通常清幽高雅、甘醇清甜中帶點涼味，味道清新、穿透力強，常帶有似花香或果香的獨特味道。",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "惠安系沉香通常清幽高雅、甘醇清甜中帶點涼味，味道清新、穿透力強，常帶有似花香或果香的獨特味道。",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-805d-9963-e02e743890b9",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "著名產區：",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "著名產區：",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-8098-90ad-e903b9b7417c",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "惠安",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "惠安",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "：濃蜜黑糖甜味，宜人果香帶絲絲涼意。撲鼻的甜味、寧靜雅致的蜜甜底蘊。似果香又像蜜香，與一絲絲的清新涼意交織，久聞不膩，美妙的香氣，典雅而華貴，深受大眾喜愛。",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "：濃蜜黑糖甜味，宜人果香帶絲絲涼意。撲鼻的甜味、寧靜雅致的蜜甜底蘊。似果香又像蜜香，與一絲絲的清新涼意交織，久聞不膩，美妙的香氣，典雅而華貴，深受大眾喜愛。",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-809d-9ff5-c2316175f453",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "芽莊",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "芽莊",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "：突出的甘甜韻味，絲絲涼韻貫穿宜人花香。蜜藥香氣中帶有淡雅飄逸的花香。涼涼的給人一種悠揚輕柔的清麗感覺。典雅舒心、回味無窮的輕安感。",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "：突出的甘甜韻味，絲絲涼韻貫穿宜人花香。蜜藥香氣中帶有淡雅飄逸的花香。涼涼的給人一種悠揚輕柔的清麗感覺。典雅舒心、回味無窮的輕安感。",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-80c7-b865-c8b2af505436",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "富森",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "富森",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "：糖膏般醇厚沁甜，奶香馥郁，爆發力十足。醇厚內斂的甜蜜韻味，隨著溫度升高而爆發，渾厚的甘醇奶香，飽和悠遠，留香持久，香味極佳，為品香的極上之選，非常迷人。",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "：糖膏般醇厚沁甜，奶香馥郁，爆發力十足。醇厚內斂的甜蜜韻味，隨著溫度升高而爆發，渾厚的甘醇奶香，飽和悠遠，留香持久，香味極佳，為品香的極上之選，非常迷人。",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-8021-96fc-d0152ac8861a",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "順化",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "順化",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "：細密綿醇的蔗糖香氣。順化距離惠安的產區很近，在味道上也較為接近。高品級的順化沉香，少了涼意，多了蔗糖般的濃密甜意。",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "：細密綿醇的蔗糖香氣。順化距離惠安的產區很近，在味道上也較為接近。高品級的順化沉香，少了涼意，多了蔗糖般的濃密甜意。",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-8014-9da8-ea8a2239e390",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "寮國（老撾）",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "寮國（老撾）",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "： 涼涼的微弱酸韻，有的清甜，有的泥濘。寮國所產的沉香，品級很多，有的清香如糖果，有的泥味甚重。絕大多數沒有印尼沉香的霸氣，也未有海南沉香的清幽。寮國沉香油脂特多，香味濃烈帶有涼意，偶有酸悶味。",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "： 涼涼的微弱酸韻，有的清甜，有的泥濘。寮國所產的沉香，品級很多，有的清香如糖果，有的泥味甚重。絕大多數沒有印尼沉香的霸氣，也未有海南沉香的清幽。寮國沉香油脂特多，香味濃烈帶有涼意，偶有酸悶味。",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-8062-9199-e7cd9f9a3ed0",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "柬埔寨（真臘，高棉）",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "柬埔寨（真臘，高棉）",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "：",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "：",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-8047-9293-d290aa9d5e37",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:59:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "微帶酸韻、肉桂香，略為張揚的花蜜香氣。中國唐宋時期，將柬埔寨稱為真臘國，以菩薩地區沉香味道最好。而高棉是柬埔寨國主要的民族。因其緊挨越南，地理氣候類似，在香韻上較惠安清爽，常帶花香蜜意，偶爾帶點酸韻。因其香味濃郁，用它提煉沉香油，能掩蓋臭味。被譽爲大自然中最好的香水，很受中東國家喜歡。",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "微帶酸韻、肉桂香，略為張揚的花蜜香氣。中國唐宋時期，將柬埔寨稱為真臘國，以菩薩地區沉香味道最好。而高棉是柬埔寨國主要的民族。因其緊挨越南，地理氣候類似，在香韻上較惠安清爽，常帶花香蜜意，偶爾帶點酸韻。因其香味濃郁，用它提煉沉香油，能掩蓋臭味。被譽爲大自然中最好的香水，很受中東國家喜歡。",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-8048-865e-c6de0c4a5033",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:59:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": true,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [],
+        "icon": null,
+        "color": "default"
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-8039-bd50-f33c3c892616",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "海南",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "海南",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "：不俗不媚的清甜，柔和雅致帶點花香。《陳式香譜》對海南沉香的描述為「香氣清婉耳」。味道清新雅致、溫和純正，含蓄而婉約，被稱為瓊脂。其加溫後芳甜渾厚，甜涼中帶有絲絲綿密的花韻。",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "：不俗不媚的清甜，柔和雅致帶點花香。《陳式香譜》對海南沉香的描述為「香氣清婉耳」。味道清新雅致、溫和純正，含蓄而婉約，被稱為瓊脂。其加溫後芳甜渾厚，甜涼中帶有絲絲綿密的花韻。",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-80ff-89a5-f66086c25232",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "———————-",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "———————-",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-8071-9a60-edf09468ad31",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "heading_2",
+      "heading_2": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "▌星洲系（青州）沉香",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "▌星洲系（青州）沉香",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-8045-8276-f75ab0b1c244",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "星洲系沉香通常粗曠霸道、味烈濃醇，香韻較為單一、張揚。常帶有香草氣息或者乳香味，較少帶有涼韻。",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "星洲系沉香通常粗曠霸道、味烈濃醇，香韻較為單一、張揚。常帶有香草氣息或者乳香味，較少帶有涼韻。",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-80d2-91c3-ef3c50ef5fd4",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T02:00:00.000Z",
+      "last_edited_time": "2026-04-08T02:00:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "image",
+      "image": {
+        "caption": [],
+        "type": "file",
+        "file": {
+          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/4527bee2-f499-4f29-b253-6c1ca56a5a5c/8e64d27e-61d3-423d-9b0f-6aae88f1a26f/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466TMLYR7VO%2F20260408%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260408T032257Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjECoaCXVzLXdlc3QtMiJGMEQCIGgPJ6Qo8nXf1ui9sQt%2BHcM9%2F0EahYgI0bYGh%2F35DszyAiBVZDDwYSKIn%2FXYMBqdHd4XH%2BPLyamAG5TpuEc%2BOE3VGSqIBAjz%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAAaDDYzNzQyMzE4MzgwNSIMXVWeee4az5lkx%2By6KtwD9fXf%2BgweF8dGgvbN8BvGlFV5IH7dp7LVUdizJ%2F4ess8epAnPV%2F1OeKhc6UcGhimmyHBi0PziPro%2F3YXSMwa%2BMA9Dh2rxxreqzl%2ByRRATAct7gRe3qsP58gkrWrw8enPdKtKdcfd%2BDKf8Bcna%2F2%2FoiIrkura6rWPWAfhmRmNRoDUQ18BGjgLKKOLJAeZU19D1Ld5MvjYDx7F5uGGz%2BQ8cCdBOsEpEf%2F8AgLY5WuqLOzebfyNjFSIH8KhJQJeF%2B%2FQRbvfUuuKd3j2W9jQwkJcssRie5M%2Fw8ENiPaz6BCXTTpCdWAlCgO3cMplPu3GWgye3q0%2FWV8it%2BuXeEwSAMLU9oyBvk4%2B5denF3VQnm60stJnatmxHxHPQWiK34ybP%2BPRC2uD%2Fe%2FdM%2F2JNKM%2Fjjxj4mE2QwQpnkWTzZOd7e%2BSsxsg3oP1Ok0Qbm5fh50p4q0DTOhwpNsnNnvFDIQEyjFRvlSQrX6e4anF4p5qegmRaOt28F5BDi90UFM6kr%2BJlUiGnlDVLwhn0ELkfua4KC2Qfxc4H7oJ0HBIjpKof4VpAsbOvmH6JWxXnfxnEkXF98GBd9nZruIfBgcHAlGQYlrI9cO3ONLbWmTqDPiqvYzbPAJbGudnanRJilkkNHKcw8u7WzgY6pgHiLxE5x4loeSFf3%2BZWsmW7e%2FtD5vCyvPw8OzKaTCwdge1a1%2BK4EeHk16kR16z37AA%2BEXmdjP0RWk%2F8cPiF3DYlq%2FQr12gqFjhw6X9cJYS%2FegCjJHfNFqsGSIzEN1F6ieoylElf6jpxq1KY0oqjvjoVg%2BTAsNH6O%2BBJvXcqm4CYziF0wFF7EZQV4oj8mqZIarOiuKg2M%2F6%2FtIEo%2BBaw1TOcZTh5YcvM&X-Amz-Signature=9bd3ced9dcd6fad054e91996a63eaf0d1f80de67ddc7bfe6f33b50c99df99223&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+          "expiry_time": "2026-04-08T04:22:57.477Z"
+        }
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-80f8-9ad8-f2e6c51ff806",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "著名產區：",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "著名產區：",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-801f-b346-cb322154985f",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "加里曼丹",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "加里曼丹",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "：草藥香帶點竹蓆的氣息，細細的涼味參雜其中。加里曼丹島是星洲沉香內最大的一個產區，可分爲東西南北共四省，而四個省的味道略有不同。",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "：草藥香帶點竹蓆的氣息，細細的涼味參雜其中。加里曼丹島是星洲沉香內最大的一個產區，可分爲東西南北共四省，而四個省的味道略有不同。",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-80cd-9dda-e334ec5062e1",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T02:00:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": true,
+      "in_trash": false,
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [],
+        "color": "default"
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-8000-b512-c9cc80d548fd",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T02:00:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [],
+        "icon": null,
+        "color": "default"
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-8038-884e-c3b2f6c02ed0",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "達拉干",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "達拉干",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "：沁人的涼意，伴隨馥郁柔和的甜乳香。達拉干為加里曼丹島上的一個港口，地貌豐富，所產的沉香味道豐富有層次。幽柔的藥香、甘甜濃郁的奶香，加上通透的涼意，香韻非常討人喜歡。",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "：沁人的涼意，伴隨馥郁柔和的甜乳香。達拉干為加里曼丹島上的一個港口，地貌豐富，所產的沉香味道豐富有層次。幽柔的藥香、甘甜濃郁的奶香，加上通透的涼意，香韻非常討人喜歡。",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-8012-b1db-c9876a66799f",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "馬尼澇",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "馬尼澇",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "：粉粉的甜奶香韻，伴隨絲絲的涼藥香氣。馬泥澇接近達拉干產區，離東馬也不遠，香韻穩定持久，初聞時帶點人參藥香味、接續醇美的妝粉奶香韻，接著微微的果香及清甜。",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "：粉粉的甜奶香韻，伴隨絲絲的涼藥香氣。馬泥澇接近達拉干產區，離東馬也不遠，香韻穩定持久，初聞時帶點人參藥香味、接續醇美的妝粉奶香韻，接著微微的果香及清甜。",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-8010-8794-fb95390b64cc",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "汶萊",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "汶萊",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "：百花奔放的純淨甘甜味，和著高雅無雜的甜涼乳香。汶萊的面積較小，沉香產量也不高。但香韻的變化非常豐富。初聞是甘甜涼爽的感覺，帶著一絲香草味，再往後有純透的果香乳韻，舒服沁心的一種香氣。",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "：百花奔放的純淨甘甜味，和著高雅無雜的甜涼乳香。汶萊的面積較小，沉香產量也不高。但香韻的變化非常豐富。初聞是甘甜涼爽的感覺，帶著一絲香草味，再往後有純透的果香乳韻，舒服沁心的一種香氣。",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-8092-b0cd-e736b4efbf02",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T02:00:00.000Z",
+      "last_edited_time": "2026-04-08T02:00:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "image",
+      "image": {
+        "caption": [],
+        "type": "file",
+        "file": {
+          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/4527bee2-f499-4f29-b253-6c1ca56a5a5c/7dad5a21-9460-4594-8f48-3a06afb5c3a5/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466TMLYR7VO%2F20260408%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260408T032257Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjECoaCXVzLXdlc3QtMiJGMEQCIGgPJ6Qo8nXf1ui9sQt%2BHcM9%2F0EahYgI0bYGh%2F35DszyAiBVZDDwYSKIn%2FXYMBqdHd4XH%2BPLyamAG5TpuEc%2BOE3VGSqIBAjz%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAAaDDYzNzQyMzE4MzgwNSIMXVWeee4az5lkx%2By6KtwD9fXf%2BgweF8dGgvbN8BvGlFV5IH7dp7LVUdizJ%2F4ess8epAnPV%2F1OeKhc6UcGhimmyHBi0PziPro%2F3YXSMwa%2BMA9Dh2rxxreqzl%2ByRRATAct7gRe3qsP58gkrWrw8enPdKtKdcfd%2BDKf8Bcna%2F2%2FoiIrkura6rWPWAfhmRmNRoDUQ18BGjgLKKOLJAeZU19D1Ld5MvjYDx7F5uGGz%2BQ8cCdBOsEpEf%2F8AgLY5WuqLOzebfyNjFSIH8KhJQJeF%2B%2FQRbvfUuuKd3j2W9jQwkJcssRie5M%2Fw8ENiPaz6BCXTTpCdWAlCgO3cMplPu3GWgye3q0%2FWV8it%2BuXeEwSAMLU9oyBvk4%2B5denF3VQnm60stJnatmxHxHPQWiK34ybP%2BPRC2uD%2Fe%2FdM%2F2JNKM%2Fjjxj4mE2QwQpnkWTzZOd7e%2BSsxsg3oP1Ok0Qbm5fh50p4q0DTOhwpNsnNnvFDIQEyjFRvlSQrX6e4anF4p5qegmRaOt28F5BDi90UFM6kr%2BJlUiGnlDVLwhn0ELkfua4KC2Qfxc4H7oJ0HBIjpKof4VpAsbOvmH6JWxXnfxnEkXF98GBd9nZruIfBgcHAlGQYlrI9cO3ONLbWmTqDPiqvYzbPAJbGudnanRJilkkNHKcw8u7WzgY6pgHiLxE5x4loeSFf3%2BZWsmW7e%2FtD5vCyvPw8OzKaTCwdge1a1%2BK4EeHk16kR16z37AA%2BEXmdjP0RWk%2F8cPiF3DYlq%2FQr12gqFjhw6X9cJYS%2FegCjJHfNFqsGSIzEN1F6ieoylElf6jpxq1KY0oqjvjoVg%2BTAsNH6O%2BBJvXcqm4CYziF0wFF7EZQV4oj8mqZIarOiuKg2M%2F6%2FtIEo%2BBaw1TOcZTh5YcvM&X-Amz-Signature=0b1859cd59bcbad23e01f470cb23831f82b5589a3b6e539354c81a3c66eb6036&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+          "expiry_time": "2026-04-08T04:22:57.472Z"
+        }
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-80e2-86ca-e898b8893c8b",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "伊利安",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "伊利安",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "：飄逸舒心的藥香混合獨特的水草味，近似一種大地的氣息。伊利安生產的沉香略帶藥味。蘊含一些苦澀，夾雜著泥土氣味和腥味。",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "：飄逸舒心的藥香混合獨特的水草味，近似一種大地的氣息。伊利安生產的沉香略帶藥味。蘊含一些苦澀，夾雜著泥土氣味和腥味。",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-8075-b2dd-e908a88083ff",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "甲不拉",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "甲不拉",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "：略帶清涼的濃厚藥香氣，土腥味較為明顯。甲不拉是伊利安島北部港口，在香韻上，比伊利安略帶清涼。",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "：略帶清涼的濃厚藥香氣，土腥味較為明顯。甲不拉是伊利安島北部港口，在香韻上，比伊利安略帶清涼。",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-80bc-8c55-d5a532d32f17",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "巴布亞",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "巴布亞",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "：明顯的藥香夾雜乳香，帶點微微的辛味。巴布亞位於伊利安島上，香味沉穩含蓄，略帶奶韻。",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "：明顯的藥香夾雜乳香，帶點微微的辛味。巴布亞位於伊利安島上，香味沉穩含蓄，略帶奶韻。",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-80c7-8725-d699d57aa5e7",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "馬拉OK",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "馬拉OK",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "：清苦的中藥香混和絲絲甘醇的乳香。位於伊利安島上索隆島附近，又稱索隆沉香。沼澤地形，土沉居多。香氣馥郁厚重，藥味中帶點甜，接著一絲薄荷的涼感。",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "：清苦的中藥香混和絲絲甘醇的乳香。位於伊利安島上索隆島附近，又稱索隆沉香。沼澤地形，土沉居多。香氣馥郁厚重，藥味中帶點甜，接著一絲薄荷的涼感。",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-802a-8f8d-f5a18ff8edeb",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "安汶",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "安汶",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "：藥香、乳香、涼意、甜意，交織的豐富氣息。安汶是安汶島上的港口，所產的沉香味道獨特、渲染力極強。帶有沼澤水草的香韻和類似加里曼丹沉香的草藥味。屬於清新活潑的熱帶氣味。",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "：藥香、乳香、涼意、甜意，交織的豐富氣息。安汶是安汶島上的港口，所產的沉香味道獨特、渲染力極強。帶有沼澤水草的香韻和類似加里曼丹沉香的草藥味。屬於清新活潑的熱帶氣味。",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-8034-aea0-e350a5bf8c96",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "馬來西亞",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "馬來西亞",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "可以分為馬來半島南邊的西馬來西亞，和婆羅洲北邊的東馬來西亞兩個區域。",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "可以分為馬來半島南邊的西馬來西亞，和婆羅洲北邊的東馬來西亞兩個區域。",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-80c0-939e-cf22935e5cdd",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": true,
+      "in_trash": false,
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [],
+        "color": "default"
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-8011-b953-e7d3178fd8bf",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "divider",
+      "divider": {}
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-80f1-b7e7-e422634c8523",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "heading_1",
+      "heading_1": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "沉香的前中後味",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "沉香的前中後味",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-8064-b543-e76a739acd62",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T02:00:00.000Z",
+      "last_edited_time": "2026-04-08T02:00:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "image",
+      "image": {
+        "caption": [],
+        "type": "file",
+        "file": {
+          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/4527bee2-f499-4f29-b253-6c1ca56a5a5c/7dd98714-4ad6-48b8-b5dc-c1b986851538/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466TMLYR7VO%2F20260408%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260408T032257Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjECoaCXVzLXdlc3QtMiJGMEQCIGgPJ6Qo8nXf1ui9sQt%2BHcM9%2F0EahYgI0bYGh%2F35DszyAiBVZDDwYSKIn%2FXYMBqdHd4XH%2BPLyamAG5TpuEc%2BOE3VGSqIBAjz%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAAaDDYzNzQyMzE4MzgwNSIMXVWeee4az5lkx%2By6KtwD9fXf%2BgweF8dGgvbN8BvGlFV5IH7dp7LVUdizJ%2F4ess8epAnPV%2F1OeKhc6UcGhimmyHBi0PziPro%2F3YXSMwa%2BMA9Dh2rxxreqzl%2ByRRATAct7gRe3qsP58gkrWrw8enPdKtKdcfd%2BDKf8Bcna%2F2%2FoiIrkura6rWPWAfhmRmNRoDUQ18BGjgLKKOLJAeZU19D1Ld5MvjYDx7F5uGGz%2BQ8cCdBOsEpEf%2F8AgLY5WuqLOzebfyNjFSIH8KhJQJeF%2B%2FQRbvfUuuKd3j2W9jQwkJcssRie5M%2Fw8ENiPaz6BCXTTpCdWAlCgO3cMplPu3GWgye3q0%2FWV8it%2BuXeEwSAMLU9oyBvk4%2B5denF3VQnm60stJnatmxHxHPQWiK34ybP%2BPRC2uD%2Fe%2FdM%2F2JNKM%2Fjjxj4mE2QwQpnkWTzZOd7e%2BSsxsg3oP1Ok0Qbm5fh50p4q0DTOhwpNsnNnvFDIQEyjFRvlSQrX6e4anF4p5qegmRaOt28F5BDi90UFM6kr%2BJlUiGnlDVLwhn0ELkfua4KC2Qfxc4H7oJ0HBIjpKof4VpAsbOvmH6JWxXnfxnEkXF98GBd9nZruIfBgcHAlGQYlrI9cO3ONLbWmTqDPiqvYzbPAJbGudnanRJilkkNHKcw8u7WzgY6pgHiLxE5x4loeSFf3%2BZWsmW7e%2FtD5vCyvPw8OzKaTCwdge1a1%2BK4EeHk16kR16z37AA%2BEXmdjP0RWk%2F8cPiF3DYlq%2FQr12gqFjhw6X9cJYS%2FegCjJHfNFqsGSIzEN1F6ieoylElf6jpxq1KY0oqjvjoVg%2BTAsNH6O%2BBJvXcqm4CYziF0wFF7EZQV4oj8mqZIarOiuKg2M%2F6%2FtIEo%2BBaw1TOcZTh5YcvM&X-Amz-Signature=3414e4298deb91508de805d3e9cb782b263e06ecd1a69e530a90213a8d491ad1&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+          "expiry_time": "2026-04-08T04:22:57.474Z"
+        }
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-807e-8d91-c69b919e1113",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "香味是一種能讓人感到愉悅和舒適的因子。沉香之所以能發香，是因其含有多種可以發香的「芳香有機化合物」。",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "香味是一種能讓人感到愉悅和舒適的因子。沉香之所以能發香，是因其含有多種可以發香的「芳香有機化合物」。",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-8084-8115-e9b3148c6483",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "這些化合物，在常溫下多數是沒有明顯香味的，需要加熱到一定的溫度，使其從表面分子脫離，散發到空氣中，才會發散出香氣。這個溫度點被我們稱為該芳香有機化合物的「發香溫度點」，簡稱「發香點」。沉香中所含的芳香有機化合物不一樣，其發香點也會不同。",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "這些化合物，在常溫下多數是沒有明顯香味的，需要加熱到一定的溫度，使其從表面分子脫離，散發到空氣中，才會發散出香氣。這個溫度點被我們稱為該芳香有機化合物的「發香溫度點」，簡稱「發香點」。沉香中所含的芳香有機化合物不一樣，其發香點也會不同。",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-804d-b944-c9563cca254e",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "品香時，隨著溫度緩緩的上升，能感覺沉香香氣的改變。原因在於，沉香內部的芳香有機物，先達到發香溫度的會先發出香氣，而有些需要更高溫度的，暫時還沒有發香。但當溫度繼續上升，未發香的有機物慢慢發出香氣，形成一個順暢的發香流程，一種香味的層次堆疊。",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "品香時，隨著溫度緩緩的上升，能感覺沉香香氣的改變。原因在於，沉香內部的芳香有機物，先達到發香溫度的會先發出香氣，而有些需要更高溫度的，暫時還沒有發香。但當溫度繼續上升，未發香的有機物慢慢發出香氣，形成一個順暢的發香流程，一種香味的層次堆疊。",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-80e1-bfae-cf561b468419",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "divider",
+      "divider": {}
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-80e9-9005-c21f054efab2",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:56:00.000Z",
+      "last_edited_time": "2026-04-08T01:56:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "品香的方式很多，時間較充裕，可以以香灰和雲母片隔炭火品香，而現代人多選用電子薰香爐來品香，除了節省香材，也是最能品出初香、本香和尾香轉化過程的方式。沉香味道的認定，屬於個人主觀的嗅覺反應，在品同樣一種香時，個人的感官認定也是很重要的。",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "品香的方式很多，時間較充裕，可以以香灰和雲母片隔炭火品香，而現代人多選用電子薰香爐來品香，除了節省香材，也是最能品出初香、本香和尾香轉化過程的方式。沉香味道的認定，屬於個人主觀的嗅覺反應，在品同樣一種香時，個人的感官認定也是很重要的。",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      }
+    },
+    {
+      "object": "block",
+      "id": "33c63a7b-b3db-80de-ad06-d823b30dee86",
+      "parent": {
+        "type": "page_id",
+        "page_id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa"
+      },
+      "created_time": "2026-04-08T01:58:00.000Z",
+      "last_edited_time": "2026-04-08T01:59:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "9ae60457-2c15-449e-9a96-16a2b2021d15"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "image",
+      "image": {
+        "caption": [],
+        "type": "file",
+        "file": {
+          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/4527bee2-f499-4f29-b253-6c1ca56a5a5c/0a555ec1-d937-44ec-b49f-bb80337a7fe8/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466TMLYR7VO%2F20260408%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260408T032257Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjECoaCXVzLXdlc3QtMiJGMEQCIGgPJ6Qo8nXf1ui9sQt%2BHcM9%2F0EahYgI0bYGh%2F35DszyAiBVZDDwYSKIn%2FXYMBqdHd4XH%2BPLyamAG5TpuEc%2BOE3VGSqIBAjz%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAAaDDYzNzQyMzE4MzgwNSIMXVWeee4az5lkx%2By6KtwD9fXf%2BgweF8dGgvbN8BvGlFV5IH7dp7LVUdizJ%2F4ess8epAnPV%2F1OeKhc6UcGhimmyHBi0PziPro%2F3YXSMwa%2BMA9Dh2rxxreqzl%2ByRRATAct7gRe3qsP58gkrWrw8enPdKtKdcfd%2BDKf8Bcna%2F2%2FoiIrkura6rWPWAfhmRmNRoDUQ18BGjgLKKOLJAeZU19D1Ld5MvjYDx7F5uGGz%2BQ8cCdBOsEpEf%2F8AgLY5WuqLOzebfyNjFSIH8KhJQJeF%2B%2FQRbvfUuuKd3j2W9jQwkJcssRie5M%2Fw8ENiPaz6BCXTTpCdWAlCgO3cMplPu3GWgye3q0%2FWV8it%2BuXeEwSAMLU9oyBvk4%2B5denF3VQnm60stJnatmxHxHPQWiK34ybP%2BPRC2uD%2Fe%2FdM%2F2JNKM%2Fjjxj4mE2QwQpnkWTzZOd7e%2BSsxsg3oP1Ok0Qbm5fh50p4q0DTOhwpNsnNnvFDIQEyjFRvlSQrX6e4anF4p5qegmRaOt28F5BDi90UFM6kr%2BJlUiGnlDVLwhn0ELkfua4KC2Qfxc4H7oJ0HBIjpKof4VpAsbOvmH6JWxXnfxnEkXF98GBd9nZruIfBgcHAlGQYlrI9cO3ONLbWmTqDPiqvYzbPAJbGudnanRJilkkNHKcw8u7WzgY6pgHiLxE5x4loeSFf3%2BZWsmW7e%2FtD5vCyvPw8OzKaTCwdge1a1%2BK4EeHk16kR16z37AA%2BEXmdjP0RWk%2F8cPiF3DYlq%2FQr12gqFjhw6X9cJYS%2FegCjJHfNFqsGSIzEN1F6ieoylElf6jpxq1KY0oqjvjoVg%2BTAsNH6O%2BBJvXcqm4CYziF0wFF7EZQV4oj8mqZIarOiuKg2M%2F6%2FtIEo%2BBaw1TOcZTh5YcvM&X-Amz-Signature=577c98197b51c0e8c63008c7553451a3656123c22af88d2783afbf2258f30c24&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+          "expiry_time": "2026-04-08T04:22:57.513Z"
+        }
       }
     }
   ],
@@ -229,5 +3561,5 @@
   "type": "block",
   "block": {},
   "developer_survey": "https://notionup.typeform.com/to/bllBsoI4?utm_source=postman",
-  "request_id": "fb8f5697-9887-4922-ab3e-ad7242685c6e"
+  "request_id": "d012aa8e-981c-4034-800d-90f0ee9546f0"
 }

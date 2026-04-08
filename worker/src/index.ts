@@ -35,11 +35,9 @@ async function handleRequest(
   }
 
   const url = new URL(request.url);
-  const siteName = (await getEnvValue(env, 'SITE_NAME')) || 'Woodzpacker';
-  const siteTagline = (await getEnvValue(env, 'SITE_TAGLINE')) || '沉香';
-  const siteDescription =
-    (await getEnvValue(env, 'SITE_DESCRIPTION')) ||
-    '专注于马来西亚野生沉香与佛教珍品';
+  const siteName = 'Woodzpacker';
+  const siteTagline = '沉香';
+  const siteDescription ='专注于马来西亚野生沉香与佛教珍品的交流';
 
   // Static routes
   if (path === '/v1/feed') {

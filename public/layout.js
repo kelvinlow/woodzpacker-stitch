@@ -148,9 +148,8 @@ const injectLayout = () => {
             <a class="font-label tracking-widest uppercase text-sm ${currentPage === 'about_us.html' ? 'text-[#E9C349] border-b border-[#E9C349]/30 pb-1' : 'text-[#F1DFD3]/80'} hover:text-[#E9C349] transition-colors duration-700" href="about_us.html">About</a>
         </div>
         <div class="flex items-center gap-6">
-            <button class="font-label tracking-widest uppercase text-sm text-[#E9C349] hover:opacity-80 transition-opacity">EN/ZH</button>
             <button class="text-[#F1DFD3]/80 hover:text-[#E9C349] transition-colors duration-700">
-                <span class="material-symbols-outlined">shopping_bag</span>
+                <span class="material-symbols-outlined">phone_in_talk</span>
             </button>
         </div>
     </div>

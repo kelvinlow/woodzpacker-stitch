@@ -51,7 +51,6 @@ export async function handleProduct(env: Env): Promise<Response> {
         productCategory: props['Product Category']?.select?.name || null,
         discountPrice: props['Discount Price']?.number || 0,
         sellingPrice: props['Selling Price']?.number || 0,
-        notionUrl: page.url
       };
     });
 

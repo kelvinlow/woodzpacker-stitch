@@ -17,7 +17,6 @@ type ArticleListItem = {
   category: string | null;
   createdAt: string | null;
   published: boolean;
-  notionUrl: string;
 };
 
 type ArticleQueryOptions = {
@@ -54,7 +53,6 @@ function simplifyArticle(page: NotionPage): ArticleListItem {
     category: props.Category?.select?.name || null,
     createdAt: props['Created Time']?.date?.start || null,
     published: props.Published?.checkbox ?? false,
-    notionUrl: page.url
   };
 }
 
@@ -181,7 +179,7 @@ export async function queryArticles(
 export async function handleFeed(
   env: Env,
   pageNumber = 1,
-  pageSize = 8,
+  pageSize = 5,
   category?: string,
   query?: string
 ): Promise<Response> {

@@ -1,0 +1,44 @@
+{
+  "pageNumber": 1,
+  "pageSize": 8,
+  "totalItems": 3,
+  "totalPages": 1,
+  "hasMore": false,
+  "hasPrevious": false,
+  "availableCategories": [
+    "Business",
+    "Health"
+  ],
+  "items": [
+    {
+      "id": "33c63a7b-b3db-8029-8069-dc4f9a6b60fa",
+      "title": "分辨頂級沉香——產區、特色、味道",
+      "description": "不同產區的沉香，會因為樹種的不同和環境條件的差異，產生不一樣的香韻。即使相同樹種、同一個產區生產的沉香，也會因為結香條件的差異，譬如水質、染菌的菌種跟受傷的部位、生長時間的長遠，而出現千差萬別的香味。",
+      "slug": "distinguishing-top-quality-agarwood-origin-characteristics-aroma",
+      "thumbnail": null,
+      "category": null,
+      "createdAt": "2026-04-06",
+      "published": true
+    },
+    {
+      "id": "33a63a7b-b3db-807b-8c11-ea8047790fc0",
+      "title": "Traditional Uses of Agarwood in Asian Medicine",
+      "description": "Discover how agarwood has been used for centuries in traditional Chinese and Ayurvedic medicine for its therapeutic properties and cultural significance.",
+      "slug": "agarwood-traditional-medicine",
+      "thumbnail": null,
+      "category": "Health",
+      "createdAt": "2026-04-06",
+      "published": true
+    },
+    {
+      "id": "33a63a7b-b3db-803f-9dfe-f9c295f19ef1",
+      "title": "Sustainable Agarwood Cultivation: A Growing Industry",
+      "description": "How modern cultivation techniques are making agarwood production more sustainable while meeting global demand for this rare and valuable resource.",
+      "slug": "sustainable-agarwood-cultivation",
+      "thumbnail": null,
+      "category": "Business",
+      "createdAt": "2026-04-05",
+      "published": true
+    }
+  ]
+}

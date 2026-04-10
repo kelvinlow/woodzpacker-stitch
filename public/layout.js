@@ -18,7 +18,7 @@ window.WOODZPACKER_CONFIG = {
   workerBaseUrl: GLOBAL_CONFIG.workerBaseUrl.replace(/\/+$/, '')
 };
 
-// Navigation items are fetched from the worker (single source: worker/src/utils/nav.ts)
+// Navigation items — canonical source is public/nav.json (worker reads it at build time)
 
 // Simple template interpolation
 const interpolate = (str) => {
@@ -136,36 +136,68 @@ const injectLayout = async () => {
   const currentPage = window.location.pathname.split("/").pop() || "index.html";
 
   // Fetch nav items from nav.json — single source of truth
-  let navItems = [];
+  // Note: requires HTTP(S) — works on Cloudflare, not via file://
+  let NAV_ITEMS = [];
   try {
     const res = await fetch('./nav.json');
-    navItems = await res.json();
+    NAV_ITEMS = await res.json();
   } catch (e) {
-    console.warn('[layout] Failed to load nav items:', e);
+    console.warn('[layout] Failed to load nav.json (file:// not supported):', e);
   }
 
-  const navLinksHTML = navItems.map(item => {
-    const isActive = item.activeMatch === 'includes'
-      ? currentPage.includes(item.activeKey)
-      : currentPage === item.activeKey;
-    const activeClass = isActive ? 'text-[#E9C349] border-b border-[#E9C349]/30 pb-1' : 'text-[#F1DFD3]/80';
-    return `<a class="font-label tracking-widest uppercase text-sm ${activeClass} hover:text-[#E9C349] transition-colors duration-700" href="${item.href}">${item.label}</a>`;
+  const desktopLinks = NAV_ITEMS.map(item => {
+    const isActive = currentPage.includes(item.activeKey);
+    const cls = isActive ? 'text-[#E9C349] border-b border-[#E9C349]/30 pb-1' : 'text-[#F1DFD3]/80';
+    return `<a class="font-label tracking-widest uppercase text-sm ${cls} hover:text-[#E9C349] transition-colors duration-700" href="${item.href}">${item.label}</a>`;
   }).join('\n            ');
 
-  // Navigation HTML
+  const mobileLinks = NAV_ITEMS.map(item => {
+    const isActive = currentPage.includes(item.activeKey);
+    const cls = isActive ? 'text-[#E9C349] bg-[#E9C349]/5' : 'text-[#F1DFD3]/70';
+    return `<a href="${item.href}" class="font-label tracking-widest uppercase text-xs ${cls} hover:text-[#E9C349] hover:bg-[#E9C349]/5 block px-4 py-3 transition-colors duration-300">${item.label}</a>`;
+  }).join('\n          ');
+
+  // Navigation HTML — standard Tailwind responsive navbar pattern
   const navHTML = interpolate(`
-<nav class="fixed top-0 w-full z-50 bg-[#1A120B]/70 backdrop-blur-md bg-gradient-to-b from-[#1A120B] to-transparent shadow-[0_4px_30_rgba(0,0,0,0.1)]">
-    <div class="flex justify-between items-center px-12 py-6 w-full max-w-screen-2xl mx-auto">
-        <div class="text-xl font-headline font-bold tracking-tighter text-[#F1DFD3]">
-            <span class="text-[#E9C349]">{{websiteName}} </span> | {{tagline}}
+<nav class="fixed top-0 w-full z-50 bg-[#1A120B]/80 backdrop-blur-md shadow-[0_1px_0_rgba(79,69,64,0.2)]">
+    <div class="max-w-screen-2xl mx-auto px-6 md:px-12">
+        <div class="flex justify-between items-center h-16 md:h-20">
+
+            <!-- Brand -->
+            <div class="text-xl font-headline font-bold tracking-tighter text-[#F1DFD3] shrink-0">
+                <a href="index.html"><span class="text-[#E9C349]">{{websiteName}} </span><span class="text-[#F1DFD3]/50">|</span> {{tagline}}</a>
+            </div>
+
+            <!-- Desktop links -->
+            <div class="hidden md:flex gap-10 items-center">
+                ${desktopLinks}
+            </div>
+
+            <!-- Desktop right actions -->
+            <div class="hidden md:flex items-center gap-4">
+                <button class="text-[#F1DFD3]/60 hover:text-[#E9C349] transition-colors duration-300">
+                    <span class="material-symbols-outlined text-[20px]">phone_in_talk</span>
+                </button>
+            </div>
+
+            <!-- Mobile: phone + hamburger -->
+            <div class="flex md:hidden items-center gap-3">
+                <button class="text-[#F1DFD3]/60 hover:text-[#E9C349] transition-colors duration-300">
+                    <span class="material-symbols-outlined text-[20px]">phone_in_talk</span>
+                </button>
+                <button id="nav-toggle" aria-expanded="false" aria-controls="nav-mobile-menu"
+                    class="text-[#F1DFD3]/60 hover:text-[#E9C349] transition-colors duration-300 p-1">
+                    <span id="nav-icon-open" class="material-symbols-outlined">menu</span>
+                    <span id="nav-icon-close" class="material-symbols-outlined hidden">close</span>
+                </button>
+            </div>
         </div>
-        <div class="hidden md:flex gap-10 items-center">
-            ${navLinksHTML}
-        </div>
-        <div class="flex items-center gap-6">
-            <button class="text-[#F1DFD3]/80 hover:text-[#E9C349] transition-colors duration-700">
-                <span class="material-symbols-outlined">phone_in_talk</span>
-            </button>
+    </div>
+
+    <!-- Mobile menu panel -->
+    <div id="nav-mobile-menu" class="hidden md:hidden border-t border-[#4F4540]/20 bg-[#140d06]/95 backdrop-blur-sm">
+        <div class="px-2 py-3 space-y-1">
+          ${mobileLinks}
         </div>
     </div>
 </nav>`);
@@ -243,6 +275,19 @@ const injectLayout = async () => {
   // Inject into body
   document.body.insertAdjacentHTML('afterbegin', navHTML);
   document.body.insertAdjacentHTML('beforeend', footerHTML);
+
+  // Mobile nav toggle
+  const _toggle = document.getElementById('nav-toggle');
+  const _menu   = document.getElementById('nav-mobile-menu');
+  const _iconOpen  = document.getElementById('nav-icon-open');
+  const _iconClose = document.getElementById('nav-icon-close');
+  _toggle.addEventListener('click', () => {
+    const isOpen = !_menu.classList.contains('hidden');
+    _menu.classList.toggle('hidden', isOpen);
+    _iconOpen.classList.toggle('hidden', !isOpen);
+    _iconClose.classList.toggle('hidden', isOpen);
+    _toggle.setAttribute('aria-expanded', String(!isOpen));
+  });
 
   // Final Revelation
   setTimeout(() => {

@@ -1,6 +1,7 @@
 import { handleFeed } from './handlers/feed';
 import { handleProduct } from './handlers/product';
 import { handleSearch } from './handlers/search';
+import { handleSitemap } from './handlers/sitemap';
 import { fetchArticleDetailData, handleArticleDetail } from './handlers/article';
 import {
   htmlResponse,
@@ -40,6 +41,10 @@ async function handleRequest(
   const siteDescription ='专注于马来西亚野生沉香与佛教珍品的交流';
 
   // Static routes
+  if (path === '/sitemap.xml') {
+    return handleSitemap(env);
+  }
+
   if (path === '/v1/feed') {
     const pageNumber = Number(url.searchParams.get('pageNumber') || '1');
     const pageSize = Number(url.searchParams.get('pageSize') || '8');
@@ -105,5 +110,5 @@ async function handleRequest(
 }
 
 function isWorkerRoute(path: string): boolean {
-  return path.startsWith('/v1/') || path.startsWith('/article/');
+  return path === '/sitemap.xml' || path.startsWith('/v1/') || path.startsWith('/article/');
 }

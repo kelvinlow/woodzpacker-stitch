@@ -1,0 +1,46 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "woodzpacker-worker",
+  "main": "worker/src/index.ts",
+  "compatibility_date": "2024-04-03",
+  "assets": {
+    "directory": "./public",
+    "run_worker_first": [
+      "/v1/*",
+      "/article/*",
+      "/product/*",
+      "/sitemap.xml"
+    ],
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  },
+  "vars": {
+    "NOTION_API_VERSION": "2026-03-11"
+  },
+  "secrets_store_secrets": [
+    {
+      "binding": "NOTION_TOKEN",
+      "store_id": "679c33b8690b486aa651c8280ca7e109",
+      "secret_name": "NOTION_TOKEN"
+    },
+    {
+      "binding": "ARTICLE_DATA_SOURCE_ID",
+      "store_id": "679c33b8690b486aa651c8280ca7e109",
+      "secret_name": "ARTICLE_DATA_SOURCE_ID"
+    },
+    {
+      "binding": "PRODUCT_DATA_SOURCE_ID",
+      "store_id": "679c33b8690b486aa651c8280ca7e109",
+      "secret_name": "PRODUCT_DATA_SOURCE_ID"
+    }
+  ],
+  "observability": {
+    "logs": {
+      "enabled": true,
+      "invocation_logs": true
+    },
+    "traces": {
+      "enabled": true
+    }
+  }
+}

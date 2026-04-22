@@ -23,367 +23,524 @@
   </head>
 
   <body class="bg-background text-on-surface font-body selection:bg-primary/30 opacity-0 transition-opacity duration-300">
-    <main>
-
-      <!-- ═══════════════════════════════════════════
-           HERO: Split Panel (sticky gallery + info)
-           ═══════════════════════════════════════════ -->
-      <div class="pt-24 flex flex-col md:flex-row min-h-screen">
-
-        <!-- Left: Gallery 65% -->
-        <section class="w-full md:w-[65%] flex flex-row relative md:h-[calc(100vh-6rem)] md:sticky md:top-24 overflow-hidden">
-
-          <!-- Vertical Thumbnails -->
-          <div class="w-24 flex-none py-8 flex flex-col items-center gap-5 overflow-y-auto custom-scrollbar border-r border-outline-variant/10">
-            <button
-              class="thumbnail-btn active w-16 h-20 flex-none border border-transparent overflow-hidden transition-all duration-500"
-              data-src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4HPFnExBffoVATx6PO6adc6b2BIQlpQjiBsfuEMkG2Yzs4rquKJeE9MYnsfJWzC_m2p9mcvgKPV8qo-6r7VjBr6JPbf3HBS_23JZnBYTSm5TMPNCEQ1S3wpza20ezLTGIXfqsnEggZFcW7o83n_EWnX4hB2Vwsq9q7nP0zGzut7MmClMgvhvOk2iWG8u1nVdoyXvcRNAh-sWORmMQY4aVod3YpTj9g4ricprdMydMfBwrURpoaAZ-mQaHq_0RiftI3d_RxIRtbSkJ"
-              data-caption="The Resonance of Time."
-            >
-              <img
-                class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4HPFnExBffoVATx6PO6adc6b2BIQlpQjiBsfuEMkG2Yzs4rquKJeE9MYnsfJWzC_m2p9mcvgKPV8qo-6r7VjBr6JPbf3HBS_23JZnBYTSm5TMPNCEQ1S3wpza20ezLTGIXfqsnEggZFcW7o83n_EWnX4hB2Vwsq9q7nP0zGzut7MmClMgvhvOk2iWG8u1nVdoyXvcRNAh-sWORmMQY4aVod3YpTj9g4ricprdMydMfBwrURpoaAZ-mQaHq_0RiftI3d_RxIRtbSkJ"
-                alt="Zenith Kinam hero"
-              />
-            </button>
-            <button
-              class="thumbnail-btn opacity-40 w-16 h-20 flex-none border border-transparent overflow-hidden transition-all duration-500"
-              data-src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjPVwzAL4YhgO-Q_f_6ndpgbkH5S4x9Rrf9nXl_-S1WyVh0rsIsaYyzEikVAxHvV8pxy72ZPgt2kjTF2asazuvNrlvcCVHDhNdzyNmgFGOusg5I20PiGs3U8qMSqfHkHBku3-qhZlxxCGdKij_Q-TaJQXw4KsSM9HaDT3CmGaANjc6_1np7vg6kHosflQwTTyzwxzJJDTYxTnJ4zWASay-G4_2rHu-CPAUV8wB8_GWKqf8DKugvzSusAJhch9D74iNL91nnL2bxDxm"
-              data-caption="Macro detail of resinous grain."
-            >
-              <img
-                class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjPVwzAL4YhgO-Q_f_6ndpgbkH5S4x9Rrf9nXl_-S1WyVh0rsIsaYyzEikVAxHvV8pxy72ZPgt2kjTF2asazuvNrlvcCVHDhNdzyNmgFGOusg5I20PiGs3U8qMSqfHkHBku3-qhZlxxCGdKij_Q-TaJQXw4KsSM9HaDT3CmGaANjc6_1np7vg6kHosflQwTTyzwxzJJDTYxTnJ4zWASay-G4_2rHu-CPAUV8wB8_GWKqf8DKugvzSusAJhch9D74iNL91nnL2bxDxm"
-                alt="Macro detail"
-              />
-            </button>
-            <button
-              class="thumbnail-btn opacity-40 w-16 h-20 flex-none border border-transparent overflow-hidden transition-all duration-500"
-              data-src="https://lh3.googleusercontent.com/aida-public/AB6AXuCE4LP2eSntR8d-sNrg5HK4IeYM_TGlqzTYEcQ6U9HIWwVSf2XEw-spX1ce_OGaiJlS3cRXTQE2Q_90tk99T3eCP-30uwwn9guiCKLTGaG4PPQMixYcnbeAodhCbJ5pt8qHaTkK3koEyna998taEWW5t_xC0xp1I_Z2kVgpQL7pPc1ctTIqYi267kV2_ZHBZiM32PI_edOwhmeXrOrBEWOKKeCgo4WPAYjfxqohDVrgnsmvMQpAQ3qOvhh-0Hzx2db54z2eXQ7q6a7a"
-              data-caption="Raw Kinam block on dark surface."
-            >
-              <img
-                class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCE4LP2eSntR8d-sNrg5HK4IeYM_TGlqzTYEcQ6U9HIWwVSf2XEw-spX1ce_OGaiJlS3cRXTQE2Q_90tk99T3eCP-30uwwn9guiCKLTGaG4PPQMixYcnbeAodhCbJ5pt8qHaTkK3koEyna998taEWW5t_xC0xp1I_Z2kVgpQL7pPc1ctTIqYi267kV2_ZHBZiM32PI_edOwhmeXrOrBEWOKKeCgo4WPAYjfxqohDVrgnsmvMQpAQ3qOvhh-0Hzx2db54z2eXQ7q6a7a"
-                alt="Raw block"
-              />
-            </button>
-            <button
-              class="thumbnail-btn opacity-40 w-16 h-20 flex-none border border-transparent overflow-hidden transition-all duration-500"
-              data-src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoSOmozArvC2AWUzYhh98TyVxqgooBD-JGp7f2Rek2IKU42sjtMCIeYX2-NcVLviCZgMWGwgqBPwsFcIJgBERAqbNxAreIy1wNACxt7O5gcWk1r7u_Ativ1hLV-MBbJJrXnRf6el6iLjMGRx28Vz-eKLKXrhYjVCxC-OPqA-N4GiXKDa_yXVsNE7hHdavEzyF6rdclTuPf2SzMAR9Tsmie9wmBaUylq-7ogtfbKQAJgVLfL-_WKZpSG3jLCK2lepI15z5X6efXnAE5"
-              data-caption="Incense chips in ceramic bowl."
-            >
-              <img
-                class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoSOmozArvC2AWUzYhh98TyVxqgooBD-JGp7f2Rek2IKU42sjtMCIeYX2-NcVLviCZgMWGwgqBPwsFcIJgBERAqbNxAreIy1wNACxt7O5gcWk1r7u_Ativ1hLV-MBbJJrXnRf6el6iLjMGRx28Vz-eKLKXrhYjVCxC-OPqA-N4GiXKDa_yXVsNE7hHdavEzyF6rdclTuPf2SzMAR9Tsmie9wmBaUylq-7ogtfbKQAJgVLfL-_WKZpSG3jLCK2lepI15z5X6efXnAE5"
-                alt="Incense chips"
-              />
-            </button>
-          </div>
-
-          <!-- Main Image -->
-          <div class="flex-grow overflow-hidden relative group">
-            <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10 opacity-40 pointer-events-none"></div>
-            <img
-              id="main-gallery-image"
-              class="w-full h-full object-cover transition-all duration-700 ease-out group-hover:scale-105"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4HPFnExBffoVATx6PO6adc6b2BIQlpQjiBsfuEMkG2Yzs4rquKJeE9MYnsfJWzC_m2p9mcvgKPV8qo-6r7VjBr6JPbf3HBS_23JZnBYTSm5TMPNCEQ1S3wpza20ezLTGIXfqsnEggZFcW7o83n_EWnX4hB2Vwsq9q7nP0zGzut7MmClMgvhvOk2iWG8u1nVdoyXvcRNAh-sWORmMQY4aVod3YpTj9g4ricprdMydMfBwrURpoaAZ-mQaHq_0RiftI3d_RxIRtbSkJ"
-              alt="Zenith Kinam main"
-            />
-            <div class="absolute bottom-12 left-12 z-20">
-              <p class="font-label text-[10px] tracking-[0.3em] uppercase text-primary/60 mb-2">Detailed Observation</p>
-              <p id="gallery-caption" class="font-headline text-2xl italic text-on-surface/80">The Resonance of Time.</p>
-            </div>
-          </div>
-        </section>
-
-        <!-- Right: Info Panel 35% -->
-        <section class="w-full md:w-[35%] bg-surface-container-low/50 backdrop-blur-sm px-10 lg:px-14 py-12 overflow-y-auto md:h-[calc(100vh-6rem)] md:sticky md:top-24 custom-scrollbar">
-
-          <!-- Identity -->
-          <div class="mb-8">
-            <span class="font-label text-[10px] tracking-[0.4em] uppercase text-primary mb-3 block">HEARTWOOD COLLECTION / 核心珍藏</span>
-            <h1 class="font-headline text-4xl lg:text-5xl leading-tight text-on-surface mb-1">
-              Zenith Kinam<br /><span class="text-2xl font-light">巅峰奇楠</span>
-            </h1>
-          </div>
-
-          <!-- Price + Status -->
-          <div class="flex items-center gap-4 mb-8">
-            <span class="text-primary text-2xl font-headline">$12,800.00 USD</span>
-            <span class="text-on-surface-variant font-label text-xs uppercase tracking-widest px-3 py-1 border border-outline-variant/30">Available</span>
-          </div>
-
-          <!-- Description -->
-          <div class="mb-8 border-l-2 border-primary/20 pl-5">
-            <p class="text-on-surface-variant leading-relaxed italic">
-              Born from a century of silent transformation deep within the rainforest, Zenith Kinam is the ultimate expression of nature's alchemy. Its scent profile is a celestial journey — starting with cool mint, transitioning into sweet honey, and lingering with the profound depth of ancient earth.
-            </p>
-            <p class="text-on-surface-variant/70 italic text-sm mt-3">
-              越南芽庄红土奇楠，油润如膏，凉味彻骨，伴有蜜甜兰花香气。
-            </p>
-          </div>
-
-          <!-- Attributes -->
-          <div class="grid grid-cols-2 gap-3 mb-8">
-            <div class="p-4 bg-surface-container border border-outline-variant/10">
-              <p class="text-[10px] font-label text-primary uppercase tracking-widest mb-1">Origin | 产地</p>
-              <p class="font-headline text-base">Nha Trang, Vietnam</p>
-            </div>
-            <div class="p-4 bg-surface-container border border-outline-variant/10">
-              <p class="text-[10px] font-label text-primary uppercase tracking-widest mb-1">Grade | 等级</p>
-              <p class="font-headline text-base">Kynam / 奇楠</p>
-            </div>
-            <div class="p-4 bg-surface-container border border-outline-variant/10">
-              <p class="text-[10px] font-label text-primary uppercase tracking-widest mb-1">Density | 密度</p>
-              <p class="font-headline text-base">Sinking | 沉水级</p>
-            </div>
-            <div class="p-4 bg-surface-container border border-outline-variant/10">
-              <p class="text-[10px] font-label text-primary uppercase tracking-widest mb-1">Aged | 年份</p>
-              <p class="font-headline text-base">50+ Years</p>
-            </div>
-          </div>
-
-          <!-- CTAs -->
-          <div class="space-y-3 mb-8">
-            <button class="w-full py-5 px-8 bg-primary text-on-primary font-label text-xs tracking-widest uppercase hover:bg-primary-fixed-dim transition-all duration-500 flex justify-between items-center group">
-              <span>ADD TO COLLECTION / 加入收藏</span>
-              <span class="material-symbols-outlined text-sm transform group-hover:translate-x-1 transition-transform">chevron_right</span>
-            </button>
-            <button class="w-full py-5 px-8 border border-outline-variant text-on-surface font-label text-xs tracking-[0.3em] uppercase hover:bg-surface-container-high transition-all duration-500">
-              ENQUIRE / 咨询专家
-            </button>
-          </div>
-
-          <!-- Trust Badges -->
-          <div class="flex items-center gap-6 mb-10 text-on-surface-variant text-xs font-label">
-            <span class="flex items-center gap-2">
-              <span class="material-symbols-outlined text-primary text-sm">verified</span>
-              Authenticity Guaranteed
-            </span>
-            <span class="flex items-center gap-2">
-              <span class="material-symbols-outlined text-primary text-sm">package_2</span>
-              Secure Global Shipping
-            </span>
-          </div>
-
-          <!-- Accordions -->
-          <div class="divide-y divide-outline-variant/10">
-            <details class="group py-5" open>
-              <summary class="flex justify-between items-center cursor-pointer">
-                <span class="font-label text-xs tracking-[0.2em] uppercase text-on-surface/80 group-hover:text-primary transition-colors">Product Story</span>
-                <span class="material-symbols-outlined text-sm text-outline accordion-chevron">expand_more</span>
-              </summary>
-              <div class="pt-4 text-on-surface-variant text-sm leading-relaxed font-body">
-                Zenith Kinam represents the pinnacle of Vietnamese agarwood. Sourced ethically from heritage reserves, this piece has been naturally cured over eight decades to achieve its unique resin density.
-              </div>
-            </details>
-            <details class="group py-5">
-              <summary class="flex justify-between items-center cursor-pointer">
-                <span class="font-label text-xs tracking-[0.2em] uppercase text-on-surface/80 group-hover:text-primary transition-colors">Material Origin</span>
-                <span class="material-symbols-outlined text-sm text-outline accordion-chevron">expand_more</span>
-              </summary>
-              <div class="pt-4 text-on-surface-variant text-sm leading-relaxed font-body">
-                Authentic Kyara (Kinam) grade from the Nha Trang region. Characterized by high oil content that stays soft to the touch and releases fragrance even at room temperature.
-              </div>
-            </details>
-            <details class="group py-5">
-              <summary class="flex justify-between items-center cursor-pointer">
-                <span class="font-label text-xs tracking-[0.2em] uppercase text-on-surface/80 group-hover:text-primary transition-colors">Care Guide</span>
-                <span class="material-symbols-outlined text-sm text-outline accordion-chevron">expand_more</span>
-              </summary>
-              <div class="pt-4 text-on-surface-variant text-sm leading-relaxed font-body">
-                Store in the provided Paulownia wood box. Avoid direct sunlight and high humidity. Handle with clean silk gloves to preserve the natural oil balance.
-              </div>
-            </details>
-            <details class="group py-5">
-              <summary class="flex justify-between items-center cursor-pointer">
-                <span class="font-label text-xs tracking-[0.2em] uppercase text-on-surface/80 group-hover:text-primary transition-colors">Shipping &amp; Returns</span>
-                <span class="material-symbols-outlined text-sm text-outline accordion-chevron">expand_more</span>
-              </summary>
-              <div class="pt-4 text-on-surface-variant text-sm leading-relaxed font-body">
-                Complimentary secure global shipping via specialised courier. Each piece is accompanied by a certificate of authenticity and photographic record. Returns are handled via private concierge.
-              </div>
-            </details>
-          </div>
-
-        </section>
-      </div><!-- end hero split -->
-
-      <!-- ═══════════════════════════════════════
-           SECTION: Product Story
-           ═══════════════════════════════════════ -->
-      <section class="py-32 px-6 md:px-12 lg:px-20 max-w-screen-2xl mx-auto relative overflow-hidden">
-        <div class="absolute -left-20 top-0 writing-mode-vertical text-9xl font-headline opacity-[0.03] pointer-events-none select-none" style="writing-mode:vertical-rl">冥想 · 呼吸 · 时间</div>
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-          <!-- Image -->
-          <div class="relative order-2 lg:order-1">
-            <div class="absolute -top-10 -left-10 w-40 h-40 border-t border-l border-primary/20 pointer-events-none"></div>
-            <img
-              class="w-full grayscale contrast-125"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOkZtrlKhl349dHLtQscjpk6RSdecT4BO3Et1fYCM5YTPToZnzpqJxlWGhKPTo3oO3lQ9DGFG4me3kgsw-aRrSbF41xoxiWtL5Vdww1clHN5ZJsbrWg60f5lQasZs_oM9qDCD6EW-Dp_U5LtMnRDwMCI72-mGL6InMSnkvM6bv2iJRrOKXIkh31HHh-G_K3iRf0bVhXkill_19H_0ivGwgwGLwrX5JTw4iE_R_JOwbk-baxzaqP0Og5KIBmkc-xJp607hwmnh8VOdA"
-              alt="Ancient forest"
-            />
-            <div class="absolute bottom-6 left-6 p-6 bg-surface-container/80 backdrop-blur-md border border-outline-variant/10">
-              <p class="text-xs font-label text-primary mb-2">ORIGIN STORY</p>
-              <p class="font-headline italic text-lg text-on-surface">"Every bead tells a century-old story of resilience."</p>
-            </div>
-          </div>
-          <!-- Text -->
-          <div class="space-y-8 order-1 lg:order-2">
-            <div class="inline-block px-4 py-1 border border-primary/30 text-primary text-[10px] font-label tracking-widest uppercase">The Genesis | 缘起</div>
-            <h2 class="text-4xl font-headline leading-snug">
-              Born from the<br />Heart of the Jungle
-            </h2>
-            <p class="text-on-surface-variant leading-relaxed">
-              Agarwood is not merely wood; it is the miraculous result of a tree's healing process. For over a century, the Aquilaria tree secreted rare resins to protect itself from the elements, concentrating its essence into what we now know as Kinam. Each bead has been hand-carved to preserve the natural grain and resinous veins.
-            </p>
-            <p class="text-on-surface-variant leading-relaxed">
-              在越南深山之中，沉香树历经百年风霜与自然侵蚀，在自我修护中凝聚出稀世油脂。奇楠，是沉香中的极品，其形成极具偶然性，千百棵树中难求其一。
-            </p>
-          </div>
+    <main class="pb-24 pt-24">
+      <div id="product-loading" class="flex min-h-[60vh] items-center justify-center px-6">
+        <div class="space-y-4 text-center">
+          <div class="mx-auto h-12 w-12 rounded-full border border-primary/30 border-t-primary animate-spin"></div>
+          <p class="font-label text-xs uppercase tracking-[0.35em] text-on-surface-variant">Loading Product</p>
         </div>
-      </section>
+      </div>
 
-      <!-- ═══════════════════════════════════════
-           SECTION: Material Details Bento Grid
-           ═══════════════════════════════════════ -->
-      <section class="py-32 bg-surface-container-low">
-        <div class="max-w-screen-2xl mx-auto px-6 md:px-12 lg:px-20 space-y-12">
-          <div class="text-center space-y-4">
-            <h3 class="text-xs font-label text-primary tracking-[0.4em] uppercase">Craftsmanship &amp; Material | 工艺与材质</h3>
-            <p class="text-3xl font-headline">Uncompromising Excellence</p>
-          </div>
-          <div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-4 lg:h-[600px]">
-            <!-- Large card -->
-            <div class="md:col-span-2 md:row-span-2 relative group overflow-hidden bg-surface">
-              <img
-                class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-1000"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJ7tmp1HH33cWAd-yX9ymh6ulUy1iTyd8Yjwn2FR1w8k7qedFRhlbkU1hoCCmfQUqWYGd-wpwHt3Veaplm1WM2F8r7jtlgBCTCMAyMIJHLb82aq--8N1NJheQgW0B4dU-FNcRMGMq1ydjPwa0LTafZhPiCw9CxEW6drUUNu6BIakT59EXFWZdRNA7qbbBitvPv5rqyJ9jNCepVNP502uDua7HKstJQ0_9hpXXbg1PSNgoYu2VvkzLjlNFdPQDLtY6gsYdaqwh1HT0u"
-                alt="Resin veins"
-              />
-              <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
-              <div class="absolute bottom-8 left-8">
-                <h4 class="text-xl font-headline mb-2">High Resin Content | 满油级别</h4>
-                <p class="text-sm text-on-surface-variant max-w-xs">Nearly 80% resin saturation, giving it a cool, waxy texture and heavy weight.</p>
-              </div>
-            </div>
-            <!-- Precision -->
-            <div class="md:col-span-2 relative group overflow-hidden bg-surface">
-              <img
-                class="w-full h-full object-cover opacity-40"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCOWlBtSjaVXz72zqYkuoW_mAjDl40VbGaeUEyUjVlmDzFWpOw_t6uKAhDyv0dQfEYgLkqx-DFZ6MYcbUMTpgTDHvvn392ELdocWNtSuaZmh_WxFHBpHZsJTXKLSXtWgUNDIQMAPLGo3486izjpgFgqmwtVS8ZwMN7-DTWEr1GZr9ZWKrxIhm6E33q-PvdMq2Wcd5fsgTbAfs8TUIxmxQ1FpA9qBjyC2e1s7C3m8JLiPsGUY5GJzMcxiPmnypeGTY4bwJxnnbmBw30"
-                alt="Bead diagram"
-              />
-              <div class="absolute inset-0 flex flex-col justify-center px-10">
-                <h4 class="text-xl font-headline mb-2">Precision Carving | 精工圆珠</h4>
-                <p class="text-sm text-on-surface-variant">Each bead is calibrated to within 0.05mm of tolerance.</p>
-              </div>
-            </div>
-            <!-- Cooling scent -->
-            <div class="md:col-span-1 bg-secondary-container">
-              <div class="p-8 h-full flex flex-col justify-between">
-                <span class="material-symbols-outlined text-4xl text-primary">ac_unit</span>
-                <div>
-                  <h4 class="text-lg font-headline">Cooling Scent</h4>
-                  <p class="text-xs text-on-secondary-container mt-2">Natural menthol-like cooling notes.</p>
-                </div>
-              </div>
-            </div>
-            <!-- Aged -->
-            <div class="md:col-span-1 bg-surface-container-high border border-outline-variant/20">
-              <div class="p-8 h-full flex flex-col justify-between">
-                <span class="material-symbols-outlined text-4xl text-primary">auto_awesome</span>
-                <div>
-                  <h4 class="text-lg font-headline">Aged 50+ Years</h4>
-                  <p class="text-xs text-on-surface-variant mt-2">Properly aged for maximum aromatic stability.</p>
-                </div>
-              </div>
-            </div>
-          </div>
+      <div id="product-error" class="hidden px-6">
+        <div class="mx-auto max-w-2xl border border-outline-variant/20 bg-surface-container-low px-8 py-14 text-center">
+          <p class="font-label text-xs uppercase tracking-[0.35em] text-primary mb-4">Product Unavailable</p>
+          <h1 class="font-headline text-4xl mb-4">Unable to load this product</h1>
+          <p id="product-error-message" class="text-lg leading-relaxed text-on-surface-variant"></p>
         </div>
-      </section>
+      </div>
 
-      <!-- ═══════════════════════════════════════
-           SECTION: Meditation Practice & Care
-           ═══════════════════════════════════════ -->
-      <section class="py-32 px-6 md:px-12 lg:px-20 max-w-screen-2xl mx-auto">
-        <div class="flex flex-col lg:flex-row gap-16">
-          <div class="lg:w-1/3">
-            <h3 class="text-4xl font-headline mb-6">
-              Meditation<br />Practice<br /><span class="text-primary italic">使用与养护</span>
-            </h3>
-            <p class="text-on-surface-variant font-label text-sm uppercase tracking-widest">Guide to Scent &amp; Spirit</p>
-          </div>
-          <div class="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div class="space-y-4">
-              <div class="w-12 h-12 flex items-center justify-center border border-primary/30 rounded-full text-primary font-headline">01</div>
-              <h4 class="text-xl font-headline">The Ritual | 仪式</h4>
-              <p class="text-on-surface-variant leading-relaxed">
-                Place the piece in your palms and warm it slightly to release the top notes of honey and flowers before beginning your meditation.
-              </p>
-            </div>
-            <div class="space-y-4">
-              <div class="w-12 h-12 flex items-center justify-center border border-primary/30 rounded-full text-primary font-headline">02</div>
-              <h4 class="text-xl font-headline">Preservation | 收藏</h4>
-              <p class="text-on-surface-variant leading-relaxed">
-                Keep in the provided Paulownia wood box or a silk pouch, away from direct sunlight and moisture, to preserve the resin integrity.
-              </p>
-            </div>
-            <div class="space-y-4">
-              <div class="w-12 h-12 flex items-center justify-center border border-primary/30 rounded-full text-primary font-headline">03</div>
-              <h4 class="text-xl font-headline">Aging | 养木</h4>
-              <p class="text-on-surface-variant leading-relaxed">
-                With time and gentle contact, the oils migrate to the surface, deepening colour and intensifying the fragrance profile over decades.
-              </p>
-            </div>
-            <div class="space-y-4">
-              <div class="w-12 h-12 flex items-center justify-center border border-primary/30 rounded-full text-primary font-headline">04</div>
-              <h4 class="text-xl font-headline">Authentication | 鉴别</h4>
-              <p class="text-on-surface-variant leading-relaxed">
-                Each piece ships with a GC-MS certificate and photographic provenance record from our heritage archive.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      <div id="product-shell" class="hidden"></div>
     </main>
 
     <script>
-      (function () {
-        const thumbs = document.querySelectorAll('.thumbnail-btn');
-        const mainImg = document.getElementById('main-gallery-image');
-        const caption = document.getElementById('gallery-caption');
+      (() => {
+        const DEFAULT_PRODUCT_ID = "";
+        const FALLBACK_IMAGES = [
+          "https://lh3.googleusercontent.com/aida-public/AB6AXuA4HPFnExBffoVATx6PO6adc6b2BIQlpQjiBsfuEMkG2Yzs4rquKJeE9MYnsfJWzC_m2p9mcvgKPV8qo-6r7VjBr6JPbf3HBS_23JZnBYTSm5TMPNCEQ1S3wpza20ezLTGIXfqsnEggZFcW7o83n_EWnX4hB2Vwsq9q7nP0zGzut7MmClMgvhvOk2iWG8u1nVdoyXvcRNAh-sWORmMQY4aVod3YpTj9g4ricprdMydMfBwrURpoaAZ-mQaHq_0RiftI3d_RxIRtbSkJ",
+          "https://lh3.googleusercontent.com/aida-public/AB6AXuCjPVwzAL4YhgO-Q_f_6ndpgbkH5S4x9Rrf9nXl_-S1WyVh0rsIsaYyzEikVAxHvV8pxy72ZPgt2kjTF2asazuvNrlvcCVHDhNdzyNmgFGOusg5I20PiGs3U8qMSqfHkHBku3-qhZlxxCGdKij_Q-TaJQXw4KsSM9HaDT3CmGaANjc6_1np7vg6kHosflQwTTyzwxzJJDTYxTnJ4zWASay-G4_2rHu-CPAUV8wB8_GWKqf8DKugvzSusAJhch9D74iNL91nnL2bxDxm",
+          "https://lh3.googleusercontent.com/aida-public/AB6AXuCE4LP2eSntR8d-sNrg5HK4IeYM_TGlqzTYEcQ6U9HIWwVSf2XEw-spX1ce_OGaiJlS3cRXTQE2Q_90tk99T3eCP-30uwwn9guiCKLTGaG4PPQMixYcnbeAodhCbJ5pt8qHaTkK3koEyna998taEWW5t_xC0xp1I_Z2kVgpQL7pPc1ctTIqYi267kV2_ZHBZiM32PI_edOwhmeXrOrBEWOKKeCgo4WPAYjfxqohDVrgnsmvMQpAQ3qOvhh-0Hzx2db54z2eXQ7q6a7a",
+          "https://lh3.googleusercontent.com/aida-public/AB6AXuDoSOmozArvC2AWUzYhh98TyVxqgooBD-JGp7f2Rek2IKU42sjtMCIeYX2-NcVLviCZgMWGwgqBPwsFcIJgBERAqbNxAreIy1wNACxt7O5gcWk1r7u_Ativ1hLV-MBbJJrXnRf6el6iLjMGRx28Vz-eKLKXrhYjVCxC-OPqA-N4GiXKDa_yXVsNE7hHdavEzyF6rdclTuPf2SzMAR9Tsmie9wmBaUylq-7ogtfbKQAJgVLfL-_WKZpSG3jLCK2lepI15z5X6efXnAE5",
+          "https://lh3.googleusercontent.com/aida-public/AB6AXuBOkZtrlKhl349dHLtQscjpk6RSdecT4BO3Et1fYCM5YTPToZnzpqJxlWGhKPTo3oO3lQ9DGFG4me3kgsw-aRrSbF41xoxiWtL5Vdww1clHN5ZJsbrWg60f5lQasZs_oM9qDCD6EW-Dp_U5LtMnRDwMCI72-mGL6InMSnkvM6bv2iJRrOKXIkh31HHh-G_K3iRf0bVhXkill_19H_0ivGwgwGLwrX5JTw4iE_R_JOwbk-baxzaqP0Og5KIBmkc-xJp607hwmnh8VOdA",
+          "https://lh3.googleusercontent.com/aida-public/AB6AXuDJ7tmp1HH33cWAd-yX9ymh6ulUy1iTyd8Yjwn2FR1w8k7qedFRhlbkU1hoCCmfQUqWYGd-wpwHt3Veaplm1WM2F8r7jtlgBCTCMAyMIJHLb82aq--8N1NJheQgW0B4dU-FNcRMGMq1ydjPwa0LTafZhPiCw9CxEW6drUUNu6BIakT59EXFWZdRNA7qbbBitvPv5rqyJ9jNCepVNP502uDua7HKstJQ0_9hpXXbg1PSNgoYu2VvkzLjlNFdPQDLtY6gsYdaqwh1HT0u"
+        ];
 
-        thumbs.forEach(function (btn) {
-          btn.addEventListener('click', function () {
-            const newSrc = btn.getAttribute('data-src');
-            const newCaption = btn.getAttribute('data-caption');
+        const state = {
+          loading: document.getElementById("product-loading"),
+          error: document.getElementById("product-error"),
+          errorMessage: document.getElementById("product-error-message"),
+          shell: document.getElementById("product-shell")
+        };
 
-            // Fade out → swap → fade in
-            mainImg.style.opacity = '0';
-            setTimeout(function () {
-              mainImg.src = newSrc;
-              mainImg.onload = function () { mainImg.style.opacity = '1'; };
-              // Fallback if already cached
-              if (mainImg.complete) mainImg.style.opacity = '1';
-            }, 250);
-
-            if (caption && newCaption) caption.textContent = newCaption;
-
-            // Update active state
-            thumbs.forEach(function (t) {
-              t.classList.remove('active');
-              t.classList.add('opacity-40');
-            });
-            btn.classList.add('active');
-            btn.classList.remove('opacity-40');
+        function escapeHtml(value) {
+          return String(value || "").replace(/[&<>\"']/g, (character) => {
+            const entities = {
+              "&": "&amp;",
+              "<": "&lt;",
+              ">": "&gt;",
+              "\"": "&quot;",
+              "'": "&#39;"
+            };
+            return entities[character] || character;
           });
-        });
+        }
 
-        // Smooth image transition
-        mainImg.style.transition = 'opacity 0.25s ease';
+        function getApiBase() {
+          return window.location.protocol === "file:"
+            ? "http://127.0.0.1:8787"
+            : (window.WOODZPACKER_CONFIG?.workerBaseUrl || window.location.origin);
+        }
+
+        function getProductId() {
+          const url = new URL(window.location.href);
+          return url.searchParams.get("id") || DEFAULT_PRODUCT_ID;
+        }
+
+        function formatCurrency(value) {
+          if (typeof value !== "number") return "Price on request";
+          return new Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "USD",
+            maximumFractionDigits: value % 1 === 0 ? 0 : 2
+          }).format(value);
+        }
+
+        function formatDate(value) {
+          if (!value) return "N/A";
+          const date = new Date(value);
+          if (Number.isNaN(date.getTime())) return value;
+          return new Intl.DateTimeFormat("en", {
+            year: "numeric",
+            month: "long",
+            day: "numeric"
+          }).format(date);
+        }
+
+        function getImages(product) {
+          const gallery = Array.isArray(product.gallery) ? product.gallery.filter(Boolean) : [];
+          if (gallery.length) return gallery;
+          return FALLBACK_IMAGES;
+        }
+
+        function getPrimaryPrice(product) {
+          return typeof product.discountPrice === "number"
+            ? product.discountPrice
+            : product.sellingPrice;
+        }
+
+        function getStatusLabel(product) {
+          if (product.stock > 0) {
+            return product.status || "Available";
+          }
+          return product.status || "Out of stock";
+        }
+
+        function getAttributeValue(value, fallback) {
+          return escapeHtml(value || fallback);
+        }
+
+        function renderEditorialSection(blocks) {
+          if (!Array.isArray(blocks) || !blocks.length) {
+            return "";
+          }
+
+          return `
+            <section class="px-6 lg:px-10 mt-20">
+              <div class="border border-outline-variant/12 bg-surface-container-low p-8 lg:p-10">
+                <div class="mb-10 border-b border-outline-variant/10 pb-6">
+                  <p class="font-label text-[10px] uppercase tracking-[0.3em] text-primary/70">Extended Notes</p>
+                  <h2 class="mt-4 font-headline text-4xl leading-tight">Primary source content from the product record.</h2>
+                </div>
+                <article class="mx-auto max-w-3xl text-lg leading-relaxed">
+                  ${renderBlocks(blocks)}
+                </article>
+              </div>
+            </section>
+          `;
+        }
+
+        function renderBlocks(blocks) {
+          const rendered = [];
+          let index = 0;
+
+          while (index < blocks.length) {
+            const block = blocks[index];
+
+            if (block.type === "bulleted_list_item") {
+              const items = [];
+              while (index < blocks.length && blocks[index].type === "bulleted_list_item") {
+                items.push(renderListItem(blocks[index], "ul"));
+                index += 1;
+              }
+              rendered.push(`<ul class="mb-8 pl-6 list-disc text-on-surface/90 leading-[1.9]">${items.join("")}</ul>`);
+              continue;
+            }
+
+            if (block.type === "numbered_list_item") {
+              const items = [];
+              while (index < blocks.length && blocks[index].type === "numbered_list_item") {
+                items.push(renderListItem(blocks[index], "ol"));
+                index += 1;
+              }
+              rendered.push(`<ol class="mb-8 pl-6 list-decimal text-on-surface/90 leading-[1.9]">${items.join("")}</ol>`);
+              continue;
+            }
+
+            rendered.push(renderBlock(block));
+            index += 1;
+          }
+
+          return rendered.join("");
+        }
+
+        function renderBlock(block) {
+          const text = escapeHtml(block.text || "");
+
+          switch (block.type) {
+            case "heading_1":
+              return `<section class="mt-16 mb-6"><h2 class="font-headline text-3xl md:text-4xl text-primary leading-tight">${text}</h2></section>`;
+            case "heading_2":
+              return `<section class="mt-14 mb-5"><h3 class="font-headline text-2xl md:text-3xl text-on-surface leading-snug">${text}</h3></section>`;
+            case "heading_3":
+              return `<section class="mt-10 mb-4"><h4 class="font-label text-sm tracking-[0.25em] uppercase text-secondary">${text}</h4></section>`;
+            case "paragraph":
+              if (!text.trim()) return "";
+              return `<p class="mb-6 text-on-surface/90 leading-[1.95]">${text}</p>`;
+            case "image":
+              if (!block.url) return "";
+              return `
+                <figure class="my-12">
+                  <div class="bg-surface p-3 md:p-4">
+                    <img
+                      src="${escapeHtml(block.url)}"
+                      alt="${escapeHtml(block.caption || "Product image")}"
+                      class="w-full h-auto object-cover max-h-[42rem]"
+                    />
+                    ${block.caption ? `<figcaption class="mt-4 text-center font-body italic text-sm text-on-surface-variant">${escapeHtml(block.caption)}</figcaption>` : ""}
+                  </div>
+                </figure>
+              `;
+            case "table":
+              return renderTable(block);
+            case "divider":
+              return `<div class="my-12 border-t border-outline-variant/20"></div>`;
+            default:
+              return "";
+          }
+        }
+
+        function renderListItem(block, listType) {
+          const nested = renderNestedChildren(block.children || [], listType);
+          return `<li class="mb-3">${escapeHtml(block.text || "")}${nested}</li>`;
+        }
+
+        function renderNestedChildren(children, parentListType) {
+          if (!children.length) return "";
+
+          const childListType = children[0].type === "numbered_list_item" ? "ol" : parentListType;
+          const className = childListType === "ol"
+            ? "mt-3 pl-6 list-decimal text-on-surface/90 leading-[1.9]"
+            : "mt-3 pl-6 list-disc text-on-surface/90 leading-[1.9]";
+
+          const items = children.map((child) => {
+            if (child.type === "bulleted_list_item" || child.type === "numbered_list_item") {
+              return renderListItem(child, childListType);
+            }
+            return renderBlock(child);
+          }).join("");
+
+          return `<${childListType} class="${className}">${items}</${childListType}>`;
+        }
+
+        function renderTable(block) {
+          const rows = Array.isArray(block.children) ? block.children : [];
+          if (!rows.length) return "";
+
+          const body = rows
+            .filter((row) => row.type === "table_row")
+            .map((row) => {
+              const cells = Array.isArray(row.cells) ? row.cells : [];
+              const columns = cells
+                .map((cell) => {
+                  const text = Array.isArray(cell) ? cell.join(" ") : "";
+                  return `<td class="border border-outline-variant/20 px-4 py-3 align-top">${escapeHtml(text)}</td>`;
+                })
+                .join("");
+
+              return `<tr>${columns}</tr>`;
+            })
+            .join("");
+
+          return `
+            <div class="my-10 overflow-x-auto bg-surface border border-outline-variant/20">
+              <table class="min-w-full border-collapse text-left text-base">
+                <tbody>${body}</tbody>
+              </table>
+            </div>
+          `;
+        }
+
+        function setMeta(product) {
+          document.title = `${product.productName} | Woodzpacker`;
+          let descriptionTag = document.querySelector('meta[name="description"]');
+          if (!descriptionTag) {
+            descriptionTag = document.createElement("meta");
+            descriptionTag.name = "description";
+            document.head.appendChild(descriptionTag);
+          }
+          descriptionTag.content = product.description || `${product.productName} in the Woodzpacker collection.`;
+        }
+
+        function renderProduct(product) {
+          const images = getImages(product);
+          const primaryPrice = formatCurrency(getPrimaryPrice(product));
+          const comparePrice = typeof product.discountPrice === "number" &&
+            typeof product.sellingPrice === "number" &&
+            product.discountPrice !== product.sellingPrice
+            ? formatCurrency(product.sellingPrice)
+            : "";
+          const scentProfile = Array.isArray(product.scentProfile) && product.scentProfile.length
+            ? product.scentProfile
+            : [product.material || "Curated Material", product.origin || "Collector Source"];
+          const heroImage = images[0];
+
+          setMeta(product);
+
+          state.shell.innerHTML = `
+            <section class="px-6 lg:px-10">
+              <div class="grid gap-8 xl:grid-cols-[1.1fr_0.9fr]">
+                <div class="overflow-hidden border border-outline-variant/12 bg-surface-container-low">
+                  <div class="grid min-h-[34rem] md:grid-cols-[5.5rem_minmax(0,1fr)]">
+                    <div id="thumbnail-column" class="custom-scrollbar flex gap-4 overflow-x-auto border-b border-outline-variant/10 p-4 md:flex-col md:overflow-y-auto md:border-b-0 md:border-r">
+                      ${images.map((image, index) => `
+                        <button
+                          class="thumbnail-btn ${index === 0 ? "active" : "opacity-40"} h-20 w-16 shrink-0 overflow-hidden border border-transparent transition-all duration-500"
+                          data-src="${escapeHtml(image)}"
+                          data-caption="${escapeHtml(scentProfile[index % scentProfile.length])}"
+                          type="button"
+                        >
+                          <img
+                            alt="${escapeHtml(product.productName)} thumbnail ${index + 1}"
+                            class="h-full w-full object-cover grayscale transition-all duration-700 hover:grayscale-0"
+                            src="${escapeHtml(image)}"
+                          />
+                        </button>
+                      `).join("")}
+                    </div>
+                    <div class="relative min-h-[28rem] overflow-hidden">
+                      <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(233,195,73,0.16),transparent_34%)]"></div>
+                      <img
+                        id="main-gallery-image"
+                        alt="${escapeHtml(product.productName)}"
+                        class="h-full w-full object-cover transition-all duration-700 ease-out"
+                        src="${escapeHtml(heroImage)}"
+                      />
+                      <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-background to-transparent px-8 py-10">
+                        <p class="font-label text-[10px] uppercase tracking-[0.3em] text-primary/60">Detailed Observation</p>
+                        <p id="gallery-caption" class="mt-2 font-headline text-2xl italic text-on-surface/85">${escapeHtml(scentProfile[0])}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="border border-outline-variant/12 bg-surface-container-low/80 backdrop-blur-sm">
+                  <div class="space-y-8 p-8 lg:p-10">
+                    <div class="flex flex-wrap items-center justify-between gap-4">
+                      <a class="font-label text-[10px] uppercase tracking-[0.28em] text-on-surface-variant/60 hover:text-primary transition-colors" href="/products.html">
+                        Back to collection
+                      </a>
+                      <span class="rounded-full border border-outline-variant/20 px-3 py-1 font-label text-[10px] uppercase tracking-[0.22em] text-primary">${escapeHtml(getStatusLabel(product))}</span>
+                    </div>
+
+                    <div>
+                      <p class="font-label text-[10px] uppercase tracking-[0.35em] text-primary/70">${escapeHtml(product.productCategory || "Collection")} / ${escapeHtml(product.supplier || "Woodzpacker")}</p>
+                      <h1 class="mt-4 font-headline text-4xl leading-tight lg:text-5xl">${escapeHtml(product.productName)}</h1>
+                      <p class="mt-5 max-w-2xl text-lg leading-relaxed text-on-surface-variant">${escapeHtml(product.description)}</p>
+                    </div>
+
+                    <div class="flex flex-wrap items-end gap-5 border-y border-outline-variant/10 py-6">
+                      <div>
+                        <p class="font-headline text-3xl text-primary">${escapeHtml(primaryPrice)}</p>
+                        ${comparePrice ? `<p class="mt-2 text-sm text-on-surface-variant/50 line-through">${escapeHtml(comparePrice)}</p>` : ""}
+                      </div>
+                      <div class="grid gap-2 text-sm text-on-surface-variant">
+                        <p><span class="font-label text-[10px] uppercase tracking-[0.22em] text-primary/70">Stock</span> ${escapeHtml(String(product.stock || 0))}</p>
+                        <p><span class="font-label text-[10px] uppercase tracking-[0.22em] text-primary/70">Created</span> ${escapeHtml(formatDate(product.createdTime))}</p>
+                      </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-3">
+                      <div class="border border-outline-variant/10 bg-surface/50 p-4">
+                        <p class="font-label text-[10px] uppercase tracking-[0.24em] text-primary/70">Origin</p>
+                        <p class="mt-2 font-headline text-lg">${getAttributeValue(product.origin, "Curated Source")}</p>
+                      </div>
+                      <div class="border border-outline-variant/10 bg-surface/50 p-4">
+                        <p class="font-label text-[10px] uppercase tracking-[0.24em] text-primary/70">Grade</p>
+                        <p class="mt-2 font-headline text-lg">${getAttributeValue(product.grade, "Collection Grade")}</p>
+                      </div>
+                      <div class="border border-outline-variant/10 bg-surface/50 p-4">
+                        <p class="font-label text-[10px] uppercase tracking-[0.24em] text-primary/70">Density</p>
+                        <p class="mt-2 font-headline text-lg">${getAttributeValue(product.density, "Balanced")}</p>
+                      </div>
+                      <div class="border border-outline-variant/10 bg-surface/50 p-4">
+                        <p class="font-label text-[10px] uppercase tracking-[0.24em] text-primary/70">Aged</p>
+                        <p class="mt-2 font-headline text-lg">${getAttributeValue(product.aged, "By source")}</p>
+                      </div>
+                    </div>
+
+                    <div class="grid gap-3 sm:grid-cols-2">
+                      <button class="w-full border border-primary bg-primary px-6 py-4 font-label text-xs uppercase tracking-[0.28em] text-on-primary transition-colors hover:bg-primary-fixed-dim" type="button">
+                        Enquire
+                      </button>
+                      <button class="w-full border border-outline-variant/20 px-6 py-4 font-label text-xs uppercase tracking-[0.28em] text-on-surface transition-colors hover:border-primary/30 hover:text-primary" type="button">
+                        Save Reference
+                      </button>
+                    </div>
+
+                    <div class="flex flex-wrap gap-3">
+                      ${scentProfile.map((note) => `
+                        <span class="border border-outline-variant/20 bg-surface/40 px-3 py-2 font-label text-[10px] uppercase tracking-[0.2em] text-on-surface-variant/80">
+                          ${escapeHtml(note)}
+                        </span>
+                      `).join("")}
+                    </div>
+
+                    <div class="divide-y divide-outline-variant/10">
+                      <details class="group py-5" open>
+                        <summary class="flex cursor-pointer items-center justify-between">
+                          <span class="font-label text-xs uppercase tracking-[0.22em] text-on-surface/80 group-hover:text-primary transition-colors">Product Story</span>
+                          <span class="material-symbols-outlined accordion-chevron text-sm text-outline">expand_more</span>
+                        </summary>
+                        <div class="pt-4 text-sm leading-relaxed text-on-surface-variant">${escapeHtml(product.story)}</div>
+                      </details>
+                      <details class="group py-5">
+                        <summary class="flex cursor-pointer items-center justify-between">
+                          <span class="font-label text-xs uppercase tracking-[0.22em] text-on-surface/80 group-hover:text-primary transition-colors">Material Origin</span>
+                          <span class="material-symbols-outlined accordion-chevron text-sm text-outline">expand_more</span>
+                        </summary>
+                        <div class="pt-4 text-sm leading-relaxed text-on-surface-variant">${escapeHtml(product.materialOrigin)}</div>
+                      </details>
+                      <details class="group py-5">
+                        <summary class="flex cursor-pointer items-center justify-between">
+                          <span class="font-label text-xs uppercase tracking-[0.22em] text-on-surface/80 group-hover:text-primary transition-colors">Care Guide</span>
+                          <span class="material-symbols-outlined accordion-chevron text-sm text-outline">expand_more</span>
+                        </summary>
+                        <div class="pt-4 text-sm leading-relaxed text-on-surface-variant">${escapeHtml(product.careGuide)}</div>
+                      </details>
+                      <details class="group py-5">
+                        <summary class="flex cursor-pointer items-center justify-between">
+                          <span class="font-label text-xs uppercase tracking-[0.22em] text-on-surface/80 group-hover:text-primary transition-colors">Shipping Notes</span>
+                          <span class="material-symbols-outlined accordion-chevron text-sm text-outline">expand_more</span>
+                        </summary>
+                        <div class="pt-4 text-sm leading-relaxed text-on-surface-variant">${escapeHtml(product.shippingNotes)}</div>
+                      </details>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="px-6 lg:px-10 mt-20">
+              <div class="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+                <article class="border border-outline-variant/12 bg-surface-container-low p-8 lg:p-10">
+                  <p class="font-label text-[10px] uppercase tracking-[0.3em] text-primary/70">Material Profile</p>
+                  <h2 class="mt-4 font-headline text-4xl leading-tight">A slower read on the piece.</h2>
+                  <p class="mt-6 text-lg leading-relaxed text-on-surface-variant">${escapeHtml(product.story)}</p>
+                  <div class="mt-8 grid gap-4 md:grid-cols-2">
+                    <div class="border border-outline-variant/10 bg-surface/50 p-5">
+                      <p class="font-label text-[10px] uppercase tracking-[0.22em] text-primary/70">Material</p>
+                      <p class="mt-2 font-headline text-2xl">${getAttributeValue(product.material, "Natural Material")}</p>
+                    </div>
+                    <div class="border border-outline-variant/10 bg-surface/50 p-5">
+                      <p class="font-label text-[10px] uppercase tracking-[0.22em] text-primary/70">Size</p>
+                      <p class="mt-2 font-headline text-2xl">${getAttributeValue(product.size, "Collector Size")}</p>
+                    </div>
+                    <div class="border border-outline-variant/10 bg-surface/50 p-5">
+                      <p class="font-label text-[10px] uppercase tracking-[0.22em] text-primary/70">Manufactured</p>
+                      <p class="mt-2 font-headline text-2xl">${escapeHtml(formatDate(product.manufactoryDate))}</p>
+                    </div>
+                    <div class="border border-outline-variant/10 bg-surface/50 p-5">
+                      <p class="font-label text-[10px] uppercase tracking-[0.22em] text-primary/70">Category</p>
+                      <p class="mt-2 font-headline text-2xl">${getAttributeValue(product.productCategory, "Collection")}</p>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="overflow-hidden border border-outline-variant/12 bg-surface-container-low">
+                  <div class="relative h-full min-h-[24rem]">
+                    <img
+                      alt="${escapeHtml(product.productName)} contextual image"
+                      class="h-full w-full object-cover"
+                      src="${escapeHtml(images[Math.min(1, images.length - 1)])}"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-background via-background/10 to-transparent"></div>
+                    <div class="absolute inset-x-0 bottom-0 p-8">
+                      <p class="font-label text-[10px] uppercase tracking-[0.3em] text-primary/70">Source & Care</p>
+                      <p class="mt-3 text-lg leading-relaxed text-on-surface-variant">${escapeHtml(product.materialOrigin)}</p>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </section>
+            ${renderEditorialSection(product.blocks)}
+          `;
+
+          bindGallery();
+        }
+
+        function bindGallery() {
+          const thumbs = state.shell.querySelectorAll(".thumbnail-btn");
+          const mainImg = state.shell.querySelector("#main-gallery-image");
+          const caption = state.shell.querySelector("#gallery-caption");
+          if (!thumbs.length || !mainImg) return;
+
+          mainImg.style.transition = "opacity 0.25s ease";
+
+          thumbs.forEach((btn) => {
+            btn.addEventListener("click", () => {
+              const nextSrc = btn.getAttribute("data-src");
+              const nextCaption = btn.getAttribute("data-caption");
+              mainImg.style.opacity = "0";
+              window.setTimeout(() => {
+                mainImg.src = nextSrc;
+                mainImg.onload = () => {
+                  mainImg.style.opacity = "1";
+                };
+                if (mainImg.complete) mainImg.style.opacity = "1";
+              }, 180);
+
+              if (caption && nextCaption) caption.textContent = nextCaption;
+
+              thumbs.forEach((thumb) => {
+                thumb.classList.remove("active");
+                thumb.classList.add("opacity-40");
+              });
+              btn.classList.add("active");
+              btn.classList.remove("opacity-40");
+            });
+          });
+        }
+
+        async function loadProduct() {
+          const productId = getProductId();
+          if (!productId) {
+            state.loading.classList.add("hidden");
+            state.error.classList.remove("hidden");
+            state.errorMessage.textContent = "Missing product identifier.";
+            return;
+          }
+
+          try {
+            const response = await fetch(`${getApiBase()}/v1/product/${encodeURIComponent(productId)}`, {
+              headers: { Accept: "application/json" }
+            });
+
+            if (!response.ok) {
+              const payload = await response.json().catch(() => ({}));
+              throw new Error(payload.error || `Product request failed with ${response.status}`);
+            }
+
+            const product = await response.json();
+            state.loading.classList.add("hidden");
+            state.shell.classList.remove("hidden");
+            renderProduct(product);
+          } catch (error) {
+            state.loading.classList.add("hidden");
+            state.error.classList.remove("hidden");
+            state.errorMessage.textContent = error.message || "Unknown error";
+          }
+        }
+
+        loadProduct();
       })();
     </script>
   </body>

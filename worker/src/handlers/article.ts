@@ -2,6 +2,7 @@ import { Env, NotionBlock, NotionPage, NotionResponse } from '../types';
 import { errorResponse, JSON_HEADERS } from '../utils/response';
 import { getEnvValue } from '../utils/env';
 import { notionFetch } from '../utils/notion';
+import { queryArticles } from './feed';
 
 type SimplifiedBlock = {
   type: string;
@@ -224,6 +225,29 @@ export async function handleArticleDetail(
   try {
     const article = await fetchArticleDetailData(identifier, env);
     return new Response(JSON.stringify(article, null, 2), {
+      headers: JSON_HEADERS
+    });
+  } catch (error: any) {
+    return errorResponse(error.message);
+  }
+}
+
+export async function handleArticleCollection(
+  env: Env,
+  pageNumber = 1,
+  pageSize = 5,
+  category?: string,
+  query?: string
+): Promise<Response> {
+  try {
+    const collection = await queryArticles(env, {
+      pageNumber,
+      pageSize,
+      category,
+      query
+    });
+
+    return new Response(JSON.stringify(collection, null, 2), {
       headers: JSON_HEADERS
     });
   } catch (error: any) {

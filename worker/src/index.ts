@@ -1,13 +1,22 @@
 import { handleFeed } from './handlers/feed';
-import { handleProduct } from './handlers/product';
+import {
+  handleProductCollection,
+  handleProductDetail
+} from './handlers/product';
 import { handleSearch } from './handlers/search';
 import { handleSitemap } from './handlers/sitemap';
-import { fetchArticleDetailData, handleArticleDetail } from './handlers/article';
+import {
+  fetchArticleDetailData,
+  handleArticleCollection,
+  handleArticleDetail
+} from './handlers/article';
 import {
   htmlResponse,
   renderArticlePage,
   renderErrorPage
 } from './handlers/articlePage';
+import { renderProductPage } from './handlers/productPage';
+import { fetchProductDetailData } from './handlers/product';
 import { errorResponse } from './utils/response';
 import { getEnvValue } from './utils/env';
 import { Env } from './types';
@@ -53,6 +62,14 @@ async function handleRequest(
     return handleFeed(env, pageNumber, pageSize, category, query);
   }
 
+  if (path === '/v1/article') {
+    const pageNumber = Number(url.searchParams.get('pageNumber') || '1');
+    const pageSize = Number(url.searchParams.get('pageSize') || '8');
+    const category = url.searchParams.get('category') || undefined;
+    const query = url.searchParams.get('q') || undefined;
+    return handleArticleCollection(env, pageNumber, pageSize, category, query);
+  }
+
   if (path === '/v1/search') {
     const query = url.searchParams.get('q') || url.searchParams.get('query') || '';
     const category = url.searchParams.get('category') || '';
@@ -62,7 +79,58 @@ async function handleRequest(
   }
   
   if (path === '/v1/product') {
-    return handleProduct(env);
+    const pageNumber = Number(url.searchParams.get('pageNumber') || '1');
+    const pageSize = Number(url.searchParams.get('pageSize') || '9');
+    const category = url.searchParams.get('category') || undefined;
+    const query = url.searchParams.get('q') || undefined;
+    const sort = url.searchParams.get('sort') || undefined;
+    return handleProductCollection(
+      env,
+      pageNumber,
+      pageSize,
+      category,
+      query,
+      sort
+    );
+  }
+
+  if (path.startsWith('/v1/product/')) {
+    const productId = path.split('/').pop();
+    if (productId) {
+      return handleProductDetail(productId, env);
+    }
+  }
+
+  if (path.startsWith('/product/')) {
+    const productId = path.split('/').pop();
+    if (!productId) {
+      return htmlResponse(renderErrorPage('Missing product id.', siteName), 400);
+    }
+
+    try {
+      const product = await fetchProductDetailData(productId, env);
+      if (product.slug && productId !== product.slug) {
+        return Response.redirect(
+          new URL(`/product/${product.slug}`, request.url).toString(),
+          301
+        );
+      }
+
+      return htmlResponse(
+        renderProductPage(
+          product,
+          new URL(request.url),
+          siteName,
+          siteTagline,
+          siteDescription
+        )
+      );
+    } catch (error: any) {
+      return htmlResponse(
+        renderErrorPage(error.message || 'Failed to load product.', siteName),
+        502
+      );
+    }
   }
 
   // Dynamic routes (e.g., /v1/article/:id)
@@ -110,5 +178,10 @@ async function handleRequest(
 }
 
 function isWorkerRoute(path: string): boolean {
-  return path === '/sitemap.xml' || path.startsWith('/v1/') || path.startsWith('/article/');
+  return (
+    path === '/sitemap.xml' ||
+    path.startsWith('/v1/') ||
+    path.startsWith('/article/') ||
+    path.startsWith('/product/')
+  );
 }

@@ -4,6 +4,10 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Articles | {{websiteName}}</title>
+    <meta
+      name="description"
+      content="Browse Woodzpacker journal entries on agarwood, meditation, and ritual."
+    />
     <script src="layout.js"></script>
     <style>
       body {
@@ -18,7 +22,6 @@
   >
     <main class="pt-32 pb-24">
       <div class="grain-overlay fixed inset-0 z-0"></div>
-      <!-- Hero Section / Title -->
       <header class="relative z-10 max-w-screen-2xl mx-auto px-12 mb-20">
         <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
           <div class="md:col-span-8">
@@ -43,179 +46,524 @@
           </div>
         </div>
       </header>
-      <!-- Category Filter Chips -->
+
       <section class="relative z-10 max-w-screen-2xl mx-auto px-12 mb-16">
-        <div
-          class="flex flex-wrap gap-4 border-b border-outline-variant/20 pb-8"
-        >
-          <button
-            class="bg-tertiary-container text-tertiary px-6 py-2 rounded-sm font-label text-xs tracking-widest uppercase hover:bg-tertiary hover:text-on-tertiary transition-all duration-500"
+        <div class="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-6 items-end border-b border-outline-variant/20 pb-8">
+          <div
+            id="category-filters"
+            class="flex flex-wrap gap-4"
           >
-            All Topics
-          </button>
-          <button
-            class="text-on-surface-variant/60 px-6 py-2 rounded-sm font-label text-xs tracking-widest uppercase hover:text-primary transition-all duration-500"
-          >
-            沉香知识
-          </button>
-          <button
-            class="text-on-surface-variant/60 px-6 py-2 rounded-sm font-label text-xs tracking-widest uppercase hover:text-primary transition-all duration-500"
-          >
-            佛珠文化
-          </button>
-          <button
-            class="text-on-surface-variant/60 px-6 py-2 rounded-sm font-label text-xs tracking-widest uppercase hover:text-primary transition-all duration-500"
-          >
-            冥想修行
-          </button>
-          <button
-            class="text-on-surface-variant/60 px-6 py-2 rounded-sm font-label text-xs tracking-widest uppercase hover:text-primary transition-all duration-500"
-          >
-            Living Zen
-          </button>
+            <button
+              class="bg-tertiary-container text-tertiary px-6 py-2 rounded-sm font-label text-xs tracking-widest uppercase hover:bg-tertiary hover:text-on-tertiary transition-all duration-500"
+              data-category=""
+              type="button"
+            >
+              All Topics
+            </button>
+          </div>
+          <label class="block">
+            <span class="sr-only">Search articles</span>
+            <input
+              id="article-search"
+              class="w-full lg:w-80 bg-transparent border-b border-outline-variant/30 px-0 py-3 font-label text-xs tracking-[0.22em] uppercase placeholder:text-on-surface-variant/40 focus:outline-none focus:border-primary transition-colors duration-500"
+              placeholder="Search journal"
+              type="search"
+            />
+          </label>
         </div>
       </section>
-      <!-- Articles Grid (Asymmetric Bento-inspired) -->
+
+      <section class="relative z-10 max-w-screen-2xl mx-auto px-12 mb-10">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <p
+            id="feed-status"
+            class="font-label text-[11px] tracking-[0.28em] uppercase text-on-surface-variant/70"
+          >
+            Loading journal entries...
+          </p>
+          <p
+            id="feed-summary"
+            class="font-label text-[11px] tracking-[0.28em] uppercase text-on-surface-variant/40"
+          >
+            Powered by v1/article
+          </p>
+        </div>
+      </section>
+
       <section class="relative z-10 max-w-screen-2xl mx-auto px-12">
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-x-8 gap-y-24">
-          <!-- Main Featured Card -->
-          <article class="md:col-span-8 group">
-            <div
-              class="relative aspect-[16/9] mb-8 overflow-hidden bg-surface-container-low"
-            >
-              <img
-                class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 opacity-80 group-hover:opacity-100"
-                data-alt="Close-up of burning agarwood incense coil with elegant wisps of smoke rising in a dark moody zen room with warm lighting"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3YiCCKqe35GQGc8q-LzKZPOVFuUQ-qRQd-S8PG5v4JAn9g5SNEAcN4pgGS8NVid0gsKjAlFMDIkUD0vDQ_0aJFnW8ZOpt1B14u2BizAJ66GE4PD2Q-FMHZwEb99NMHZk7OTi854LjhqBWG4H_vMfI4GETYF7QoF6ykBsRgIksA5Nfowq1T-jMV3A-8HxKrMGEF5_iwQIZrYZKS8CjBTOPb5V-puRbSKba0STazbIa-pGwcQKs7M5ksPM7OBAMvn9bqvtQBpRNcGzd"
-              />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60"
-              ></div>
-              <div class="absolute top-6 left-6">
-                <span
-                  class="bg-primary/10 backdrop-blur-md text-primary border border-primary/20 px-4 py-1 font-label text-[10px] tracking-widest uppercase"
-                  >Knowledge</span
-                >
-              </div>
-            </div>
-            <div class="max-w-2xl">
-              <h2
-                class="font-headline text-3xl md:text-4xl mb-4 group-hover:text-primary transition-colors duration-500"
-              >
-                沉香知识：大地赋予的灵气与灵魂的安宁
-              </h2>
-              <p
-                class="font-body text-on-surface-variant text-lg leading-relaxed mb-6"
-              >
-                Explore the ancient origins of Agarwood, known as the 'Diamond
-                of the Forest', and how its unique resonance helps anchor the
-                wandering mind during deep meditation.
-              </p>
-              <a
-                class="group/btn inline-flex items-center gap-4 font-label text-xs tracking-widest uppercase text-primary"
-                href="article_detail.html"
-              >
-                Read Journal
-                <span
-                  class="w-12 h-[1px] bg-primary/30 group-hover/btn:w-20 transition-all duration-700"
-                ></span>
-              </a>
-            </div>
-          </article>
-          <!-- Sidebar Card 1 -->
-          <article class="md:col-span-4 group mt-12 md:mt-0">
-            <div
-              class="relative aspect-[4/5] mb-6 overflow-hidden bg-surface-container-low"
-            >
-              <img
-                class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-70 group-hover:opacity-90"
-                data-alt="Exquisite dark agarwood prayer beads resting on a weathered wooden table with soft side lighting and shadows"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCq6Rr6OPDC16w2BNO_pcGW5aVmI4uKTbT49L8B4os0hBRT6Dnvk3eVEIA_qaEsWKnm_kDuuvhXuAbFL5FITs19r3om9tluEFFAFY8Jir4Yy0dpXkjXcyzt4gAgvwe9E8plj18uQilu1E6L-XzPwGoDLL3VrRbn1v1HKyh0-7zYmdNnEdu-m-IsIjgh0nKhlvWdW_lBnqxXMT6qFy6tIvuN4OwLvW_zm-wdwJzWhRrfsgSGTVo9vRF6ndTRhjN0sBS72oGG4_1ihAoI"
-              />
-              <div class="absolute top-6 left-6">
-                <span
-                  class="bg-primary/10 backdrop-blur-md text-primary border border-primary/20 px-4 py-1 font-label text-[10px] tracking-widest uppercase"
-                  >Culture</span
-                >
-              </div>
-            </div>
-            <h3
-              class="font-headline text-2xl mb-3 group-hover:text-secondary transition-colors duration-500"
-            >
-              佛珠文化：指尖上的呼吸与禅意
-            </h3>
-            <p class="font-body text-on-surface-variant text-base italic mb-4">
-              The sacred geometry of prayer beads as a tool for mindfulness.
-            </p>
-            <a
-              class="font-label text-[10px] tracking-[0.2em] uppercase text-on-surface-variant/60 hover:text-primary transition-colors"
-              href="article_detail.html"
-              >Explore Culture</a
-            >
-          </article>
-          <!-- Grid Item 3 -->
-          <article class="md:col-span-4 group">
-            <div
-              class="relative aspect-square mb-6 overflow-hidden bg-surface-container-low"
-            >
-              <img
-                class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 opacity-70"
-                data-alt="A person sitting in meditation silhouette against a soft warm backlight with a hint of forest atmosphere"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnQ68WEkAV5qQZccmhyw26DiWwztpa5CksDFO9c9MvjWEtUSzt8ZXWVn89PYwPOPppQuxkD4Ixi2PuGqkRrRBilyCOvYoLheS19qMs1qp5Kz5yXBCsY0E9c5kKACDtIDDnm3ae1QSgh4vvVvmA3k74YgFMer76_uQIM9CDRlM5zfNBTZ4Y7AaFlWWbMdfc4afOHY0bavsl08bbVwyTINkJrBuj6zybwyV77u1hetGS_NbhYitGelNTeCAEM_rFMcoVFQqaYnJtU8kq"
-              />
-              <div class="absolute top-6 left-6">
-                <span
-                  class="bg-primary/10 backdrop-blur-md text-primary border border-primary/20 px-4 py-1 font-label text-[10px] tracking-widest uppercase"
-                  >Practice</span
-                >
-              </div>
-            </div>
-            <h3
-              class="font-headline text-2xl mb-3 group-hover:text-secondary transition-colors duration-500"
-            >
-              冥想修行：在虚无中寻回真实的自我
-            </h3>
-            <p class="font-body text-on-surface-variant text-base mb-4">
-              Finding the 'Empty Vessel' state through scent and rhythmic
-              breathing.
-            </p>
-          </article>
-          <!-- Grid Item 4 - Wide -->
-          <article class="md:col-span-8 group md:pl-12">
-            <div class="flex flex-col md:flex-row gap-8 items-center h-full">
-              <div
-                class="md:w-1/2 overflow-hidden aspect-[3/4] bg-surface-container-low"
-              >
-                <img
-                  class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-70"
-                  data-alt="Artistic macro shot of high-quality resinous agarwood pieces with intricate textures and rich dark colors"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAqk18SrJqnLzocrJPbE6whtJ5CZ2Y16SsoIYRkD0rOL-IiP65qEZuywSiC6itgxw-8mji_01AMy7JkKbYEpzOjjS-ORNVG90WW0MY2L4PukwNP7RrmfakX1oyVEQjDiRkkixfyHczGL3QJHaCox1ApOBhTQuGejca9eTDp99aD1ZK9QTG465Zt7GwCpvs_GTGoNWunFWe5ovJovYwyKB3gyqsNppzThg-gfhQa_N9OS37qBh2ng-GJPXUQ0Vd4tLkQ23MtTUsniD0"
-                />
-              </div>
-              <div class="md:w-1/2">
-                <span
-                  class="font-label text-primary/60 text-[10px] tracking-widest uppercase mb-4 block"
-                  >Zen Living</span
-                >
-                <h3
-                  class="font-headline text-3xl mb-4 group-hover:text-primary transition-colors duration-500 leading-snug"
-                >
-                  The Art of Scent: <br />Incense as a Ritual
-                </h3>
-                <p class="font-body text-on-surface-variant mb-6 text-lg">
-                  Beyond the physical, agarwood serves as a bridge between the
-                  mundane and the celestial.
-                </p>
-                <button
-                  class="border border-primary/30 text-primary px-8 py-3 font-label text-xs tracking-widest uppercase hover:bg-primary/10 transition-all duration-500"
-                >
-                  Read Essay
-                </button>
-              </div>
-            </div>
+        <div id="article-grid" class="grid grid-cols-1 md:grid-cols-12 gap-x-8 gap-y-24">
+          <article class="md:col-span-12 border border-outline-variant/10 bg-surface-container-low px-8 py-20 text-center">
+            <p class="font-headline text-3xl text-on-surface/80">Preparing the journal archive...</p>
           </article>
         </div>
       </section>
+
+      <nav
+        id="pagination"
+        class="relative z-10 max-w-screen-2xl mx-auto px-12 mt-20 flex justify-center items-center gap-8 border-t border-outline-variant/10 pt-12"
+      ></nav>
     </main>
+
+    <noscript>
+      <div class="px-12 pb-12 text-center text-secondary">
+        JavaScript is required to load the latest journal archive on this page.
+      </div>
+    </noscript>
+
+    <script>
+      (() => {
+        const PAGE_SIZE = 5;
+        const FALLBACK_IMAGES = [
+          "https://lh3.googleusercontent.com/aida-public/AB6AXuA3YiCCKqe35GQGc8q-LzKZPOVFuUQ-qRQd-S8PG5v4JAn9g5SNEAcN4pgGS8NVid0gsKjAlFMDIkUD0vDQ_0aJFnW8ZOpt1B14u2BizAJ66GE4PD2Q-FMHZwEb99NMHZk7OTi854LjhqBWG4H_vMfI4GETYF7QoF6ykBsRgIksA5Nfowq1T-jMV3A-8HxKrMGEF5_iwQIZrYZKS8CjBTOPb5V-puRbSKba0STazbIa-pGwcQKs7M5ksPM7OBAMvn9bqvtQBpRNcGzd",
+          "https://lh3.googleusercontent.com/aida-public/AB6AXuCq6Rr6OPDC16w2BNO_pcGW5aVmI4uKTbT49L8B4os0hBRT6Dnvk3eVEIA_qaEsWKnm_kDuuvhXuAbFL5FITs19r3om9tluEFFAFY8Jir4Yy0dpXkjXcyzt4gAgvwe9E8plj18uQilu1E6L-XzPwGoDLL3VrRbn1v1HKyh0-7zYmdNnEdu-m-IsIjgh0nKhlvWdW_lBnqxXMT6qFy6tIvuN4OwLvW_zm-wdwJzWhRrfsgSGTVo9vRF6ndTRhjN0sBS72oGG4_1ihAoI",
+          "https://lh3.googleusercontent.com/aida-public/AB6AXuAnQ68WEkAV5qQZccmhyw26DiWwztpa5CksDFO9c9MvjWEtUSzt8ZXWVn89PYwPOPppQuxkD4Ixi2PuGqkRrRBilyCOvYoLheS19qMs1qp5Kz5yXBCsY0E9c5kKACDtIDDnm3ae1QSgh4vvVvmA3k74YgFMer76_uQIM9CDRlM5zfNBTZ4Y7AaFlWWbMdfc4afOHY0bavsl08bbVwyTINkJrBuj6zybwyV77u1hetGS_NbhYitGelNTeCAEM_rFMcoVFQqaYnJtU8kq",
+          "https://lh3.googleusercontent.com/aida-public/AB6AXuCAqk18SrJqnLzocrJPbE6whtJ5CZ2Y16SsoIYRkD0rOL-IiP65qEZuywSiC6itgxw-8mji_01AMy7JkKbYEpzOjjS-ORNVG90WW0MY2L4PukwNP7RrmfakX1oyVEQjDiRkkixfyHczGL3QJHaCox1ApOBhTQuGejca9eTDp99aD1ZK9QTG465Zt7GwCpvs_GTGoNWunFWe5ovJovYwyKB3gyqsNppzThg-gfhQa_N9OS37qBh2ng-GJPXUQ0Vd4tLkQ23MtTUsniD0"
+        ];
+        const params = new URLSearchParams(window.location.search);
+        const state = {
+          page: parsePositiveInt(params.get("page"), 1),
+          query: (params.get("q") || "").trim(),
+          category: (params.get("category") || "").trim()
+        };
+
+        const categoryFilters = document.getElementById("category-filters");
+        const searchInput = document.getElementById("article-search");
+        const grid = document.getElementById("article-grid");
+        const status = document.getElementById("feed-status");
+        const summary = document.getElementById("feed-summary");
+        const pagination = document.getElementById("pagination");
+        let searchTimer = 0;
+
+        searchInput.value = state.query;
+
+        function parsePositiveInt(value, fallbackValue) {
+          const parsed = Number.parseInt(value || "", 10);
+          return Number.isFinite(parsed) && parsed > 0 ? parsed : fallbackValue;
+        }
+
+        function getApiBase() {
+          return window.location.protocol === "file:"
+            ? "http://127.0.0.1:8787"
+            : (window.WOODZPACKER_CONFIG?.workerBaseUrl || window.location.origin);
+        }
+
+        function escapeHtml(value) {
+          return String(value || "").replace(/[&<>\"']/g, (character) => {
+            const entities = {
+              "&": "&amp;",
+              "<": "&lt;",
+              ">": "&gt;",
+              "\"": "&quot;",
+              "'": "&#39;"
+            };
+            return entities[character] || character;
+          });
+        }
+
+        function formatDate(value) {
+          if (!value) {
+            return "Undated";
+          }
+
+          const date = new Date(value);
+          if (Number.isNaN(date.getTime())) {
+            return value;
+          }
+
+          return new Intl.DateTimeFormat("en", {
+            year: "numeric",
+            month: "long",
+            day: "numeric"
+          }).format(date);
+        }
+
+        function getImage(article, index) {
+          return article.thumbnail || FALLBACK_IMAGES[index % FALLBACK_IMAGES.length];
+        }
+
+        function buildArticleUrl(article) {
+          return `/article_detail.html?id=${encodeURIComponent(article.slug || article.id)}`;
+        }
+
+        function buildPageHref(pageNumber) {
+          const nextParams = new URLSearchParams();
+          if (pageNumber > 1) {
+            nextParams.set("page", String(pageNumber));
+          }
+          if (state.query) {
+            nextParams.set("q", state.query);
+          }
+          if (state.category) {
+            nextParams.set("category", state.category);
+          }
+
+          const queryString = nextParams.toString();
+          return queryString ? `?${queryString}` : window.location.pathname;
+        }
+
+        function syncUrl(mode) {
+          if (mode === "none") {
+            return;
+          }
+
+          const nextUrl = buildPageHref(state.page);
+          const historyMethod = mode === "replace" ? "replaceState" : "pushState";
+          window.history[historyMethod](
+            {
+              page: state.page,
+              query: state.query,
+              category: state.category
+            },
+            "",
+            nextUrl
+          );
+        }
+
+        function setLoading() {
+          status.textContent = "Loading journal entries...";
+          summary.textContent = state.query || state.category
+            ? "Searching v1/article"
+            : "Powered by v1/article";
+          grid.innerHTML = `
+            <article class="md:col-span-12 border border-outline-variant/10 bg-surface-container-low px-8 py-20 text-center">
+              <p class="font-headline text-3xl text-on-surface/80">Loading stories...</p>
+            </article>
+          `;
+        }
+
+        function renderCategoryFilters(categories) {
+          const values = [""].concat(categories || []);
+          categoryFilters.innerHTML = values.map((category) => {
+            const isActive = category === state.category;
+            const buttonClass = isActive
+              ? "bg-tertiary-container text-tertiary"
+              : "text-on-surface-variant/60 hover:text-primary";
+
+            return `
+              <button
+                class="${buttonClass} px-6 py-2 rounded-sm font-label text-xs tracking-widest uppercase transition-all duration-500"
+                data-category="${escapeHtml(category)}"
+                type="button"
+              >
+                ${escapeHtml(category || "All Topics")}
+              </button>
+            `;
+          }).join("");
+        }
+
+        function renderFeaturedArticle(article) {
+          const category = article.category || "Journal";
+          const description = article.description || "Read the full journal entry.";
+
+          return `
+            <article class="md:col-span-8 group">
+              <a class="block" href="${escapeHtml(buildArticleUrl(article))}">
+                <div class="relative aspect-[16/9] mb-8 overflow-hidden bg-surface-container-low">
+                  <img
+                    alt="${escapeHtml(article.title)}"
+                    class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 opacity-80 group-hover:opacity-100"
+                    src="${escapeHtml(getImage(article, 0))}"
+                  />
+                  <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60"></div>
+                  <div class="absolute top-6 left-6">
+                    <span class="bg-primary/10 backdrop-blur-md text-primary border border-primary/20 px-4 py-1 font-label text-[10px] tracking-widest uppercase">${escapeHtml(category)}</span>
+                  </div>
+                </div>
+                <div class="max-w-2xl">
+                  <h2 class="font-headline text-3xl md:text-4xl mb-4 group-hover:text-primary transition-colors duration-500">
+                    ${escapeHtml(article.title)}
+                  </h2>
+                  <p class="font-body text-on-surface-variant text-lg leading-relaxed mb-6">
+                    ${escapeHtml(description)}
+                  </p>
+                  <div class="flex items-center gap-6">
+                    <span class="group/btn inline-flex items-center gap-4 font-label text-xs tracking-widest uppercase text-primary">
+                      Read Journal
+                      <span class="w-12 h-[1px] bg-primary/30 group-hover/btn:w-20 transition-all duration-700"></span>
+                    </span>
+                    <span class="font-label text-[10px] tracking-[0.3em] uppercase text-on-surface-variant/50">${escapeHtml(formatDate(article.createdAt))}</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+          `;
+        }
+
+        function renderSidebarCard(article, index) {
+          const category = article.category || "Journal";
+          const description = article.description || "Open the full entry for more.";
+
+          return `
+            <article class="md:col-span-4 group mt-12 md:mt-0">
+              <a class="block" href="${escapeHtml(buildArticleUrl(article))}">
+                <div class="relative aspect-[4/5] mb-6 overflow-hidden bg-surface-container-low">
+                  <img
+                    alt="${escapeHtml(article.title)}"
+                    class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-70 group-hover:opacity-90"
+                    src="${escapeHtml(getImage(article, index))}"
+                  />
+                  <div class="absolute top-6 left-6">
+                    <span class="bg-primary/10 backdrop-blur-md text-primary border border-primary/20 px-4 py-1 font-label text-[10px] tracking-widest uppercase">${escapeHtml(category)}</span>
+                  </div>
+                </div>
+                <h3 class="font-headline text-2xl mb-3 group-hover:text-secondary transition-colors duration-500">
+                  ${escapeHtml(article.title)}
+                </h3>
+                <p class="font-body text-on-surface-variant text-base italic mb-4">
+                  ${escapeHtml(description)}
+                </p>
+                <span class="font-label text-[10px] tracking-[0.2em] uppercase text-on-surface-variant/60 hover:text-primary transition-colors">
+                  Explore ${escapeHtml(category)}
+                </span>
+              </a>
+            </article>
+          `;
+        }
+
+        function renderSquareCard(article, index) {
+          const category = article.category || "Journal";
+          const description = article.description || "Read the full journal entry for details.";
+
+          return `
+            <article class="md:col-span-4 group">
+              <a class="block" href="${escapeHtml(buildArticleUrl(article))}">
+                <div class="relative aspect-square mb-6 overflow-hidden bg-surface-container-low">
+                  <img
+                    alt="${escapeHtml(article.title)}"
+                    class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 opacity-70"
+                    src="${escapeHtml(getImage(article, index))}"
+                  />
+                  <div class="absolute top-6 left-6">
+                    <span class="bg-primary/10 backdrop-blur-md text-primary border border-primary/20 px-4 py-1 font-label text-[10px] tracking-widest uppercase">${escapeHtml(category)}</span>
+                  </div>
+                </div>
+                <h3 class="font-headline text-2xl mb-3 group-hover:text-secondary transition-colors duration-500">
+                  ${escapeHtml(article.title)}
+                </h3>
+                <p class="font-body text-on-surface-variant text-base mb-4">
+                  ${escapeHtml(description)}
+                </p>
+              </a>
+            </article>
+          `;
+        }
+
+        function renderWideCard(article, index) {
+          const category = article.category || "Journal";
+          const description = article.description || "Open the essay for the full narrative.";
+
+          return `
+            <article class="md:col-span-8 group md:pl-12">
+              <a class="flex flex-col md:flex-row gap-8 items-center h-full" href="${escapeHtml(buildArticleUrl(article))}">
+                <div class="md:w-1/2 overflow-hidden aspect-[3/4] bg-surface-container-low">
+                  <img
+                    alt="${escapeHtml(article.title)}"
+                    class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-70"
+                    src="${escapeHtml(getImage(article, index))}"
+                  />
+                </div>
+                <div class="md:w-1/2">
+                  <span class="font-label text-primary/60 text-[10px] tracking-widest uppercase mb-4 block">${escapeHtml(category)}</span>
+                  <h3 class="font-headline text-3xl mb-4 group-hover:text-primary transition-colors duration-500 leading-snug">
+                    ${escapeHtml(article.title)}
+                  </h3>
+                  <p class="font-body text-on-surface-variant mb-6 text-lg">
+                    ${escapeHtml(description)}
+                  </p>
+                  <span class="inline-flex border border-primary/30 text-primary px-8 py-3 font-label text-xs tracking-widest uppercase hover:bg-primary/10 transition-all duration-500">
+                    Read Essay
+                  </span>
+                </div>
+              </a>
+            </article>
+          `;
+        }
+
+        function renderEmptyState() {
+          grid.innerHTML = `
+            <article class="md:col-span-12 border border-outline-variant/10 bg-surface-container-low px-8 py-20 text-center">
+              <p class="font-headline text-3xl text-on-surface/80 mb-4">No journal entries matched this view.</p>
+              <p class="text-on-surface-variant text-lg">Try another keyword or clear the category filter.</p>
+            </article>
+          `;
+        }
+
+        function renderGrid(items) {
+          if (!items.length) {
+            renderEmptyState();
+            return;
+          }
+
+          const sections = [];
+          const featured = items[0];
+          if (featured) {
+            sections.push(renderFeaturedArticle(featured));
+          }
+          if (items[1]) {
+            sections.push(renderSidebarCard(items[1], 1));
+          }
+
+          for (let index = 2; index < items.length; index += 2) {
+            sections.push(renderSquareCard(items[index], index));
+            if (items[index + 1]) {
+              sections.push(renderWideCard(items[index + 1], index + 1));
+            }
+          }
+
+          grid.innerHTML = sections.join("");
+        }
+
+        function getPaginationPages(currentPage, totalPages) {
+          const pages = [];
+          const start = Math.max(1, currentPage - 2);
+          const end = Math.min(totalPages, currentPage + 2);
+
+          for (let page = start; page <= end; page += 1) {
+            pages.push(page);
+          }
+
+          return pages;
+        }
+
+        function renderPagination(data) {
+          if (!data.totalPages || data.totalPages === 1) {
+            pagination.innerHTML = "";
+            return;
+          }
+
+          const pages = getPaginationPages(data.pageNumber, data.totalPages)
+            .map((page) => {
+              const isActive = page === data.pageNumber;
+              const classes = isActive
+                ? "text-primary border-b border-primary pb-1"
+                : "text-on-surface/40 hover:text-on-surface transition-colors duration-500";
+
+              return `
+                <a class="${classes}" data-page="${page}" href="${escapeHtml(buildPageHref(page))}">
+                  ${String(page).padStart(2, "0")}
+                </a>
+              `;
+            })
+            .join("");
+
+          pagination.innerHTML = `
+            <a
+              aria-disabled="${data.hasPrevious ? "false" : "true"}"
+              class="${data.hasPrevious ? "text-on-surface/60 hover:text-primary" : "text-on-surface/30 pointer-events-none"} transition-colors duration-500"
+              data-page="${Math.max(1, data.pageNumber - 1)}"
+              href="${escapeHtml(buildPageHref(Math.max(1, data.pageNumber - 1)))}"
+            >
+              <span class="material-symbols-outlined">west</span>
+            </a>
+            <div class="flex items-center gap-6 font-label text-xs tracking-[0.3em]">
+              ${pages}
+            </div>
+            <a
+              aria-disabled="${data.hasMore ? "false" : "true"}"
+              class="${data.hasMore ? "text-on-surface/60 hover:text-primary" : "text-on-surface/30 pointer-events-none"} transition-colors duration-500"
+              data-page="${Math.min(data.totalPages, data.pageNumber + 1)}"
+              href="${escapeHtml(buildPageHref(Math.min(data.totalPages, data.pageNumber + 1)))}"
+            >
+              <span class="material-symbols-outlined">east</span>
+            </a>
+          `;
+        }
+
+        async function loadArticles(historyMode) {
+          setLoading();
+
+          const requestUrl = new URL(`${getApiBase()}/v1/article`);
+          requestUrl.searchParams.set("pageNumber", String(state.page));
+          requestUrl.searchParams.set("pageSize", String(PAGE_SIZE));
+          if (state.query) {
+            requestUrl.searchParams.set("q", state.query);
+          }
+          if (state.category) {
+            requestUrl.searchParams.set("category", state.category);
+          }
+
+          try {
+            const response = await fetch(requestUrl.toString(), {
+              headers: {
+                Accept: "application/json"
+              }
+            });
+
+            if (!response.ok) {
+              throw new Error(`Article request failed with ${response.status}`);
+            }
+
+            const data = await response.json();
+            renderCategoryFilters(data.availableCategories || []);
+            renderGrid(data.items || []);
+            renderPagination(data);
+            status.textContent = data.totalItems
+              ? `${data.totalItems} journal entr${data.totalItems === 1 ? "y" : "ies"}`
+              : "No journal entries found";
+            summary.textContent = state.query || state.category
+              ? `Page ${data.pageNumber} of ${Math.max(data.totalPages, 1)}`
+              : `Powered by v1/article`;
+            syncUrl(historyMode);
+          } catch (error) {
+            grid.innerHTML = `
+              <article class="md:col-span-12 border border-outline-variant/10 bg-surface-container-low px-8 py-20 text-center">
+                <p class="font-headline text-3xl text-on-surface/80 mb-4">Unable to load the journal archive.</p>
+                <p class="text-on-surface-variant text-lg">${escapeHtml(error.message || "Unknown error")}</p>
+              </article>
+            `;
+            pagination.innerHTML = "";
+            status.textContent = "Archive unavailable";
+            summary.textContent = "Worker request failed";
+          }
+        }
+
+        categoryFilters.addEventListener("click", (event) => {
+          const button = event.target.closest("[data-category]");
+          if (!button) {
+            return;
+          }
+
+          state.category = button.getAttribute("data-category") || "";
+          state.page = 1;
+          loadArticles("push");
+        });
+
+        searchInput.addEventListener("input", (event) => {
+          window.clearTimeout(searchTimer);
+          searchTimer = window.setTimeout(() => {
+            state.query = event.target.value.trim();
+            state.page = 1;
+            loadArticles("replace");
+          }, 250);
+        });
+
+        pagination.addEventListener("click", (event) => {
+          const link = event.target.closest("[data-page]");
+          if (!link) {
+            return;
+          }
+
+          event.preventDefault();
+          const page = parsePositiveInt(link.getAttribute("data-page"), state.page);
+          if (page === state.page) {
+            return;
+          }
+
+          state.page = page;
+          loadArticles("push");
+        });
+
+        window.addEventListener("popstate", () => {
+          const nextParams = new URLSearchParams(window.location.search);
+          state.page = parsePositiveInt(nextParams.get("page"), 1);
+          state.query = (nextParams.get("q") || "").trim();
+          state.category = (nextParams.get("category") || "").trim();
+          searchInput.value = state.query;
+          loadArticles("none");
+        });
+
+        loadArticles("replace");
+      })();
+    </script>
   </body>
 </html>

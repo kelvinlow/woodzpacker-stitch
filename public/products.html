@@ -4,6 +4,10 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Products - Shop | {{websiteName}}</title>
+    <meta
+      name="description"
+      content="Browse the Woodzpacker collection of agarwood, beads, incense tools, and ritual objects."
+    />
     <script src="layout.js"></script>
     <style>
       body {
@@ -17,402 +21,565 @@
     class="bg-background text-on-surface font-body selection:bg-primary/30 opacity-0 transition-opacity duration-300"
   >
     <main class="pt-32 pb-24">
-      <!-- Hero Section / Header -->
-      <section class="px-6 lg:px-12 mb-12 lg:mb-20">
-        <div
-          class="flex flex-col md:flex-row md:items-end justify-between gap-6"
-        >
-          <div class="max-w-2xl">
-            <span
-              class="font-label text-primary tracking-[0.2em] text-xs uppercase mb-4 block"
-              >甄选系列 | CURATED COLLECTION</span
-            >
-            <h1
-              class="font-headline text-4xl lg:text-6xl text-on-surface leading-tight"
-            >
-              自然的馈赠，<br />
-              <span class="italic text-primary-fixed-dim">时间的沉淀。</span>
-            </h1>
-          </div>
-          <div class="hidden lg:block text-right">
-            <p
-              class="font-body text-on-surface-variant max-w-xs text-sm leading-relaxed"
-            >
-              Every piece tells a century-long story of resilience and
-              transformation. Sourced from the mystical forests of Southeast
-              Asia.
-            </p>
+      <section class="px-6 lg:px-12 mb-12 lg:mb-16">
+        <div class="relative overflow-hidden border border-outline-variant/20 bg-[radial-gradient(circle_at_top_left,rgba(233,195,73,0.14),transparent_34%),linear-gradient(135deg,rgba(39,30,22,0.98),rgba(26,18,11,1))] px-8 py-12 md:px-12 md:py-16">
+          <div class="absolute right-0 top-0 h-52 w-52 -translate-y-1/4 translate-x-1/4 rounded-full border border-primary/10"></div>
+          <div class="grid gap-10 lg:grid-cols-[minmax(0,1fr)_20rem] lg:items-end">
+            <div class="max-w-3xl">
+              <span class="font-label text-primary tracking-[0.22em] text-xs uppercase mb-4 block">
+                甄选系列 | Curated Collection
+              </span>
+              <h1 class="font-headline text-4xl lg:text-6xl text-on-surface leading-tight">
+                Material, ritual,
+                <span class="italic text-primary">and stillness.</span>
+              </h1>
+              <p class="mt-6 max-w-2xl text-lg leading-relaxed text-on-surface-variant">
+                A dynamic catalog of scent-led objects and collector pieces, shaped for browsing by texture, category, and intended use.
+              </p>
+            </div>
+            <div class="grid grid-cols-2 gap-4 text-sm">
+              <div class="border border-outline-variant/15 bg-surface/40 p-4">
+                <p class="font-label text-[10px] uppercase tracking-[0.3em] text-primary/70">Catalog</p>
+                <p id="catalog-total" class="mt-3 font-headline text-3xl">--</p>
+              </div>
+              <div class="border border-outline-variant/15 bg-surface/40 p-4">
+                <p class="font-label text-[10px] uppercase tracking-[0.3em] text-primary/70">Categories</p>
+                <p id="catalog-categories" class="mt-3 font-headline text-3xl">--</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
-      <!-- Filter & Grid Canvas -->
-      <section class="px-6 lg:px-12 flex flex-col lg:flex-row gap-12">
-        <!-- Filter Sidebar -->
-        <aside class="w-full lg:w-64 space-y-10">
-          <!-- Search -->
-          <div class="relative group">
-            <input
-              class="w-full bg-transparent border-b border-outline-variant py-2 pr-10 focus:outline-none focus:border-primary transition-colors font-label text-sm placeholder:text-on-surface-variant/50"
-              placeholder="搜索商品..."
-              type="text"
-            />
-            <span
-              class="material-symbols-outlined absolute right-0 top-2 text-on-surface-variant group-focus-within:text-primary transition-colors"
-              data-icon="search"
-              >search</span
-            >
-          </div>
-          <!-- Categories -->
-          <div>
-            <h3
-              class="font-label text-xs uppercase tracking-widest text-primary mb-6"
-            >
-              分类 CATEGORIES
-            </h3>
-            <ul class="space-y-4">
-              <li>
-                <button
-                  class="flex items-center gap-3 text-on-surface hover:text-primary transition-colors font-body text-sm group"
-                >
-                  <span
-                    class="w-1.5 h-1.5 bg-primary/20 group-hover:bg-primary transition-colors rounded-full"
-                  ></span>
-                  沉香 Agarwood
-                </button>
-              </li>
-              <li>
-                <button
-                  class="flex items-center gap-3 text-on-surface-variant hover:text-primary transition-colors font-body text-sm group"
-                >
-                  <span
-                    class="w-1.5 h-1.5 bg-primary/0 group-hover:bg-primary transition-colors rounded-full"
-                  ></span>
-                  佛珠 Prayer Beads
-                </button>
-              </li>
-              <li>
-                <button
-                  class="flex items-center gap-3 text-on-surface-variant hover:text-primary transition-colors font-body text-sm group"
-                >
-                  <span
-                    class="w-1.5 h-1.5 bg-primary/0 group-hover:bg-primary transition-colors rounded-full"
-                  ></span>
-                  香具 Accessories
-                </button>
-              </li>
-            </ul>
-          </div>
-          <!-- Scent Profile (The Scent Map Chips) -->
-          <div>
-            <h3
-              class="font-label text-xs uppercase tracking-widest text-primary mb-6"
-            >
-              香韵 SCENT MAP
-            </h3>
-            <div class="flex flex-wrap gap-2">
-              <span
-                class="glass-map px-3 py-1.5 text-[10px] uppercase font-label tracking-wider text-on-surface hover:border-primary border border-outline-variant/30 cursor-pointer transition-all"
-                >Floral 花香</span
-              >
-              <span
-                class="glass-map px-3 py-1.5 text-[10px] uppercase font-label tracking-wider text-on-surface hover:border-primary border border-outline-variant/30 cursor-pointer transition-all"
-                >Woody 木香</span
-              >
-              <span
-                class="glass-map px-3 py-1.5 text-[10px] uppercase font-label tracking-wider text-on-surface hover:border-primary border border-outline-variant/30 cursor-pointer transition-all"
-                >Sweet 甜香</span
-              >
-              <span
-                class="glass-map px-3 py-1.5 text-[10px] uppercase font-label tracking-wider text-on-surface hover:border-primary border border-outline-variant/30 cursor-pointer transition-all"
-                >Spicy 辛香</span
-              >
+
+      <section class="px-6 lg:px-12 flex flex-col xl:flex-row gap-10">
+        <aside class="w-full xl:w-80 shrink-0">
+          <div class="sticky top-28 space-y-8 border border-outline-variant/15 bg-surface-container-low/80 p-6 backdrop-blur-sm">
+            <div>
+              <label class="font-label text-[10px] uppercase tracking-[0.3em] text-primary/70" for="product-search">
+                Search
+              </label>
+              <div class="relative mt-3">
+                <input
+                  id="product-search"
+                  class="w-full border border-outline-variant/20 bg-background/60 px-4 py-3 pr-12 font-label text-xs tracking-[0.16em] uppercase placeholder:text-on-surface-variant/40 focus:border-primary focus:outline-none"
+                  placeholder="Search products"
+                  type="search"
+                />
+                <span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-on-surface-variant">
+                  search
+                </span>
+              </div>
             </div>
-          </div>
-          <!-- Price Range -->
-          <div>
-            <h3
-              class="font-label text-xs uppercase tracking-widest text-primary mb-6"
-            >
-              价格区间 PRICE
-            </h3>
-            <div class="h-1 bg-surface-container-highest relative rounded-full">
-              <div
-                class="absolute left-0 right-1/4 h-full bg-primary/40 rounded-full"
-              ></div>
-              <div
-                class="absolute left-0 w-3 h-3 bg-primary rounded-full -top-1 shadow-[0_0_10px_rgba(233,195,73,0.5)]"
-              ></div>
-              <div
-                class="absolute right-1/4 w-3 h-3 bg-primary rounded-full -top-1 shadow-[0_0_10px_rgba(233,195,73,0.5)]"
-              ></div>
+
+            <div>
+              <div class="flex items-center justify-between gap-4">
+                <h2 class="font-label text-[10px] uppercase tracking-[0.3em] text-primary/70">
+                  Categories
+                </h2>
+                <button
+                  id="clear-filters"
+                  class="font-label text-[10px] uppercase tracking-[0.24em] text-on-surface-variant/60 hover:text-primary transition-colors"
+                  type="button"
+                >
+                  Reset
+                </button>
+              </div>
+              <div id="category-filters" class="mt-4 flex flex-wrap gap-2">
+                <button
+                  class="rounded-full border border-primary/30 bg-primary/10 px-4 py-2 font-label text-[10px] uppercase tracking-[0.24em] text-primary"
+                  data-category=""
+                  type="button"
+                >
+                  All
+                </button>
+              </div>
             </div>
-            <div
-              class="flex justify-between mt-4 font-label text-[10px] text-on-surface-variant"
-            >
-              <span>¥0</span>
-              <span>¥50,000+</span>
+
+            <div>
+              <label class="font-label text-[10px] uppercase tracking-[0.3em] text-primary/70" for="sort-select">
+                Sort
+              </label>
+              <select
+                id="sort-select"
+                class="mt-3 w-full border border-outline-variant/20 bg-background/60 px-4 py-3 font-label text-xs uppercase tracking-[0.16em] focus:border-primary focus:outline-none"
+              >
+                <option value="latest">Latest Arrival</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="name">Name</option>
+              </select>
+            </div>
+
+            <div class="border-t border-outline-variant/10 pt-6">
+              <p class="font-label text-[10px] uppercase tracking-[0.3em] text-primary/70">Collection Note</p>
+              <p class="mt-3 text-sm leading-relaxed text-on-surface-variant">
+                Search spans name, supplier, material, origin, scent profile, and category. Filters are URL-backed so a current view can be linked directly.
+              </p>
             </div>
           </div>
         </aside>
-        <!-- Product Grid -->
-        <div class="flex-1">
-          <!-- Sorting & Count -->
-          <div
-            class="flex justify-between items-center mb-10 pb-4 border-b border-outline-variant/10"
-          >
-            <p class="font-label text-xs text-on-surface-variant">
-              Showing 24 products
-            </p>
-            <div class="flex items-center gap-6">
-              <div
-                class="flex items-center gap-2 font-label text-xs cursor-pointer hover:text-primary transition-colors"
-              >
-                <span>排序 SORT BY</span>
-                <span
-                  class="material-symbols-outlined text-sm"
-                  data-icon="expand_more"
-                  >expand_more</span
-                >
-              </div>
+
+        <div class="min-w-0 flex-1">
+          <div class="mb-8 flex flex-col gap-4 border-b border-outline-variant/10 pb-5 md:flex-row md:items-center md:justify-between">
+            <div>
+              <p id="feed-status" class="font-label text-[11px] uppercase tracking-[0.28em] text-on-surface-variant/70">
+                Loading collection...
+              </p>
+              <p id="feed-summary" class="mt-2 text-sm text-on-surface-variant/60">
+                Powered by v1/product
+              </p>
+            </div>
+            <div id="active-filter-summary" class="font-label text-[10px] uppercase tracking-[0.22em] text-on-surface-variant/50">
+              No active filters
             </div>
           </div>
-          <!-- Bento-inspired Product Grid -->
-          <div
-            class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-8 gap-y-16"
-          >
-            <!-- Product 1: Hero Featured -->
-            <div
-              class="group relative md:col-span-2 overflow-hidden bg-surface-container-low"
-            >
-              <div class="aspect-[16/9] overflow-hidden">
-                <img
-                  class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
-                  data-alt="Close-up of premium agarwood pieces with intricate textures on a dark minimalist background with soft warm spotlighting"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeX9mYiIJC3tHEsoJb1MjY9xOFk1Nm2hXFGgWaKZiuXBrt6m_w-MqbGH-IUZexQNHH219YojGzzL4Xg0XbUuP8q44dQMLlZyzvPnanYsDuCPHmtfdc8n_TiBau1IEi_PKmLRa8o4tOPFRVHFvc7O3lWtSjwus7aRiVIRxXPo0V7uWZPadr-9iD_P3YZpcmW8NnxgDMP20k6eZX5kqphS5up-a0dNsTBle3CeK0JUTI9ZfkAezAj5uQZj6ND6q1Rg6O5bUGf3TAa5AI"
-                />
-              </div>
-              <div
-                class="absolute bottom-0 left-0 p-8 w-full bg-gradient-to-t from-background via-background/60 to-transparent"
-              >
-                <div class="flex justify-between items-end">
-                  <div>
-                    <span
-                      class="font-label text-[10px] text-primary tracking-widest uppercase"
-                      >Premium Grade</span
-                    >
-                    <h3 class="font-headline text-2xl mt-1">
-                      越南芽庄沉香块
-                      <span class="text-sm font-light opacity-60 ml-2"
-                        >Nha Trang Oud</span
-                      >
-                    </h3>
-                    <p
-                      class="font-body text-on-surface-variant text-sm mt-2 max-w-md"
-                    >
-                      Sweet honey-like aroma with a hint of coolness. Rare
-                      collection grade.
-                    </p>
-                  </div>
-                  <div class="text-right">
-                    <span class="font-headline text-2xl text-primary"
-                      >¥12,800</span
-                    >
-                    <button
-                      class="mt-4 block w-full px-6 py-2 bg-primary text-on-primary font-label text-xs tracking-widest uppercase hover:bg-primary-fixed-dim transition-colors"
-                    >
-                      收藏产品 VIEW
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Product 2 -->
-            <div class="group">
-              <div
-                class="aspect-[4/5] bg-surface-container-low overflow-hidden relative"
-              >
-                <img
-                  class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all duration-700 group-hover:scale-110"
-                  data-alt="Detailed view of dark sandalwood prayer beads resting on a weathered piece of wood with dramatic lighting"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAb2AjmEaU9W-enTuvaz-EQrknsgrUMVb32P4TNgoW_f-i5TA3d9Q9cHKGgjTlz4mQbwOutykQgisE8zPzQz28ZU1Z1IFMesexY96r2Zu1nFOpC5ZoUfvTE6-6O0jsGRoLu2E6b7GvaZ3o7i-_i5nMc9aGTnMn--xqyAmIMpvPgTqbq3jG-5pt8FZbYwJ6qvpioN4IjOrPS1DO2FBqjXKefw4Ac5PG370T0jcehwVkNYsqryti1WzcJ4eWw1BIV7ewu07bPyjLCVjNJ"
-                />
-                <div
-                  class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity"
-                ></div>
-              </div>
-              <div class="mt-6 flex justify-between items-start">
-                <div>
-                  <h3 class="font-headline text-lg">
-                    黑檀木佛珠 <br /><span
-                      class="text-xs font-label uppercase text-on-surface-variant"
-                      >Ebony Mala Beads</span
-                    >
-                  </h3>
-                  <p class="font-label text-[10px] text-primary mt-1">
-                    108 BEADS | 8MM
-                  </p>
-                </div>
-                <span
-                  class="font-headline text-lg opacity-60 group-hover:opacity-100 transition-opacity"
-                  >¥2,580</span
-                >
-              </div>
-            </div>
-            <!-- Product 3 -->
-            <div class="group">
-              <div
-                class="aspect-[4/5] bg-surface-container-low overflow-hidden relative"
-              >
-                <img
-                  class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all duration-700 group-hover:scale-110"
-                  data-alt="Exquisite brass incense burner with rising white smoke in a dark zen tea room setting"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAY0QrN7ykDqHCPb06uLuFPvNi9q1WQalUTvNvZF4uX3vOBiSU9hcn4NGde7BJ11EWaQ_X3mi-tHtyROqmc114J8L2YLK2IVaMC9DvkKTqGh2pEk7xDArHyhpnD3oHs5hvfyhpsRi9bADyCaTUB0GX_oYI249frDVO2SXOw-dMKAsj2ezHMqfr2bSvESBM2nIBv77hwv1q-OOGjgm0uq4KgLNpfTqYNTvjinVVOqSYfFJpgdUVYv80_D9ezlhqAcjMMb0RKb33fgkkI"
-                />
-                <div
-                  class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity"
-                ></div>
-              </div>
-              <div class="mt-6 flex justify-between items-start">
-                <div>
-                  <h3 class="font-headline text-lg">
-                    古法铜质香炉 <br /><span
-                      class="text-xs font-label uppercase text-on-surface-variant"
-                      >Antique Brass Burner</span
-                    >
-                  </h3>
-                  <p class="font-label text-[10px] text-primary mt-1">
-                    HAND-CRAFTED | BRONZE
-                  </p>
-                </div>
-                <span
-                  class="font-headline text-lg opacity-60 group-hover:opacity-100 transition-opacity"
-                  >¥1,890</span
-                >
-              </div>
-            </div>
-            <!-- Product 4 -->
-            <div class="group">
-              <div
-                class="aspect-[4/5] bg-surface-container-low overflow-hidden relative"
-              >
-                <img
-                  class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all duration-700 group-hover:scale-110"
-                  data-alt="Macro photography of raw agarwood oil in a small glass vial reflecting amber light on dark stone"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsEd_Pq-cWyV0yycPgQimH2ZZBqW1IhlB1kvTSbd7zzZY7q_9YPJNYdHHSpxVSzO-jG_iHXD6ul2Q9aeF3pagWYUHZgqQT_SdMGZNnd50Rm0dlVcxrRcMxRlOq7r4Jd3ZtOw8kDzxuB5QqA4BeQw5s1cPIC_hFmY4r6IesorwVbHE64BL7d6iv0IBKCPg20b-zP9FtOUjJdlbIdqbmLd6yO0_qD2mP0squSDyyKrPwsRbRuuUAG7oMPqjidW-zqJJFcvV_hiMzakhw"
-                />
-                <div
-                  class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity"
-                ></div>
-              </div>
-              <div class="mt-6 flex justify-between items-start">
-                <div>
-                  <h3 class="font-headline text-lg">
-                    柬埔寨沉香精油 <br /><span
-                      class="text-xs font-label uppercase text-on-surface-variant"
-                      >Cambodian Oud Oil</span
-                    >
-                  </h3>
-                  <p class="font-label text-[10px] text-primary mt-1">
-                    PURE CONCENTRATE | 3ML
-                  </p>
-                </div>
-                <span
-                  class="font-headline text-lg opacity-60 group-hover:opacity-100 transition-opacity"
-                  >¥5,400</span
-                >
-              </div>
-            </div>
-            <!-- Product 5 -->
-            <div class="group">
-              <div
-                class="aspect-[4/5] bg-surface-container-low overflow-hidden relative"
-              >
-                <img
-                  class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all duration-700 group-hover:scale-110"
-                  data-alt="Rows of incense sticks in a minimalist bamboo container on an off-white silk surface"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdEWvl0FU9R3QPqlLzIlMZ_LAM0A4wPQY2HYanBOTmgLhdMZE8NCj7KIbXMS1CFPRnUz2yKkiivWZrNwSa-uUCYs78Uwcdk0dbiPxjKVeqSwz4lNVOwHHDfNmJrzG_YX9Ipbu3YkNp3cypBWqdvzaOEApEAfUI4Cn0eZgrw0hkjWvzTDaNStRo8vJcw6X5N1lkTLEpeQitvzwbMsdptZvJkYlGAYsvyHM2BZCQz4fWsTDsSlM3vijGfJJEBoLsjVcyNEKNGSCSojm3"
-                />
-                <div
-                  class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity"
-                ></div>
-              </div>
-              <div class="mt-6 flex justify-between items-start">
-                <div>
-                  <h3 class="font-headline text-lg">
-                    惠安水沉线香 <br /><span
-                      class="text-xs font-label uppercase text-on-surface-variant"
-                      >Hui An Joss Sticks</span
-                    >
-                  </h3>
-                  <p class="font-label text-[10px] text-primary mt-1">
-                    NATURAL BINDER | 20G
-                  </p>
-                </div>
-                <span
-                  class="font-headline text-lg opacity-60 group-hover:opacity-100 transition-opacity"
-                  >¥680</span
-                >
-              </div>
-            </div>
-          </div>
-          <!-- Pagination / Loading -->
-          <div class="mt-24 flex justify-center items-center gap-10">
-            <button
-              class="font-label text-xs tracking-widest uppercase opacity-40 hover:opacity-100 transition-opacity flex items-center gap-2"
-            >
-              <span
-                class="material-symbols-outlined text-sm"
-                data-icon="arrow_back"
-                >arrow_back</span
-              >
-              PREVIOUS
-            </button>
-            <div class="flex gap-4 font-label text-xs">
-              <span class="text-primary border-b border-primary pb-1">01</span>
-              <span
-                class="opacity-40 hover:opacity-100 cursor-pointer transition-opacity"
-                >02</span
-              >
-              <span
-                class="opacity-40 hover:opacity-100 cursor-pointer transition-opacity"
-                >03</span
-              >
-            </div>
-            <button
-              class="font-label text-xs tracking-widest uppercase opacity-40 hover:opacity-100 transition-opacity flex items-center gap-2"
-            >
-              NEXT
-              <span
-                class="material-symbols-outlined text-sm"
-                data-icon="arrow_forward"
-                >arrow_forward</span
-              >
-            </button>
-          </div>
-        </div>
-      </section>
-      <!-- Newsletter Subscription Area -->
-      <section class="liubai-spacing bg-surface-container-low mt-20">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-          <h2 class="font-headline text-3xl lg:text-5xl mb-6">入席，听香。</h2>
-          <p class="font-body text-on-surface-variant mb-12 max-w-lg mx-auto">
-            Subscribe to our journal for early access to rare harvests and
-            meditative insights into the world of Agarwood.
-          </p>
-          <form class="flex flex-col md:flex-row gap-4 max-w-xl mx-auto">
-            <input
-              class="flex-1 bg-background border-outline-variant px-6 py-4 font-label text-xs tracking-widest focus:border-primary outline-none transition-colors"
-              placeholder="EMAIL ADDRESS"
-              type="email"
-            />
-            <button
-              class="bg-primary text-on-primary px-10 py-4 font-label text-xs tracking-widest uppercase hover:bg-primary-fixed-dim transition-colors"
-            >
-              SUBSCRIBE
-            </button>
-          </form>
+
+          <section id="product-grid" class="grid grid-cols-1 gap-6 md:grid-cols-2 2xl:grid-cols-3">
+            <article class="md:col-span-2 2xl:col-span-3 border border-outline-variant/10 bg-surface-container-low px-8 py-20 text-center">
+              <p class="font-headline text-3xl text-on-surface/80">Preparing the collection...</p>
+            </article>
+          </section>
+
+          <nav id="pagination" class="mt-16 flex justify-center"></nav>
         </div>
       </section>
     </main>
+
+    <noscript>
+      <div class="px-6 pb-12 text-center text-secondary">
+        JavaScript is required to load the live collection.
+      </div>
+    </noscript>
+
+    <script>
+      (() => {
+        const PAGE_SIZE = 9;
+        const FALLBACK_IMAGES = [
+          "https://lh3.googleusercontent.com/aida-public/AB6AXuDeX9mYiIJC3tHEsoJb1MjY9xOFk1Nm2hXFGgWaKZiuXBrt6m_w-MqbGH-IUZexQNHH219YojGzzL4Xg0XbUuP8q44dQMLlZyzvPnanYsDuCPHmtfdc8n_TiBau1IEi_PKmLRa8o4tOPFRVHFvc7O3lWtSjwus7aRiVIRxXPo0V7uWZPadr-9iD_P3YZpcmW8NnxgDMP20k6eZX5kqphS5up-a0dNsTBle3CeK0JUTI9ZfkAezAj5uQZj6ND6q1Rg6O5bUGf3TAa5AI",
+          "https://lh3.googleusercontent.com/aida-public/AB6AXuAb2AjmEaU9W-enTuvaz-EQrknsgrUMVb32P4TNgoW_f-i5TA3d9Q9cHKGgjTlz4mQbwOutykQgisE8zPzQz28ZU1Z1IFMesexY96r2Zu1nFOpC5ZoUfvTE6-6O0jsGRoLu2E6b7GvaZ3o7i-_i5nMc9aGTnMn--xqyAmIMpvPgTqbq3jG-5pt8FZbYwJ6qvpioN4IjOrPS1DO2FBqjXKefw4Ac5PG370T0jcehwVkNYsqryti1WzcJ4eWw1BIV7ewu07bPyjLCVjNJ",
+          "https://lh3.googleusercontent.com/aida-public/AB6AXuAY0QrN7ykDqHCPb06uLuFPvNi9q1WQalUTvNvZF4uX3vOBiSU9hcn4NGde7BJ11EWaQ_X3mi-tHtyROqmc114J8L2YLK2IVaMC9DvkKTqGh2pEk7xDArHyhpnD3oHs5hvfyhpsRi9bADyCaTUB0GX_oYI249frDVO2SXOw-dMKAsj2ezHMqfr2bSvESBM2nIBv77hwv1q-OOGjgm0uq4KgLNpfTqYNTvjinVVOqSYfFJpgdUVYv80_D9ezlhqAcjMMb0RKb33fgkkI",
+          "https://lh3.googleusercontent.com/aida-public/AB6AXuAsEd_Pq-cWyV0yycPgQimH2ZZBqW1IhlB1kvTSbd7zzZY7q_9YPJNYdHHSpxVSzO-jG_iHXD6ul2Q9aeF3pagWYUHZgqQT_SdMGZNnd50Rm0dlVcxrRcMxRlOq7r4Jd3ZtOw8kDzxuB5QqA4BeQw5s1cPIC_hFmY4r6IesorwVbHE64BL7d6iv0IBKCPg20b-zP9FtOUjJdlbIdqbmLd6yO0_qD2mP0squSDyyKrPwsRbRuuUAG7oMPqjidW-zqJJFcvV_hiMzakhw",
+          "https://lh3.googleusercontent.com/aida-public/AB6AXuDdEWvl0FU9R3QPqlLzIlMZ_LAM0A4wPQY2HYanBOTmgLhdMZE8NCj7KIbXMS1CFPRnUz2yKkiivWZrNwSa-uUCYs78Uwcdk0dbiPxjKVeqSwz4lNVOwHHDfNmJrzG_YX9Ipbu3YkNp3cypBWqdvzaOEApEAfUI4Cn0eZgrw0hkjWvzTDaNStRo8vJcw6X5N1lkTLEpeQitvzwbMsdptZvJkYlGAYsvyHM2BZCQz4fWsTDsSlM3vijGfJJEBoLsjVcyNEKNGSCSojm3"
+        ];
+        const params = new URLSearchParams(window.location.search);
+        const state = {
+          page: parsePositiveInt(params.get("page"), 1),
+          query: (params.get("q") || "").trim(),
+          category: (params.get("category") || "").trim(),
+          sort: (params.get("sort") || "latest").trim()
+        };
+
+        const productGrid = document.getElementById("product-grid");
+        const categoryFilters = document.getElementById("category-filters");
+        const searchInput = document.getElementById("product-search");
+        const sortSelect = document.getElementById("sort-select");
+        const feedStatus = document.getElementById("feed-status");
+        const feedSummary = document.getElementById("feed-summary");
+        const filterSummary = document.getElementById("active-filter-summary");
+        const pagination = document.getElementById("pagination");
+        const totalNode = document.getElementById("catalog-total");
+        const categoryCountNode = document.getElementById("catalog-categories");
+        let searchTimer = 0;
+
+        searchInput.value = state.query;
+        sortSelect.value = state.sort;
+
+        function parsePositiveInt(value, fallbackValue) {
+          const parsed = Number.parseInt(value || "", 10);
+          return Number.isFinite(parsed) && parsed > 0 ? parsed : fallbackValue;
+        }
+
+        function getApiBase() {
+          return window.location.protocol === "file:"
+            ? "http://127.0.0.1:8787"
+            : (window.WOODZPACKER_CONFIG?.workerBaseUrl || window.location.origin);
+        }
+
+        function escapeHtml(value) {
+          return String(value || "").replace(/[&<>\"']/g, (character) => {
+            const entities = {
+              "&": "&amp;",
+              "<": "&lt;",
+              ">": "&gt;",
+              "\"": "&quot;",
+              "'": "&#39;"
+            };
+            return entities[character] || character;
+          });
+        }
+
+        function formatCurrency(value) {
+          if (typeof value !== "number") {
+            return "Price on request";
+          }
+
+          return new Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "USD",
+            maximumFractionDigits: value % 1 === 0 ? 0 : 2
+          }).format(value);
+        }
+
+        function formatPrice(product) {
+          const currentPrice = typeof product.discountPrice === "number"
+            ? product.discountPrice
+            : product.sellingPrice;
+          const originalPrice = typeof product.discountPrice === "number" &&
+            typeof product.sellingPrice === "number" &&
+            product.discountPrice !== product.sellingPrice
+            ? product.sellingPrice
+            : null;
+
+          return {
+            current: formatCurrency(currentPrice),
+            original: originalPrice ? formatCurrency(originalPrice) : ""
+          };
+        }
+
+        function getProductImage(product, index) {
+          return product.thumbnail || FALLBACK_IMAGES[index % FALLBACK_IMAGES.length];
+        }
+
+        function getStatusLabel(product) {
+          if (product.stock > 0) {
+            return product.status || "Available";
+          }
+          return product.status || "Out of stock";
+        }
+
+        function buildProductUrl(product) {
+          return `/product_detail.html?id=${encodeURIComponent(product.slug || product.id)}`;
+        }
+
+        function buildPageHref(pageNumber) {
+          const nextParams = new URLSearchParams();
+          if (pageNumber > 1) nextParams.set("page", String(pageNumber));
+          if (state.query) nextParams.set("q", state.query);
+          if (state.category) nextParams.set("category", state.category);
+          if (state.sort && state.sort !== "latest") nextParams.set("sort", state.sort);
+          const queryString = nextParams.toString();
+          return queryString ? `?${queryString}` : window.location.pathname;
+        }
+
+        function syncUrl(mode) {
+          if (mode === "none") return;
+          const method = mode === "replace" ? "replaceState" : "pushState";
+          window.history[method](
+            {
+              page: state.page,
+              query: state.query,
+              category: state.category,
+              sort: state.sort
+            },
+            "",
+            buildPageHref(state.page)
+          );
+        }
+
+        function updateFilterSummary() {
+          const parts = [];
+          if (state.query) parts.push(`query: ${state.query}`);
+          if (state.category) parts.push(`category: ${state.category}`);
+          if (state.sort && state.sort !== "latest") parts.push(`sort: ${state.sort}`);
+          filterSummary.textContent = parts.length ? parts.join(" / ") : "No active filters";
+        }
+
+        function setLoading() {
+          feedStatus.textContent = "Loading collection...";
+          feedSummary.textContent = state.query || state.category ? "Searching v1/product" : "Powered by v1/product";
+          updateFilterSummary();
+          productGrid.innerHTML = `
+            <article class="md:col-span-2 2xl:col-span-3 border border-outline-variant/10 bg-surface-container-low px-8 py-20 text-center">
+              <p class="font-headline text-3xl text-on-surface/80">Loading products...</p>
+            </article>
+          `;
+        }
+
+        function renderCategoryFilters(categories) {
+          const values = [""].concat(categories || []);
+          categoryFilters.innerHTML = values.map((category) => {
+            const isActive = category === state.category;
+            const classes = isActive
+              ? "border-primary/30 bg-primary/10 text-primary"
+              : "border-outline-variant/20 text-on-surface-variant hover:border-primary/30 hover:text-primary";
+
+            return `
+              <button
+                class="rounded-full border px-4 py-2 font-label text-[10px] uppercase tracking-[0.24em] transition-colors ${classes}"
+                data-category="${escapeHtml(category)}"
+                type="button"
+              >
+                ${escapeHtml(category || "All")}
+              </button>
+            `;
+          }).join("");
+        }
+
+        function renderFeaturedCard(product) {
+          const price = formatPrice(product);
+          return `
+            <article class="group overflow-hidden border border-outline-variant/15 bg-surface-container-low md:col-span-2 2xl:col-span-2">
+              <a class="grid h-full md:grid-cols-[1.2fr_0.8fr]" href="${escapeHtml(buildProductUrl(product))}">
+                <div class="relative min-h-[22rem] overflow-hidden">
+                  <img
+                    alt="${escapeHtml(product.productName)}"
+                    class="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                    src="${escapeHtml(getProductImage(product, 0))}"
+                  />
+                  <div class="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent"></div>
+                  <div class="absolute left-6 top-6">
+                    <span class="border border-primary/30 bg-background/30 px-3 py-2 font-label text-[10px] uppercase tracking-[0.26em] text-primary backdrop-blur-sm">
+                      Featured Piece
+                    </span>
+                  </div>
+                </div>
+                <div class="flex flex-col justify-between p-8 md:p-10">
+                  <div>
+                    <div class="flex items-center justify-between gap-4">
+                      <p class="font-label text-[10px] uppercase tracking-[0.28em] text-primary/70">${escapeHtml(product.productCategory || "Collection")}</p>
+                      <span class="rounded-full border border-outline-variant/20 px-3 py-1 font-label text-[10px] uppercase tracking-[0.2em] text-on-surface-variant/80">${escapeHtml(getStatusLabel(product))}</span>
+                    </div>
+                    <h2 class="mt-5 font-headline text-3xl leading-tight">${escapeHtml(product.productName)}</h2>
+                    <p class="mt-5 text-base leading-relaxed text-on-surface-variant">${escapeHtml(product.description)}</p>
+                    <div class="mt-8 grid grid-cols-2 gap-3 text-sm">
+                      <div class="border border-outline-variant/10 bg-surface/50 p-4">
+                        <p class="font-label text-[10px] uppercase tracking-[0.22em] text-primary/70">Supplier</p>
+                        <p class="mt-2 font-headline text-lg">${escapeHtml(product.supplier || "Woodzpacker")}</p>
+                      </div>
+                      <div class="border border-outline-variant/10 bg-surface/50 p-4">
+                        <p class="font-label text-[10px] uppercase tracking-[0.22em] text-primary/70">Stock</p>
+                        <p class="mt-2 font-headline text-lg">${escapeHtml(String(product.stock || 0))}</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mt-8 flex items-end justify-between gap-4 border-t border-outline-variant/10 pt-6">
+                    <div>
+                      <p class="font-headline text-3xl text-primary">${escapeHtml(price.current)}</p>
+                      ${price.original ? `<p class="mt-2 text-sm text-on-surface-variant/50 line-through">${escapeHtml(price.original)}</p>` : ""}
+                    </div>
+                    <span class="inline-flex items-center gap-3 font-label text-[10px] uppercase tracking-[0.26em] text-primary">
+                      View Product
+                      <span class="material-symbols-outlined text-base">north_east</span>
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </article>
+          `;
+        }
+
+        function renderStandardCard(product, index) {
+          const price = formatPrice(product);
+          const scent = Array.isArray(product.scentProfile) && product.scentProfile.length
+            ? product.scentProfile.slice(0, 2).join(" · ")
+            : (product.material || product.origin || "Curated object");
+
+          return `
+            <article class="group border border-outline-variant/12 bg-surface-container-low/85 transition-transform duration-500 hover:-translate-y-1">
+              <a class="block h-full" href="${escapeHtml(buildProductUrl(product))}">
+                <div class="relative aspect-[4/5] overflow-hidden">
+                  <img
+                    alt="${escapeHtml(product.productName)}"
+                    class="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                    src="${escapeHtml(getProductImage(product, index))}"
+                  />
+                  <div class="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent"></div>
+                  <div class="absolute left-5 right-5 top-5 flex items-center justify-between gap-3">
+                    <span class="border border-outline-variant/20 bg-background/20 px-3 py-1 font-label text-[10px] uppercase tracking-[0.22em] text-on-surface backdrop-blur-sm">
+                      ${escapeHtml(product.productCategory || "Collection")}
+                    </span>
+                    <span class="font-label text-[10px] uppercase tracking-[0.22em] text-primary">${escapeHtml(getStatusLabel(product))}</span>
+                  </div>
+                </div>
+                <div class="space-y-4 p-6">
+                  <div class="flex items-start justify-between gap-4">
+                    <h3 class="font-headline text-2xl leading-tight">${escapeHtml(product.productName)}</h3>
+                    <div class="text-right">
+                      <p class="font-headline text-xl text-primary">${escapeHtml(price.current)}</p>
+                      ${price.original ? `<p class="text-xs text-on-surface-variant/50 line-through">${escapeHtml(price.original)}</p>` : ""}
+                    </div>
+                  </div>
+                  <p class="text-sm leading-relaxed text-on-surface-variant">${escapeHtml(product.description)}</p>
+                  <div class="flex items-center justify-between gap-4 border-t border-outline-variant/10 pt-4">
+                    <p class="font-label text-[10px] uppercase tracking-[0.22em] text-on-surface-variant/60">${escapeHtml(scent)}</p>
+                    <span class="material-symbols-outlined text-primary">arrow_outward</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+          `;
+        }
+
+        function renderGrid(items) {
+          if (!items.length) {
+            productGrid.innerHTML = `
+              <article class="md:col-span-2 2xl:col-span-3 border border-outline-variant/10 bg-surface-container-low px-8 py-20 text-center">
+                <p class="font-headline text-3xl text-on-surface/80 mb-4">No products matched this view.</p>
+                <p class="text-lg text-on-surface-variant">Try another keyword, category, or sort option.</p>
+              </article>
+            `;
+            return;
+          }
+
+          const [featured, ...others] = items;
+          productGrid.innerHTML = [
+            renderFeaturedCard(featured),
+            ...others.map((product, index) => renderStandardCard(product, index + 1))
+          ].join("");
+        }
+
+        function getPaginationPages(currentPage, totalPages) {
+          const pages = [];
+          const start = Math.max(1, currentPage - 2);
+          const end = Math.min(totalPages, currentPage + 2);
+          for (let page = start; page <= end; page += 1) pages.push(page);
+          return pages;
+        }
+
+        function renderPagination(data) {
+          if (!data.totalPages || data.totalPages === 1) {
+            pagination.innerHTML = "";
+            return;
+          }
+
+          const pages = getPaginationPages(data.pageNumber, data.totalPages).map((page) => {
+            const active = page === data.pageNumber;
+            const classes = active
+              ? "border-primary text-primary"
+              : "border-outline-variant/20 text-on-surface-variant hover:border-primary/30 hover:text-primary";
+            return `
+              <a
+                class="inline-flex h-10 w-10 items-center justify-center border font-label text-xs transition-colors ${classes}"
+                data-page="${page}"
+                href="${escapeHtml(buildPageHref(page))}"
+              >
+                ${String(page).padStart(2, "0")}
+              </a>
+            `;
+          }).join("");
+
+          pagination.innerHTML = `
+            <div class="flex items-center gap-3">
+              <a
+                class="inline-flex h-10 items-center justify-center border px-4 font-label text-xs uppercase tracking-[0.2em] transition-colors ${data.hasPrevious ? "border-outline-variant/20 text-on-surface-variant hover:border-primary/30 hover:text-primary" : "pointer-events-none border-outline-variant/10 text-on-surface-variant/30"}"
+                data-page="${Math.max(1, data.pageNumber - 1)}"
+                href="${escapeHtml(buildPageHref(Math.max(1, data.pageNumber - 1)))}"
+              >
+                Prev
+              </a>
+              ${pages}
+              <a
+                class="inline-flex h-10 items-center justify-center border px-4 font-label text-xs uppercase tracking-[0.2em] transition-colors ${data.hasMore ? "border-outline-variant/20 text-on-surface-variant hover:border-primary/30 hover:text-primary" : "pointer-events-none border-outline-variant/10 text-on-surface-variant/30"}"
+                data-page="${Math.min(data.totalPages, data.pageNumber + 1)}"
+                href="${escapeHtml(buildPageHref(Math.min(data.totalPages, data.pageNumber + 1)))}"
+              >
+                Next
+              </a>
+            </div>
+          `;
+        }
+
+        async function loadProducts(historyMode) {
+          setLoading();
+
+          const requestUrl = new URL(`${getApiBase()}/v1/product`);
+          requestUrl.searchParams.set("pageNumber", String(state.page));
+          requestUrl.searchParams.set("pageSize", String(PAGE_SIZE));
+          requestUrl.searchParams.set("sort", state.sort || "latest");
+          if (state.query) requestUrl.searchParams.set("q", state.query);
+          if (state.category) requestUrl.searchParams.set("category", state.category);
+
+          try {
+            const response = await fetch(requestUrl.toString(), {
+              headers: { Accept: "application/json" }
+            });
+            if (!response.ok) {
+              throw new Error(`Product request failed with ${response.status}`);
+            }
+
+            const data = await response.json();
+            totalNode.textContent = String(data.totalItems || 0).padStart(2, "0");
+            categoryCountNode.textContent = String((data.availableCategories || []).length).padStart(2, "0");
+            renderCategoryFilters(data.availableCategories || []);
+            renderGrid(data.items || []);
+            renderPagination(data);
+            feedStatus.textContent = data.totalItems
+              ? `${data.totalItems} product${data.totalItems === 1 ? "" : "s"} in the collection`
+              : "No products found";
+            feedSummary.textContent = state.query || state.category
+              ? `Page ${data.pageNumber} of ${Math.max(data.totalPages, 1)}`
+              : "Powered by v1/product";
+            updateFilterSummary();
+            syncUrl(historyMode);
+          } catch (error) {
+            productGrid.innerHTML = `
+              <article class="md:col-span-2 2xl:col-span-3 border border-outline-variant/10 bg-surface-container-low px-8 py-20 text-center">
+                <p class="font-headline text-3xl text-on-surface/80 mb-4">Unable to load the collection.</p>
+                <p class="text-lg text-on-surface-variant">${escapeHtml(error.message || "Unknown error")}</p>
+              </article>
+            `;
+            feedStatus.textContent = "Collection unavailable";
+            feedSummary.textContent = "Worker request failed";
+            pagination.innerHTML = "";
+          }
+        }
+
+        categoryFilters.addEventListener("click", (event) => {
+          const button = event.target.closest("[data-category]");
+          if (!button) return;
+          state.category = button.getAttribute("data-category") || "";
+          state.page = 1;
+          loadProducts("push");
+        });
+
+        document.getElementById("clear-filters").addEventListener("click", () => {
+          state.query = "";
+          state.category = "";
+          state.sort = "latest";
+          state.page = 1;
+          searchInput.value = "";
+          sortSelect.value = "latest";
+          loadProducts("replace");
+        });
+
+        searchInput.addEventListener("input", (event) => {
+          window.clearTimeout(searchTimer);
+          searchTimer = window.setTimeout(() => {
+            state.query = event.target.value.trim();
+            state.page = 1;
+            loadProducts("replace");
+          }, 250);
+        });
+
+        sortSelect.addEventListener("change", (event) => {
+          state.sort = event.target.value;
+          state.page = 1;
+          loadProducts("push");
+        });
+
+        pagination.addEventListener("click", (event) => {
+          const link = event.target.closest("[data-page]");
+          if (!link) return;
+          event.preventDefault();
+          const page = parsePositiveInt(link.getAttribute("data-page"), state.page);
+          if (page === state.page) return;
+          state.page = page;
+          loadProducts("push");
+        });
+
+        window.addEventListener("popstate", () => {
+          const nextParams = new URLSearchParams(window.location.search);
+          state.page = parsePositiveInt(nextParams.get("page"), 1);
+          state.query = (nextParams.get("q") || "").trim();
+          state.category = (nextParams.get("category") || "").trim();
+          state.sort = (nextParams.get("sort") || "latest").trim();
+          searchInput.value = state.query;
+          sortSelect.value = state.sort;
+          loadProducts("none");
+        });
+
+        loadProducts("replace");
+      })();
+    </script>
   </body>
 </html>

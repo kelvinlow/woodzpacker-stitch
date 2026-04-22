@@ -1,6 +1,6 @@
 import { Env } from '../types';
 import { queryArticles } from './feed';
-import { queryProducts }  from './product';
+import { queryProducts } from './product';
 
 export async function handleSitemap(env: Env) {
   const BASE_URL = "https://woodzpacker.com";
@@ -28,7 +28,7 @@ export async function handleSitemap(env: Env) {
   // 2. Fetch dynamic articles & products
   const [articles, products] = await Promise.all([
     queryArticles(env, { pageSize: 1000 }),
-    queryProducts(env)
+    queryProducts(env, { pageSize: 1000 })
   ]);
 
   const articleUrls = articles.items.map(article => `
@@ -44,15 +44,16 @@ export async function handleSitemap(env: Env) {
     </url>
   `).join("");
 
-  const productUrls = products.map(product => `
+  const productUrls = products.items.map(product => `
     <url>
-      <loc>${BASE_URL}/product/${product.id}</loc>
+      <loc>${BASE_URL}/product/${product.slug || product.id}</loc>
       <changefreq>weekly</changefreq>
       <priority>0.7</priority>
+      ${product.thumbnail ? `
       <image:image>
         <image:loc>${product.thumbnail}</image:loc>
         <image:title>${product.productName}</image:title>
-      </image:image>
+      </image:image>` : ''}
       <lastmod>${product.createdTime}</lastmod>
     </url>
   `).join("");  

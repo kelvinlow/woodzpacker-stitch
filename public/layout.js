@@ -52,7 +52,7 @@ const setupHead = () => {
   });
 
   // Inject Shared style.css
-  document.write('<link rel="stylesheet" href="style.css">');
+  document.write('<link rel="stylesheet" href="/style.css">');
 
   // Setup Tailwind Config
   window.tailwindConfig = {
@@ -139,7 +139,7 @@ const injectLayout = async () => {
   // Note: requires HTTP(S) — works on Cloudflare, not via file://
   let NAV_ITEMS = [];
   try {
-    const res = await fetch('./nav.json');
+    const res = await fetch('/nav.json');
     NAV_ITEMS = await res.json();
   } catch (e) {
     console.warn('[layout] Failed to load nav.json (file:// not supported):', e);

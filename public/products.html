@@ -248,7 +248,7 @@
         }
 
         function buildProductUrl(product) {
-          return `/product_detail.html?id=${encodeURIComponent(product.slug || product.id)}`;
+          return `/product/${encodeURIComponent(product.slug || product.id)}`;
         }
 
         function buildPageHref(pageNumber) {

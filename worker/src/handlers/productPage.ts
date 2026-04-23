@@ -210,8 +210,8 @@ export function renderProductPage(
               </div>
 
               <div class="grid gap-3 sm:grid-cols-2">
-                <a href="/product_detail.html?id=${encodeURIComponent(product.slug || product.id)}" class="w-full border border-primary bg-primary px-6 py-4 text-center font-label text-xs uppercase tracking-[0.28em] text-on-primary transition-colors hover:bg-primary-fixed-dim">
-                  Client Detail View
+                <a href="/product/${encodeURIComponent(product.slug || product.id)}" class="w-full border border-primary bg-primary px-6 py-4 text-center font-label text-xs uppercase tracking-[0.28em] text-on-primary transition-colors hover:bg-primary-fixed-dim">
+                  Canonical Product URL
                 </a>
                 <a href="/products.html" class="w-full border border-outline-variant/20 px-6 py-4 text-center font-label text-xs uppercase tracking-[0.28em] text-on-surface transition-colors hover:border-primary/30 hover:text-primary">
                   Browse Collection

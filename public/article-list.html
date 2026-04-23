@@ -139,7 +139,7 @@
         }
 
         function buildArticleUrl(article) {
-          return `/article_detail.html?id=${encodeURIComponent(article.id)}`;
+          return `/article/${encodeURIComponent(article.slug || article.id)}`;
         }
 
         function buildPageHref(pageNumber) {

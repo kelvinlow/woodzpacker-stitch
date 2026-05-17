@@ -1,7 +1,7 @@
 import { Env, NotionBlock, NotionPage, NotionResponse } from '../types';
 import { errorResponse, jsonResponse } from '../utils/response';
 import { getEnvValue } from '../utils/env';
-import { ensureStableImageUrl, findFirstImageBlock } from '../utils/media';
+import { ensureStableImageUrl, ensureStableImageUrls, findFirstImageBlock, ImageReference } from '../utils/media';
 import { notionFetch } from '../utils/notion';
 import { fetchFirstImageReference, fetchPageBlocks } from '../utils/notionBlocks';
 
@@ -341,6 +341,44 @@ async function fetchProductBlocks(
   return simplifyProductBlocks(hydratedBlocks as NotionBlock[]);
 }
 
+async function normalizeProductBlocks(
+  blocks: SimplifiedProductBlock[],
+  env: Env,
+  publicBaseUrl: string,
+  pageId: string
+): Promise<SimplifiedProductBlock[]> {
+  return Promise.all(
+    blocks.map(async (block) => {
+      const normalizedChildren = Array.isArray(block.children)
+        ? await normalizeProductBlocks(block.children, env, publicBaseUrl, pageId)
+        : undefined;
+
+      if (block.type !== 'image' || !block.url) {
+        return normalizedChildren ? { ...block, children: normalizedChildren } : block;
+      }
+
+      const normalizedUrl =
+        (await ensureStableImageUrl(env, publicBaseUrl, 'product', pageId, {
+          id: block.id,
+          url: block.url
+        })) || block.url;
+
+      return {
+        ...block,
+        url: normalizedUrl,
+        ...(normalizedChildren ? { children: normalizedChildren } : {})
+      };
+    })
+  );
+}
+
+function buildGalleryImageReferences(product: ProductListItem): ImageReference[] {
+  return product.gallery.map((url, index) => ({
+    id: `gallery-${index}`,
+    url
+  }));
+}
+
 function matchesProduct(
   product: ProductListItem,
   normalizedQuery: string,
@@ -468,7 +506,13 @@ export async function fetchProductDetailData(
   }
 
   const blocks = await fetchProductBlocks(product.id, env);
-  const firstImage = findFirstImageBlock(blocks);
+  const normalizedBlocks = await normalizeProductBlocks(
+    blocks,
+    env,
+    publicBaseUrl,
+    product.id
+  );
+  const firstImage = findFirstImageBlock(normalizedBlocks);
   const thumbnail =
     (await ensureStableImageUrl(
       env,
@@ -477,9 +521,14 @@ export async function fetchProductDetailData(
       product.id,
       firstImage || (product.thumbnail ? { id: 'page-thumbnail', url: product.thumbnail } : null)
     )) || product.thumbnail;
-  const gallery = Array.from(
-    new Set([thumbnail, ...product.gallery].filter(Boolean))
-  ) as string[];
+  const normalizedGallery = await ensureStableImageUrls(
+    env,
+    publicBaseUrl,
+    'product',
+    product.id,
+    buildGalleryImageReferences(product)
+  );
+  const gallery = Array.from(new Set([thumbnail, ...normalizedGallery].filter(Boolean))) as string[];
 
   return {
     ...product,
@@ -492,7 +541,7 @@ export async function fetchProductDetailData(
     description:
       product.description ||
       getFallbackDescription(product.productName, product.productCategory),
-    blocks
+    blocks: normalizedBlocks
   };
 }
 

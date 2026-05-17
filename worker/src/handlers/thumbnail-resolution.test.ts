@@ -247,16 +247,44 @@ describe('thumbnail resolution from notion blocks', () => {
 
       if (path === '/v1/blocks/product-1/children') {
         return jsonResponse(
-          blockChildrenWithImage('https://example.com/product-detail-block.jpg')
+          blockChildrenWithImage(
+            'https://prod-files-secure.s3.us-west-2.amazonaws.com/workspace/file/product-detail.png?X-Amz-Expires=3600'
+          )
         );
       }
 
       throw new Error(`Unexpected path: ${path}`);
     });
 
-    const product = await fetchProductDetailData('prayer-beads', mockEnv, 'https://woodzpacker.test');
+    mockBucket.head.mockResolvedValue(null);
+    mockBucket.put.mockResolvedValue(undefined);
+    vi.stubGlobal(
+      'fetch',
+      vi.fn().mockResolvedValue(
+        new Response('image-bytes', {
+          headers: { 'Content-Type': 'image/png' }
+        })
+      )
+    );
 
-    expect(product.thumbnail).toBe('https://example.com/product-detail-block.jpg');
-    expect(product.gallery[0]).toBe('https://example.com/product-detail-block.jpg');
+    const product = await fetchProductDetailData(
+      'prayer-beads',
+      {
+        ...mockEnv,
+        MEDIA_BUCKET: mockBucket
+      },
+      'https://woodzpacker.test'
+    );
+
+    expect(product.thumbnail).toMatch(
+      /^https:\/\/woodzpacker\.test\/media\/product\/product-1\/block-2-[a-f0-9]{8}\.png$/
+    );
+    expect(product.gallery[0]).toMatch(
+      /^https:\/\/woodzpacker\.test\/media\/product\/product-1\//
+    );
+    expect(product.blocks[1].url).toMatch(
+      /^https:\/\/woodzpacker\.test\/media\/product\/product-1\/block-2-[a-f0-9]{8}\.png$/
+    );
+    vi.unstubAllGlobals();
   });
 });

@@ -178,6 +178,22 @@ export async function ensureStableImageUrl(
   return buildMediaUrl(publicBaseUrl, objectKey);
 }
 
+export async function ensureStableImageUrls(
+  env: Env,
+  fallbackBaseUrl: string,
+  namespace: string,
+  pageId: string,
+  images: ImageReference[]
+): Promise<string[]> {
+  const results = await Promise.all(
+    images.map((image) =>
+      ensureStableImageUrl(env, fallbackBaseUrl, namespace, pageId, image)
+    )
+  );
+
+  return Array.from(new Set(results.filter(Boolean))) as string[];
+}
+
 export async function handleMediaRequest(pathname: string, env: Env): Promise<Response> {
   const key = mediaKeyFromPath(pathname);
   if (!key || !env.MEDIA_BUCKET) {

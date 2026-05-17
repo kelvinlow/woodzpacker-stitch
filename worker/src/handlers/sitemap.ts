@@ -2,8 +2,8 @@ import { Env } from '../types';
 import { queryArticles } from './feed';
 import { queryProducts } from './product';
 
-export async function handleSitemap(env: Env) {
-  const BASE_URL = "https://woodzpacker.com";
+export async function handleSitemap(env: Env, baseUrl: string) {
+  const normalizedBaseUrl = baseUrl.replace(/\/+$/g, '');
 
   // 1. Static pages
   const staticPaths = [
@@ -19,7 +19,7 @@ export async function handleSitemap(env: Env) {
 
   const staticUrls = staticPaths.map(path => `
     <url>
-      <loc>${BASE_URL}${path}</loc>
+      <loc>${normalizedBaseUrl}${path}</loc>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
     </url>
@@ -27,13 +27,13 @@ export async function handleSitemap(env: Env) {
 
   // 2. Fetch dynamic articles & products
   const [articles, products] = await Promise.all([
-    queryArticles(env, { pageSize: 1000 }),
-    queryProducts(env, { pageSize: 1000 })
+    queryArticles(env, { pageSize: 1000 }, normalizedBaseUrl),
+    queryProducts(env, { pageSize: 1000 }, normalizedBaseUrl)
   ]);
 
   const articleUrls = articles.items.map(article => `
     <url>
-      <loc>${BASE_URL}/article/${article.slug}</loc>
+      <loc>${normalizedBaseUrl}/article/${article.slug}</loc>
       <changefreq>monthly</changefreq>
       <priority>0.6</priority>
       ${article.thumbnail ? `
@@ -47,7 +47,7 @@ export async function handleSitemap(env: Env) {
 
   const productUrls = products.items.map(product => `
     <url>
-      <loc>${BASE_URL}/product/${product.slug || product.id}</loc>
+      <loc>${normalizedBaseUrl}/product/${product.slug || product.id}</loc>
       <changefreq>weekly</changefreq>
       <priority>0.7</priority>
       ${product.thumbnail ? `

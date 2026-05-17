@@ -1,7 +1,9 @@
 import { Env, NotionBlock, NotionPage, NotionResponse } from '../types';
 import { errorResponse, jsonResponse } from '../utils/response';
 import { getEnvValue } from '../utils/env';
+import { ensureStableImageUrl, findFirstImageBlock } from '../utils/media';
 import { notionFetch } from '../utils/notion';
+import { fetchFirstImageReference, fetchPageBlocks } from '../utils/notionBlocks';
 
 type ProductQueryResult = NotionResponse & {
   has_more?: boolean;
@@ -291,42 +293,6 @@ async function fetchPublishedProducts(env: Env): Promise<ProductListItem[]> {
   return allResults.map(simplifyProduct);
 }
 
-async function fetchBlockChildren(
-  blockId: string,
-  env: Env
-): Promise<NotionBlock[]> {
-  const response = await notionFetch(`/v1/blocks/${blockId}/children`, env);
-
-  if (!response.ok) {
-    const errorData = await response.text();
-    throw new Error(
-      `Failed to fetch child blocks for ${blockId} (${response.status}): ${errorData}`
-    );
-  }
-
-  const data = (await response.json()) as { results: NotionBlock[] };
-  return data.results;
-}
-
-async function hydrateBlocks(
-  blocks: NotionBlock[],
-  env: Env
-): Promise<NotionBlock[]> {
-  return Promise.all(
-    blocks.map(async (block) => {
-      if (!block.has_children) {
-        return block;
-      }
-
-      const children = await fetchBlockChildren(block.id, env);
-      return {
-        ...block,
-        children: await hydrateBlocks(children, env)
-      };
-    })
-  );
-}
-
 function simplifyProductBlocks(blocks: any[]): SimplifiedProductBlock[] {
   return blocks.map((block) => {
     const type = block.type;
@@ -371,18 +337,8 @@ async function fetchProductBlocks(
   productId: string,
   env: Env
 ): Promise<SimplifiedProductBlock[]> {
-  const response = await notionFetch(`/v1/blocks/${productId}/children`, env);
-
-  if (!response.ok) {
-    const errorData = await response.text();
-    throw new Error(
-      `Failed to fetch product content (${response.status}): ${errorData}`
-    );
-  }
-
-  const data = (await response.json()) as { results: NotionBlock[] };
-  const hydratedBlocks = await hydrateBlocks(data.results, env);
-  return simplifyProductBlocks(hydratedBlocks);
+  const hydratedBlocks = await fetchPageBlocks(productId, env, 'product');
+  return simplifyProductBlocks(hydratedBlocks as NotionBlock[]);
 }
 
 function matchesProduct(
@@ -445,7 +401,8 @@ function sortProducts(products: ProductListItem[], sort: string): ProductListIte
 
 export async function queryProducts(
   env: Env,
-  options: ProductQueryOptions = {}
+  options: ProductQueryOptions = {},
+  publicBaseUrl = ''
 ): Promise<ProductCollectionResponse> {
   const safePageSize = Math.max(1, Math.min(100, Math.floor(options.pageSize || 9)));
   const requestedPageNumber = Math.max(1, Math.floor(options.pageNumber || 1));
@@ -468,7 +425,11 @@ export async function queryProducts(
   const totalPages = totalItems === 0 ? 0 : Math.ceil(totalItems / safePageSize);
   const pageNumber = totalPages === 0 ? 1 : Math.min(requestedPageNumber, totalPages);
   const startIndex = (pageNumber - 1) * safePageSize;
-  const items = filteredProducts.slice(startIndex, startIndex + safePageSize);
+  const items = await Promise.all(
+    filteredProducts
+      .slice(startIndex, startIndex + safePageSize)
+      .map((product) => populateProductThumbnail(product, env, publicBaseUrl))
+  );
 
   return {
     pageNumber,
@@ -484,7 +445,8 @@ export async function queryProducts(
 
 export async function fetchProductDetailData(
   identifier: string,
-  env: Env
+  env: Env,
+  publicBaseUrl: string
 ): Promise<ProductDetailData> {
   const products = await fetchPublishedProducts(env);
   const normalizedIdentifier = identifier.trim().toLowerCase();
@@ -506,9 +468,23 @@ export async function fetchProductDetailData(
   }
 
   const blocks = await fetchProductBlocks(product.id, env);
+  const firstImage = findFirstImageBlock(blocks);
+  const thumbnail =
+    (await ensureStableImageUrl(
+      env,
+      publicBaseUrl,
+      'product',
+      product.id,
+      firstImage || (product.thumbnail ? { id: 'page-thumbnail', url: product.thumbnail } : null)
+    )) || product.thumbnail;
+  const gallery = Array.from(
+    new Set([thumbnail, ...product.gallery].filter(Boolean))
+  ) as string[];
 
   return {
     ...product,
+    thumbnail,
+    gallery,
     story: product.story || getFallbackStory(product),
     materialOrigin: product.materialOrigin || getFallbackMaterialOrigin(product),
     careGuide: product.careGuide || getFallbackCareGuide(product),
@@ -522,6 +498,7 @@ export async function fetchProductDetailData(
 
 export async function handleProductCollection(
   env: Env,
+  publicBaseUrl: string,
   pageNumber = 1,
   pageSize = 9,
   category?: string,
@@ -535,7 +512,7 @@ export async function handleProductCollection(
       category,
       query,
       sort
-    });
+    }, publicBaseUrl);
 
     return jsonResponse(products);
   } catch (error: any) {
@@ -545,10 +522,11 @@ export async function handleProductCollection(
 
 export async function handleProductDetail(
   identifier: string,
-  env: Env
+  env: Env,
+  publicBaseUrl: string
 ): Promise<Response> {
   try {
-    const product = await fetchProductDetailData(identifier, env);
+    const product = await fetchProductDetailData(identifier, env, publicBaseUrl);
     return jsonResponse(product);
   } catch (error: any) {
     return errorResponse(error.message, null, 404);
@@ -564,4 +542,29 @@ export function getProductPriceLabel(product: ProductListItem): string {
   }
 
   return selling || discount || 'Price on request';
+}
+
+export async function populateProductThumbnail(
+  product: ProductListItem,
+  env: Env,
+  publicBaseUrl: string
+): Promise<ProductListItem> {
+  const firstImage = await fetchFirstImageReference(product.id, env, 'product');
+  const thumbnail =
+    (await ensureStableImageUrl(
+      env,
+      publicBaseUrl,
+      'product',
+      product.id,
+      firstImage || (product.thumbnail ? { id: 'page-thumbnail', url: product.thumbnail } : null)
+    )) || product.thumbnail;
+  const gallery = Array.from(
+    new Set([thumbnail, ...product.gallery].filter(Boolean))
+  ) as string[];
+
+  return {
+    ...product,
+    thumbnail,
+    gallery
+  };
 }

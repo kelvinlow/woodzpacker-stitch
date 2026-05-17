@@ -1,7 +1,9 @@
 import { Env, NotionPage, NotionResponse } from '../types';
 import { errorResponse, jsonResponse } from '../utils/response';
 import { getEnvValue } from '../utils/env';
+import { ensureStableImageUrl } from '../utils/media';
 import { notionFetch } from '../utils/notion';
+import { fetchFirstImageReference } from '../utils/notionBlocks';
 
 type FeedQueryResult = NotionResponse & {
   has_more?: boolean;
@@ -36,6 +38,26 @@ type ArticleCollectionResponse = {
   availableCategories: string[];
   items: ArticleListItem[];
 };
+
+async function populateArticleThumbnail(
+  article: ArticleListItem,
+  env: Env,
+  publicBaseUrl: string
+): Promise<ArticleListItem> {
+  const firstImage = await fetchFirstImageReference(article.id, env, 'article');
+  const thumbnail =
+    (await ensureStableImageUrl(
+      env,
+      publicBaseUrl,
+      'article',
+      article.id,
+      firstImage || (article.thumbnail ? { id: 'page-thumbnail', url: article.thumbnail } : null)
+    )) || article.thumbnail;
+  return {
+    ...article,
+    thumbnail
+  };
+}
 
 function getPlainText(richText?: any[]): string {
   return richText?.map((item: any) => item.plain_text || '').join('') || '';
@@ -142,7 +164,8 @@ async function fetchPublishedArticles(env: Env): Promise<ArticleListItem[]> {
 
 export async function queryArticles(
   env: Env,
-  options: ArticleQueryOptions = {}
+  options: ArticleQueryOptions = {},
+  publicBaseUrl = ''
 ): Promise<ArticleCollectionResponse> {
   const safePageSize = Math.max(1, Math.min(100, Math.floor(options.pageSize || 8)));
   const requestedPageNumber = Math.max(1, Math.floor(options.pageNumber || 1));
@@ -162,7 +185,11 @@ export async function queryArticles(
   const totalPages = totalItems === 0 ? 0 : Math.ceil(totalItems / safePageSize);
   const pageNumber = totalPages === 0 ? 1 : Math.min(requestedPageNumber, totalPages);
   const startIndex = (pageNumber - 1) * safePageSize;
-  const items = filteredArticles.slice(startIndex, startIndex + safePageSize);
+  const items = await Promise.all(
+    filteredArticles
+      .slice(startIndex, startIndex + safePageSize)
+      .map((article) => populateArticleThumbnail(article, env, publicBaseUrl))
+  );
 
   return {
     pageNumber,
@@ -178,13 +205,14 @@ export async function queryArticles(
 
 export async function handleFeed(
   env: Env,
+  publicBaseUrl: string,
   pageNumber = 1,
   pageSize = 5,
   category?: string,
   query?: string
 ): Promise<Response> {
   try {
-    const feed = await queryArticles(env, { pageNumber, pageSize, category, query });
+    const feed = await queryArticles(env, { pageNumber, pageSize, category, query }, publicBaseUrl);
     return jsonResponse(feed);
   } catch (error: any) {
     return errorResponse(error.message);

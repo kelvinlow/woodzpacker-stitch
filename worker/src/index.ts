@@ -19,6 +19,7 @@ import { renderProductPage } from './handlers/productPage';
 import { fetchProductDetailData } from './handlers/product';
 import { errorResponse } from './utils/response';
 import { getEnvValue } from './utils/env';
+import { handleMediaRequest } from './utils/media';
 import { Env } from './types';
 
 export default {
@@ -45,13 +46,18 @@ async function handleRequest(
   }
 
   const url = new URL(request.url);
+  const origin = url.origin;
   const siteName = 'Woodzpacker';
   const siteTagline = '沉香';
   const siteDescription ='专注于马来西亚野生沉香与佛教珍品的交流';
 
   // Static routes
   if (path === '/sitemap.xml') {
-    return handleSitemap(env);
+    return handleSitemap(env, origin);
+  }
+
+  if (path.startsWith('/media/')) {
+    return handleMediaRequest(path, env);
   }
 
   if (path === '/v1/feed') {
@@ -59,7 +65,7 @@ async function handleRequest(
     const pageSize = Number(url.searchParams.get('pageSize') || '8');
     const category = url.searchParams.get('category') || undefined;
     const query = url.searchParams.get('q') || undefined;
-    return handleFeed(env, pageNumber, pageSize, category, query);
+    return handleFeed(env, origin, pageNumber, pageSize, category, query);
   }
 
   if (path === '/v1/article') {
@@ -67,7 +73,7 @@ async function handleRequest(
     const pageSize = Number(url.searchParams.get('pageSize') || '8');
     const category = url.searchParams.get('category') || undefined;
     const query = url.searchParams.get('q') || undefined;
-    return handleArticleCollection(env, pageNumber, pageSize, category, query);
+    return handleArticleCollection(env, origin, pageNumber, pageSize, category, query);
   }
 
   if (path === '/v1/search') {
@@ -75,7 +81,7 @@ async function handleRequest(
     const category = url.searchParams.get('category') || '';
     const pageNumber = Number(url.searchParams.get('pageNumber') || '1');
     const pageSize = Number(url.searchParams.get('pageSize') || '8');
-    return handleSearch(env, query, category, pageNumber, pageSize);
+    return handleSearch(env, origin, query, category, pageNumber, pageSize);
   }
   
   if (path === '/v1/product') {
@@ -86,6 +92,7 @@ async function handleRequest(
     const sort = url.searchParams.get('sort') || undefined;
     return handleProductCollection(
       env,
+      origin,
       pageNumber,
       pageSize,
       category,
@@ -97,7 +104,7 @@ async function handleRequest(
   if (path.startsWith('/v1/product/')) {
     const productId = path.split('/').pop();
     if (productId) {
-      return handleProductDetail(productId, env);
+      return handleProductDetail(productId, env, origin);
     }
   }
 
@@ -108,7 +115,7 @@ async function handleRequest(
     }
 
     try {
-      const product = await fetchProductDetailData(productId, env);
+      const product = await fetchProductDetailData(productId, env, origin);
       if (product.slug && productId !== product.slug) {
         return Response.redirect(
           new URL(`/product/${product.slug}`, request.url).toString(),
@@ -136,7 +143,7 @@ async function handleRequest(
   // Dynamic routes (e.g., /v1/article/:id)
   if (path.startsWith('/v1/article/')) {
     const articleId = path.split('/').pop();
-    if (articleId) return handleArticleDetail(articleId, env);
+    if (articleId) return handleArticleDetail(articleId, env, origin);
   }
 
   if (path.startsWith('/article/')) {
@@ -146,7 +153,7 @@ async function handleRequest(
     }
 
     try {
-      const article = await fetchArticleDetailData(articleId, env);
+      const article = await fetchArticleDetailData(articleId, env, origin);
       if (article.slug && articleId !== article.slug) {
         return Response.redirect(
           new URL(`/article/${article.slug}`, request.url).toString(),
@@ -180,6 +187,7 @@ async function handleRequest(
 function isWorkerRoute(path: string): boolean {
   return (
     path === '/sitemap.xml' ||
+    path.startsWith('/media/') ||
     path.startsWith('/v1/') ||
     path.startsWith('/article/') ||
     path.startsWith('/product/')

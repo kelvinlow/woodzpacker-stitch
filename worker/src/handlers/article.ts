@@ -2,6 +2,8 @@ import { Env, NotionBlock, NotionPage, NotionResponse } from '../types';
 import { errorResponse, JSON_HEADERS } from '../utils/response';
 import { getEnvValue } from '../utils/env';
 import { notionFetch } from '../utils/notion';
+import { ensureStableImageUrl, findFirstImageBlock } from '../utils/media';
+import { fetchPageBlocks } from '../utils/notionBlocks';
 import { queryArticles } from './feed';
 
 type SimplifiedBlock = {
@@ -19,6 +21,7 @@ type ArticleDetailData = {
   id: string;
   slug: string;
   title: string;
+  thumbnail: string | null;
   blocks: SimplifiedBlock[];
 };
 
@@ -103,42 +106,6 @@ async function resolveArticlePage(
   return fetchPageBySlug(identifier, env);
 }
 
-async function fetchBlockChildren(
-  blockId: string,
-  env: Env
-): Promise<NotionBlock[]> {
-  const response = await notionFetch(`/v1/blocks/${blockId}/children`, env);
-
-  if (!response.ok) {
-    const errorData = await response.text();
-    throw new Error(
-      `Failed to fetch child blocks for ${blockId} (${response.status}): ${errorData}`
-    );
-  }
-
-  const data = (await response.json()) as { results: NotionBlock[] };
-  return data.results;
-}
-
-async function hydrateBlocks(
-  blocks: NotionBlock[],
-  env: Env
-): Promise<NotionBlock[]> {
-  return Promise.all(
-    blocks.map(async (block) => {
-      if (!block.has_children) {
-        return block;
-      }
-
-      const children = await fetchBlockChildren(block.id, env);
-      return {
-        ...block,
-        children: await hydrateBlocks(children, env)
-      };
-    })
-  );
-}
-
 function simplifyArticleBlocks(blocks: any[]): SimplifiedBlock[] {
   return blocks.map((block) => {
     const type = block.type;
@@ -183,47 +150,50 @@ async function fetchArticleBlocks(
   articleId: string,
   env: Env
 ): Promise<SimplifiedBlock[]> {
-  const response = await notionFetch(`/v1/blocks/${articleId}/children`, env);
-
-  if (!response.ok) {
-    const errorData = await response.text();
-    throw new Error(
-      `Failed to fetch article content (${response.status}): ${errorData}`
-    );
-  }
-
-  const data = (await response.json()) as { results: NotionBlock[] };
-  const hydratedBlocks = await hydrateBlocks(data.results, env);
-  return simplifyArticleBlocks(hydratedBlocks);
+  const hydratedBlocks = await fetchPageBlocks(articleId, env, 'article');
+  return simplifyArticleBlocks(hydratedBlocks as NotionBlock[]);
 }
 
 export async function fetchArticleDetailData(
   identifier: string,
-  env: Env
+  env: Env,
+  publicBaseUrl: string
 ): Promise<ArticleDetailData> {
   const page = await resolveArticlePage(identifier, env);
   const articleId = page.id;
   const slug = getPlainText(page.properties.Slug?.rich_text) || normalizeNotionId(articleId);
+  const fallbackThumbnail = page.properties.Thumbnail?.url || null;
 
   const [title, blocks] = await Promise.all([
     Promise.resolve(page.properties.Title?.title?.[0]?.plain_text || 'Untitled'),
     fetchArticleBlocks(articleId, env)
   ]);
+  const firstImage = findFirstImageBlock(blocks);
+  const thumbnail =
+    (await ensureStableImageUrl(
+      env,
+      publicBaseUrl,
+      'article',
+      articleId,
+      firstImage || (fallbackThumbnail ? { id: 'page-thumbnail', url: fallbackThumbnail } : null)
+    )) || fallbackThumbnail;
 
   return {
     id: articleId,
     slug,
     title,
+    thumbnail,
     blocks
   };
 }
 
 export async function handleArticleDetail(
   identifier: string,
-  env: Env
+  env: Env,
+  publicBaseUrl: string
 ): Promise<Response> {
   try {
-    const article = await fetchArticleDetailData(identifier, env);
+    const article = await fetchArticleDetailData(identifier, env, publicBaseUrl);
     return new Response(JSON.stringify(article, null, 2), {
       headers: JSON_HEADERS
     });
@@ -234,6 +204,7 @@ export async function handleArticleDetail(
 
 export async function handleArticleCollection(
   env: Env,
+  publicBaseUrl: string,
   pageNumber = 1,
   pageSize = 5,
   category?: string,
@@ -245,7 +216,7 @@ export async function handleArticleCollection(
       pageSize,
       category,
       query
-    });
+    }, publicBaseUrl);
 
     return new Response(JSON.stringify(collection, null, 2), {
       headers: JSON_HEADERS

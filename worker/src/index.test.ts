@@ -132,7 +132,7 @@ describe('worker api routing', () => {
       mockEnv
     );
 
-    expect(handleSitemap).toHaveBeenCalledWith(mockEnv);
+    expect(handleSitemap).toHaveBeenCalledWith(mockEnv, 'https://woodzpacker.test');
     expect(response.status).toBe(200);
     await expect(response.text()).resolves.toBe('<xml />');
   });
@@ -145,7 +145,14 @@ describe('worker api routing', () => {
       mockEnv
     );
 
-    expect(handleFeed).toHaveBeenCalledWith(mockEnv, 2, 7, 'ritual', 'oud');
+    expect(handleFeed).toHaveBeenCalledWith(
+      mockEnv,
+      'https://woodzpacker.test',
+      2,
+      7,
+      'ritual',
+      'oud'
+    );
   });
 
   it('routes article collection requests with parsed parameters', async () => {
@@ -158,6 +165,7 @@ describe('worker api routing', () => {
 
     expect(handleArticleCollection).toHaveBeenCalledWith(
       mockEnv,
+      'https://woodzpacker.test',
       3,
       4,
       'knowledge',
@@ -171,7 +179,14 @@ describe('worker api routing', () => {
       mockEnv
     );
 
-    expect(handleSearch).toHaveBeenCalledWith(mockEnv, 'resin', '', 1, 8);
+    expect(handleSearch).toHaveBeenCalledWith(
+      mockEnv,
+      'https://woodzpacker.test',
+      'resin',
+      '',
+      1,
+      8
+    );
   });
 
   it('routes product collection requests with sort and paging', async () => {
@@ -184,6 +199,7 @@ describe('worker api routing', () => {
 
     expect(handleProductCollection).toHaveBeenCalledWith(
       mockEnv,
+      'https://woodzpacker.test',
       5,
       12,
       'beads',
@@ -198,7 +214,11 @@ describe('worker api routing', () => {
       mockEnv
     );
 
-    expect(handleArticleDetail).toHaveBeenCalledWith('article-123', mockEnv);
+    expect(handleArticleDetail).toHaveBeenCalledWith(
+      'article-123',
+      mockEnv,
+      'https://woodzpacker.test'
+    );
   });
 
   it('routes /v1/product/:id to the product detail handler', async () => {
@@ -207,7 +227,11 @@ describe('worker api routing', () => {
       mockEnv
     );
 
-    expect(handleProductDetail).toHaveBeenCalledWith('product-123', mockEnv);
+    expect(handleProductDetail).toHaveBeenCalledWith(
+      'product-123',
+      mockEnv,
+      'https://woodzpacker.test'
+    );
   });
 
   it('redirects article pages when the requested slug is not canonical', async () => {

@@ -4,6 +4,7 @@ import { queryArticles } from './feed';
 
 export async function handleSearch(
   env: Env,
+  publicBaseUrl: string,
   query = '',
   category = '',
   pageNumber = 1,
@@ -15,7 +16,7 @@ export async function handleSearch(
       category,
       pageNumber,
       pageSize
-    });
+    }, publicBaseUrl);
 
     return jsonResponse({
       ...results,

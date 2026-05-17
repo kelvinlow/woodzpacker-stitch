@@ -13,6 +13,33 @@ const GLOBAL_CONFIG = {
   footerDescription: "专注于马来西亚野生沉香与佛教珍品<br/>品质至上，诚信经营"
 };
 
+const FOOTER_GROUPS = [
+  {
+    title: "Explore",
+    links: [
+      { label: "Journal", href: "/article-list" },
+      { label: "Gallery", href: "/gallery" },
+      { label: "Guide", href: "/guide" }
+    ]
+  },
+  {
+    title: "Collections",
+    links: [
+      { label: "Products", href: "/products" },
+      { label: "Wild Agarwood", href: "/agarwood" },
+      { label: "Brand Story", href: "/aboutus" }
+    ]
+  },
+  {
+    title: "Read Next",
+    links: [
+      { label: "Agarwood Quality", href: "/article/distinguishing-top-quality-agarwood-origin-characteristics-aroma" },
+      { label: "Zenith Editorial", href: "/zenith" },
+      { label: "Home", href: "/" }
+    ]
+  }
+];
+
 window.WOODZPACKER_CONFIG = {
   ...GLOBAL_CONFIG,
   workerBaseUrl: GLOBAL_CONFIG.workerBaseUrl.replace(/\/+$/, '')
@@ -133,7 +160,7 @@ const setupHead = () => {
 
 // 2. Main Logic - Inject Header & Footer
 const injectLayout = async () => {
-  const currentPage = window.location.pathname.split("/").pop() || "index.html";
+  const currentPath = normalizePath(window.location.pathname);
 
   // Fetch nav items from nav.json — single source of truth
   // Note: requires HTTP(S) — works on Cloudflare, not via file://
@@ -146,16 +173,31 @@ const injectLayout = async () => {
   }
 
   const desktopLinks = NAV_ITEMS.map(item => {
-    const isActive = currentPage.includes(item.activeKey);
+    const isActive = item.activeMatch === 'exact'
+      ? currentPath === item.activeKey
+      : currentPath.includes(item.activeKey);
     const cls = isActive ? 'text-[#E9C349] border-b border-[#E9C349]/30 pb-1' : 'text-[#F1DFD3]/80';
-    return `<a class="font-label tracking-widest uppercase text-sm ${cls} hover:text-[#E9C349] transition-colors duration-700" href="${item.href}">${item.label}</a>`;
+    return `<a class="font-label tracking-widest uppercase text-sm ${cls} hover:text-[#E9C349] transition-colors duration-700" href="${item.workerHref || item.href}">${item.label}</a>`;
   }).join('\n            ');
 
   const mobileLinks = NAV_ITEMS.map(item => {
-    const isActive = currentPage.includes(item.activeKey);
+    const isActive = item.activeMatch === 'exact'
+      ? currentPath === item.activeKey
+      : currentPath.includes(item.activeKey);
     const cls = isActive ? 'text-[#E9C349] bg-[#E9C349]/5' : 'text-[#F1DFD3]/70';
-    return `<a href="${item.href}" class="font-label tracking-widest uppercase text-xs ${cls} hover:text-[#E9C349] hover:bg-[#E9C349]/5 block px-4 py-3 transition-colors duration-300">${item.label}</a>`;
+    return `<a href="${item.workerHref || item.href}" class="font-label tracking-widest uppercase text-xs ${cls} hover:text-[#E9C349] hover:bg-[#E9C349]/5 block px-4 py-3 transition-colors duration-300">${item.label}</a>`;
   }).join('\n          ');
+
+  const footerColumns = FOOTER_GROUPS.map(group => `
+                <div class="space-y-4">
+                    <h4 class="font-label text-[#E9C349] text-[10px] tracking-[0.28em] uppercase">${group.title}</h4>
+                    <ul class="space-y-3">
+                        ${group.links.map(link => `
+                          <li><a href="${link.href}" class="font-body text-sm text-[#F1DFD3]/60 hover:text-[#E9C349] transition-colors">${link.label}</a></li>
+                        `).join('')}
+                    </ul>
+                </div>
+              `).join('');
 
   // Navigation HTML — standard Tailwind responsive navbar pattern
   const navHTML = interpolate(`
@@ -165,7 +207,7 @@ const injectLayout = async () => {
 
             <!-- Brand -->
             <div class="text-xl font-headline font-bold tracking-tighter text-[#F1DFD3] shrink-0">
-                <a href="index.html"><span class="text-[#E9C349]">{{websiteName}} </span><span class="text-[#F1DFD3]/50">|</span> {{tagline}}</a>
+                <a href="/"><span class="text-[#E9C349]">{{websiteName}} </span><span class="text-[#F1DFD3]/50">|</span> {{tagline}}</a>
             </div>
 
             <!-- Desktop links -->
@@ -205,66 +247,43 @@ const injectLayout = async () => {
   // Footer HTML (Redesigned for Premium Look)
   const footerHTML = interpolate(`
 <footer class="w-full border-t border-[#4F4540]/20 bg-[#1A120B] pt-24 pb-12">
-    <div class="max-w-screen-2xl mx-auto px-12">
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-16 mb-5">
+    <div class="max-w-screen-2xl mx-auto px-6 md:px-12">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-10 mb-4">
             <!-- Brand Column -->
-            <div class="md:col-span-5 space-y-8">
-                <div class="text-2xl font-headline font-bold tracking-tighter text-[#F1DFD3]">
+            <div class="md:col-span-5 space-y-6">
+                <div class="text-xl md:text-2xl font-headline font-bold tracking-tighter text-[#F1DFD3]">
                     <span class="text-[#E9C349]">{{websiteName}} {{tagline}}</span>
                 </div>
-                <div class="space-y-4">
-                    <p class="font-headline text-xl text-[#F1DFD3]/90 italic leading-relaxed">
+                <div class="space-y-3">
+                    <p class="font-headline text-lg md:text-xl text-[#F1DFD3]/90 italic leading-relaxed">
                         {{footerSlogan}}
                     </p>
-                    <p class="font-body text-[#F1DFD3]/60 text-lg leading-relaxed max-w-md">
+                    <p class="font-body text-[#F1DFD3]/60 text-base leading-relaxed max-w-md">
                         {{footerDescription}}
                     </p>
                 </div>
-                <div class="flex items-center gap-6 pt-4">
-                    <a href="#" class="text-[#F1DFD3]/40 hover:text-[#E9C349] transition-colors duration-500">
+                <div class="flex items-center gap-5 pt-2">
+                    <a href="/gallery" class="text-[#F1DFD3]/40 hover:text-[#E9C349] transition-colors duration-500">
                         <span class="font-label text-xs tracking-widest uppercase">Instagram</span>
                     </a>
-                    <a href="#" class="text-[#F1DFD3]/40 hover:text-[#E9C349] transition-colors duration-500">
+                    <a href="/aboutus" class="text-[#F1DFD3]/40 hover:text-[#E9C349] transition-colors duration-500">
                         <span class="font-label text-xs tracking-widest uppercase">WeChat</span>
                     </a>
                 </div>
             </div>
 
             <!-- Links Columns -->
-            <div class="md:col-span-7 grid grid-cols-2 md:grid-cols-3 gap-12">
-                <div class="space-y-6">
-                    <h4 class="font-label text-[#E9C349] text-xs tracking-[0.3em] uppercase">Discovery</h4>
-                    <ul class="space-y-4">
-                        <li><a href="articles_demo.html" class="font-body text-[#F1DFD3]/60 hover:text-[#E9C349] transition-colors">Journal</a></li>
-                        <li><a href="gallery.html" class="font-body text-[#F1DFD3]/60 hover:text-[#E9C349] transition-colors">Gallery</a></li>
-                        <li><a href="guide.html" class="font-body text-[#F1DFD3]/60 hover:text-[#E9C349] transition-colors">Beginner's Guide</a></li>
-                    </ul>
-                </div>
-                <div class="space-y-6">
-                    <h4 class="font-label text-[#E9C349] text-xs tracking-[0.3em] uppercase">Shop</h4>
-                    <ul class="space-y-4">
-                        <li><a href="products.html" class="font-body text-[#F1DFD3]/60 hover:text-[#E9C349] transition-colors">Collection</a></li>
-                        <li><a href="product_detail_1.html" class="font-body text-[#F1DFD3]/60 hover:text-[#E9C349] transition-colors">Gift Sets</a></li>
-                        <li><a href="about_us.html" class="font-body text-[#F1DFD3]/60 hover:text-[#E9C349] transition-colors">Heritage</a></li>
-                    </ul>
-                </div>
-                <div class="space-y-6">
-                    <h4 class="font-label text-[#E9C349] text-xs tracking-[0.3em] uppercase">Contact</h4>
-                    <ul class="space-y-4">
-                        <li><a href="#" class="font-body text-[#F1DFD3]/60 hover:text-[#E9C349] transition-colors">Store Locator</a></li>
-                        <li><a href="#" class="font-body text-[#F1DFD3]/60 hover:text-[#E9C349] transition-colors">Customer Care</a></li>
-                        <li><a href="#" class="font-body text-[#F1DFD3]/60 hover:text-[#E9C349] transition-colors">Privacy Policy</a></li>
-                    </ul>
-                </div>
+            <div class="md:col-span-7 grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-10">
+                ${footerColumns}
             </div>
         </div>
 
         <!-- Copyright Line -->
-        <div class="pt-6 border-t border-[#4F4540]/10 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="pt-5 border-t border-[#4F4540]/10 flex flex-col md:flex-row justify-between items-center gap-4">
             <div class="font-label text-[10px] tracking-[0.4em] text-[#F1DFD3]/30 uppercase">
                 © 2026 WOODZPACKER | AGARWOOD. ALL RIGHTS RESERVED.
             </div>
-            <div class="flex items-center gap-8">
+            <div class="flex items-center gap-6">
                 <span class="font-label text-[10px] tracking-widest text-[#F1DFD3]/20 uppercase">Handcrafted with time</span>
                 <span class="font-label text-[10px] tracking-widest text-[#F1DFD3]/20 uppercase">SCN-MY2024</span>
             </div>
@@ -299,6 +318,11 @@ const injectLayout = async () => {
 
 // Execution
 setupHead();
+
+function normalizePath(pathname) {
+  const path = pathname.replace(/\/+$/, '');
+  return path || '/';
+}
 
 // Fail-safe: Reveal body if something goes wrong
 setTimeout(() => {

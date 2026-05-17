@@ -8,13 +8,13 @@ export async function handleSitemap(env: Env) {
   // 1. Static pages
   const staticPaths = [
     "/",
-    "/about_us.html",
-    "/products.html",
-    "/gallery.html",
-    "/guide.html",
-    "/agarwood.html",
-    "/zenith.html",
-    "/article-list.html"
+    "/aboutus",
+    "/products",
+    "/gallery",
+    "/guide",
+    "/agarwood",
+    "/zenith",
+    "/article-list"
   ];
 
   const staticUrls = staticPaths.map(path => `

@@ -179,7 +179,7 @@ export function renderProductPage(
           <div class="border border-outline-variant/12 bg-surface-container-low/80 backdrop-blur-sm">
             <div class="space-y-8 p-8 lg:p-10">
               <div class="flex flex-wrap items-center justify-between gap-4">
-                <a class="font-label text-[10px] uppercase tracking-[0.28em] text-on-surface-variant/60 hover:text-primary transition-colors" href="/products.html">
+                <a class="font-label text-[10px] uppercase tracking-[0.28em] text-on-surface-variant/60 hover:text-primary transition-colors" href="/products">
                   Back to collection
                 </a>
                 <span class="rounded-full border border-outline-variant/20 px-3 py-1 font-label text-[10px] uppercase tracking-[0.22em] text-primary">${escapeHtml(statusLabel)}</span>
@@ -213,7 +213,7 @@ export function renderProductPage(
                 <a href="/product/${encodeURIComponent(product.slug || product.id)}" class="w-full border border-primary bg-primary px-6 py-4 text-center font-label text-xs uppercase tracking-[0.28em] text-on-primary transition-colors hover:bg-primary-fixed-dim">
                   Canonical Product URL
                 </a>
-                <a href="/products.html" class="w-full border border-outline-variant/20 px-6 py-4 text-center font-label text-xs uppercase tracking-[0.28em] text-on-surface transition-colors hover:border-primary/30 hover:text-primary">
+                <a href="/products" class="w-full border border-outline-variant/20 px-6 py-4 text-center font-label text-xs uppercase tracking-[0.28em] text-on-surface transition-colors hover:border-primary/30 hover:text-primary">
                   Browse Collection
                 </a>
               </div>

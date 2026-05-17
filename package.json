@@ -4,11 +4,13 @@
   "scripts": {
     "dev": "wrangler dev --config wrangler.jsonc",
     "dev:remote": "wrangler dev --remote --config wrangler.jsonc",
+    "test": "vitest run",
     "deploy": "wrangler deploy --config wrangler.jsonc",
     "deploy:dry-run": "wrangler deploy --dry-run --config wrangler.jsonc"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20240401.0",
+    "vitest": "^4.1.6",
     "wrangler": "^4.84.1"
   }
 }

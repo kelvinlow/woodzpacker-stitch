@@ -1,7 +1,6 @@
 [
   { "label": "Articles",    "href": "/article-list", "workerHref": "/article-list", "activeMatch": "includes", "activeKey": "article" },
   { "label": "Gallery",     "href": "/gallery", "workerHref": "/gallery", "activeMatch": "includes", "activeKey": "gallery" },
-  { "label": "分辨頂級沉香", "href": "/article/distinguishing-top-quality-agarwood-origin-characteristics-aroma", "workerHref": "/article/distinguishing-top-quality-agarwood-origin-characteristics-aroma", "activeMatch": "includes", "activeKey": "/article/distinguishing-top-quality-agarwood-origin-characteristics-aroma" },
   { "label": "Guide",       "href": "/guide", "workerHref": "/guide", "activeMatch": "includes", "activeKey": "guide" },
   { "label": "Products",    "href": "/products", "workerHref": "/products", "activeMatch": "includes", "activeKey": "products" },
   { "label": "About",       "href": "/aboutus", "workerHref": "/aboutus", "activeMatch": "includes", "activeKey": "about" }

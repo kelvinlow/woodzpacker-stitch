@@ -6,6 +6,36 @@ const HTML_HEADERS = {
   'Cache-Control': 'public, max-age=300'
 };
 
+const FOOTER_GROUPS = [
+  {
+    title: 'Explore',
+    links: [
+      { label: 'Journal', href: '/article-list' },
+      { label: 'Gallery', href: '/gallery' },
+      { label: 'Guide', href: '/guide' }
+    ]
+  },
+  {
+    title: 'Collections',
+    links: [
+      { label: 'Products', href: '/products' },
+      { label: 'Wild Agarwood', href: '/agarwood' },
+      { label: 'Brand Story', href: '/aboutus' }
+    ]
+  },
+  {
+    title: 'Read Next',
+    links: [
+      {
+        label: 'Agarwood Quality',
+        href: '/article/distinguishing-top-quality-agarwood-origin-characteristics-aroma'
+      },
+      { label: 'Zenith Editorial', href: '/zenith' },
+      { label: 'Home', href: '/' }
+    ]
+  }
+];
+
 export function htmlResponse(html: string, status = 200): Response {
   return new Response(html, {
     status,
@@ -119,6 +149,7 @@ export function renderArticlePage(
       };
     </script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Newsreader:ital,wght@0,400;0,600;1,400&family=Manrope:wght@300;500;700&display=swap" />
+    <link rel="stylesheet" href="/style.css" />
     <style>
       body {
         background: radial-gradient(circle at top, rgba(233, 195, 73, 0.08), transparent 35%), #1a120b;
@@ -127,7 +158,7 @@ export function renderArticlePage(
   </head>
   <body class="bg-background text-on-surface font-body selection:bg-primary/30">
     ${renderNav(siteName, siteTagline, requestUrl.pathname)}
-    <main class="pt-32 pb-24">
+    <main class="page-shell">
       <div class="max-w-6xl mx-auto px-6 md:px-8">
         ${renderHero(articleId, title, description, heroImage)}
         <article class="max-w-3xl mx-auto text-lg leading-relaxed">
@@ -178,42 +209,124 @@ export function renderErrorPage(message: string, siteName: string): string {
 }
 
 function renderNav(siteName: string, siteTagline: string, currentPath: string): string {
+  const normalizedPath = normalizePath(currentPath);
   const navLinksHtml = NAV_ITEMS.map(item => {
-    const isActive = item.activeMatch === 'includes'
-      ? currentPath.includes(item.activeKey)
-      : currentPath === item.activeKey;
+    const isActive =
+      item.activeMatch === 'exact'
+        ? normalizedPath === item.activeKey
+        : normalizedPath.includes(item.activeKey);
     const activeClass = isActive ? 'text-[#E9C349] border-b border-[#E9C349]/30 pb-1' : 'text-[#F1DFD3]/80';
     return `<a class="font-label tracking-widest uppercase text-sm ${activeClass} hover:text-[#E9C349] transition-colors duration-700" href="${escapeHtml(item.workerHref || item.href)}">${escapeHtml(item.label)}</a>`;
-  }).join('\n        ');
+  }).join('\n            ');
 
-  return `<nav class="fixed top-0 w-full z-50 bg-[#1A120B]/70 backdrop-blur-md bg-gradient-to-b from-[#1A120B] to-transparent shadow-[0_4px_30px_rgba(0,0,0,0.1)]">
-    <div class="flex justify-between items-center px-6 md:px-12 py-6 w-full max-w-screen-2xl mx-auto gap-6">
-      <div class="text-xl font-headline font-bold tracking-tighter text-[#F1DFD3]">
-        <span class="text-[#E9C349]">${escapeHtml(siteName)} </span> | ${escapeHtml(siteTagline)}
+  const mobileLinksHtml = NAV_ITEMS.map(item => {
+    const isActive =
+      item.activeMatch === 'exact'
+        ? normalizedPath === item.activeKey
+        : normalizedPath.includes(item.activeKey);
+    const activeClass = isActive
+      ? 'text-[#E9C349] bg-[#E9C349]/5'
+      : 'text-[#F1DFD3]/70';
+    return `<a href="${escapeHtml(item.workerHref || item.href)}" class="font-label tracking-widest uppercase text-xs ${activeClass} hover:text-[#E9C349] hover:bg-[#E9C349]/5 block px-4 py-3 transition-colors duration-300">${escapeHtml(item.label)}</a>`;
+  }).join('\n          ');
+
+  return `<nav class="fixed top-0 w-full z-50 bg-[#1A120B]/80 backdrop-blur-md shadow-[0_1px_0_rgba(79,69,64,0.2)]">
+    <div class="max-w-screen-2xl mx-auto px-6 md:px-12">
+      <div class="flex justify-between items-center h-16 md:h-20">
+        <div class="text-xl font-headline font-bold tracking-tighter text-[#F1DFD3] shrink-0">
+          <a href="/"><span class="text-[#E9C349]">${escapeHtml(siteName)} </span><span class="text-[#F1DFD3]/50">|</span> ${escapeHtml(siteTagline)}</a>
+        </div>
+        <div class="hidden md:flex gap-10 items-center">
+          ${navLinksHtml}
+        </div>
+        <div class="hidden md:flex items-center gap-4">
+          <button class="text-[#F1DFD3]/60 hover:text-[#E9C349] transition-colors duration-300">
+            <span class="material-symbols-outlined text-[20px]">phone_in_talk</span>
+          </button>
+        </div>
+        <div class="flex md:hidden items-center gap-3">
+          <button class="text-[#F1DFD3]/60 hover:text-[#E9C349] transition-colors duration-300">
+            <span class="material-symbols-outlined text-[20px]">phone_in_talk</span>
+          </button>
+          <button id="nav-toggle" aria-expanded="false" aria-controls="nav-mobile-menu"
+            class="text-[#F1DFD3]/60 hover:text-[#E9C349] transition-colors duration-300 p-1">
+            <span id="nav-icon-open" class="material-symbols-outlined">menu</span>
+            <span id="nav-icon-close" class="material-symbols-outlined hidden">close</span>
+          </button>
+        </div>
       </div>
-      <div class="hidden md:flex gap-10 items-center">
-        ${navLinksHtml}
+      <div id="nav-mobile-menu" class="hidden md:hidden border-t border-[#4F4540]/20 bg-[#140d06]/95 backdrop-blur-sm">
+        <div class="px-2 py-3 space-y-1">
+          ${mobileLinksHtml}
+        </div>
       </div>
     </div>
+    <script>
+      (() => {
+        const toggle = document.getElementById('nav-toggle');
+        const menu = document.getElementById('nav-mobile-menu');
+        const iconOpen = document.getElementById('nav-icon-open');
+        const iconClose = document.getElementById('nav-icon-close');
+        if (!toggle || !menu || !iconOpen || !iconClose) return;
+        toggle.addEventListener('click', () => {
+          const isOpen = !menu.classList.contains('hidden');
+          menu.classList.toggle('hidden', isOpen);
+          iconOpen.classList.toggle('hidden', !isOpen);
+          iconClose.classList.toggle('hidden', isOpen);
+          toggle.setAttribute('aria-expanded', String(!isOpen));
+        });
+      })();
+    </script>
   </nav>`;
 }
 
 function renderFooter(siteName: string, siteTagline: string, siteDescription: string): string {
-  return `<footer class="w-full border-t border-[#4F4540]/20 bg-[#1A120B] pt-20 pb-12">
+  const footerColumns = FOOTER_GROUPS.map(group => `
+    <div class="space-y-4">
+      <h4 class="font-label text-[#E9C349] text-[10px] tracking-[0.28em] uppercase">${escapeHtml(group.title)}</h4>
+      <ul class="space-y-3">
+        ${group.links.map(link => `
+          <li><a href="${escapeHtml(link.href)}" class="font-body text-sm text-[#F1DFD3]/60 hover:text-[#E9C349] transition-colors">${escapeHtml(link.label)}</a></li>
+        `).join('')}
+      </ul>
+    </div>
+  `).join('');
+
+  return `<footer class="w-full border-t border-[#4F4540]/20 bg-[#1A120B] pt-24 pb-12">
     <div class="max-w-screen-2xl mx-auto px-6 md:px-12">
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 mb-4">
         <div class="md:col-span-5 space-y-6">
-          <div class="text-2xl font-headline font-bold tracking-tighter text-[#F1DFD3]">
+          <div class="text-xl md:text-2xl font-headline font-bold tracking-tighter text-[#F1DFD3]">
             <span class="text-[#E9C349]">${escapeHtml(siteName)} ${escapeHtml(siteTagline)}</span>
           </div>
-          <p class="font-body text-[#F1DFD3]/60 text-lg leading-relaxed max-w-md">
-            ${escapeHtml(siteDescription)}
-          </p>
+          <div class="space-y-3">
+            <p class="font-headline text-lg md:text-xl text-[#F1DFD3]/90 italic leading-relaxed">
+              悟培閣 · 冥想虚空 THE MEDITATIVE VOID
+            </p>
+            <p class="font-body text-[#F1DFD3]/60 text-base leading-relaxed max-w-md">
+              ${escapeHtml(siteDescription)}
+            </p>
+          </div>
+          <div class="flex items-center gap-5 pt-2">
+            <a href="/gallery" class="text-[#F1DFD3]/40 hover:text-[#E9C349] transition-colors duration-500">
+              <span class="font-label text-xs tracking-widest uppercase">Instagram</span>
+            </a>
+            <a href="/aboutus" class="text-[#F1DFD3]/40 hover:text-[#E9C349] transition-colors duration-500">
+              <span class="font-label text-xs tracking-widest uppercase">WeChat</span>
+            </a>
+          </div>
+        </div>
+        <div class="md:col-span-7 grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-10">
+          ${footerColumns}
         </div>
       </div>
-      <div class="pt-8 border-t border-[#4F4540]/10">
+      <div class="pt-5 border-t border-[#4F4540]/10 flex flex-col md:flex-row justify-between items-center gap-4">
         <div class="font-label text-[10px] tracking-[0.4em] text-[#F1DFD3]/30 uppercase">
-          ${escapeHtml(siteName)} ${escapeHtml(siteTagline)}
+          © 2026 WOODZPACKER | AGARWOOD. ALL RIGHTS RESERVED.
+        </div>
+        <div class="flex items-center gap-6">
+          <span class="font-label text-[10px] tracking-widest text-[#F1DFD3]/20 uppercase">Handcrafted with time</span>
+          <span class="font-label text-[10px] tracking-widest text-[#F1DFD3]/20 uppercase">SCN-MY2024</span>
         </div>
       </div>
     </div>
@@ -253,6 +366,11 @@ function renderHero(
       </div>
     </div>
   </header>`;
+}
+
+function normalizePath(pathname: string): string {
+  const path = pathname.replace(/\/+$/, '');
+  return path || '/';
 }
 
 function renderBlocks(blocks: NotionBlock[]): string {

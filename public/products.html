@@ -195,6 +195,10 @@
             : (window.WOODZPACKER_CONFIG?.workerBaseUrl || window.location.origin);
         }
 
+        function getSiteBase() {
+          return getApiBase().replace(/\/+$/g, "");
+        }
+
         function escapeHtml(value) {
           return String(value || "").replace(/[&<>\"']/g, (character) => {
             const entities = {
@@ -248,7 +252,7 @@
         }
 
         function buildProductUrl(product) {
-          return `/product/${encodeURIComponent(product.slug || product.id)}`;
+          return `${getSiteBase()}/product/${encodeURIComponent(product.slug || product.id)}`;
         }
 
         function buildPageHref(pageNumber) {
